@@ -1,0 +1,23 @@
+
+
+:root {
+    /* [ color palette ] */
+    --cp00: #ffffff; --cp01: #00A599; --cp02: #FFAEBF; --cp03: #FFFADD;
+    --cp04: #FDCDBF; --cp05: #FEB491; --cp06: #47C8EF; --cp07: #F190A3;
+    --cp08: #464646; --cp-clouds: #fefefe;
+    --linearbg-00: #fff;
+    --linearbg-01: #ebebec;
+    --linearbg-02: #71CDC6;
+    --linearbg-03: #00A599;
+    --linearbg-04: #ebebec;
+    --linearbg-05: #fffef4;
+    --linearbg-06: #fffdf3;
+    --linearbg-07: #fff0e4;
+    --linearbg-08: #fff0e4;
+    --linearbg-09: #fee4d9;
+    --linearbg-10: #ffe5da;
+    --linearbg-11: #fce1dd;
+    --appbar-height: 80px;
+    --logo-txt-shadow: drop-shadow(#0005 -5px 6px 1px);
+}
+
