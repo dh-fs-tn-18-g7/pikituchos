@@ -6,7 +6,7 @@
 [![Noely](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/110362892?v=4&h=100&w=100&fit=cover&mask=circle&maxage=7d)](https://github.com/NoelyGangello)
 [![Jady](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/98995625?v=4&h=100&w=100&fit=cover&mask=circle&maxage=7d)](https://github.com/Jady-Carolina) 
 [![Bryan](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/113955681?v=4&h=100&w=100&fit=cover&mask=circle&maxage=7d)](https://github.com/Bryan-Abranches)
-[![member]()]()
+[![Amando](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/2993028?v=4&h=100&w=100&fit=cover&mask=circle&maxage=7d)](https://github.com/amandoloule)
 [![member]()]()
 [![member]()]()
 [![member]()]()
