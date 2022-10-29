@@ -10,9 +10,6 @@
 [![member]()]()
 [![member]()]()
 [![member]()]()
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Noely** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Jady**
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Bryan**
 
 ---
 bootstrap with:
