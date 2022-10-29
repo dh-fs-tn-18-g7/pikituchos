@@ -1,5 +1,5 @@
 # Projeto Integrador 
-> [![img](https://rawcdn.githack.com/dh-fs-tn-18-g7/.github/97babdb5dca2a7cdfdb765c692887654a74a4803/profile/dh-fstn-19-g7.svg)](https://github.com/dh-fs-tn-18-g7)
+> [![img](https://rawcdn.githack.com/dh-fs-tn-18-g7/.github/3dec8e2c134c1dd9ae8fdb6d89cbccd93fde2469/profile/dh-fstn-18-g7.svg)](https://github.com/dh-fs-tn-18-g7)
 
 **Dev Team:**
 
