@@ -8,6 +8,7 @@
     --cp00: #ffffff; --cp01: #00A599; --cp02: #FFAEBF; --cp03: #FFFADD;
     --cp04: #FDCDBF; --cp05: #FEB491; --cp06: #47C8EF; --cp07: #F190A3;
     --cp08: #464646;
+    --text-shadow-blue: #27f 0 0 5px;
     --linearbg-00: #fff;
     --linearbg-01: #ebebec;
     --linearbg-02: #71CDC6;
@@ -154,6 +155,7 @@ appbar-center {
 
 appbar-center li {
     color: var(--cp00);
+    text-shadow: var(--text-shadow-blue);
     cursor: pointer;
     transition: .3s;
     font-weight: 500;
@@ -200,6 +202,7 @@ appbar-center li {
     transition: .2s;
 } searchbar-btn txt {
     color: var(--cp00);
+    text-shadow: var(--text-shadow-blue);
     font-family: baloo Da;
     font-size: 16px;
     -webkit-text-stroke: #00000012 1px;
@@ -221,6 +224,7 @@ appbar-right {
 btn-signin {
     width: 50px;
     color: var(--cp00);
+    text-shadow: var(--text-shadow-blue);
     font-family: Baloo Da;
     font-weight: Regular;
     transition: .2s;
@@ -268,7 +272,12 @@ newsletter-section {
     align-items: center;
     text-align: center;
     width: clamp( 100px, 80%, 435px );
+    padding: 32px 0;
     background: #f0f3fb;
+    border-radius: 13px;
+    border: var(--cp06) 6px dashed;
+    /* box-shadow: var(--cp05) 0 0 0 12px; */
+    box-shadow: var(--cp06) 0 0 0 12px;
 }
 newsletter-section #outline {
     color: var(--cp07);
@@ -302,7 +311,8 @@ newsletter-section label input[type=text] {
     margin: 12px 0;
     padding: 6px;
     outline: none;
-    box-shadow: #0003 0 5px 10px;
+    /* box-shadow:#0003 0 5px 10px; */
+    box-shadow:inset #27f5 0 2px 5px 2px;
 }
 newsletter-section label input[type=button] {
     display: block;
@@ -314,6 +324,7 @@ newsletter-section label input[type=button] {
     background: var(--cp06);
     box-shadow: #6129D750 3px 5px 0;
     color: var(--cp00);
+    text-shadow: var(--text-shadow-blue);
     font-family: Baloo Da;
     font-size: 1.1rem;
     cursor: pointer;
