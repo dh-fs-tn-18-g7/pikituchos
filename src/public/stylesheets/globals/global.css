@@ -1,7 +1,7 @@
 
 
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Londrina+Sketch&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Rajdhani:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Da&family=Baloo+Da+2&family=Baloo+Paaji&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da&family=Baloo+Da+2&family=Baloo+Da+2:wght@400;500;600;700;800&family=Baloo+Paaji&family=Londrina+Sketch&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Rajdhani:wght@400;500;600;700&display=swap');
 
 :root {
     /* [ color palette ] */
@@ -9,6 +9,7 @@
     --cp04: #FDCDBF; --cp05: #FEB491; --cp06: #47C8EF; --cp07: #F190A3;
     --cp08: #464646;
     --text-shadow-blue: #27f 0 0 5px;
+    --logo-text-shadow: drop-shadow(#0005 -5px 6px 1px);
     --linearbg-00: #fff;
     --linearbg-01: #ebebec;
     --linearbg-02: #71CDC6;
@@ -22,7 +23,6 @@
     --linearbg-10: #ffe5da;
     --linearbg-11: #fce1dd;
     --appbar-height: 80px;
-    --logo-txt-shadow: drop-shadow(#0005 -5px 6px 1px);
 }
 
 /* [ defaults ]
@@ -64,17 +64,11 @@ li {
 a {
     text-decoration: none;
 }
-img {
-    /* height: auto; */
-}
-svg {
-    /* pointer-events: none; */
-}
 
 /* [ body ]
 ================================================================= */
 html {
-    background-image: url(../pix/htmlBackground.svg);
+    background-image: url(../../images/home/htmlBackground.svg);
     background-size: cover;
     background-position: center;
 }
@@ -85,12 +79,11 @@ body {
     /* background: #1b1d22; */
 }
 
-home {
+body > main {
     display: block;
     width: 100%; height: 100%;
     padding-top: calc( var(--appbar-height) - 16px );
     background: var(--cp00);
-    /* background: #1b1d22; */
 }
 
 /* [ appbar ]
@@ -104,7 +97,6 @@ appbar {
     height: 81px; height: var(--appbar-height);
     padding: 0 2vw;
     position: absolute;
-    background: url("../images/v7_45.png");
     background: var(--cp06);
     box-shadow: 0px 0px 8px #0008;
     font-family: Baloo Da;
@@ -362,7 +354,7 @@ socials header {
     width: 65px;
 } socials header #logo-txt {
     height: 27px;
-    filter: var(--logo-txt-shadow);
+    filter: var(--logo-text-shadow);
 }
 socials main {
     display: block;
@@ -405,7 +397,7 @@ bottom-clouds {
     width: 100%;
     height: 60px;
     padding: 8px 0;
-    background-image: url(../../pix/clouds.svg);
+    background-image: url(../../images/home/clouds.svg);
     background-size: contain;
     filter: drop-shadow(var(--cp02) 0 -15px 0px) drop-shadow(#0003 0 -16px 10px);
     filter: drop-shadow(#0002 0 -8px 5px) drop-shadow(var(--cp06) 0 -15px 0px) drop-shadow(#0003 0 -16px 10px);

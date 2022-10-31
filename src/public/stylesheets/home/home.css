@@ -44,7 +44,7 @@ banner-section slider #slide00 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url("../../pix/baby-walls1.jpg");
+    background-image: url("../../images/home/baby-walls1.jpg");
     background-size: cover;
     color: var(--cp08);
     text-shadow: #fff5 0 0 6px;
@@ -130,7 +130,7 @@ banner-section slider #slide02 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url("../../pix/baby-walls2.jpg");
+    background-image: url("../../images/home/baby-walls2.jpg");
     background-size: cover;
     color: var(--cp08);
     text-shadow: #fff5 0 0 6px;
@@ -172,7 +172,7 @@ banner-section slider #slide03 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url("../../pix/baby-walls3.jpg");
+    background-image: url("../../images/home/baby-walls3.jpg");
     background-size: cover;
     color: var(--cp08);
     text-shadow: #fff5 0 0 6px;

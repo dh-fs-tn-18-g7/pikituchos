@@ -56,25 +56,6 @@ window.addEventListener( "load", ev => {
 			slide.style.transform = `translateX( ${100 * ( index - currentSlideKids )}% )`;
 		} );
 	} );
-    
-	// nextSlides.forEach( nextSlide => {
-	// 	nextSlide.addEventListener( "click", function() {
-	// 		currentSlide === maxSlide ? currentSlide = 0 : currentSlide++;
-            
-	// 		slides.forEach( ( slide, index ) => {
-	// 			slide.style.transform = `translateX( ${100 * ( index - currentSlide )}% )`;
-	// 		} );
-	// 	} );
-	// } );
-	// prevSlides.forEach( prevSlide => {
-	// 	prevSlide.addEventListener( "click", function() {
-	// 		currentSlide === 0 ? currentSlide = maxSlide : currentSlide--;
-            
-	// 		slides.forEach( ( slide, index ) => {
-	// 			slide.style.transform = `translateX(${100 * ( index - currentSlide )}%)`;
-	// 		} );
-	// 	} );
-	// } );
 
     
 

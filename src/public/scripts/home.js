@@ -6,7 +6,6 @@ window.addEventListener( "load", ev => {
     ================================= */
 	let stack = document.createElement( "script" ),
 		baby = document.querySelector( "#baby-logo" ),
-		appbar = document.querySelector( "appbar" ),
 		babysEyes = document.querySelector( "#babys-eyes" ),
 		slides = document.querySelectorAll( "banner-section slider slide" ),
 		currentSlide = 0,
@@ -17,7 +16,7 @@ window.addEventListener( "load", ev => {
     
 	/* [ events ]
     =============================== */
-	stack.src = "scripts/stack.js";
+	stack.src = "src/public/scripts/stack.js";
 	stack.async = true;
 	document.body.appendChild( stack );
 
@@ -28,7 +27,8 @@ window.addEventListener( "load", ev => {
 		babysEyes.innerHTML = pikitucho;
 	} );
 
-
+	/* [ banner slider ]
+    ---------------------------------- */
 	slides.forEach( ( slide, index ) => {
 		slide.style.transform = `translateX( ${index * 100}% )`;
 	} );

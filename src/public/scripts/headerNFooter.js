@@ -1,7 +1,24 @@
 
 
-<link rel="stylesheet" href="styles/global/appbar.css">
-<appbar>
+"use strict";
+window.addEventListener( "load", ev => {
+	/* [ properties ]
+    ================================= */
+	let appbar = document.createElement( "appbar" ),
+		footer = document.createElement( "footer" ),
+		scriptTag = document.querySelector( "script" );
+	/* ------------------------------ */
+    
+	/* [ events ]
+    ================================= */
+	[ appbar.async, footer.async ] = 
+	[ "true", "true" ];
+
+	document.body.prepend( appbar );
+	document.body.insertBefore( footer, scriptTag );
+    
+
+	appbar.innerHTML = `
     <appbar-left>
         <svg id="baby-logo" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" >
@@ -21,15 +38,13 @@
                 <path class="pikituchos-class0" d="M 22.931 16.921 C 22.26 16.361 21.367 16.034 20.667 16.034 C 19.967 16.034 19.056 16.299 18.464 16.796" style="stroke-width: 1px; stroke-linecap: square; stroke: #464646;" />
             </g>
         </svg> 
-        <img id="logos-desc" src="images/home/pikituchos-logo-txt.png" alt="">
+        <img id="logos-desc" src="src/public/images/home/pikituchos-logo-txt.png" alt="">
     </appbar-left>
     <appbar-center>
         <li>Home</li>
-        <!-- <li>Loja</li> -->
         <li>Produtos</li>
         <li>Contato</li>
-        <!-- <li><img src="images/home/stroller.png" alt=""></li> -->
-        <li><img src="images/home/shopping-cart.svg" alt=""></li>
+        <li><img src="src/public/images/home/shopping-cart.svg" alt=""></li>
     </appbar-center>
     <label for="searchbar" class="searchbar">
         <input id="searchbar" type="text" placeholder=" procure aqui. . .">
@@ -40,4 +55,85 @@
         <span>ou</span>
         <btn-signup>Cadastre-se</btn-signup>
     </appbar-right>
-</appbar>
+    `;
+
+	footer.innerHTML = `
+    <newsletter-section>
+        <h2 id="outline">Assine a nossa newsletter</h2>
+        <h2 class="text-bg">Assine a nossa newsletter</h2>
+        <txt>receba ofertas exclusivas para o seu pikitucho <br> diretamente no seu e-mail.</txt>
+        <label for="subscribe">
+            <input type="text" placeholder="digite seu melhor e-mail...">
+            <input type="button" value="Assine agora!">
+        </label>
+    </newsletter-section>
+
+    <top-section>
+        <socials>
+            <header>
+                <img src="src/public/images/home/pikituchos-logo.svg" id="logo" alt=""> 
+                <img src="src/public/images/home/pikituchos-logo-txt.png" id="logo-txt" alt="">
+            </header>
+            <main>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </main>
+            <bottom>
+                <img src="src/public/images/home/ofertas/facebook-svgrepo-com.svg" alt="">
+                <img src="src/public/images/home/ofertas/instagram-svgrepo-com.svg" alt="">
+                <img src="src/public/images/home/ofertas/twitter-svgrepo-com.svg" alt="">
+                <img src="src/public/images/home/ofertas/youtube-svgrepo-com.svg" alt="">
+            </bottom>
+        </socials>
+        <section1>
+            <header>
+                <h3 class="outline">Título</h3>
+                <h3 class="h3">Título</h3>
+            </header>
+            <main>
+                <l href="#">Link text 1</l>
+                <l href="#">Link text 2</l>
+                <l href="#">Link text 3</l>
+                <l href="#">Link text 4</l>
+            </main>
+        </section1>
+        <section2>
+            <header>
+                <h3 class="outline">Título</h3>
+                <h3 class="h3">Título</h3>
+            </header>
+            <main>
+                <l href="#">Link Text 1</l>
+                <l href="#">Link Text 2</l>
+                <l href="#">Link Text 3</l>
+                <l href="#">Link Text 4</l>
+            </main>
+        </section2>
+        <section3>
+            <header>
+                <h3 class="outline">Contact info</h3>
+                <h3 class="h3">Contact info</h3>
+            </header>
+            <main>
+                <li>Av. hifsoioios - hiosoif ojodf, 1230 LF.</li>
+                <li>( 99 ) 9 9999-9999</li>
+            </main>
+        </section3>
+    </top-section>
+    
+    <bottom-section>
+        <bottom-clouds></bottom-clouds>
+        <txt>copyright © 2022 - Present | PIKITUCHOS LTDA.</txt>
+        <txt>Made with 
+            <!-- ♥  -->
+            <img id="footer-heart" src="src/public/images/home/love_icon.svg" alt="">
+            by <a href="#">fs-tn-18</a> <strong>grupo 7</strong>
+            <img id="footer-DH" src="src/public/images/home/DH-Logo.svg" alt="">
+        </txt>
+    </bottom-section>
+    `;
+
+
+    
+    
+} );
+

@@ -1,0 +1,11 @@
+
+
+import do header e footer:
+  head:
+    <link rel="stylesheet" href="src/public/stylesheets/globals/global.css">
+  
+  body:
+    <script src="src/public/scripts/headerNFooter.js"></script>
+
+  novas páginas:
+    o conteúdo das novas páginas precisa ser envelopado na tag <main>
