@@ -11,8 +11,4 @@
 [![Rafaelamelof](https://images.weserv.nl/?url=avatars.githubusercontent.com/u/107894475?v=4&h=100&w=100&fit=cover&mask=circle&maxage=7d)](https://github.com/Rafaelamelof)
 [![member]()]()
 
----
-bootstrap:
-```bash
-$ yarn dev
-```
+
