@@ -1,28 +1,25 @@
 
 
-
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da&family=Baloo+Da+2&family=Baloo+Da+2:wght@400;500;600;700;800&family=Baloo+Paaji&family=Londrina+Sketch&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Rajdhani:wght@400;500;600;700&display=swap');
 
 :root {
-    /* [ color palette ] */
+    --appbar-height: 80px;
+
+    /* [ color palette ] -------------------- */
     --cp00: #ffffff; --cp01: #00A599; --cp02: #FFAEBF; --cp03: #FFFADD;
     --cp04: #FDCDBF; --cp05: #FEB491; --cp06: #47C8EF; --cp07: #F190A3;
     --cp08: #464646;
+
+    /* [ shadows ] -------------------- */
     --text-shadow-blue: #27f 0 0 5px;
     --logo-text-shadow: drop-shadow(#0005 -5px 6px 1px);
-    --linearbg-00: #fff;
-    --linearbg-01: #ebebec;
-    --linearbg-02: #71CDC6;
-    --linearbg-03: #00A599;
-    --linearbg-04: #ebebec;
-    --linearbg-05: #fffef4;
-    --linearbg-06: #fffdf3;
-    --linearbg-07: #fff0e4;
-    --linearbg-08: #fff0e4;
-    --linearbg-09: #fee4d9;
-    --linearbg-10: #ffe5da;
-    --linearbg-11: #fce1dd;
-    --appbar-height: 80px;
+
+    --linearbg-00: #fff;    --linearbg-01: #ebebec;
+    --linearbg-02: #71CDC6; --linearbg-03: #00A599;
+    --linearbg-04: #ebebec; --linearbg-05: #fffef4;
+    --linearbg-06: #fffdf3; --linearbg-07: #fff0e4;
+    --linearbg-08: #fff0e4; --linearbg-09: #fee4d9;
+    --linearbg-10: #ffe5da; --linearbg-11: #fce1dd;
 }
 
 /* [ defaults ]
@@ -58,12 +55,8 @@ l {
     cursor: pointer;
     user-select: none;
 }
-li {
-    list-style: none;
-}
-a {
-    text-decoration: none;
-}
+li { list-style: none; }
+a { text-decoration: none; }
 
 /* [ body ]
 ================================================================= */
@@ -88,14 +81,14 @@ body > main {
 
 /* [ appbar ]
 ================================================================= */
-appbar {
+#appbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1vw;
+    /* gap: 1vw; */
     width: 100%;
     height: 81px; height: var(--appbar-height);
-    padding: 0 2vw;
+    padding: 0 2%;
     position: absolute;
     background: var(--cp06);
     box-shadow: 0px 0px 8px #0008;
@@ -104,29 +97,28 @@ appbar {
     z-index: 9;
     user-select: none;
 }
-appbar-left {
+.appbar-left {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
-    width: 200px;
+    gap: 2%;
+    width: 15%;
+    min-width: fit-content;
+    max-width: 200px;
+    width: clamp( 10px, 10vw, 200px );
     height: 100%;
     cursor: pointer;
 }
 #baby-logo {
-    min-width: 70px;
+    /* min-width: 70px; */
+    width: clamp( 60px, 6.5vw, 70px );
     height: 100%;
 }
 #logos-desc {
-    min-width: 120px;
+    /* max-width: 120px; */
+    width: clamp( 100px, 11vw, 120px );
     filter: drop-shadow(#0005 -5px 6px 1px);
-} appbar-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: var(--appbar-height) * 4;
-    height: 100%;
-} appbar-left h2 {
+} .appbar-left h2 {
     width: 123px;
     color: var(--cp00);
     font-family: Baloo Da;
@@ -134,27 +126,28 @@ appbar-left {
     font-size: 22px;
 }
 
-appbar-center {
+.appbar-nav {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 3.8vw;
-    width: clamp( 100px, 50%, 900px );
+    justify-content: space-evenly;
+    /* gap: 3.8vw; */
+    /* width: clamp( 100px, 50%, 900px ); */
+    width: 55%;
     height: 100%;
     /* background: #000; */
     list-style: none;
 } 
 
-appbar-center li {
+.appbar-nav li {
     color: var(--cp00);
     text-shadow: var(--text-shadow-blue);
     cursor: pointer;
     transition: .3s;
     font-weight: 500;
-} appbar-center li:hover {
+} .appbar-nav li:hover {
     transition: .3s;
     text-shadow: #0005 -3px 5px 2px;
-} appbar-center li img {
+} .appbar-nav li img {
     width: 30px;
     width: 25px;
     transform: translateY(5px);
@@ -168,7 +161,7 @@ appbar-center li {
     padding: 6px;
     border-radius: 23px;
     background: var(--cp00);
-    box-shadow: 0px 4px 4px #0002;
+    box-shadow: inset 0px 2px 5px #27fc;
     color: #848484;
     font-size: 16px;
     cursor: text;
@@ -180,52 +173,59 @@ appbar-center li {
     outline: none;
     overflow-x: hidden;
     font-size: 16px;
-} searchbar-btn {
+} #searchbar-btn {
     display: grid;
     place-items: center;
+    padding: 0 2%;
     width: clamp( 81px, 30%, 81px );
     min-width: fit-content;
-    height: 100%;
+    /* height: 100%; */
     background: var(--cp06);
     stroke-width: 10px;
     border-radius: 23px;
+    border: none;
     box-shadow: 0px 1px 4px #0004;
     cursor: pointer;
     transition: .2s;
-} searchbar-btn txt {
+    
     color: var(--cp00);
     text-shadow: var(--text-shadow-blue);
     font-family: baloo Da;
     font-size: 16px;
     -webkit-text-stroke: #00000012 1px;
-} searchbar-btn txt::before {
+} #searchbar-btn txt {
+}/*  #searchbar-btn txt::before {
     content: "🔎";
-} searchbar-btn:hover {
+}*/ #searchbar-btn:hover {
     transition: .3s;
     box-shadow: -5px 5px 4px #0004;
 }
 
-appbar-right {
+.appbar-right {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 40%;
     height: 100%;
     gap: 6px;
+    gap: 2%;
     color: var(--cp00);
 }
-btn-signin {
+#btn-signin {
     width: 50px;
     color: var(--cp00);
+    border: none;
+    background: transparent;
     text-shadow: var(--text-shadow-blue);
     font-family: Baloo Da;
     font-weight: Regular;
     transition: .2s;
     cursor: pointer;
-} btn-signin:hover {
+} #btn-signin:hover {
     transition: .2s;
     text-shadow: #0005 -3px 5px 2px;
 }
-btn-signup {
+#btn-signup {
     display: grid;
     place-items: center;
     width: 110px;
@@ -234,19 +234,21 @@ btn-signup {
     border: 2px solid #464646b8;
     border-radius: 4px;
     color: var(--cp00);
+    font-size: 1.2vw;
+    font-weight: 600;
     transition: .5s ease-out;
     cursor: pointer;
 } 
-btn-signup:hover {
-    font-family: Baloo Da;
-    text-shadow: #0005 -6px 6px;
+#btn-signup:hover {
+    /* font-family: Baloo Da; */
+    /* text-shadow: #0005 -6px 6px; */
     /* overflow-x: hidden; */
 }
 
 
 /* [ footer ]
 ================================================================ */
-footer {
+body > footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -258,10 +260,11 @@ footer {
 
 /* [ newsletter section ]
 -------------------------- */
-newsletter-section {
+.newsletter {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2vw;
     text-align: center;
     width: clamp( 100px, 80%, 435px );
     padding: 32px 0;
@@ -271,31 +274,31 @@ newsletter-section {
     /* box-shadow: var(--cp05) 0 0 0 12px; */
     box-shadow: var(--cp06) 0 0 0 12px;
 }
-newsletter-section #outline {
+.newsletter #outline {
     color: var(--cp07);
     -webkit-text-stroke: 9px var(--cp00);
     filter: drop-shadow(0px 4px #0005);
     font-family: Baloo Da;
     font-size: 1.8rem;
 }
-newsletter-section .text-bg {
+.newsletter .text-bg {
     position: absolute;
     color: var(--cp07);
     font-family: Baloo Da;
     font-size: 1.8rem;
 }
-newsletter-section txt {
+.newsletter txt {
     color: var(--cp08);
     font-family: Baloo Da;
     font-size: 1.2rem;
     filter: drop-shadow(0 4px 4px #0004);
 }
-newsletter-section label {
+.newsletter label {
     display: grid;
     place-items: center;
     width: 100%;
 }
-newsletter-section label input[type=text] {
+.newsletter label input[type=text] {
     display: block;
     border-radius: 6px;
     border: none;
@@ -306,7 +309,7 @@ newsletter-section label input[type=text] {
     /* box-shadow:#0003 0 5px 10px; */
     box-shadow:inset #27f5 0 2px 5px 2px;
 }
-newsletter-section label input[type=button] {
+.newsletter label input[type=button] {
     display: block;
     border-radius: 6px 6px 6px 6px;
     border: none;
@@ -320,9 +323,9 @@ newsletter-section label input[type=button] {
     font-family: Baloo Da;
     font-size: 1.1rem;
     cursor: pointer;
-} newsletter-section label input[type=button]:hover {
+} .newsletter label input[type=button]:hover {
     animation:  btnPress .3s ;
-} newsletter-section label input[type=button]:active {
+} .newsletter label input[type=button]:active {
     transform: translate( 2px, 5px );
     box-shadow: #6129D750 0px 2px 0;
 }
@@ -330,57 +333,53 @@ newsletter-section label input[type=button] {
 
 /* [ top section ]
 -------------------------- */
-top-section {
+.footer-top {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     width: 90%;
     color: var(--cp00);
     font-size: 1.125rem;
     line-height: 3.5vw;
 }
-socials {
+.socials {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 350px;
     gap: .5rem;
 }
-socials header {
+.socials header {
     display: flex;
     align-items: center;
     gap: .2rem;
-} socials header #logo {
+} .socials header #logo {
     width: 65px;
-} socials header #logo-txt {
+} .socials header #logo-txt {
     height: 27px;
     filter: var(--logo-text-shadow);
 }
-socials main {
-    display: block;
-}
-socials bottom {
+.socials footer {
     display: flex;
     align-items: center;
     gap: .5rem;
-} socials bottom img {
+} .socials footer img {
     width: 28px;
     cursor: pointer;
 }
 
-top-section section1 {
+.footer-top .support {
     display: block;
 }
 
-top-section section1 .h3 {
+.footer-top .support .h3 {
     color: var(--cp05);
 }
 
-top-section section2 .h3 {
+.footer-top .about .h3 {
     color: var(--cp06);
 }
 
-top-section section3 .h3 {
+.footer-top .contact-info .h3 {
     color: var(--cp07);
 }
 .outline {
@@ -389,9 +388,9 @@ top-section section3 .h3 {
     position: absolute;
 }
 
-/* [ bottom section ]
+/* [ bottom section ] ❤️
 -------------------------- */
-bottom-clouds {
+#bottom-clouds {
     display: grid;
     place-items: center;
     width: 100%;
@@ -399,12 +398,15 @@ bottom-clouds {
     padding: 8px 0;
     background-image: url(../../images/home/clouds.svg);
     background-size: contain;
-    filter: drop-shadow(var(--cp02) 0 -15px 0px) drop-shadow(#0003 0 -16px 10px);
-    filter: drop-shadow(#0002 0 -8px 5px) drop-shadow(var(--cp06) 0 -15px 0px) drop-shadow(#0003 0 -16px 10px);
+    background-position-x: center;
+    filter: drop-shadow(#0002 0 -8px 5px) 
+            drop-shadow(var(--cp06) 0 -15px 0px) 
+            drop-shadow(#0003 0 -16px 10px);
+    transition: .3s ease-in-out;
     color: var(--cp00);
     font-size: 14px;
 }
-bottom-section {
+.footer-bottom {
     display: grid;
     place-items: center;
     width: 100%;
@@ -412,18 +414,18 @@ bottom-section {
     padding: 8px 0;
     color: var(--cp08);
     font-size: 14px;
-} bottom-section txt {
+} .footer-bottom txt {
     width: 348px;
     text-align: center;
-} bottom-section :nth-child(2) {
+} .footer-bottom :nth-child(2) {
     color: var(--cp08);
     font-weight: 700;
 }
-bottom-section #footer-heart { width: 15px; }
-bottom-section #footer-DH {
+.footer-bottom #footer-heart { width: 15px; }
+.footer-bottom #footer-DH {
     width: 140px;
     margin-left: .5ch;
 }
-bottom-section img {
+.footer-bottom img {
     pointer-events: none;
 }

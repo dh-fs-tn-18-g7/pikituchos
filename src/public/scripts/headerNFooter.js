@@ -4,7 +4,7 @@
 window.addEventListener( "load", ev => {
 	/* [ properties ]
     ================================= */
-	let appbar = document.createElement( "appbar" ),
+	let appbar = document.createElement( "header" ),
 		footer = document.createElement( "footer" ),
 		scriptTag = document.querySelector( "script" );
 	/* ------------------------------ */
@@ -16,10 +16,11 @@ window.addEventListener( "load", ev => {
 
 	document.body.prepend( appbar );
 	document.body.insertBefore( footer, scriptTag );
+	appbar.id = "appbar";
     
 
 	appbar.innerHTML = `
-    <appbar-left>
+    <article class="appbar-left">
         <svg id="baby-logo" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" >
             <defs>
@@ -39,26 +40,27 @@ window.addEventListener( "load", ev => {
             </g>
         </svg> 
         <img id="logos-desc" src="src/public/images/home/pikituchos-logo-txt.png" alt="">
-    </appbar-left>
-    <appbar-center>
-        <li>Home</li>
-        <li>Produtos</li>
-        <li>Contato</li>
-        <li><img src="src/public/images/home/shopping-cart.svg" alt=""></li>
-    </appbar-center>
+    </article>
+    <nav class="appbar-nav">
+        <li url="#">Home</li>
+        <li url="#">Produtos</li>
+        <li url="#">Contato</li>
+        <li url="#"><img src="src/public/images/home/shopping-cart.svg" alt=""></li>
+    </nav>
+    <article class="appbar-right">
     <label for="searchbar" class="searchbar">
         <input id="searchbar" type="text" placeholder=" procure aqui. . .">
-        <searchbar-btn><txt>buscar</txt></searchbar-btn>
+        <!-- <button id="searchbar-btn"><txt>buscar</txt></button> -->
+        <input id="searchbar-btn" type="button" value="🔎 buscar">
     </label>
-    <appbar-right>
-        <btn-signin>Entre</btn-signin>
+        <a id="btn-signin">Entre</a>
         <span>ou</span>
-        <btn-signup>Cadastre-se</btn-signup>
-    </appbar-right>
+        <a id="btn-signup">Cadastre-se</a>
+    </article>
     `;
 
 	footer.innerHTML = `
-    <newsletter-section>
+    <article class="newsletter">
         <h2 id="outline">Assine a nossa newsletter</h2>
         <h2 class="text-bg">Assine a nossa newsletter</h2>
         <txt>receba ofertas exclusivas para o seu pikitucho <br> diretamente no seu e-mail.</txt>
@@ -66,71 +68,70 @@ window.addEventListener( "load", ev => {
             <input type="text" placeholder="digite seu melhor e-mail...">
             <input type="button" value="Assine agora!">
         </label>
-    </newsletter-section>
+    </article>
 
-    <top-section>
-        <socials>
+    <article class="footer-top">
+        <section class="socials">
             <header>
                 <img src="src/public/images/home/pikituchos-logo.svg" id="logo" alt=""> 
                 <img src="src/public/images/home/pikituchos-logo-txt.png" id="logo-txt" alt="">
             </header>
-            <main>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            </main>
-            <bottom>
-                <img src="src/public/images/home/ofertas/facebook-svgrepo-com.svg" alt="">
-                <img src="src/public/images/home/ofertas/instagram-svgrepo-com.svg" alt="">
-                <img src="src/public/images/home/ofertas/twitter-svgrepo-com.svg" alt="">
-                <img src="src/public/images/home/ofertas/youtube-svgrepo-com.svg" alt="">
-            </bottom>
-        </socials>
-        <section1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <footer>
+                <img src="src/public/images/home/socials/facebook-svgrepo-com.svg" alt="">
+                <img src="src/public/images/home/socials/instagram-svgrepo-com.svg" alt="">
+                <img src="src/public/images/home/socials/twitter-svgrepo-com.svg" alt="">
+                <img src="src/public/images/home/socials/youtube-svgrepo-com.svg" alt="">
+            </footer>
+        </section>
+        <section class="support">
             <header>
-                <h3 class="outline">Título</h3>
-                <h3 class="h3">Título</h3>
+                <h3 class="outline">Support</h3>
+                <h3 class="h3">Support</h3>
             </header>
-            <main>
+            <nav>
                 <l href="#">Link text 1</l>
                 <l href="#">Link text 2</l>
                 <l href="#">Link text 3</l>
                 <l href="#">Link text 4</l>
-            </main>
-        </section1>
-        <section2>
+            </nav>
+        </section>
+        <section class="about">
             <header>
-                <h3 class="outline">Título</h3>
-                <h3 class="h3">Título</h3>
+                <h3 class="outline">About</h3>
+                <h3 class="h3">About</h3>
             </header>
-            <main>
+            <nav>
                 <l href="#">Link Text 1</l>
                 <l href="#">Link Text 2</l>
                 <l href="#">Link Text 3</l>
                 <l href="#">Link Text 4</l>
-            </main>
-        </section2>
-        <section3>
+            </nav>
+        </section>
+        <section class="contact-info">
             <header>
                 <h3 class="outline">Contact info</h3>
                 <h3 class="h3">Contact info</h3>
             </header>
-            <main>
+            <nav>
                 <li>Av. hifsoioios - hiosoif ojodf, 1230 LF.</li>
                 <li>( 99 ) 9 9999-9999</li>
-            </main>
-        </section3>
-    </top-section>
+            </nav>
+        </section>
+    </article>
     
-    <bottom-section>
-        <bottom-clouds></bottom-clouds>
+    <article class="footer-bottom">
+        <section id="bottom-clouds"></section>
         <txt>copyright © 2022 - Present | PIKITUCHOS LTDA.</txt>
         <txt>Made with 
-            <!-- ♥  -->
+            <!-- ❤️ -->
             <img id="footer-heart" src="src/public/images/home/love_icon.svg" alt="">
             by <a href="#">fs-tn-18</a> <strong>grupo 7</strong>
             <img id="footer-DH" src="src/public/images/home/DH-Logo.svg" alt="">
         </txt>
-    </bottom-section>
+    </article>
     `;
+
 
 
     
