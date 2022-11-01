@@ -415,15 +415,16 @@ body > footer {
     color: var(--cp08);
     font-size: 14px;
 } .footer-bottom txt {
-    width: 348px;
-    text-align: center;
+    display: flex;
+    align-items: baseline;
+    gap: clamp( 0px, 0.5vw, 7px );
 } .footer-bottom :nth-child(2) {
     color: var(--cp08);
     font-weight: 700;
 }
 .footer-bottom #footer-heart { width: 15px; }
 .footer-bottom #footer-DH {
-    width: 140px;
+    max-width: 140px;
     margin-left: .5ch;
 }
 .footer-bottom img {
