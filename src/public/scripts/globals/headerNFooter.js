@@ -6,13 +6,18 @@
     ================================= */
 let appbar = document.createElement( "header" ),
 	footer = document.createElement( "footer" ),
-	scriptTag = document.querySelector( "script" );
+	scriptTag = document.querySelector( "script" ),
+	stack = document.createElement( "script" );
 	/* ------------------------------ */
     
 /* [ events ]
     ================================= */
-[ appbar.async, footer.async ] = 
-	[ "true", "true" ];
+stack.src = "src/public/scripts/globals/stack.js";
+document.body.append( stack );
+
+for( let v of [ stack, footer, stack ] ) {
+	v.async = true;
+}
 
 document.body.prepend( appbar );
 document.body.insertBefore( footer, scriptTag );
@@ -134,9 +139,20 @@ footer.innerHTML = `
     </article>
     `;
 
+window.addEventListener( "load", ev => {
+	let baby = document.querySelector( "svg#baby-logo" ),
+		babysEyes = document.querySelector( "#babys-eyes" );
+
+	baby.addEventListener( "mouseenter", ev => {
+		babysEyes.innerHTML = pikituchoHoverin;
+	} );
+	baby.addEventListener( "mouseleave", ev => {
+		babysEyes.innerHTML = pikitucho;
+	} );
+
 
 
     
     
-// } );
+} );
 
