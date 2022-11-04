@@ -5,7 +5,7 @@ import do header e footer:
     <link rel="stylesheet" href="src/public/stylesheets/globals/global.css">
   
   body:
-    <script src="src/public/scripts/headerNFooter.js"></script>
+    <script src="src/public/scripts/globals/global.js"></script>
 
   novas páginas:
     o conteúdo das novas páginas precisa ser envelopado na tag <main>
