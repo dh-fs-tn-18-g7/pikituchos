@@ -145,12 +145,14 @@ body > main {
     transition: .3s;
     font-weight: 500;
 } .appbar-nav li:hover {
-    transition: .3s;
     text-shadow: #0005 -3px 5px 2px;
 } .appbar-nav li img {
     width: 30px;
     width: 25px;
     transform: translateY(5px);
+    transition: .3s;
+} .appbar-nav li:has( img ):hover {
+    filter: drop-shadow( #0005 -3px 5px 2px );
 }
 
 .searchbar {

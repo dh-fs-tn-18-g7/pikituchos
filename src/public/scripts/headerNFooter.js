@@ -1,25 +1,25 @@
 
 
 "use strict";
-window.addEventListener( "load", ev => {
-	/* [ properties ]
+// window.addEventListener( "load", ev => {
+/* [ properties ]
     ================================= */
-	let appbar = document.createElement( "header" ),
-		footer = document.createElement( "footer" ),
-		scriptTag = document.querySelector( "script" );
+let appbar = document.createElement( "header" ),
+	footer = document.createElement( "footer" ),
+	scriptTag = document.querySelector( "script" );
 	/* ------------------------------ */
     
-	/* [ events ]
+/* [ events ]
     ================================= */
-	[ appbar.async, footer.async ] = 
+[ appbar.async, footer.async ] = 
 	[ "true", "true" ];
 
-	document.body.prepend( appbar );
-	document.body.insertBefore( footer, scriptTag );
-	appbar.id = "appbar";
+document.body.prepend( appbar );
+document.body.insertBefore( footer, scriptTag );
+appbar.id = "appbar";
     
 
-	appbar.innerHTML = `
+appbar.innerHTML = `
     <article class="appbar-left">
         <svg id="baby-logo" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" >
@@ -42,16 +42,16 @@ window.addEventListener( "load", ev => {
         <img id="logos-desc" src="src/public/images/home/pikituchos-logo-txt.png" alt="">
     </article>
     <nav class="appbar-nav">
-        <li url="#">Home</li>
-        <li url="#">Produtos</li>
-        <li url="#">Contato</li>
-        <li url="#"><img src="src/public/images/home/shopping-cart.svg" alt=""></li>
+        <li url="#" title="Home">Home</li>
+        <li url="#" title="Produtos">Produtos</li>
+        <li url="#" title="Contatos">Contato</li>
+        <li url="#" title="ver carrinho"><img src="src/public/images/home/shopping-cart.svg" alt=""></li>
     </nav>
     <article class="appbar-right">
     <label for="searchbar" class="searchbar">
         <input id="searchbar" type="text" placeholder=" procure aqui. . .">
         <!-- <button id="searchbar-btn"><txt>buscar</txt></button> -->
-        <input id="searchbar-btn" type="button" value="🔎 buscar">
+        <input id="searchbar-btn" type="button" value="🔎 buscar" title="pesquise algo pelo nome">
     </label>
         <a id="btn-signin">Entre</a>
         <span>ou</span>
@@ -59,7 +59,7 @@ window.addEventListener( "load", ev => {
     </article>
     `;
 
-	footer.innerHTML = `
+footer.innerHTML = `
     <article class="newsletter">
         <h2 id="outline">Assine a nossa newsletter</h2>
         <h2 class="text-bg">Assine a nossa newsletter</h2>
@@ -98,14 +98,16 @@ window.addEventListener( "load", ev => {
         </section>
         <section class="about">
             <header>
-                <h3 class="outline">About</h3>
-                <h3 class="h3">About</h3>
+                <h3 class="outline">Sobre nós</h3>
+                <h3 class="h3">Sobre nós</h3>
             </header>
             <nav>
-                <l href="#">Link Text 1</l>
-                <l href="#">Link Text 2</l>
-                <l href="#">Link Text 3</l>
-                <l href="#">Link Text 4</l>
+                <l href="#">Quem Somos</l>
+                <l href="#">Atendimento</l>
+                <l href="#">Compra Segura</l>
+                <l href="#">Política de Entrega</l>
+                <l href="#">Política de Trocas e Devoluções</l>
+                <l href="#">Política de Privacidade</l>
             </nav>
         </section>
         <section class="contact-info">
@@ -136,5 +138,5 @@ window.addEventListener( "load", ev => {
 
     
     
-} );
+// } );
 
