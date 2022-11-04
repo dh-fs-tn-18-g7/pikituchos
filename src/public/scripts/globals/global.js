@@ -141,7 +141,9 @@ footer.innerHTML = `
 
 window.addEventListener( "load", ev => {
 	let baby = document.querySelector( "svg#baby-logo" ),
-		babysEyes = document.querySelector( "#babys-eyes" );
+		babysEyes = document.querySelector( "#babys-eyes" ),
+		animAreaTrigger = document.querySelector( ".footer-top" ),
+		bottomClouds = document.querySelector( "#bottom-clouds" );
 
 	baby.addEventListener( "mouseenter", ev => {
 		babysEyes.innerHTML = pikituchoHoverin;
@@ -150,7 +152,10 @@ window.addEventListener( "load", ev => {
 		babysEyes.innerHTML = pikitucho;
 	} );
 
-
+	animAreaTrigger.addEventListener( "wheel", ev => {
+		// bottomClouds.style.transition = "13s .3s";
+		bottomClouds.style.backgroundPositionX = "right";
+	} );
 
     
     

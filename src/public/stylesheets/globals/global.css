@@ -404,7 +404,7 @@ body > footer {
     filter: drop-shadow(#0002 0 -8px 5px) 
             drop-shadow(var(--cp06) 0 -15px 0px) 
             drop-shadow(#0003 0 -16px 10px);
-    transition: .3s ease-in-out;
+    transition: 13s .99s cubic-bezier(1, 0.98, 0, 0.02);
     color: var(--cp00);
     font-size: 14px;
 }
