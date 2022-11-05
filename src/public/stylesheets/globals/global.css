@@ -56,7 +56,35 @@ l {
     user-select: none;
 }
 li { list-style: none; }
+
 a { text-decoration: none; }
+
+[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+    
+    display: grid;
+    width: fit-content;
+    padding: 0.5ch 2ch;
+    background: var(--cp08);
+    clip-path: polygon(9.7% 0%, 100.3% 0%, 100.3% 86%, 90.3% 100.5%, 0% 100.3%, 0% 15%);
+    clip-path: polygon(10% 0%, 100% 0%, 100% 85%, 90% 100%, 0% 100%, 0% 15%);
+}
+[data-title]:after {
+    filter: drop-shadow( var( --cp05 ) 0 5px 6px );
+    content: attr(data-title);
+    color: var(--cp05);
+    position: absolute;
+    bottom: -1.6em; left: 100%;
+    white-space: nowrap;
+    opacity: 0;
+    z-index: 99;
+    visibility: hidden;
+}
+[data-title] {
+    position: relative;
+}
 
 /* [ body ]
 ================================================================= */
@@ -129,8 +157,8 @@ body > main {
 .appbar-nav {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    /* gap: 3.8vw; */
+    justify-content: center;
+    gap: 3.8vw;
     /* width: clamp( 100px, 50%, 900px ); */
     width: 55%;
     height: 100%;
@@ -404,6 +432,10 @@ body > footer {
     filter: drop-shadow(#0002 0 -8px 5px) 
             drop-shadow(var(--cp06) 0 -15px 0px) 
             drop-shadow(#0003 0 -16px 10px);
+    background-position-x: center;
+    filter: drop-shadow(#fff 0 0px 0px) 
+            drop-shadow(var(--cp06) 0 -15px 0px) 
+            drop-shadow(#0001 0 -30px 10px);
     transition: 13s .99s cubic-bezier(1, 0.98, 0, 0.02);
     color: var(--cp00);
     font-size: 14px;
@@ -430,5 +462,5 @@ body > footer {
     margin-left: .5ch;
 }
 .footer-bottom img {
-    pointer-events: none;
+    /* pointer-events: none; */
 }

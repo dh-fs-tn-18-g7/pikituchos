@@ -47,16 +47,16 @@ appbar.innerHTML = `
         <img id="logos-desc" src="src/public/images/home/pikituchos-logo-txt.png" alt="">
     </article>
     <nav class="appbar-nav">
-        <li url="#" title="Home">Home</li>
-        <li url="#" title="Produtos">Produtos</li>
-        <li url="#" title="Contatos">Contato</li>
-        <li url="#" title="ver carrinho"><img src="src/public/images/home/shopping-cart.svg" alt=""></li>
+        <li url="#" data-title="Home">Home</li>
+        <li url="#" data-title="Produtos">Produtos</li>
+        <li url="#" data-title="Contatos">Contato</li>
+        <li url="#" data-title="ver carrinho"><img src="src/public/images/home/shopping-cart.svg" alt=""></li>
     </nav>
     <article class="appbar-right">
     <label for="searchbar" class="searchbar">
         <input id="searchbar" type="text" placeholder=" procure aqui. . .">
         <!-- <button id="searchbar-btn"><txt>buscar</txt></button> -->
-        <input id="searchbar-btn" type="button" value="🔎 buscar" title="pesquise algo pelo nome">
+        <input id="searchbar-btn" type="button" value="🔎 buscar">
     </label>
         <a id="btn-signin">Entre</a>
         <span>ou</span>
@@ -134,7 +134,7 @@ footer.innerHTML = `
             <!-- ❤️ -->
             <img id="footer-heart" src="src/public/images/home/love_icon.svg" alt="">
             by <a href="#">fs-tn-18</a> <strong>grupo 7</strong>
-            <img id="footer-DH" src="src/public/images/home/DH-Logo.svg" alt="">
+            <img id="footer-DH" href="https://www.digitalhouse.com/br" src="src/public/images/home/DH-Logo.svg" alt="" data-title="www.digitalhouse.com/br">
         </txt>
     </article>
     `;
@@ -142,8 +142,14 @@ footer.innerHTML = `
 window.addEventListener( "load", ev => {
 	let baby = document.querySelector( "svg#baby-logo" ),
 		babysEyes = document.querySelector( "#babys-eyes" ),
-		animAreaTrigger = document.querySelector( ".footer-top" ),
-		bottomClouds = document.querySelector( "#bottom-clouds" );
+		/* 	cloudAnimTriggerArea = document.querySelector( "body > footer" ), */
+		bottomClouds = document.querySelector( "#bottom-clouds" ),
+		DH = document.querySelector( "img#footer-DH" ),
+		observer = new IntersectionObserver( function( entries ) {
+			entries[0].isIntersecting === true ? 
+				bottomClouds.style.backgroundPositionX = "right" : 
+				console.log( "Ha-ha-ha, você não disse a palavra mágica!" );
+		}, { threshold: [ 0 ] } );
 
 	baby.addEventListener( "mouseenter", ev => {
 		babysEyes.innerHTML = pikituchoHoverin;
@@ -152,10 +158,12 @@ window.addEventListener( "load", ev => {
 		babysEyes.innerHTML = pikitucho;
 	} );
 
-	animAreaTrigger.addEventListener( "wheel", ev => {
-		// bottomClouds.style.transition = "13s .3s";
-		bottomClouds.style.backgroundPositionX = "right";
-	} );
+
+	DH.addEventListener( "click", ev => window.open( DH.getAttribute( "href" ), "_blank" ) );
+	DH.addEventListener( "mouseenter", ev => DH.style.cursor = "pointer" );
+
+    
+	observer.observe( document.querySelector( "#bottom-clouds" ) );
 
     
     
