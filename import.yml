@@ -9,3 +9,21 @@ import do header e footer:
 
   novas páginas:
     o conteúdo das novas páginas precisa ser envelopado na tag <main>
+
+  adicionar o header na pagina com a tag:
+    <page-header></page-header>
+
+  adicionar o footer na pagina com a tag:
+    <page-footer></page-footer>
+
+  clonar um card:
+    <card-pk 
+        name="Product's name" 
+        desc="product description" 
+        real="99" 
+        cents="99"
+        src="src/public/images/home/years-section/product-05.png" 
+        alt=""
+        btn="Ver detalhes"
+    ></card-pk>
+
