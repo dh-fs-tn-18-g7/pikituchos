@@ -59,31 +59,31 @@ li { list-style: none; }
 
 a { text-decoration: none; }
 
+[data-title] {
+    position: relative;
+}
+[data-title]:after {
+    visibility: hidden;
+    opacity: 0;
+    content: attr(data-title);
+    position: absolute;
+    bottom: -1.6em; left: 100%;
+    filter: drop-shadow( var( --cp05 ) 0 5px 6px );
+    white-space: nowrap;
+    color: var(--cp05);
+    z-index: 99;
+}
 [data-title]:hover:after {
-    opacity: 1;
-    transition: all 0.1s ease 0.5s;
     visibility: visible;
-    
+    opacity: 1;
     display: grid;
     width: fit-content;
     padding: 0.5ch 2ch;
     background: var(--cp08);
     clip-path: polygon(9.7% 0%, 100.3% 0%, 100.3% 86%, 90.3% 100.5%, 0% 100.3%, 0% 15%);
     clip-path: polygon(10% 0%, 100% 0%, 100% 85%, 90% 100%, 0% 100%, 0% 15%);
-}
-[data-title]:after {
-    filter: drop-shadow( var( --cp05 ) 0 5px 6px );
-    content: attr(data-title);
-    color: var(--cp05);
-    position: absolute;
-    bottom: -1.6em; left: 100%;
-    white-space: nowrap;
-    opacity: 0;
-    z-index: 99;
-    visibility: hidden;
-}
-[data-title] {
-    position: relative;
+    clip-path: url( #clip01 );
+    transition: all 0.1s ease 0.5s;
 }
 
 /* [ body ]
@@ -428,10 +428,6 @@ body > footer {
     padding: 8px 0;
     background-image: url(../../images/home/clouds.svg);
     background-size: contain;
-    background-position-x: center;
-    filter: drop-shadow(#0002 0 -8px 5px) 
-            drop-shadow(var(--cp06) 0 -15px 0px) 
-            drop-shadow(#0003 0 -16px 10px);
     background-position-x: center;
     filter: drop-shadow(#fff 0 0px 0px) 
             drop-shadow(var(--cp06) 0 -15px 0px) 

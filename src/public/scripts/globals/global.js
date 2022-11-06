@@ -1,7 +1,6 @@
 
 
 "use strict";
-// window.addEventListener( "load", ev => {
 /* [ properties ]
     ================================= */
 let appbar = document.createElement( "header" ),
@@ -140,9 +139,10 @@ footer.innerHTML = `
     `;
 
 window.addEventListener( "load", ev => {
+	/* [ properties ]
+    =================================== */
 	let baby = document.querySelector( "svg#baby-logo" ),
 		babysEyes = document.querySelector( "#babys-eyes" ),
-		/* 	cloudAnimTriggerArea = document.querySelector( "body > footer" ), */
 		bottomClouds = document.querySelector( "#bottom-clouds" ),
 		DH = document.querySelector( "img#footer-DH" ),
 		observer = new IntersectionObserver( function( entries ) {
@@ -150,6 +150,7 @@ window.addEventListener( "load", ev => {
 				bottomClouds.style.backgroundPositionX = "right" : 
 				console.log( "Ha-ha-ha, você não disse a palavra mágica!" );
 		}, { threshold: [ 0 ] } );
+	/* -------------------------------- */
 
 	baby.addEventListener( "mouseenter", ev => {
 		babysEyes.innerHTML = pikituchoHoverin;
@@ -163,7 +164,7 @@ window.addEventListener( "load", ev => {
 	DH.addEventListener( "mouseenter", ev => DH.style.cursor = "pointer" );
 
     
-	observer.observe( document.querySelector( "#bottom-clouds" ) );
+	observer.observe( bottomClouds );
 
     
     
