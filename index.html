@@ -19,6 +19,7 @@
 <body>
         
     <!-- <%- include( "includes/global/appbar.ejs" ) %> -->
+    <page-header></page-header>
 
     <main>
 
@@ -75,86 +76,45 @@
         
         <highlights-section>
             <header>
-                <h2 id="outline">Produtos mais procurados</h2>
-                <h2 class="text-bg">Produtos mais procurados</h2>
+                <title-text name="Produtos mais procurados" color="var(--cp05)"></title-text>
             </header>
             <slider>
-                <card>
-                    <picture>
-                        <img src="src/public/images/home/ofertas/oferta-01.png" alt="">
-                    </picture>
-                    <bottom>
-                        <bottom-bg>
-                            <h3 id="outline">Product's name</h3>
-                            <h3 id="text-bg">Product's name</h3>
-                            <p>product description</p>
-                            <valor>
-                                <p>R$ 99,</p>
-                                <p>99</p>
-                            </valor>
-                            <button title="ver mais detalhes deste produto">
-                                Ver detalhes
-                            </button>
-                        </bottom-bg>
-                    </bottom>
-                </card>
-                <card>
-                    <picture>
-                        <img src="src/public/images/home/ofertas/oferta-02.png" alt="">
-                    </picture>
-                    <bottom>
-                        <bottom-bg>
-                            <h3 id="outline">Product's name</h3>
-                            <h3 id="text-bg">Product's name</h3>
-                            <p>product description</p>
-                            <valor>
-                                <p>R$ 99,</p>
-                                <p>99</p>
-                            </valor>
-                            <button title="ver mais detalhes deste produto">
-                                Ver detalhes
-                            </button>
-                        </bottom-bg>
-                    </bottom>
-                </card>
-                <card>
-                    <picture>
-                        <img src="src/public/images/home/ofertas/oferta-03.png" alt="">
-                    </picture>
-                    <bottom>
-                        <bottom-bg>
-                            <h3 id="outline">Product's name</h3>
-                            <h3 id="text-bg">Product's name</h3>
-                            <p>product description</p>
-                            <valor>
-                                <p>R$ 99,</p>
-                                <p>99</p>
-                            </valor>
-                            <button title="ver mais detalhes deste produto">
-                                Ver detalhes
-                            </button>
-                        </bottom-bg>
-                    </bottom>
-                </card>
-                <card>
-                    <picture>
-                        <img src="src/public/images/home/ofertas/oferta-04.png" alt="">
-                    </picture>
-                    <bottom>
-                        <bottom-bg>
-                            <h3 id="outline">Product's name</h3>
-                            <h3 id="text-bg">Product's name</h3>
-                            <p>product description</p>
-                            <valor>
-                                <p>R$ 99,</p> 
-                                <p>99</p>
-                            </valor>
-                            <button title="ver mais detalhes deste produto">
-                                Ver detalhes
-                            </button>
-                        </bottom-bg>
-                    </bottom>
-                </card>
+                <card-pk 
+                    name="Product's name" 
+                    desc="product description" 
+                    real="99" 
+                    cents="99"
+                    src="src/public/images/home/ofertas/oferta-01.png" 
+                    alt=""
+                    btn="Ver detalhes"
+                ></card-pk>
+                <card-pk 
+                    name="Product's name" 
+                    desc="product description" 
+                    real="99" 
+                    cents="99"
+                    src="src/public/images/home/ofertas/oferta-02.png" 
+                    alt=""
+                    btn="Ver detalhes"
+                ></card-pk>
+                <card-pk 
+                    name="Product's name" 
+                    desc="product description" 
+                    real="99" 
+                    cents="99"
+                    src="src/public/images/home/ofertas/oferta-03.png" 
+                    alt=""
+                    btn="Ver detalhes"
+                ></card-pk>
+                <card-pk 
+                    name="Product's name" 
+                    desc="product description" 
+                    real="99" 
+                    cents="99"
+                    src="src/public/images/home/ofertas/oferta-04.png" 
+                    alt=""
+                    btn="Ver detalhes"
+                ></card-pk>
                 
                 <img class="slider-btn slider-btn-next" src="src/public/images/home/arrowRight.svg" alt="">
                 <img class="slider-btn slider-btn-prev" src="src/public/images/home/arrowLeft.svg" alt="">
@@ -162,7 +122,9 @@
         </highlights-section>
 
         <yourBaby-section>
-            <h2>Seu pequeno é nossa prioridade</h2>
+            <header>
+                <title-text name="Seu pequeno é nossa prioridade" color="var(--cp05)"></title-text>
+            </header>
             <p>Nossa meta é trazer inovação e tudo que há de melhor para seu bebê, para garantir à
                 mamãe e seu pequeno todo o conforto e alegria que a vida pode oferecer.</p>
             <p>É incrível como algo tão pequenino pode te fazer sentir algo tão grande.</p>
@@ -171,86 +133,45 @@
         <years-section>
             <baby-section>
                 <header>
-                    <h2 id="outline">Moda e acessórios <br> para bebês de 0 à 1 ano</h2>
-                    <h2 class="text-bg">Moda e acessórios <br> para bebês de 0 à 1 ano</h2>
+                    <title-text name="Moda e acessórios para bebês <br> de 0 à 1 ano" color="var(--cp05)"></title-text>
                 </header>
                 <slider>
-                    <card>
-                        <picture>
-                            <img src="src/public/images/home/years-section/product-01.png" alt="">
-                        </picture>
-                        <bottom>
-                            <bottom-bg>
-                                <h3 id="outline">Product's name</h3>
-                                <h3 id="text-bg">Product's name</h3>
-                                <p>product description</p>
-                                <valor>
-                                    <p>R$ 99,</p>
-                                    <p>99</p>
-                                </valor>
-                                <button title="ver mais detalhes deste produto">
-                                Ver detalhes
-                                </button>
-                            </bottom-bg>
-                        </bottom>
-                    </card>
-                    <card>
-                        <picture>
-                            <img src="src/public/images/home/years-section/product-02.png" alt="">
-                        </picture>
-                        <bottom>
-                            <bottom-bg>
-                                <h3 id="outline">Product's name</h3>
-                                <h3 id="text-bg">Product's name</h3>
-                                <p>product description</p>
-                                <valor>
-                                    <p>R$ 99,</p>
-                                    <p>99</p>
-                                </valor>
-                                <button title="ver mais detalhes deste produto">
-                                Ver detalhes
-                                </button>
-                            </bottom-bg>
-                        </bottom>
-                    </card>
-                    <card>
-                        <picture>
-                            <img src="src/public/images/home/years-section/product-03.png" alt="">
-                        </picture>
-                        <bottom>
-                            <bottom-bg>
-                                <h3 id="outline">Product's name</h3>
-                                <h3 id="text-bg">Product's name</h3>
-                                <p>product description</p>
-                                <valor>
-                                    <p>R$ 99,</p>
-                                    <p>99</p>
-                                </valor>
-                                <button title="ver mais detalhes deste produto">
-                                Ver detalhes
-                                </button>
-                            </bottom-bg>
-                        </bottom>
-                    </card>
-                    <card>
-                        <picture>
-                            <img src="src/public/images/home/years-section/product-04.png" alt="">
-                        </picture>
-                        <bottom>
-                            <bottom-bg>
-                                <h3 id="outline">Product's name</h3>
-                                <h3 id="text-bg">Product's name</h3>
-                                <p>product description</p>
-                                <valor>
-                                    <p>R$ 99,</p>
-                                    <p>99</p>
-                                </valor>
-                                <button title="ver mais detalhes deste produto">
-                                Ver detalhes
-                                </button>
-                            </bottom-bg>
-                        </bottom>
-                    </card>
+                    <card-pk 
+                        name="Product's name" 
+                        desc="product description" 
+                        real="99" 
+                        cents="99"
+                        src="src/public/images/home/years-section/product-01.png" 
+                        alt=""
+                        btn="Ver detalhes"
+                    ></card-pk>
+                    <card-pk 
+                        name="Product's name" 
+                        desc="product description" 
+                        real="99" 
+                        cents="99"
+                        src="src/public/images/home/years-section/product-02.png" 
+                        alt=""
+                        btn="Ver detalhes"
+                    ></card-pk>
+                    <card-pk 
+                        name="Product's name" 
+                        desc="product description" 
+                        real="99" 
+                        cents="99"
+                        src="src/public/images/home/years-section/product-03.png" 
+                        alt=""
+                        btn="Ver detalhes"
+                    ></card-pk>
+                    <card-pk 
+                        name="Product's name" 
+                        desc="product description" 
+                        real="99" 
+                        cents="99"
+                        src="src/public/images/home/years-section/product-04.png" 
+                        alt=""
+                        btn="Ver detalhes"
+                    ></card-pk>
                 
                     <img class="slider-btn slider-btn-next" src="src/public/images/home/arrowRight.svg" alt="">
                     <img class="slider-btn slider-btn-prev" src="src/public/images/home/arrowLeft.svg" alt="">
@@ -258,86 +179,45 @@
             </baby-section>
             <kids-section>
                 <header>
-                    <h2 id="outline">Moda e acessórios para <br> pequenos de 2 à 3 anos</h2>
-                    <h2 class="text-bg">Moda e acessórios para <br> pequenos de 2 à 3 anos</h2>
+                    <title-text name="Moda e acessórios para pequenos <br> de 2 à 3 anos" color="var(--cp05)"></title-text>
                 </header>
                 <slider>
-                    <card>
-                        <picture>
-                            <img src="src/public/images/home/years-section/product-05.png" alt="">
-                        </picture>
-                        <bottom>
-                            <bottom-bg>
-                                <h3 id="outline">Product's name</h3>
-                                <h3 id="text-bg">Product's name</h3>
-                                <p>product description</p>
-                                <valor>
-                                    <p>R$ 99,</p>
-                                    <p>99</p>
-                                </valor>
-                                <button title="ver mais detalhes deste produto">
-                                Ver detalhes
-                                </button>
-                            </bottom-bg>
-                        </bottom>
-                    </card>
-                    <card>
-                        <picture>
-                            <img src="src/public/images/home/years-section/product-06.png" alt="">
-                        </picture>
-                        <bottom>
-                            <bottom-bg>
-                                <h3 id="outline">Product's name</h3>
-                                <h3 id="text-bg">Product's name</h3>
-                                <p>product description</p>
-                                <valor>
-                                    <p>R$ 99,</p>
-                                    <p>99</p>
-                                </valor>
-                                <button title="ver mais detalhes deste produto">
-                                Ver detalhes
-                                </button>
-                            </bottom-bg>
-                        </bottom>
-                    </card>
-                    <card>
-                        <picture>
-                            <img src="src/public/images/home/years-section/product-07.png" alt="">
-                        </picture>
-                        <bottom>
-                            <bottom-bg>
-                                <h3 id="outline">Product's name</h3>
-                                <h3 id="text-bg">Product's name</h3>
-                                <p>product description</p>
-                                <valor>
-                                    <p>R$ 99,</p>
-                                    <p>99</p>
-                                </valor>
-                                <button title="ver mais detalhes deste produto">
-                                Ver detalhes
-                                </button>
-                            </bottom-bg>
-                        </bottom>
-                    </card>
-                    <card>
-                        <picture>
-                            <img src="src/public/images/home/years-section/product-08.png" alt="">
-                        </picture>
-                        <bottom>
-                            <bottom-bg>
-                                <h3 id="outline">Product's name</h3>
-                                <h3 id="text-bg">Product's name</h3>
-                                <p>product description</p>
-                                <valor>
-                                    <p>R$ 99,</p>
-                                    <p>99</p>
-                                </valor>
-                                <button title="ver mais detalhes deste produto">
-                                Ver detalhes
-                                </button>
-                            </bottom-bg>
-                        </bottom>
-                    </card>
+                    <card-pk 
+                        name="Product's name" 
+                        desc="product description" 
+                        real="99" 
+                        cents="99"
+                        src="src/public/images/home/years-section/product-05.png" 
+                        alt=""
+                        btn="Ver detalhes"
+                    ></card-pk>
+                    <card-pk 
+                        name="Product's name" 
+                        desc="product description" 
+                        real="99" 
+                        cents="99"
+                        src="src/public/images/home/years-section/product-06.png" 
+                        alt=""
+                        btn="Ver detalhes"
+                    ></card-pk>
+                    <card-pk 
+                        name="Product's name" 
+                        desc="product description" 
+                        real="99" 
+                        cents="99"
+                        src="src/public/images/home/years-section/product-07.png" 
+                        alt=""
+                        btn="Ver detalhes"
+                    ></card-pk>
+                    <card-pk 
+                        name="Product's name" 
+                        desc="product description" 
+                        real="99" 
+                        cents="99"
+                        src="src/public/images/home/years-section/product-08.png" 
+                        alt=""
+                        btn="Ver detalhes"
+                    ></card-pk>
                 
                     <img class="slider-btn slider-btn-next" src="src/public/images/home/arrowRight.svg" alt="">
                     <img class="slider-btn slider-btn-prev" src="src/public/images/home/arrowLeft.svg" alt="">
@@ -348,8 +228,7 @@
         
         <testimonials-section>
             <header>
-                <h2 id="outline">O que outras mamães estão dizendo <br> sobre nossos serviços</h2>
-                <h2 class="text-bg">O que outras mamães estão dizendo <br> sobre nossos serviços</h2>
+                <title-text name="O que outras mamâes estão dizendo <br> sobre nossos serviços" color="var(--cp07)"></title-text>
             </header>
             <main>
                 <card>
@@ -376,6 +255,7 @@
     </main>
         
     <!-- <%- include( "includes/global/footer.ejs" ) %> -->
+    <page-footer></page-footer>
     
     <script src="src/public/scripts/globals/global.js"></script>
     <script src="src/public/scripts/home.js"></script>

@@ -234,20 +234,6 @@ highlights-section header {
     padding: 3rem 0;
 }
 
-highlights-section header #outline {
-    color: var(--cp07);
-    -webkit-text-stroke: 10px var(--cp00);
-    filter: drop-shadow(0px 4px #0005);
-    font-family: Baloo Da;
-    font-size: 2.5rem;
-}
-highlights-section header .text-bg {
-    position: absolute;
-    color: var(--cp05);
-    font-family: Baloo Da;
-    font-size: 2.5rem;
-}
-
 highlights-section > slider {
     display: flex;
     align-items: center;
@@ -255,126 +241,22 @@ highlights-section > slider {
     /* overflow-x: hidden; */
 }
 
-/* [ cards ]
------------------------- */
-/* position: absolute; */
-highlights-section > slider card {
-    display: block;
-    width: clamp( 100px, 20vw, 450px );
-    width: 234px;
-    height: calc(234px * 1.8);
-    background: #fff;
-    box-shadow: #47c8ef 0 0px 1px 10px;
-    border-radius: 18px;
-    transition: .3s ease-in;
-}
-highlights-section > slider card:hover {
-    filter: drop-shadow(2px 4px 6px #0005);
-    z-index: 3;
-}
-
-highlights-section > slider card picture {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 57%;
-}
-
-highlights-section > slider card 
-picture img {
-    transform: translateY(-55px) scale(1.1);
-    filter: drop-shadow(#0008 0 5px 3px);
-    cursor: pointer;
-    transition: .15s ease-in;
-}
-highlights-section > slider card 
-picture img:hover {
-    transition: .3s cubic-bezier(0.99, -0.74, 0, 2.2);
-    transform: translateY(-55px) scale(1.3);
-    filter: drop-shadow(#000c 0 5px 3px);
-}
-
-highlights-section > slider card bottom {
-    display: block;
-    background: var(--cp04);
-    box-shadow: #0002 0 5px 13px;
-    border-radius: 18px;
-    border: var(--cp07) solid 2px;
-    padding: 8px;
-}
-
-highlights-section > slider 
-card bottom bottom-bg {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 8px;
-    border: var(--cp00) dashed 4px;
-    border-radius: 18px;
-    color: var(--cp08);
-}
-highlights-section > slider 
-card bottom bottom-bg:hover {
-    border: var(--cp08) dashed 4px;
-}
-
-highlights-section > slider 
-card bottom bottom-bg #outline {
-    color: var(--cp07);
-    -webkit-text-stroke: 10px var(--cp00);
-    filter: drop-shadow(0px 4px #0005);
-    font-family: Baloo Da;
-}
-highlights-section > slider 
-card bottom bottom-bg #text-bg {
-    position: absolute;
-    color: var(--cp08);
-    font-family: Baloo Da;
-}
-
-highlights-section > slider 
-card bottom valor {
-    display: flex;
-    justify-content: end;
-    font-size: 1.6rem;
-    font-weight: bolder;
-    color: var(--cp08);
-} 
-
-highlights-section > slider 
-card bottom valor :nth-child(2) {
-    font-size: 1rem;
-    margin-top: 0.5ch;
-}
-
-highlights-section > slider card 
-bottom bottom-bg button {
-    border-radius: 7px;
-    border: none;
-    box-shadow: var(--cp08) 0 3px 2px;
-    outline: none;
-    background: var(--cp07);
-    padding: .5ch 0;
-    color: var(--cp00);
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-}
-highlights-section > slider card 
-bottom bottom-bg button:hover {
-    background: var(--cp06);
-}
-
 /* [ your baby section ]
 ================================================================= */
 yourBaby-section {
-    display: block;
-    min-height: 350px;
+    /* display: block;
+    min-height: 350px; */
+    
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding-bottom: 2rem;
     background-image: linear-gradient(
         to bottom,
         var(--linearbg-02),
         var(--linearbg-03)
     );
+    user-select: none;
 }
 
 /* [ years section ]
@@ -382,6 +264,7 @@ yourBaby-section {
 years-section {
     display: flex;
     flex-direction: column;
+    padding-bottom: 2rem;
     background-image: linear-gradient(
         to bottom,
         var(--linearbg-04),
@@ -389,7 +272,6 @@ years-section {
         var(--linearbg-06),
         var(--linearbg-07)
     );
-    padding-bottom: 2rem;
     user-select: none;
 }
 
@@ -410,37 +292,21 @@ kids-section header {
     line-height: 2.9rem;
 }
 
-baby-section header #outline,
-kids-section header #outline {
-    color: var(--cp07);
-    -webkit-text-stroke: 10px var(--cp00);
-    filter: drop-shadow(0px 4px #0005);
-    font-family: Baloo Da;
-    font-size: 2.5rem;
-}
-baby-section header .text-bg,
-kids-section header .text-bg {
-    position: absolute;
-    color: var(--cp05);
-    font-family: Baloo Da;
-    font-size: 2.5rem;
-}
-
 baby-section > slider,
 kids-section > slider {
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: space-evenly;
     min-height: 649px;
     overflow-x: hidden;
 }
-baby-section > slider card,
+/* baby-section > slider card,
 kids-section > slider card {
     display: block;
     width: 150px;
     height: 150px;
     background: #ff85;
-}
+} */
 
 /* [ cards ]
 ------------------------ */
