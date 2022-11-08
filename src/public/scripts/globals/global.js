@@ -16,7 +16,7 @@ let appbar = document.querySelector( "page-header" ),
 stack.src = "src/public/scripts/globals/stack.js";
 document.body.append( stack );
 
-for( let v of [ stack, footer, stack ] ) {
+for( let v of [ stack ] ) {
 	v.async = true;
 }
 
@@ -33,9 +33,10 @@ appbar.innerHTML = `<style>
         justify-content: space-between;
         /* gap: 1vw; */
         width: 100%;
-        height: 81px; height: var(--appbar-height);
+        height: var(--appbar-height);
         padding: 0 2%;
         position: absolute;
+        top: 0; left: 0;
         background: var(--cp06);
         box-shadow: 0px 0px 8px #0008;
         font-family: Baloo Da;
