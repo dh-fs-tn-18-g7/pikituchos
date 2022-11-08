@@ -3,10 +3,10 @@
 "use strict";
 /* [ properties ]
     ================================= */
-let appbar = document.querySelector( "page-header" ),
-	// pageHeaderTemplate = document.createElement( "template" ),
-	footer = document.querySelector( "page-footer" ),
-	// pageFooterTemplate = document.createElement( "template" ),
+let /* appbar = document.querySelector( "page-header" ), */
+	pageHeaderTemplate = document.createElement( "template" ),
+	/* footer = document.querySelector( "page-footer" ), */
+	pageFooterTemplate = document.createElement( "template" ),
 	scriptTag = document.querySelector( "script" ),
 	stack = document.createElement( "script" );
 /* ------------------------------ */
@@ -22,9 +22,72 @@ for( let v of [ stack ] ) {
 
 // document.body.prepend( appbar );
 // document.body.insertBefore( footer, scriptTag );
-appbar.id = "appbar";
 
-appbar.innerHTML = `<style>
+pageHeaderTemplate.innerHTML = `<style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Da&family=Baloo+Da+2&family=Baloo+Da+2:wght@400;500;600;700;800&family=Baloo+Paaji&family=Londrina+Sketch&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Rajdhani:wght@400;500;600;700&display=swap');
+    /* [ defaults ]
+    ================================================================= */
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        font-family: 'Baloo Da 2', cursive;
+        margin: 0; padding: 0;
+        position: relative;
+        outline: none;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(
+            to bottom,
+            var( --cp06 ),
+            var( --cp07 )
+        ); 
+        border-radius: 2rem;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+        background: #21232990;
+        background: var( --cp05 );
+        backdrop-filter: blur( 12px );
+    }
+    l {
+        display: list-item;
+        text-align: -webkit-match-parent;
+        list-style: none;
+        cursor: pointer;
+        user-select: none;
+    }
+    li { list-style: none; }
+
+    a { text-decoration: none; }
+
+    [data-title] {
+        position: relative;
+    }
+    [data-title]:after {
+        visibility: hidden;
+        opacity: 0;
+        content: attr(data-title);
+        position: absolute;
+        bottom: -1.6em; left: 100%;
+        filter: drop-shadow( var( --cp05 ) 0 5px 6px );
+        white-space: nowrap;
+        color: var(--cp05);
+        z-index: 99;
+    }
+    [data-title]:hover:after {
+        visibility: visible;
+        opacity: 1;
+        display: grid;
+        width: fit-content;
+        padding: 0.5ch 2ch;
+        background: var(--cp08);
+        clip-path: polygon(9.7% 0%, 100.3% 0%, 100.3% 86%, 90.3% 100.5%, 0% 100.3%, 0% 15%);
+        clip-path: polygon(10% 0%, 100% 0%, 100% 85%, 90% 100%, 0% 100%, 0% 15%);
+        clip-path: url( #clip01 );
+        transition: all 0.1s ease 0.5s;
+    }
     /* [ appbar ]
     ================================================================= */
     #appbar {
@@ -231,9 +294,64 @@ appbar.innerHTML = `<style>
     <span>ou</span>
     <a id="btn-signup">Cadastre-se</a>
 </article>
+<script>
+    window.addEventListener( "load", ev => {
+        /* [ properties ]
+        =================================== */
+        let baby = document.querySelector( "svg#baby-logo" ),
+            babysEyes = document.querySelector( "#babys-eyes" );
+        /* -------------------------------- */
+    
+        baby.addEventListener( "mouseenter", ev => {
+            babysEyes.innerHTML = pikituchoHoverin;
+        } );
+        baby.addEventListener( "mouseleave", ev => {
+            babysEyes.innerHTML = pikitucho;
+        } );
+    } );
+</script>
 `;
 
-footer.innerHTML = `<style>
+pageFooterTemplate.innerHTML = `<style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Da&family=Baloo+Da+2&family=Baloo+Da+2:wght@400;500;600;700;800&family=Baloo+Paaji&family=Londrina+Sketch&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+    /* [ defaults ]
+    ================================================================= */
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        font-family: 'Baloo Da 2', cursive;
+        margin: 0; padding: 0;
+        position: relative;
+        outline: none;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(
+            to bottom,
+            var( --cp06 ),
+            var( --cp07 )
+        ); 
+        border-radius: 2rem;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+        background: #21232990;
+        background: var( --cp05 );
+        backdrop-filter: blur( 12px );
+    }
+    l {
+        display: list-item;
+        text-align: -webkit-match-parent;
+        list-style: none;
+        cursor: pointer;
+        user-select: none;
+    }
+    li { list-style: none; }
+
+    a { text-decoration: none; }
+
     /* [ footer ]
     ================================================================ */
     page-footer {
@@ -491,6 +609,30 @@ footer.innerHTML = `<style>
         <img id="footer-DH" href="https://www.digitalhouse.com/br" src="src/public/images/home/DH-Logo.svg" alt="" data-title="www.digitalhouse.com/br">
     </txt>
 </article>
+<script>
+    window.addEventListener( "load", ev => {
+        /* [ properties ]
+        =================================== */
+        let bottomClouds = document.querySelector( "#bottom-clouds" ),
+            DH = document.querySelector( "img#footer-DH" ),
+            observer = new IntersectionObserver( function( entries ) {
+                entries[0].isIntersecting === true ? 
+                    bottomClouds.style.backgroundPositionX = "right" : 
+                    console.log( "Ha-ha-ha, você não disse a palavra mágica!" );
+            }, { threshold: [ 0 ] } );
+        /* -------------------------------- */
+
+
+        DH.addEventListener( "click", ev => window.open( DH.getAttribute( "href" ), "_blank" ) );
+        DH.addEventListener( "mouseenter", ev => DH.style.cursor = "pointer" );
+
+        
+        observer.observe( bottomClouds );
+
+        
+        
+    } );
+</script>
 `;
 
 /* [ title text template ]
@@ -689,37 +831,67 @@ class Card extends HTMLElement {
 }
 window.customElements.define( "card-pk", Card );
 
+class Appbar extends HTMLElement {
+	constructor() {
+		super();
+		this.attachShadow( { mode: "open" } );
+		this.shadowRoot.append( pageHeaderTemplate.content.cloneNode( true ) );
+		this.id = ( "appbar" );
+	} 
+	connectedCallback() {
+		this.render();
+	}
+	render() {
+	}
+}
+window.customElements.define( "page-header", Appbar );
+
+class Footer extends HTMLElement {
+	constructor() {
+		super();
+		this.attachShadow( { mode: "open" } );
+		this.shadowRoot.append( pageFooterTemplate.content.cloneNode( true ) );
+		// this.id = ( "footer" );
+	} 
+	connectedCallback() {
+		this.render();
+	}
+	render() {
+	}
+}
+window.customElements.define( "page-footer", Footer );
 
 
-window.addEventListener( "load", ev => {
-	/* [ properties ]
+
+// window.addEventListener( "load", ev => {
+/* [ properties ]
     =================================== */
-	let baby = document.querySelector( "svg#baby-logo" ),
-		babysEyes = document.querySelector( "#babys-eyes" ),
-		bottomClouds = document.querySelector( "#bottom-clouds" ),
-		DH = document.querySelector( "img#footer-DH" ),
-		observer = new IntersectionObserver( function( entries ) {
-			entries[0].isIntersecting === true ? 
-				bottomClouds.style.backgroundPositionX = "right" : 
-				console.log( "Ha-ha-ha, você não disse a palavra mágica!" );
-		}, { threshold: [ 0 ] } );
-	/* -------------------------------- */
+// let baby = document.querySelector( "svg#baby-logo" ),
+// 	babysEyes = document.querySelector( "#babys-eyes" ),
+// 	bottomClouds = document.querySelector( "#bottom-clouds" ),
+// 	DH = document.querySelector( "img#footer-DH" ),
+// 	observer = new IntersectionObserver( function( entries ) {
+// 		entries[0].isIntersecting === true ? 
+// 			bottomClouds.style.backgroundPositionX = "right" : 
+// 			console.log( "Ha-ha-ha, você não disse a palavra mágica!" );
+// 	}, { threshold: [ 0 ] } );
+/* -------------------------------- */
 
-	baby.addEventListener( "mouseenter", ev => {
-		babysEyes.innerHTML = pikituchoHoverin;
-	} );
-	baby.addEventListener( "mouseleave", ev => {
-		babysEyes.innerHTML = pikitucho;
-	} );
+// baby.addEventListener( "mouseenter", ev => {
+// 	babysEyes.innerHTML = pikituchoHoverin;
+// } );
+// baby.addEventListener( "mouseleave", ev => {
+// 	babysEyes.innerHTML = pikitucho;
+// } );
 
 
-	DH.addEventListener( "click", ev => window.open( DH.getAttribute( "href" ), "_blank" ) );
-	DH.addEventListener( "mouseenter", ev => DH.style.cursor = "pointer" );
-
-    
-	observer.observe( bottomClouds );
+// 	DH.addEventListener( "click", ev => window.open( DH.getAttribute( "href" ), "_blank" ) );
+// 	DH.addEventListener( "mouseenter", ev => DH.style.cursor = "pointer" );
 
     
+// 	observer.observe( bottomClouds );
+
     
-} );
+    
+// } );
 

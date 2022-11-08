@@ -107,6 +107,26 @@ body > main {
     background: var(--cp00);
 }
 
+/* [ appbar ]
+----------------------------------------------------------------- */
+page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 1vw; */
+    width: 100%;
+    height: var(--appbar-height);
+    padding: 0 2%;
+    position: absolute;
+    top: 0; left: 0;
+    background: var(--cp06);
+    box-shadow: 0px 0px 8px #0008;
+    font-family: Baloo Da;
+    font-size: 18px;
+    z-index: 9;
+    user-select: none;
+}
+
 /* [ cards ]
 ----------------------------------------------------------------- */
 card-pk {
@@ -124,3 +144,14 @@ card-pk:hover {
     z-index: 3;
 }
 
+/* [ footer ]
+================================================================ */
+page-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    padding-top: 5rem;
+    background: var(--cp07);
+    user-select: none;
+}
