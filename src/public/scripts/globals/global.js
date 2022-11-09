@@ -23,240 +23,7 @@ for( let v of [ stack ] ) {
 // document.body.prepend( appbar );
 // document.body.insertBefore( footer, scriptTag );
 
-pageHeaderTemplate.innerHTML = `<style>
-    @import url('https://fonts.googleapis.com/css2?family=Baloo+Da&family=Baloo+Da+2&family=Baloo+Da+2:wght@400;500;600;700;800&family=Baloo+Paaji&family=Londrina+Sketch&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Rajdhani:wght@400;500;600;700&display=swap');
-    /* [ defaults ]
-    ================================================================= */
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-        font-family: 'Baloo Da 2', cursive;
-        margin: 0; padding: 0;
-        position: relative;
-        outline: none;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: linear-gradient(
-            to bottom,
-            var( --cp06 ),
-            var( --cp07 )
-        ); 
-        border-radius: 2rem;
-    }
-    ::-webkit-scrollbar {
-        width: 10px;
-        background: #21232990;
-        background: var( --cp05 );
-        backdrop-filter: blur( 12px );
-    }
-    l {
-        display: list-item;
-        text-align: -webkit-match-parent;
-        list-style: none;
-        cursor: pointer;
-        user-select: none;
-    }
-    li { list-style: none; }
-
-    a { text-decoration: none; }
-
-    [data-title] {
-        position: relative;
-    }
-    [data-title]:after {
-        visibility: hidden;
-        opacity: 0;
-        content: attr(data-title);
-        position: absolute;
-        bottom: -1.6em; left: 100%;
-        filter: drop-shadow( var( --cp05 ) 0 5px 6px );
-        white-space: nowrap;
-        color: var(--cp05);
-        z-index: 99;
-    }
-    [data-title]:hover:after {
-        visibility: visible;
-        opacity: 1;
-        display: grid;
-        width: fit-content;
-        padding: 0.5ch 2ch;
-        background: var(--cp08);
-        clip-path: polygon(9.7% 0%, 100.3% 0%, 100.3% 86%, 90.3% 100.5%, 0% 100.3%, 0% 15%);
-        clip-path: polygon(10% 0%, 100% 0%, 100% 85%, 90% 100%, 0% 100%, 0% 15%);
-        clip-path: url( #clip01 );
-        transition: all 0.1s ease 0.5s;
-    }
-    /* [ appbar ]
-    ================================================================= */
-    #appbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        /* gap: 1vw; */
-        width: 100%;
-        height: var(--appbar-height);
-        padding: 0 2%;
-        position: absolute;
-        top: 0; left: 0;
-        background: var(--cp06);
-        box-shadow: 0px 0px 8px #0008;
-        font-family: Baloo Da;
-        font-size: 18px;
-        z-index: 9;
-        user-select: none;
-    }
-    .appbar-left {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2%;
-        width: 15%;
-        min-width: fit-content;
-        max-width: 200px;
-        width: clamp( 10px, 10vw, 200px );
-        height: 100%;
-        cursor: pointer;
-    }
-    #baby-logo {
-        /* min-width: 70px; */
-        width: clamp( 60px, 6.5vw, 70px );
-        height: 100%;
-    }
-    #logos-desc {
-        /* max-width: 120px; */
-        width: clamp( 100px, 11vw, 120px );
-        filter: drop-shadow(#0005 -5px 6px 1px);
-    } .appbar-left h2 {
-        width: 123px;
-        color: var(--cp00);
-        font-family: Baloo Da;
-        font-weight: Regular;
-        font-size: 22px;
-    }
-
-    .appbar-nav {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 3.8vw;
-        /* width: clamp( 100px, 50%, 900px ); */
-        width: 55%;
-        height: 100%;
-        /* background: #000; */
-        list-style: none;
-    } 
-
-    .appbar-nav li {
-        color: var(--cp00);
-        text-shadow: var(--text-shadow-blue);
-        cursor: pointer;
-        transition: .3s;
-        font-weight: 500;
-    } .appbar-nav li:hover {
-        text-shadow: #0005 -3px 5px 2px;
-    } .appbar-nav li img {
-        width: 30px;
-        width: 25px;
-        transform: translateY(5px);
-        transition: .3s;
-    } .appbar-nav li:has( img ):hover {
-        filter: drop-shadow( #0005 -3px 5px 2px );
-    }
-
-    .searchbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 36px;
-        padding: 6px;
-        border-radius: 23px;
-        background: var(--cp00);
-        box-shadow: inset 0px 2px 5px #27fc;
-        color: #848484;
-        font-size: 16px;
-        cursor: text;
-    } .searchbar input {
-        width: 70%;
-        padding-left: 0px;
-        border-radius: 2rem;
-        border: 0px;
-        outline: none;
-        overflow-x: hidden;
-        font-size: 16px;
-    } #searchbar-btn {
-        display: grid;
-        place-items: center;
-        padding: 0 2%;
-        width: clamp( 81px, 30%, 81px );
-        min-width: fit-content;
-        /* height: 100%; */
-        background: var(--cp06);
-        stroke-width: 10px;
-        border-radius: 23px;
-        border: none;
-        box-shadow: 0px 1px 4px #0004;
-        cursor: pointer;
-        transition: .2s;
-        
-        color: var(--cp00);
-        text-shadow: var(--text-shadow-blue);
-        font-family: baloo Da;
-        font-size: 16px;
-        -webkit-text-stroke: #00000012 1px;
-    } #searchbar-btn txt {
-    }/*  #searchbar-btn txt::before {
-        content: "🔎";
-    }*/ #searchbar-btn:hover {
-        transition: .3s;
-        box-shadow: -5px 5px 4px #0004;
-    }
-
-    .appbar-right {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 40%;
-        height: 100%;
-        gap: 6px;
-        gap: 2%;
-        color: var(--cp00);
-    }
-    #btn-signin {
-        width: 50px;
-        color: var(--cp00);
-        border: none;
-        background: transparent;
-        text-shadow: var(--text-shadow-blue);
-        font-family: Baloo Da;
-        font-weight: Regular;
-        transition: .2s;
-        cursor: pointer;
-    } #btn-signin:hover {
-        transition: .2s;
-        text-shadow: #0005 -3px 5px 2px;
-    }
-    #btn-signup {
-        display: grid;
-        place-items: center;
-        width: 110px;
-        height: 40%;
-        background: var(--cp07);
-        border: 2px solid #464646b8;
-        border-radius: 4px;
-        color: var(--cp00);
-        font-size: 1.2vw;
-        font-weight: 600;
-        transition: .5s ease-out;
-        cursor: pointer;
-    } 
-    #btn-signup:hover {
-        /* font-family: Baloo Da; */
-        /* text-shadow: #0005 -6px 6px; */
-        /* overflow-x: hidden; */
-    }
-</style>
+var appbarTemplate = `
 <article class="appbar-left">
     <svg id="baby-logo" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" >
@@ -312,231 +79,7 @@ pageHeaderTemplate.innerHTML = `<style>
 </script>
 `;
 
-pageFooterTemplate.innerHTML = `<style>
-    @import url('https://fonts.googleapis.com/css2?family=Baloo+Da&family=Baloo+Da+2&family=Baloo+Da+2:wght@400;500;600;700;800&family=Baloo+Paaji&family=Londrina+Sketch&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Rajdhani:wght@400;500;600;700&display=swap');
-
-    /* [ defaults ]
-    ================================================================= */
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-        font-family: 'Baloo Da 2', cursive;
-        margin: 0; padding: 0;
-        position: relative;
-        outline: none;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: linear-gradient(
-            to bottom,
-            var( --cp06 ),
-            var( --cp07 )
-        ); 
-        border-radius: 2rem;
-    }
-    ::-webkit-scrollbar {
-        width: 10px;
-        background: #21232990;
-        background: var( --cp05 );
-        backdrop-filter: blur( 12px );
-    }
-    l {
-        display: list-item;
-        text-align: -webkit-match-parent;
-        list-style: none;
-        cursor: pointer;
-        user-select: none;
-    }
-    li { list-style: none; }
-
-    a { text-decoration: none; }
-
-    /* [ footer ]
-    ================================================================ */
-    page-footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5rem;
-        padding-top: 5rem;
-        background: var(--cp07);
-        user-select: none;
-    }
-
-    /* [ newsletter section ]
-    -------------------------- */
-    .newsletter {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2vw;
-        text-align: center;
-        width: clamp( 100px, 80%, 435px );
-        padding: 32px 0;
-        background: #f0f3fb;
-        border-radius: 13px;
-        border: var(--cp06) 6px dashed;
-        /* box-shadow: var(--cp05) 0 0 0 12px; */
-        box-shadow: var(--cp06) 0 0 0 12px;
-    }
-    .newsletter #outline {
-        color: var(--cp07);
-        -webkit-text-stroke: 9px var(--cp00);
-        filter: drop-shadow(0px 4px #0005);
-        font-family: Baloo Da;
-        font-size: 1.8rem;
-    }
-    .newsletter .text-bg {
-        position: absolute;
-        color: var(--cp07);
-        font-family: Baloo Da;
-        font-size: 1.8rem;
-    }
-    .newsletter txt {
-        color: var(--cp08);
-        font-family: Baloo Da;
-        font-size: 1.2rem;
-        filter: drop-shadow(0 4px 4px #0004);
-    }
-    .newsletter label {
-        display: grid;
-        place-items: center;
-        width: 100%;
-    }
-    .newsletter label input[type=text] {
-        display: block;
-        border-radius: 6px;
-        border: none;
-        width: 90%;
-        margin: 12px 0;
-        padding: 6px;
-        outline: none;
-        /* box-shadow:#0003 0 5px 10px; */
-        box-shadow:inset #27f5 0 2px 5px 2px;
-    }
-    .newsletter label input[type=button] {
-        display: block;
-        border-radius: 6px 6px 6px 6px;
-        border: none;
-        width: 90%;
-        margin: 12px 0;
-        padding: 4px;
-        background: var(--cp06);
-        box-shadow: #6129D750 3px 5px 0;
-        color: var(--cp00);
-        text-shadow: var(--text-shadow-blue);
-        font-family: Baloo Da;
-        font-size: 1.1rem;
-        cursor: pointer;
-    } .newsletter label input[type=button]:hover {
-        animation:  btnPress .3s ;
-    } .newsletter label input[type=button]:active {
-        transform: translate( 2px, 5px );
-        box-shadow: #6129D750 0px 2px 0;
-    }
-
-
-    /* [ top section ]
-    -------------------------- */
-    .footer-top {
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        color: var(--cp00);
-        font-size: 1.125rem;
-        line-height: 3.5vw;
-    }
-    .socials {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 350px;
-        gap: .5rem;
-    }
-    .socials header {
-        display: flex;
-        align-items: center;
-        gap: .2rem;
-    } .socials header #logo {
-        width: 65px;
-    } .socials header #logo-txt {
-        height: 27px;
-        filter: var(--logo-text-shadow);
-    }
-    .socials footer {
-        display: flex;
-        align-items: center;
-        gap: .5rem;
-    } .socials footer img {
-        width: 28px;
-        cursor: pointer;
-    }
-
-    .footer-top .support {
-        display: block;
-    }
-
-    .footer-top .support .h3 {
-        color: var(--cp05);
-    }
-
-    .footer-top .about .h3 {
-        color: var(--cp06);
-    }
-
-    .footer-top .contact-info .h3 {
-        color: var(--cp07);
-    }
-    .outline {
-        -webkit-text-stroke: 6px var(--cp00);
-        font-family: Baloo Da;
-        position: absolute;
-    }
-
-    /* [ bottom section ] ❤️
-    -------------------------- */
-    #bottom-clouds {
-        display: grid;
-        place-items: center;
-        width: 100%;
-        height: 60px;
-        padding: 8px 0;
-        background-image: url(src/public/images/home/clouds.svg);
-        background-size: contain;
-        background-position-x: center;
-        filter: drop-shadow(#fff 0 0px 0px) 
-                drop-shadow(var(--cp06) 0 -15px 0px) 
-                drop-shadow(#0001 0 -30px 10px);
-        transition: 13s .99s cubic-bezier(1, 0.98, 0, 0.02);
-        color: var(--cp00);
-        font-size: 14px;
-    }
-    .footer-bottom {
-        display: grid;
-        place-items: center;
-        width: 100%;
-        height: 60px;
-        padding: 8px 0;
-        color: var(--cp08);
-        font-size: 14px;
-    } .footer-bottom txt {
-        display: flex;
-        align-items: baseline;
-        gap: clamp( 0px, 0.5vw, 7px );
-    } .footer-bottom :nth-child(2) {
-        color: var(--cp08);
-        font-weight: 700;
-    }
-    .footer-bottom #footer-heart { width: 15px; }
-    .footer-bottom #footer-DH {
-        max-width: 140px;
-        margin-left: .5ch;
-    }
-    .footer-bottom img {
-        /* pointer-events: none; */
-    }
-</style>
+var footerTemplate = `
 <article class="newsletter">
     <h2 id="outline">Assine a nossa newsletter</h2>
     <h2 class="text-bg">Assine a nossa newsletter</h2>
@@ -660,7 +203,7 @@ titleTemplate.innerHTML = `<style>
         font-family: Baloo Da;
         font-size: 2.5rem;
     }
-</style>
+</>
 <div id="template">
     <h2 id="outline"></h2>
     <h2 id="text"></h2>
@@ -834,9 +377,10 @@ window.customElements.define( "card-pk", Card );
 class Appbar extends HTMLElement {
 	constructor() {
 		super();
-		this.attachShadow( { mode: "open" } );
-		this.shadowRoot.append( pageHeaderTemplate.content.cloneNode( true ) );
-		this.id = ( "appbar" );
+		this.innerHTML = appbarTemplate;
+		// this.attachShadow( { mode: "open" } );
+		// this.shadowRoot.append( pageHeaderTemplate.content.cloneNode( true ) );
+		// this.id = ( "appbar" );
 	} 
 	connectedCallback() {
 		this.render();
@@ -849,8 +393,9 @@ window.customElements.define( "page-header", Appbar );
 class Footer extends HTMLElement {
 	constructor() {
 		super();
-		this.attachShadow( { mode: "open" } );
-		this.shadowRoot.append( pageFooterTemplate.content.cloneNode( true ) );
+		this.innerHTML = footerTemplate;
+		// this.attachShadow( { mode: "open" } );
+		// this.shadowRoot.append( pageFooterTemplate.content.cloneNode( true ) );
 		// this.id = ( "footer" );
 	} 
 	connectedCallback() {
@@ -863,35 +408,35 @@ window.customElements.define( "page-footer", Footer );
 
 
 
-// window.addEventListener( "load", ev => {
+window.addEventListener( "load", ev => {
 /* [ properties ]
     =================================== */
-// let baby = document.querySelector( "svg#baby-logo" ),
-// 	babysEyes = document.querySelector( "#babys-eyes" ),
-// 	bottomClouds = document.querySelector( "#bottom-clouds" ),
-// 	DH = document.querySelector( "img#footer-DH" ),
-// 	observer = new IntersectionObserver( function( entries ) {
-// 		entries[0].isIntersecting === true ? 
-// 			bottomClouds.style.backgroundPositionX = "right" : 
-// 			console.log( "Ha-ha-ha, você não disse a palavra mágica!" );
-// 	}, { threshold: [ 0 ] } );
-/* -------------------------------- */
+	let baby = document.querySelector( "svg#baby-logo" ),
+		babysEyes = document.querySelector( "#babys-eyes" ),
+		bottomClouds = document.querySelector( "#bottom-clouds" ),
+		DH = document.querySelector( "img#footer-DH" ),
+		observer = new IntersectionObserver( function( entries ) {
+			entries[0].isIntersecting === true ? 
+				bottomClouds.style.backgroundPositionX = "right" : 
+				console.log( "Ha-ha-ha, você não disse a palavra mágica!" );
+		}, { threshold: [ 0 ] } );
+	/* -------------------------------- */
 
-// baby.addEventListener( "mouseenter", ev => {
-// 	babysEyes.innerHTML = pikituchoHoverin;
-// } );
-// baby.addEventListener( "mouseleave", ev => {
-// 	babysEyes.innerHTML = pikitucho;
-// } );
+	baby.addEventListener( "mouseenter", ev => {
+		babysEyes.innerHTML = pikituchoHoverin;
+	} );
+	baby.addEventListener( "mouseleave", ev => {
+		babysEyes.innerHTML = pikitucho;
+	} );
 
 
-// 	DH.addEventListener( "click", ev => window.open( DH.getAttribute( "href" ), "_blank" ) );
-// 	DH.addEventListener( "mouseenter", ev => DH.style.cursor = "pointer" );
-
-    
-// 	observer.observe( bottomClouds );
+	DH.addEventListener( "click", ev => window.open( DH.getAttribute( "href" ), "_blank" ) );
+	DH.addEventListener( "mouseenter", ev => DH.style.cursor = "pointer" );
 
     
+	observer.observe( bottomClouds );
+
     
-// } );
+    
+} );
 
