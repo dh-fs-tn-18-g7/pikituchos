@@ -2,28 +2,10 @@
 
 "use strict";
 /* [ properties ]
-    ================================= */
-let /* appbar = document.querySelector( "page-header" ), */
-	pageHeaderTemplate = document.createElement( "template" ),
-	/* footer = document.querySelector( "page-footer" ), */
-	pageFooterTemplate = document.createElement( "template" ),
-	scriptTag = document.querySelector( "script" ),
-	stack = document.createElement( "script" );
-/* ------------------------------ */
-    
-/* [ events ]
-    ================================= */
-stack.src = "src/public/scripts/globals/stack.js";
-document.body.append( stack );
-
-for( let v of [ stack ] ) {
-	v.async = true;
-}
-
-// document.body.prepend( appbar );
-// document.body.insertBefore( footer, scriptTag );
-
-var appbarTemplate = `
+    =========================================================================== */
+let pageHeader = document.createElement( "page-header" ),
+	pageFooter = document.createElement( "page-footer" ),
+	appbarTemplate = `
 <article class="appbar-left">
     <svg id="baby-logo" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" >
@@ -77,9 +59,8 @@ var appbarTemplate = `
         } );
     } );
 </script>
-`;
-
-var footerTemplate = `
+`,
+	footerTemplate = `
 <article class="newsletter">
     <h2 id="outline">Assine a nossa newsletter</h2>
     <h2 class="text-bg">Assine a nossa newsletter</h2>
@@ -152,36 +133,9 @@ var footerTemplate = `
         <img id="footer-DH" href="https://www.digitalhouse.com/br" src="src/public/images/home/DH-Logo.svg" alt="" data-title="www.digitalhouse.com/br">
     </txt>
 </article>
-<script>
-    window.addEventListener( "load", ev => {
-        /* [ properties ]
-        =================================== */
-        let bottomClouds = document.querySelector( "#bottom-clouds" ),
-            DH = document.querySelector( "img#footer-DH" ),
-            observer = new IntersectionObserver( function( entries ) {
-                entries[0].isIntersecting === true ? 
-                    bottomClouds.style.backgroundPositionX = "right" : 
-                    console.log( "Ha-ha-ha, você não disse a palavra mágica!" );
-            }, { threshold: [ 0 ] } );
-        /* -------------------------------- */
-
-
-        DH.addEventListener( "click", ev => window.open( DH.getAttribute( "href" ), "_blank" ) );
-        DH.addEventListener( "mouseenter", ev => DH.style.cursor = "pointer" );
-
-        
-        observer.observe( bottomClouds );
-
-        
-        
-    } );
-</script>
-`;
-
-/* [ title text template ]
-=============================================================================== */
-const titleTemplate = document.createElement( "template" );
-titleTemplate.innerHTML = `<style>
+`,
+	titleTemplate = `
+<style>
     div#template {
         display: flex;
         align-items: center;
@@ -203,47 +157,23 @@ titleTemplate.innerHTML = `<style>
         font-family: Baloo Da;
         font-size: 2.5rem;
     }
-</>
+</style>
 <div id="template">
-    <h2 id="outline"></h2>
-    <h2 id="text"></h2>
+<h2 id="outline"></h2>
+<h2 id="text"></h2>
 </div>
-`;
-
-class Title extends HTMLElement {
-	constructor() {
-		super();
-		this.attachShadow( { mode: "open" } );
-		this.shadowRoot.append( titleTemplate.content.cloneNode( true ) );
-		this.shadowRoot.querySelector( "h2#outline" ).innerHTML = this.getAttribute( "name" );
-		this.shadowRoot.querySelector( "h2#text" ).innerHTML = this.getAttribute( "name" );
-		this.shadowRoot.querySelector( "h2#text" ).style.color = this.getAttribute( "color" );
-	} 
-	connectedCallback() {
-		this.outline = this.getAttribute( "name" );
-		this.text = this.getAttribute( "name" );
-		this.render();
-	}
-	render() {
-		this.outline;
-		this.text;
-	}
-}
-window.customElements.define( "title-text", Title );
-
-/* [ card template ]
-===============================================================================*/
-const cardTemplate = document.createElement( "template" );
-cardTemplate.innerHTML = `<style>  
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    font-family: 'Baloo Da 2', cursive;
-    margin: 0; padding: 0;
-    position: relative;
-    outline: none;
-}
+`,
+	cardTemplate = `
+<style>  
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        font-family: 'Baloo Da 2', cursive;
+        margin: 0; padding: 0;
+        position: relative;
+        outline: none;
+    }
     picture {
         display: flex;
         justify-content: center;
@@ -351,12 +281,109 @@ cardTemplate.innerHTML = `<style>
     </bottom-bg>
 </bottom>
 `;
+/* --------------------------------------------------------------------------- */
 
+
+/* [ page-header template ]
+===============================================================================*/
+class Appbar extends HTMLElement {
+	constructor() {
+		super();
+		this.innerHTML = appbarTemplate;
+		// this.attachShadow( { mode: "open" } );
+		// this.shadowRoot.append( pageHeaderTemplate.content.cloneNode( true ) );
+		// this.id = ( "appbar" );
+	} 
+	connectedCallback() {
+		this.render();
+		let baby = document.querySelector( "svg#baby-logo" ),
+			babysEyes = document.querySelector( "#babys-eyes" ),
+			pikitucho = `<path class="pikituchos-class0" d="M 13.757 16.921 C 13.086 16.361 12.193 16.034 11.493 16.034 C 10.793 16.034 9.882 16.299 9.29 16.796" style="stroke-width: 1px; stroke-linecap: square; stroke: rgb(70, 70, 70);" />
+    <path class="pikituchos-class0" d="M 22.931 16.921 C 22.26 16.361 21.367 16.034 20.667 16.034 C 19.967 16.034 19.056 16.299 18.464 16.796" style="stroke-width: 1px; stroke-linecap: square; stroke: rgb(70, 70, 70);" />
+    `,
+			pikituchoHoverin = `
+        <path class="pikituchos-class0" d="M 13.757 14.921 C 13.086 14.361 12.193 14.034 11.493 14.034 C 10.793 14.034 9.882 14.299 9.29 14.796" style="stroke-width: 1px; stroke-linecap: square; stroke: rgb(70, 70, 70);" />
+        <path class="pikituchos-class0" d="M 22.931 14.921 C 22.26 14.361 21.367 14.034 20.667 14.034 C 19.967 14.034 19.056 14.299 18.464 14.796" style="stroke-width: 1px; stroke-linecap: square; stroke: rgb(70, 70, 70);" />
+        <path style="fill: rgb(216, 216, 216); stroke-linecap: round; stroke-linejoin: round; stroke: rgb(70, 70, 70); stroke-width: 2px;" d="M 11.328 15.237 L 11.802 15.237" transform="matrix(0.037625, -0.999291, 0.999292, 0.037625, -4.096353, 26.220512)"/>
+        <path style="fill: rgb(216, 216, 216); stroke-linecap: round; stroke-linejoin: round; stroke: rgb(70, 70, 70); stroke-width: 2px;" d="M 20.328 15.237 L 20.802 15.237" transform="matrix(0.037625, -0.999291, 0.999292, 0.037625, 4.565021, 35.214133)"/>
+    `;
+        
+		baby.addEventListener( "mouseenter", ev => {
+			babysEyes.innerHTML = pikituchoHoverin;
+		} );
+		baby.addEventListener( "mouseleave", ev => {
+			babysEyes.innerHTML = pikitucho;
+		} );
+	}
+	render() {
+	}
+}
+window.customElements.define( "page-header", Appbar );
+
+/* [ page-footer template ]
+===============================================================================*/
+class Footer extends HTMLElement {
+	constructor() {
+		super();
+		this.innerHTML = footerTemplate;
+		// this.attachShadow( { mode: "open" } );
+		// this.shadowRoot.append( pageFooterTemplate.content.cloneNode( true ) );
+		// this.id = ( "footer" );
+	} 
+	connectedCallback() {
+		this.render();
+		let bottomClouds = document.querySelector( "#bottom-clouds" ),
+			DH = document.querySelector( "img#footer-DH" ),
+			observer = new IntersectionObserver( function( entries ) {
+				entries[0].isIntersecting === true ? 
+					bottomClouds.style.backgroundPositionX = "right" : 
+					console.log( "Ha-ha-ha, você não disse a palavra mágica!" );
+			}, { threshold: [ 0 ] } );
+                
+		DH.addEventListener( "click", ev => window.open( DH.getAttribute( "href" ), "_blank" ) );
+		DH.addEventListener( "mouseenter", ev => DH.style.cursor = "pointer" );
+    
+		observer.observe( bottomClouds );
+	}
+	render() {
+	}
+}
+window.customElements.define( "page-footer", Footer );
+
+/* [ title-pk template ]
+===============================================================================*/
+class Title extends HTMLElement {
+	constructor() {
+		super();
+		let title = document.createElement( "template" );
+		title.innerHTML = titleTemplate;
+		this.attachShadow( { mode: "open" } );
+		this.shadowRoot.append( title.content.cloneNode( true ) );
+		this.shadowRoot.querySelector( "h2#outline" ).innerHTML = this.getAttribute( "name" );
+		this.shadowRoot.querySelector( "h2#text" ).innerHTML = this.getAttribute( "name" );
+		this.shadowRoot.querySelector( "h2#text" ).style.color = this.getAttribute( "color" );
+	} 
+	connectedCallback() {
+		this.outline = this.getAttribute( "name" );
+		this.text = this.getAttribute( "name" );
+		this.render();
+	}
+	render() {
+		this.outline;
+		this.text;
+	}
+}
+window.customElements.define( "title-pk", Title );
+
+/* [ card-pk template ]
+===============================================================================*/
 class Card extends HTMLElement {
 	constructor() {
 		super();
+		let card = document.createElement( "template" );
+		card.innerHTML = cardTemplate;
 		this.attachShadow( { mode: "open" } );
-		this.shadowRoot.append( cardTemplate.content.cloneNode( true ) );
+		this.shadowRoot.append( card.content.cloneNode( true ) );
 		this.shadowRoot.querySelector( "img" ).src = this.getAttribute( "src" );
 		this.shadowRoot.querySelector( "img" ).alt = this.getAttribute( "alt" );
 		this.shadowRoot.querySelector( "h3#outline" ).innerHTML = this.getAttribute( "name" );
@@ -374,69 +401,12 @@ class Card extends HTMLElement {
 }
 window.customElements.define( "card-pk", Card );
 
-class Appbar extends HTMLElement {
-	constructor() {
-		super();
-		this.innerHTML = appbarTemplate;
-		// this.attachShadow( { mode: "open" } );
-		// this.shadowRoot.append( pageHeaderTemplate.content.cloneNode( true ) );
-		// this.id = ( "appbar" );
-	} 
-	connectedCallback() {
-		this.render();
-	}
-	render() {
-	}
-}
-window.customElements.define( "page-header", Appbar );
-
-class Footer extends HTMLElement {
-	constructor() {
-		super();
-		this.innerHTML = footerTemplate;
-		// this.attachShadow( { mode: "open" } );
-		// this.shadowRoot.append( pageFooterTemplate.content.cloneNode( true ) );
-		// this.id = ( "footer" );
-	} 
-	connectedCallback() {
-		this.render();
-	}
-	render() {
-	}
-}
-window.customElements.define( "page-footer", Footer );
-
 
 
 window.addEventListener( "load", ev => {
 /* [ properties ]
     =================================== */
-	let baby = document.querySelector( "svg#baby-logo" ),
-		babysEyes = document.querySelector( "#babys-eyes" ),
-		bottomClouds = document.querySelector( "#bottom-clouds" ),
-		DH = document.querySelector( "img#footer-DH" ),
-		observer = new IntersectionObserver( function( entries ) {
-			entries[0].isIntersecting === true ? 
-				bottomClouds.style.backgroundPositionX = "right" : 
-				console.log( "Ha-ha-ha, você não disse a palavra mágica!" );
-		}, { threshold: [ 0 ] } );
-	/* -------------------------------- */
 
-	baby.addEventListener( "mouseenter", ev => {
-		babysEyes.innerHTML = pikituchoHoverin;
-	} );
-	baby.addEventListener( "mouseleave", ev => {
-		babysEyes.innerHTML = pikitucho;
-	} );
-
-
-	DH.addEventListener( "click", ev => window.open( DH.getAttribute( "href" ), "_blank" ) );
-	DH.addEventListener( "mouseenter", ev => DH.style.cursor = "pointer" );
-
-    
-	observer.observe( bottomClouds );
-
-    
     
 } );
 

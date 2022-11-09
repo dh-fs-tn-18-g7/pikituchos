@@ -16,6 +16,12 @@ import do header e footer:
   adicionar o footer na pagina com a tag:
     <page-footer></page-footer>
 
+  adicionar um Título com a mesma formatação:
+    <title-pk 
+      name="Seu pequeno é nossa prioridade" 
+      color="var(--cp05)"
+    ></title-pk>
+
   clonar um card:
     <card-pk 
         name="Product's name" 
