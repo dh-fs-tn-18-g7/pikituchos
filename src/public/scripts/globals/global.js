@@ -87,8 +87,10 @@ let pageHeader = document.createElement( "page-header" ),
     </section>
     <section class="support">
         <header>
-            <h3 class="outline">Support</h3>
-            <h3 class="h3">Support</h3>
+            <div class="title-pk">
+                <h3 class="outline">Support</h3>
+                <h3 class="h3">Support</h3>
+            </div>
         </header>
         <nav>
             <l href="#">Link text 1</l>
@@ -99,8 +101,10 @@ let pageHeader = document.createElement( "page-header" ),
     </section>
     <section class="about">
         <header>
-            <h3 class="outline">Sobre nós</h3>
-            <h3 class="h3">Sobre nós</h3>
+            <div class="title-pk">
+                <h3 class="outline">Sobre nós</h3>
+                <h3 class="h3">Sobre nós</h3>
+            </div>
         </header>
         <nav>
             <l href="#">Quem Somos</l>
@@ -113,8 +117,10 @@ let pageHeader = document.createElement( "page-header" ),
     </section>
     <section class="contact-info">
         <header>
-            <h3 class="outline">Contact info</h3>
-            <h3 class="h3">Contact info</h3>
+            <div class="title-pk">
+                <h3 class="outline">Contact info</h3>
+                <h3 class="h3">Contact info</h3>
+            </div>
         </header>
         <nav>
             <li>Av. hifsoioios - hiosoif ojodf, 1230 LF.</li>
@@ -140,6 +146,7 @@ let pageHeader = document.createElement( "page-header" ),
         display: flex;
         align-items: center;
         text-align: center;
+        position: relative;
     }
     h2#outline {
         position: relative;

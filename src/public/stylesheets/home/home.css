@@ -238,6 +238,7 @@ highlights-section > slider {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    position: relative;
     /* overflow-x: hidden; */
 }
 
@@ -297,6 +298,7 @@ kids-section > slider {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    position: relative;
     min-height: 649px;
     overflow-x: hidden;
 }

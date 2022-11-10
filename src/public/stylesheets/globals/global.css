@@ -30,7 +30,6 @@
     box-sizing: border-box;
     font-family: 'Baloo Da 2', cursive;
     margin: 0; padding: 0;
-    position: relative;
     outline: none;
 }
 
@@ -420,14 +419,20 @@ page-footer {
 
 .footer-top .support .h3 {
     color: var(--cp05);
+    position: relative;
 }
 
 .footer-top .about .h3 {
     color: var(--cp06);
+    position: relative;
 }
 
 .footer-top .contact-info .h3 {
     color: var(--cp07);
+    position: relative;
+}
+div.title-pk {
+    /* position: relative; */
 }
 .outline {
     -webkit-text-stroke: 6px var(--cp00);
