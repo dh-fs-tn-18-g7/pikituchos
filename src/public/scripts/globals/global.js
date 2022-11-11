@@ -29,7 +29,7 @@ let pageHeader = document.createElement( "page-header" ),
 </article>
 <nav class="appbar-nav">
     <li url="#" data-title="Home">Home</li>
-    <li url="#" data-title="Produtos">Produtos</li>
+    <li url="#highlights" data-title="Produtos">Produtos</li>
     <li url="#" data-title="Contatos">Contato</li>
     <li url="#" data-title="ver carrinho"><img src="src/public/images/home/shopping-cart.svg" alt=""></li>
 </nav>
@@ -200,16 +200,51 @@ let pageHeader = document.createElement( "page-header" ),
         filter: drop-shadow(#000c 0 5px 3px);
     }
     
-    bottom {
+    card-base {
         display: block;
+        width: 100%;
+        position: relative;
+        transition: .5s ease-in-out;
+        transform-style: preserve-3d;
+    }
+    
+    card-front {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        position: absolute;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
         background: var(--cp04);
         box-shadow: #0002 0 5px 13px;
         border-radius: 18px;
         border: var(--cp07) solid 2px;
+        z-index: 2;
+    }
+
+    card-back {
+        display: block;
+        width: 100%;
+        min-height: 181px;
         padding: 8px;
+        position: absolute;
+        transform: rotateY(180deg);
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        background: var(--cp04);
+        box-shadow: #0002 0 5px 13px;
+        border-radius: 18px;
+        border: var(--cp07) solid 2px;
+        z-index: 0;
+    }
+
+    .turnCard {
+        transform: rotateY(180deg);
     }
     
-    bottom bottom-bg {
+    card-front bottom-bg {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -218,23 +253,23 @@ let pageHeader = document.createElement( "page-header" ),
         border-radius: 18px;
         color: var(--cp08);
     }
-    bottom bottom-bg:hover {
+    card-front bottom-bg:hover {
         border: var(--cp08) dashed 4px;
     }
     
-    bottom bottom-bg #outline {
+    card-front bottom-bg #outline {
         color: var(--cp07);
         -webkit-text-stroke: 10px var(--cp00);
         filter: drop-shadow(0px 4px #0005);
         font-family: Baloo Da;
     }
-    bottom bottom-bg #text-bg {
+    card-front bottom-bg #text-bg {
         position: absolute;
         color: var(--cp08);
         font-family: Baloo Da;
     }
     
-    bottom valor {
+    card-front valor {
         display: flex;
         justify-content: end;
         font-size: 1.6rem;
@@ -242,20 +277,20 @@ let pageHeader = document.createElement( "page-header" ),
         color: var(--cp08);
     } 
     
-    bottom valor :nth-child(1):before {
+    card-front valor :nth-child(1):before {
         content: "R$";
     }
     
-    bottom valor :nth-child(1):after {
+    card-front valor :nth-child(1):after {
         content: ",";
     }
     
-    bottom valor :nth-child(2) {
+    card-front valor :nth-child(2) {
         font-size: 1rem;
         margin-top: 0.5ch;
     }
     
-    bottom bottom-bg button {
+    card-front bottom-bg button {
         border-radius: 7px;
         border: none;
         box-shadow: var(--cp08) 0 3px 2px;
@@ -267,32 +302,111 @@ let pageHeader = document.createElement( "page-header" ),
         font-size: 1rem;
         cursor: pointer;
     }
-    bottom bottom-bg button:hover {
+    card-front bottom-bg button:hover {
         background: var(--cp06);
+        text-shadow: #00f7 0 0 10px;
+    }
+
+    /* ------------------------------ */
+    
+    card-back bottom-bg {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 8px;
+        border: var(--cp00) dashed 4px;
+        border-radius: 18px;
+        color: var(--cp08);
+    }
+    card-back bottom-bg:hover {
+        border: var(--cp08) dashed 4px;
+    }
+    
+    card-back bottom-bg #outline {
+        color: var(--cp07);
+        -webkit-text-stroke: 10px var(--cp00);
+        filter: drop-shadow(0px 4px #0005);
+        font-family: Baloo Da;
+    }
+    card-back bottom-bg #text-bg {
+        position: absolute;
+        color: var(--cp08);
+        font-family: Baloo Da;
+    }
+    
+    card-back valor {
+        display: flex;
+        justify-content: end;
+        font-size: 1.6rem;
+        font-weight: bolder;
+        color: var(--cp08);
+    } 
+    
+    card-back valor :nth-child(1):before {
+        content: "R$";
+    }
+    
+    card-back valor :nth-child(1):after {
+        content: ",";
+    }
+    
+    card-back valor :nth-child(2) {
+        font-size: 1rem;
+        margin-top: 0.5ch;
+    }
+    
+    card-back bottom-bg button {
+        border-radius: 7px;
+        border: none;
+        box-shadow: var(--cp08) 0 3px 2px;
+        outline: none;
+        background: var(--cp07);
+        padding: .5ch 0;
+        color: var(--cp00);
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    card-back bottom-bg button:hover {
+        background: var(--cp06);
+        text-shadow: #00f7 0 0 10px;
     }
 </style>
 <picture>
     <img src="" alt="">
 </picture>
-<bottom>
-    <bottom-bg>
-        <h3 id="outline"></h3>
-        <h3 id="text-bg"></h3>
-        <p></p>
-        <valor>
+<card-base>
+    <card-front>
+        <bottom-bg>
+            <h3 id="outline"></h3>
+            <h3 id="text-bg"></h3>
             <p></p>
-            <p></p>
-        </valor>
-        <button title="ver mais detalhes deste produto">
-        </button>
-    </bottom-bg>
-</bottom>
+            <valor>
+                <p></p>
+                <p></p>
+            </valor>
+            <button title="ver mais detalhes deste produto">
+            </button>
+        </bottom-bg>
+    </card-front>
+    <card-back>
+        <bottom-bg>
+            <p>
+                Lorem ipsum sit amet consectetur elit. 
+                Accusamus recusandae, vel. Quae sit non eius!
+            </p>
+            <button title="ver mais detalhes deste produto">
+                adicionar ao carrinho
+            </button>
+        </bottom-bg>
+    </card-back>
+</card-base>
 `;
 /* --------------------------------------------------------------------------- */
 
 
 /* [ page-header template ]
-===============================================================================*/
+============================================================================== */
 class Appbar extends HTMLElement {
 	constructor() {
 		super();
@@ -402,6 +516,15 @@ class Card extends HTMLElement {
 	} 
 	connectedCallback() {
 		this.render();
+		let btn = this.shadowRoot.querySelector( "button" ),
+			cardBase = this.shadowRoot.querySelector( "card-base" ),
+			cardBack = this.shadowRoot.querySelector( "card-back" );
+		btn.addEventListener( "click", ev => {
+			cardBase.style.transform = "rotateY( 180deg )";
+		} );
+		cardBack.addEventListener( "click", ev => {
+			cardBase.style.transform = "rotateY( 0deg )";
+		} );
 	}
 	render() {
 	}
