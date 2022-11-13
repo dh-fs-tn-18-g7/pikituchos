@@ -10,7 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/public/stylesheets/globals/global.css">
     <style>
-        body { min-height: 100vh; background: #212329;
+        body { min-height: 100vh; 
+            background-image: radial-gradient( at center,
+                /* #4a515c, */
+                #212329,
+                #212329
+            );
+            background-attachment: fixed;
             color: #e9e6e3;
         }
         
@@ -24,7 +30,15 @@
             user-select: none;
         }
         appbar :nth-child(1n) { display: grid; place-items: center; color: #e9e6e3; }
-        appbar :nth-child(1) { color: #27f; }
+        appbar-home h1#outline {
+            -webkit-text-stroke: 6px var(--cp00);
+            font-family: Baloo Da;
+            position: absolute;
+        }
+        appbar-home h1#text {
+            color: var( --cp05 );
+            position: relative;
+        }
         appbar-right { cursor: pointer; }
         appbar-right:hover { transition: cubic-bezier(0.075, 0.82, 0.165, 1); transform: scale( 1.1 ); }
 
@@ -33,7 +47,7 @@
             display: grid; grid-template-rows: auto 1fr;
             width: 0;
             height: 100%;
-            background: #ffffff10;
+            background: #4a515ccc;
             filter: drop-shadow( #f055 2px 0 0 );
             backdrop-filter: blur( 12px );
             transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -49,7 +63,7 @@
             padding: 16px;
             white-space: nowrap;
         }
-        drawer-home :nth-child(1n) { cursor: pointer; }
+        drawer-home :nth-child(1n) { cursor: pointer; color: var( --cp06 ); }
 
         home article {
             display: none; grid-template-columns: auto;
@@ -67,12 +81,41 @@
         article section h2, article section h3 {
             color: #27f;
         }
-        holder {
-            padding-top: 3vw;
+        holder:has( card-pk ) {
+            padding: 11vw 0;
         }
         w { color: #fff; }
-        t { color: #900; }
+        t { color: #c00; }
+        tag-a { color: #c00; }
+        tag-a::before { content: "<"; color: #fff; }
+        tag-a::after { content: ">"; color: #fff; }
+        tag-f { color: #c00; }
+        tag-f::before { content: "</"; color: #fff; }
+        tag-f::after { content: ">"; color: #fff; }
+        tag-a-opn { color: #c00; }
+        tag-a-opn::before { content: "<"; color: #fff; }
+        property {
+            color: #a36e04;
+            padding-left: 2vw;
+        }
+        prop {
+            color: #a36e04;
+            padding-left: 1ch;
+        }
         n { color: #a36e04; }
+
+        @media only screen and ( min-width: 768px ) {
+            
+            article section:has( holder ) {
+                display: grid;
+                grid-template-columns: 1.5fr 1fr;
+            }
+            article section holder {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -80,7 +123,8 @@
     <appbar>
         <appbar-left></appbar-left>
         <appbar-home>
-            <h2> guia de layout </h2>
+            <h1 id="outline"> Guia de layout </h1>
+            <h1 id="text"> Guia de layout </h1>
         </appbar-home>
         <appbar-right>&#9776;</appbar-right>
     </appbar>
@@ -92,6 +136,7 @@
             <h4 href="header-footer">header e footer</h4>
             <h4 href="title-pk">title-pk</h4>
             <h4 href="card-pk">card-pk</h4>
+            <h4 href="color-palette">paleta de cores</h4>
         </drawer-home>
     </drawer>
 
@@ -106,6 +151,7 @@
                 <title-pk href="header-footer" name="header e footer" color="var( --cp06 )"></title-pk>
                 <title-pk href="title-pk" name="title-pk" color="var( --cp08 )"></title-pk>
                 <title-pk href="card-pk" name="card-pk" color=""></title-pk>
+                <title-pk href="color-palette" name="paleta de cores" color=""></title-pk>
             </section>
         </article>
         
@@ -114,11 +160,18 @@
                 <title-pk name="globals" color="var( --cp07 )"></title-pk>
             </header>
             <section>
-                <h2>head:</h2>
-                &lt;link rel="stylesheet" href="src/public/stylesheets/globals/global.css"&gt;
-                
-                <h2>body:</h2>
-                &lt;script src="src/public/scripts/globals/global.js"&gt;&lt;/script&gt;
+                <div>
+                    <h2>head:</h2>
+                    <tag-a>link</tag-a> 
+                        <prop>rel</prop>="stylesheet" 
+                        <prop>href</prop>="src/public/stylesheets/globals/global.css"
+                    <w>&gt;</w>
+                    
+                    <h2>body:</h2>
+                    <tag-a-opn>script</tag-a-opn> 
+                        <prop>src</prop>="src/public/scripts/globals/global.js"
+                    <w>&gt;</w><tag-f>script</tag-f>
+                </div>
             </section>
         </article>
 
@@ -127,14 +180,14 @@
                 <title-pk name="header e footer" color="var( --cp06 )"></title-pk>
             </header>
             <section>
-                <h2>novas páginas:</h2>
-                    o conteúdo das novas páginas precisa ser envelopado na tag &lt;main&gt;&lt;/main&gt;
-                
-                    <h3>adicionar o header na pagina com a tag:</h3>
-                        &lt;page-header&gt;&lt;/page-header&gt;
-
-                    <h3>adicionar o footer na pagina com a tag:</h3>
-                        &lt;page-footer&gt;&lt;/page-footer&gt;
+                <h3>novas páginas:  <br>
+                    <w>o conteúdo das novas páginas precisa ser envelopado na tag   <br>
+                    <tag-a>main</tag-a><tag-f>main</tag-f>   <br>
+                    adicionar o header na pagina com a tag: <br>
+                    <tag-a>page-header</tag-a><tag-f>page-header</tag-f>  <br>
+                    adicionar o footer na pagina com a tag: <br>
+                    <tag-a>page-footer</tag-a><tag-f>page-footer</tag-f>
+                </h3>
             </section>
         </article>
         
@@ -144,17 +197,17 @@
             </header>
             <section>
                 <holder>
-                    <title-pk 
-                        name="Seu pequeno é nossa prioridade" 
-                        color="var(--cp05)"
+                    <title-pk   
+                        name="Seu pequeno é nossa prioridade"   
+                        color="var(--cp05)" 
                     ></title-pk>
                 </holder>
-                <pre>
-&lt;title-pk 
-    name="Seu pequeno é nossa prioridade" 
-    color="var(--cp05)"
-&gt;&lt;/title-pk&gt;
-                </pre>
+                <div>
+                    <tag-a-opn>title-pk</tag-a-opn> <br>
+                        <property>name</property>="Seu pequeno é nossa prioridade"  <br>
+                        <property>color</property>="var(--cp05)"    <br>
+                    <w>&gt;</w><tag-f>title-pk</tag-f>
+                </div>
             </section>
         </article>
 
@@ -174,18 +227,33 @@
                         btn="Ver detalhes"
                     ></card-pk>
                 </holder>
-                <pre>
+                <div>
+                    <tag-a-opn>card-pk</tag-a-opn>  <br>
+                        <property>name</property>="Product's name"  <br>
+                        <property>desc</property>="product description" <br>
+                        <property>real</property>="99"  <br>
+                        <property>cents</property>="99  <br>
+                        <property>src</property>="src/public/images/product-05.png" <br>
+                        <property>alt</property>="" <br>
+                        <property>btn</property>="Ver detalhes" <br>
+                    <w>&gt;</w> <tag-f>card-pk</tag-f>
+                </div>
+            </section>
+        </article>
 
-&lt;card-pk 
-    name="Product's name" 
-    desc="product description" 
-    real="99" 
-    cents="99"
-    src="src/public/images/product-05.png" 
-    alt=""
-    btn="Ver detalhes"
-&gt;&lt;/card-pk&gt;
-                </pre>
+        <article id="color-palette">
+            <header>
+                <title-pk name="color-palette" color="var( --cp04 )"></title-pk>
+            </header>
+            <section>
+                <color-palette name="var( --cp01 )"></color-palette>
+                <color-palette name="var( --cp02 )"></color-palette>
+                <color-palette name="var( --cp03 )"></color-palette>
+                <color-palette name="var( --cp04 )"></color-palette>
+                <color-palette name="var( --cp05 )"></color-palette>
+                <color-palette name="var( --cp06 )"></color-palette>
+                <color-palette name="var( --cp07 )"></color-palette>
+                <color-palette name="var( --cp08 )"></color-palette>
             </section>
         </article>
 
@@ -228,6 +296,42 @@
                     };
                 } );
             } );
+
+            class ColorPalette extends HTMLElement {
+                constructor() {
+                    super();
+                    let colorPalette = document.createElement( "template" );
+                    colorPalette.innerHTML = titleTemplate = `
+                        <style>
+                            card-base {
+                                display: flex; align-items: center;
+                                width: 100%;
+                            }
+                            box {
+                                display: block; width: 50px; height: 50px;
+                            }
+                            h4 {
+                                color: #e9e6e3;
+                                margin-left: 2ch;
+                            }
+                        </style>
+                        <card-base>
+                            <box></box>
+                            <h4></h4>
+                        </card-base>`;
+                    this.attachShadow( { mode: "open" } );
+                    this.shadowRoot.append( colorPalette.content.cloneNode( true ) );
+                    this.shadowRoot.querySelector( "box" ).style.background = this.getAttribute( "name" );
+                    this.shadowRoot.querySelector( "h4" ).innerText = this.getAttribute( "name" );
+                    // this.style.background = this.getAttribute( "name" );
+                } 
+                connectedCallback() {
+                    this.render();
+                }
+                render() {
+                }
+            }
+            window.customElements.define( "color-palette", ColorPalette );
         } );
     </script>
 </body>
