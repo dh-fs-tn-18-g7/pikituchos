@@ -142,12 +142,6 @@ let pageHeader = document.createElement( "page-header" ),
 `,
 	titleTemplate = `
 <style>
-    div#template {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        position: relative;
-    }
     h2#outline {
         position: relative;
         top: 0; left: 0;
@@ -165,10 +159,8 @@ let pageHeader = document.createElement( "page-header" ),
         font-size: 2.5rem;
     }
 </style>
-<div id="template">
 <h2 id="outline"></h2>
 <h2 id="text"></h2>
-</div>
 `,
 	cardTemplate = `
 <style>  
@@ -513,6 +505,7 @@ class Card extends HTMLElement {
 		this.shadowRoot.querySelector( "valor :nth-child(1)" ).innerText = this.getAttribute( "real" );
 		this.shadowRoot.querySelector( "valor :nth-child(2)" ).innerText = this.getAttribute( "cents" );
 		this.shadowRoot.querySelector( "button" ).innerText = this.getAttribute( "btn" );
+		this.style.hover = "filter: drop-shadow(2px 4px 6px #0005); z-index: 3;";
 	} 
 	connectedCallback() {
 		this.render();

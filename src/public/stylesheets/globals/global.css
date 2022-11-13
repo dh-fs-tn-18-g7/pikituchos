@@ -94,10 +94,7 @@ html {
 }
 
 body {
-    margin: 0;
     padding: var(--appbar-height) 0 0;
-    /* font-size: 14px; */
-    /* background: #1b1d22; */
 }
 
 body > main {
@@ -270,8 +267,17 @@ page-header {
     cursor: pointer;
 }
 
-/* [ cards ]
------------------------------------------------------------------ */
+/* [ title-pk ]
+================================================================ */
+title-pk {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* [ card-pk ]
+================================================================ */
 card-pk {
     display: block;
     width: clamp( 100px, 20vw, 450px );
@@ -282,10 +288,6 @@ card-pk {
     border-radius: 18px;
     transition: .3s ease-in;
     perspective: 1000px;
-}
-card-pk:hover {
-    filter: drop-shadow(2px 4px 6px #0005);
-    z-index: 3;
 }
 
 /* [ footer ]

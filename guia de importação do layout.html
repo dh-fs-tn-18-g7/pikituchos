@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Guia de importação do layout</title>
+    <link rel="icon" href="src/public/images/logo.svg" type="svg+xml">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/public/stylesheets/globals/global.css">
+    <style>
+        body { min-height: 100vh; background: #212329;
+            color: #e9e6e3;
+        }
+        
+        appbar {
+            position: fixed; top: 0; left: 0;
+            display: grid; grid-template-columns: auto 1fr auto;
+            width: 100%; height: 81px;
+            padding: 0 3vw;
+            background: #1b1d22;
+            z-index: 6;
+            user-select: none;
+        }
+        appbar :nth-child(1n) { display: grid; place-items: center; color: #e9e6e3; }
+        appbar :nth-child(1) { color: #27f; }
+        appbar-right { cursor: pointer; }
+        appbar-right:hover { transition: cubic-bezier(0.075, 0.82, 0.165, 1); transform: scale( 1.1 ); }
+
+        drawer {
+            position: fixed; top: 0; left: 0;
+            display: grid; grid-template-rows: auto 1fr;
+            width: 0;
+            height: 100%;
+            background: #ffffff10;
+            filter: drop-shadow( #f055 2px 0 0 );
+            backdrop-filter: blur( 12px );
+            transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            z-index: 9;
+            overflow-x: hidden;
+        } .open {
+            width: clamp( 80px, 75%, 350px );
+            transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        drawer-header { display: grid; place-items: center; padding: 16px; background: #212329; }
+        drawer-home {
+            display: flex; flex-direction: column;
+            padding: 16px;
+            white-space: nowrap;
+        }
+        drawer-home :nth-child(1n) { cursor: pointer; }
+
+        home article {
+            display: none; grid-template-columns: auto;
+            min-height: calc( 100vh - 81px );
+        }
+        article#home section :nth-child(1n) { cursor: pointer; }
+        article > header {
+            display: grid; place-items: center;
+        }
+        article section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        article section h2, article section h3 {
+            color: #27f;
+        }
+        holder {
+            padding-top: 3vw;
+        }
+        w { color: #fff; }
+        t { color: #900; }
+        n { color: #a36e04; }
+    </style>
+</head>
+<body>
+    
+    <appbar>
+        <appbar-left></appbar-left>
+        <appbar-home>
+            <h2> guia de layout </h2>
+        </appbar-home>
+        <appbar-right>&#9776;</appbar-right>
+    </appbar>
+
+    <drawer>
+        <drawer-header>Menu</drawer-header>
+        <drawer-home>
+            <h4 href="globals">importar o estilo</h4>
+            <h4 href="header-footer">header e footer</h4>
+            <h4 href="title-pk">title-pk</h4>
+            <h4 href="card-pk">card-pk</h4>
+        </drawer-home>
+    </drawer>
+
+    <home>
+
+        <article id="home">
+            <header>
+                <h1>links</h1>
+            </header>
+            <section>
+                <title-pk href="globals" name="importar o estilo" color="var( --cp07 )"></title-pk>
+                <title-pk href="header-footer" name="header e footer" color="var( --cp06 )"></title-pk>
+                <title-pk href="title-pk" name="title-pk" color="var( --cp08 )"></title-pk>
+                <title-pk href="card-pk" name="card-pk" color=""></title-pk>
+            </section>
+        </article>
+        
+        <article id="globals">
+            <header>
+                <title-pk name="globals" color="var( --cp07 )"></title-pk>
+            </header>
+            <section>
+                <h2>head:</h2>
+                &lt;link rel="stylesheet" href="src/public/stylesheets/globals/global.css"&gt;
+                
+                <h2>body:</h2>
+                &lt;script src="src/public/scripts/globals/global.js"&gt;&lt;/script&gt;
+            </section>
+        </article>
+
+        <article id="header-footer">
+            <header>
+                <title-pk name="header e footer" color="var( --cp06 )"></title-pk>
+            </header>
+            <section>
+                <h2>novas páginas:</h2>
+                    o conteúdo das novas páginas precisa ser envelopado na tag &lt;main&gt;&lt;/main&gt;
+                
+                    <h3>adicionar o header na pagina com a tag:</h3>
+                        &lt;page-header&gt;&lt;/page-header&gt;
+
+                    <h3>adicionar o footer na pagina com a tag:</h3>
+                        &lt;page-footer&gt;&lt;/page-footer&gt;
+            </section>
+        </article>
+        
+        <article id="title-pk">
+            <header>
+                <title-pk name="title-pk" color="var( --cp08 )"></title-pk>
+            </header>
+            <section>
+                <holder>
+                    <title-pk 
+                        name="Seu pequeno é nossa prioridade" 
+                        color="var(--cp05)"
+                    ></title-pk>
+                </holder>
+                <pre>
+&lt;title-pk 
+    name="Seu pequeno é nossa prioridade" 
+    color="var(--cp05)"
+&gt;&lt;/title-pk&gt;
+                </pre>
+            </section>
+        </article>
+
+        <article id="card-pk">
+            <header>
+                <title-pk name="card-pk" color=""></title-pk>
+            </header>
+            <section>
+                <holder>
+                    <card-pk 
+                        name="Product's name" 
+                        desc="product description" 
+                        real="99" 
+                        cents="99"
+                        src="src/public/images/home/years-section/product-05.png" 
+                        alt=""
+                        btn="Ver detalhes"
+                    ></card-pk>
+                </holder>
+                <pre>
+
+&lt;card-pk 
+    name="Product's name" 
+    desc="product description" 
+    real="99" 
+    cents="99"
+    src="src/public/images/product-05.png" 
+    alt=""
+    btn="Ver detalhes"
+&gt;&lt;/card-pk&gt;
+                </pre>
+            </section>
+        </article>
+
+    </home>
+
+    <footer></footer>
+    
+    <script src="src/public/scripts/globals/global.js"></script>
+    <script>
+        window.addEventListener( "load", ev => {
+            var drawerLinks = document.querySelectorAll( "drawer-home h4" )
+                links = document.querySelectorAll( "article#home section title-pk" ),
+                articles = document.querySelectorAll( "article" ),
+                drawerToggle = document.querySelector( "appbar-right" ),
+                drawer = document.querySelector( "drawer" );
+
+            articles[0].style.display = "grid";
+
+            drawerToggle.addEventListener( "click", ev => {
+                drawer.classList.toggle( "open" );
+            } );
+
+            drawerLinks.forEach( v => {
+                v.addEventListener( "click", () => {
+                    for( a of articles ) {
+                        a.id == v.getAttribute( "href" ) ?
+                        a.style.display = "grid" :
+                        a.style.display = "none";
+                    };
+                    drawer.classList.toggle( "open" );
+                } );
+            } );
+
+            links.forEach( v => {
+                v.addEventListener( "click", () => {
+                    for( a of articles ) {
+                        a.id == v.getAttribute( "href" ) ?
+                        a.style.display = "grid" :
+                        a.style.display = "none";
+                    };
+                } );
+            } );
+        } );
+    </script>
+</body>
+</html>
