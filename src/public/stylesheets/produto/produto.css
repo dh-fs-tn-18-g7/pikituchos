@@ -1,0 +1,34 @@
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-top {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.product-top .product-img {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.product-top .product-img .product-img-min {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.product-top .product-buy h2 {
+    font-size: 2.25rem;
+    color: var( --cp07 );
+}
+
+.product-top .product-buy p {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var( --cp08 );
+}
