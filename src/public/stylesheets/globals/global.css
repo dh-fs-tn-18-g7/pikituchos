@@ -8,7 +8,7 @@
     /* [ color palette ] -------------------- */
     --cp00: #ffffff; --cp01: #00A599; --cp02: #FFAEBF; --cp03: #FFFADD;
     --cp04: #FDCDBF; --cp05: #FEB491; --cp06: #47C8EF; --cp07: #F190A3;
-    --cp08: #464646;
+    --cp08: #464646; --cp09: #f0003c;
 
     /* [ shadows ] -------------------- */
     --text-shadow-blue: #27f 0 0 5px;

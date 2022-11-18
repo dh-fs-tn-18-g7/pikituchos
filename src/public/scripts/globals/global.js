@@ -67,7 +67,7 @@ let pageHeader = document.createElement( "page-header" ),
     <txt>receba ofertas exclusivas para o seu pikitucho <br> diretamente no seu e-mail.</txt>
     <label for="subscribe">
         <input type="text" placeholder="digite seu melhor e-mail...">
-        <input type="button" value="Assine agora!">
+        <button-pk name="Assine agora!" color="" width="90%"></button-pk>
     </label>
 </article>
 
@@ -474,6 +474,8 @@ class Title extends HTMLElement {
 		this.shadowRoot.append( title.content.cloneNode( true ) );
 		this.shadowRoot.querySelector( "h2#outline" ).innerHTML = this.getAttribute( "name" );
 		this.shadowRoot.querySelector( "h2#text" ).innerHTML = this.getAttribute( "name" );
+		this.shadowRoot.querySelector( "h2#outline" ).style.fontSize = this.getAttribute( "font-size" );
+		this.shadowRoot.querySelector( "h2#text" ).style.fontSize = this.getAttribute( "font-size" );
 		this.shadowRoot.querySelector( "h2#text" ).style.color = this.getAttribute( "color" );
 	} 
 	connectedCallback() {
@@ -523,6 +525,140 @@ class Card extends HTMLElement {
 	}
 }
 window.customElements.define( "card-pk", Card );
+
+/* [ card-pk template ]
+===============================================================================*/
+class Button extends HTMLElement {
+	constructor() {
+		super();
+		let button = document.createElement( "template" );
+		button.innerHTML = ` <style>
+            @import url('https://fonts.googleapis.com/css2?family=Baloo+Da&family=Baloo+Da+2&family=Baloo+Da+2:wght@400;500;600;700;800&family=Baloo+Paaji&family=Londrina+Sketch&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Rajdhani:wght@400;500;600;700&display=swap');
+            .button-pk {
+                position: relative;
+                border: none;
+                background: transparent;
+                width: 100%;
+                padding: 0;
+                cursor: pointer;
+                outline-offset: 4px;
+                transition: filter 250ms;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+            }
+
+            .btn-shadow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                background: #00000040;
+                will-change: transform;
+                transform: translateY(2px);
+                transition:
+                    transform
+                    600ms
+                    cubic-bezier(.3, .7, .4, 1);
+            }
+
+            .btn-edge {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                background: linear-gradient(
+                    to left,
+                    #52001b 0%,
+                    #a30036 8%,
+                    #a30036 92%,
+                    #52001b 100%
+                );
+            }
+
+            .btn-front {
+                display: block;
+                position: relative;
+                padding: 6px 27px;
+                border-radius: 12px;
+                font-family: 'Baloo Da 2';
+                font-size: 1.1rem;
+                font-weight: 700;
+                color: white;
+                background: var( --cp09 );
+                will-change: transform;
+                transform: translateY(-4px);
+                transition:
+                    transform
+                    600ms
+                    cubic-bezier(.3, .7, .4, 1);
+            }
+
+            @media (min-width: 768px) {
+                .btn-front {
+                    padding: 6px 42px;
+                }
+            }
+
+            .button-pk:hover {
+                filter: brightness(110%);
+                -webkit-filter: brightness(110%);
+            }
+
+            .button-pk:hover .btn-front {
+                transform: translateY(-6px);
+                transition:
+                    transform
+                    250ms
+                    cubic-bezier(.3, .7, .4, 1.5);
+            }
+
+            .button-pk:active .btn-front {
+                transform: translateY(-2px);
+                transition: transform 34ms;
+            }
+
+            .button-pk:hover .btn-shadow {
+                transform: translateY(4px);
+                transition:
+                    transform
+                    250ms
+                    cubic-bezier(.3, .7, .4, 1.5);
+            }
+
+            .button-pk:active .btn-shadow {
+                transform: translateY(1px);
+                transition: transform 34ms;
+            }
+
+            .button-pk:focus:not(:focus-visible) {
+                outline: none;
+            }
+            </style>
+            <button class="button-pk" role="button">
+                <span class="btn-shadow"></span>
+                <span class="btn-edge"></span>
+                <span class="btn-front text">
+                </span>
+            </button> `;
+		this.attachShadow( { mode: "open" } );
+		this.shadowRoot.append( button.content.cloneNode( true ) );
+		this.style.cssText = " display: center; align-items: center; ";
+		this.style.width = this.getAttribute( "width" );
+		this.shadowRoot.querySelector( "span.btn-front" ).innerText = this.getAttribute( "name" );
+		this.shadowRoot.querySelector( ".btn-front" ).style.backgroundColor = this.getAttribute( "color" );
+	} 
+	connectedCallback() {
+		this.render();
+	}
+	render() {
+	}
+}
+window.customElements.define( "button-pk", Button );
 
 
 
