@@ -25,23 +25,29 @@ let pageHeader = document.createElement( "page-header" ),
             <path class="pikituchos-class0" d="M 22.931 16.921 C 22.26 16.361 21.367 16.034 20.667 16.034 C 19.967 16.034 19.056 16.299 18.464 16.796" style="stroke-width: 1px; stroke-linecap: square; stroke: #464646;" />
         </g>
     </svg> 
-    <img id="logos-desc" src="src/public/images/home/pikituchos-logo-txt.png" alt="">
+    <img id="logos-desc" src="src/public/images/home-Noely/pikituchos-logo-txt.png" alt="">
 </article>
 <nav class="appbar-nav">
     <li url="#" data-title="Home">Home</li>
     <li url="#highlights" data-title="Produtos">Produtos</li>
     <li url="#" data-title="Contatos">Contato</li>
-    <li url="#" data-title="ver carrinho"><img src="src/public/images/home/shopping-cart.svg" alt=""></li>
+    <li url="#" data-title="ver carrinho"><img src="src/public/images/home-Noely/shopping-cart.svg" alt=""></li>
 </nav>
 <article class="appbar-right">
-<label for="searchbar" class="searchbar">
-    <input id="searchbar" type="text" placeholder=" procure aqui. . .">
-    <!-- <button id="searchbar-btn"><txt>buscar</txt></button> -->
-    <input id="searchbar-btn" type="button" value="🔎 buscar">
-</label>
-    <a id="btn-signin">Entre</a>
-    <span>ou</span>
-    <a id="btn-signup">Cadastre-se</a>
+    <label for="searchbar" class="searchbar">
+        <input id="searchbar" type="text" placeholder=" procure aqui. . .">
+        <!-- <button id="searchbar-btn"><txt>buscar</txt></button> -->
+        <input id="searchbar-btn" type="button" value="🔎 buscar">
+    </label>
+    <span id="btn-signup">
+        <button class="button-pk" role="button">
+            <span class="btn-shadow"></span>
+            <span class="btn-edge"></span>
+            <span class="btn-front text">
+                Cadastre-se
+            </span>
+        </button>
+    </span>
 </article>
 <script>
     window.addEventListener( "load", ev => {
@@ -74,15 +80,15 @@ let pageHeader = document.createElement( "page-header" ),
 <article class="footer-top">
     <section class="socials">
         <header>
-            <img src="src/public/images/home/pikituchos-logo.svg" id="logo" alt=""> 
-            <img src="src/public/images/home/pikituchos-logo-txt.png" id="logo-txt" alt="">
+            <img src="src/public/images/home-Noely/pikituchos-logo.svg" id="logo" alt=""> 
+            <img src="src/public/images/home-Noely/pikituchos-logo-txt.png" id="logo-txt" alt="">
         </header>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         <footer>
-            <img src="src/public/images/home/socials/facebook-svgrepo-com.svg" alt="">
-            <img src="src/public/images/home/socials/instagram-svgrepo-com.svg" alt="">
-            <img src="src/public/images/home/socials/twitter-svgrepo-com.svg" alt="">
-            <img src="src/public/images/home/socials/youtube-svgrepo-com.svg" alt="">
+            <img src="src/public/images/home-Noely/socials/facebook-svgrepo-com.svg" alt="">
+            <img src="src/public/images/home-Noely/socials/instagram-svgrepo-com.svg" alt="">
+            <img src="src/public/images/home-Noely/socials/twitter-svgrepo-com.svg" alt="">
+            <img src="src/public/images/home-Noely/socials/youtube-svgrepo-com.svg" alt="">
         </footer>
     </section>
     <section class="support">
@@ -134,9 +140,9 @@ let pageHeader = document.createElement( "page-header" ),
     <txt>copyright © 2022 - Present | PIKITUCHOS LTDA.</txt>
     <txt>Made with 
         <!-- ❤️ -->
-        <img id="footer-heart" src="src/public/images/home/love_icon.svg" alt="">
+        <img id="footer-heart" src="src/public/images/home-Noely/love_icon.svg" alt="">
         by <a href="#">fs-tn-18</a> <strong>grupo 7</strong>
-        <img id="footer-DH" href="https://www.digitalhouse.com/br" src="src/public/images/home/DH-Logo.svg" alt="" data-title="www.digitalhouse.com/br">
+        <img id="footer-DH" href="https://www.digitalhouse.com/br" src="src/public/images/home-Noely/DH-Logo.svg" alt="" data-title="www.digitalhouse.com/br">
     </txt>
 </article>
 `,

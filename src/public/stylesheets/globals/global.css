@@ -88,7 +88,7 @@ a { text-decoration: none; }
 /* [ body ]
 ================================================================= */
 html {
-    background-image: url(../../images/home/htmlBackground.svg);
+    background-image: url(../../images/home-Noely/htmlBackground.svg);
     background-size: cover;
     background-position: center;
 }
@@ -253,7 +253,7 @@ page-header {
     text-shadow: #0005 -3px 5px 2px;
 }
 #btn-signup {
-    display: grid;
+    /* display: grid;
     place-items: center;
     width: 110px;
     height: 40%;
@@ -264,8 +264,109 @@ page-header {
     font-size: 1.2vw;
     font-weight: 600;
     transition: .5s ease-out;
-    cursor: pointer;
+    cursor: pointer; */
+    width: fit-content;
 }
+
+.button-pk {
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 100%;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.btn-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: #00000040;
+    will-change: transform;
+    transform: translateY(2px);
+    transition:
+        transform
+        600ms
+        cubic-bezier(.3, .7, .4, 1);
+}
+
+.btn-edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+        to left,
+        #52001b 0%,
+        #a30036 8%,
+        #a30036 92%,
+        #52001b 100%
+    );
+}
+
+.btn-front {
+    display: block;
+    position: relative;
+    padding: 6px;
+    min-width: 100px;
+    border-radius: 12px;
+    font-family: 'Baloo Da 2';
+    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    background: var( --cp09 );
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-pk:hover {
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+}
+
+.button-pk:hover .btn-front {
+    transform: translateY(-6px);
+    transition:
+        transform
+        250ms
+        cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-pk:active .btn-front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.button-pk:hover .btn-shadow {
+    transform: translateY(4px);
+    transition:
+        transform
+        250ms
+        cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-pk:active .btn-shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.button-pk:focus:not(:focus-visible) {
+    outline: none;
+}
+
+
 
 /* [ title-pk ]
 ================================================================ */
@@ -446,7 +547,7 @@ div.title-pk {
     width: 100%;
     height: 60px;
     padding: 8px 0;
-    background-image: url(../../images/home/clouds.svg);
+    background-image: url(../../images/home-Noely/clouds.svg);
     background-size: contain;
     background-position-x: center;
     filter: drop-shadow(#fff 0 0px 0px) 
