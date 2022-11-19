@@ -388,6 +388,14 @@ page-footer {
     gap: 5rem;
     padding-top: 5rem;
     background: var(--cp07);
+    background: var( --cp09 );
+    background-image: 
+        linear-gradient( 
+            to bottom,
+            #f190a3cc, 
+            var(--cp07), 
+            #f190a350
+        );
     user-select: none;
 }
 
@@ -408,17 +416,20 @@ page-footer {
     box-shadow: var(--cp06) 0 0 0 12px;
 }
 .newsletter #outline {
+    position: absolute;
     color: var(--cp07);
     -webkit-text-stroke: 9px var(--cp00);
     filter: drop-shadow(0px 4px #0005);
     font-family: Baloo Da;
     font-size: 1.8rem;
+    white-space: nowrap;
 }
 .newsletter .text-bg {
-    position: absolute;
+    position: relative;
     color: var(--cp07);
     font-family: Baloo Da;
     font-size: 1.8rem;
+    white-space: nowrap;
 }
 .newsletter txt {
     color: var(--cp08);
@@ -507,16 +518,21 @@ page-footer {
 .footer-top .support .h3 {
     color: var(--cp05);
     position: relative;
+    white-space: nowrap;
 }
 
 .footer-top .about .h3 {
     color: var(--cp06);
     position: relative;
+    letter-spacing: .2px;
+    white-space: nowrap;
 }
 
 .footer-top .contact-info .h3 {
     color: var(--cp07);
     position: relative;
+    letter-spacing: .2px;
+    white-space: nowrap;
 }
 div.title-pk {
     /* position: relative; */
@@ -525,6 +541,7 @@ div.title-pk {
     -webkit-text-stroke: 6px var(--cp00);
     font-family: Baloo Da;
     position: absolute;
+    white-space: nowrap;
 }
 
 /* [ bottom section ] ❤️

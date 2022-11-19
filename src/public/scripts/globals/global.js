@@ -254,15 +254,18 @@ let pageHeader = document.createElement( "page-header" ),
     }
     
     card-front bottom-bg #outline {
+        position: absolute;
         color: var(--cp07);
         -webkit-text-stroke: 10px var(--cp00);
         filter: drop-shadow(0px 4px #0005);
         font-family: Baloo Da;
+        white-space: nowrap;
     }
     card-front bottom-bg #text-bg {
-        position: absolute;
+        position: relative;
         color: var(--cp08);
         font-family: Baloo Da;
+        white-space: nowrap;
     }
     
     card-front valor {
