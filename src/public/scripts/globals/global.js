@@ -39,7 +39,6 @@ let pageHeader = document.createElement( "page-header" ),
         <!-- <button id="searchbar-btn"><txt>buscar</txt></button> -->
         <input id="searchbar-btn" type="button" value="🔎 buscar">
     </label>
-    <span id="btn-signup">
         <button class="button-pk" role="button">
             <span class="btn-shadow"></span>
             <span class="btn-edge"></span>
@@ -47,7 +46,6 @@ let pageHeader = document.createElement( "page-header" ),
                 Cadastre-se
             </span>
         </button>
-    </span>
 </article>
 <script>
     window.addEventListener( "load", ev => {
