@@ -28,7 +28,7 @@ banner-section slider slide {
 }
 
 banner-section > slider slide 
-left main h2 {
+left section h2 {
     font-size: clamp( .1rem, 2vw,1.6rem );
 }
 
@@ -59,7 +59,7 @@ banner-section slider #slide00 {
         #fff0
     );
 } banner-section slider 
-#slide00 left main {
+#slide00 left section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,7 +67,7 @@ banner-section slider #slide00 {
     padding: 30% 5%;
 }
 banner-section slider 
-#slide00 left main #mamae-e-bebe {
+#slide00 left section #mamae-e-bebe {
     width: 30.6vw;
     filter: drop-shadow(#0005 0 5px 3px);
     user-select: none;
@@ -103,7 +103,7 @@ banner-section slider #slide01 {
         #0000
     );
 } banner-section slider 
-#slide01 left main {
+#slide01 left section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,7 +111,7 @@ banner-section slider #slide01 {
     padding: 30% 5%;
 }
 banner-section slider 
-#slide01 left main #mamae-e-bebe {
+#slide01 left section #mamae-e-bebe {
     width: 30.6vw;
     filter: drop-shadow(#0005 0 5px 3px);
     user-select: none;
@@ -145,7 +145,7 @@ banner-section slider #slide02 {
         #fff0
     );
 } banner-section slider 
-#slide02 left main {
+#slide02 left section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -153,7 +153,7 @@ banner-section slider #slide02 {
     padding: 30% 5%;
 }
 banner-section slider 
-#slide02 left main #mamae-e-bebe {
+#slide02 left section #mamae-e-bebe {
     width: 30.6vw;
     filter: drop-shadow(#0005 0 5px 3px);
     user-select: none;
@@ -187,7 +187,7 @@ banner-section slider #slide03 {
         #fff0
     );
 } banner-section slider 
-#slide03 left main {
+#slide03 left section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,7 +195,7 @@ banner-section slider #slide03 {
     padding: 30% 5%;
 }
 banner-section slider 
-#slide03 left main #mamae-e-bebe {
+#slide03 left section #mamae-e-bebe {
     width: 30.6vw;
     filter: drop-shadow(#0005 0 5px 3px);
     user-select: none;
@@ -484,23 +484,23 @@ testimonials-section header .text-bg {
     font-size: 2.5rem;
 }
 
-testimonials-section main {
+testimonials-section section {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5rem;
 }
 
-testimonials-section main card {
+testimonials-section section card {
     display: block;
     width: 150px;
     height: 150px;
     background: #ff85;
 }
 
-testimonials-section main card h2 {}
+testimonials-section section card h2 {}
 
-testimonials-section main card testimonial {}
+testimonials-section section card testimonial {}
 
 /* [ banner slider ]
 ================================== */
