@@ -51,6 +51,7 @@ l {
     display: list-item;
     text-align: -webkit-match-parent;
     list-style: none;
+    line-height: initial;
     cursor: pointer;
     user-select: none;
 }
@@ -466,8 +467,8 @@ page-footer {
 /* [ top section ]
 -------------------------- */
 .footer-top {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 90%;
     color: var(--cp00);
     font-size: 1.125rem;

@@ -297,10 +297,21 @@ let pageHeader = document.createElement( "page-header" ),
         font-weight: bold;
         font-size: 1rem;
         cursor: pointer;
+        outline-offset: 4px;
+        transition: filter 250ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
     }
     card-front bottom-bg button:hover {
-        background: var(--cp06);
+        background: var(--cp09);
         text-shadow: #00f7 0 0 10px;
+        box-shadow: var(--cp08) 0 6px 2px;
+        transform: translateY(-3px);
+        transition:
+            transform
+            250ms
+            cubic-bezier(.3, .7, .4, 1.5);
     }
 
     /* ------------------------------ */
@@ -362,10 +373,21 @@ let pageHeader = document.createElement( "page-header" ),
         font-weight: bold;
         font-size: 1rem;
         cursor: pointer;
+        outline-offset: 4px;
+        transition: filter 250ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
     }
     card-back bottom-bg button:hover {
-        background: var(--cp06);
+        background: var(--cp09);
         text-shadow: #00f7 0 0 10px;
+        box-shadow: var(--cp08) 0 6px 2px;
+        transform: translateY(-3px);
+        transition:
+            transform
+            250ms
+            cubic-bezier(.3, .7, .4, 1.5);
     }
 </style>
 <picture>
