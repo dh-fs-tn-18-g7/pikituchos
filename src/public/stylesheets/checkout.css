@@ -1,5 +1,13 @@
 @import url(/src/public/stylesheets/globals/global.css);
 
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
 :root {
   text-decoration: none;
 }
@@ -39,6 +47,9 @@ label {
   font-weight: 600;
   color: var(--cp08);
 }
+
+
+
 
 /* CSS MAIN */
 
