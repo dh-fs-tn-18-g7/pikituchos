@@ -23,6 +23,32 @@
     transition: 0.1s;
   }
 
+
+
+/* Esconder senha */
+
+.input-senha{
+
+  position: relative;
+
+}
+
+.esconde-senha{
+  position: absolute;
+  right: 20px;
+  bottom: 1%;
+  cursor: pointer;
+}
+
+.esconde-senha img{
+  width: 26px;
+
+}
+
+
+
+
+
   
 /* Estilos de Botões */
 
@@ -82,3 +108,4 @@
   width: 45%;
 
 }
+

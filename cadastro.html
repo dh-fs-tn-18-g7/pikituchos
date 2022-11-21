@@ -19,14 +19,13 @@
     <!-- CSS da pagina e dos componentes -->
 
     <link rel="stylesheet" href="./src/public/stylesheets/cadastro.css" />
-    <link rel="stylesheet" href="/src/public/stylesheets/components.css">
+    <link rel="stylesheet" href="/src/public/stylesheets/components.css" />
   </head>
 
   <body>
     <page-header></page-header>
 
     <main>
-      
       <form action="">
         <article>
           <img src="./src/public/images/home/pikituchos-logo-txt.png" alt="" />
@@ -34,8 +33,7 @@
 
         <article class="dados-cadastrais">
           <div>
-            <h2> Dados cadastrais:</h2>
-           
+            <h2>Dados cadastrais:</h2>
           </div>
         </article>
 
@@ -50,26 +48,41 @@
                 placeholder="Digite seu E-mail:"
             /></label>
           </div>
-          <div>
+          <div class="input-senha">
             <label for="senha"
               >Senha:<input
                 class="input-form"
-                type="text"
+                type="password"
                 name="senha"
                 id="senha"
                 placeholder="Escolha uma senha:"
-            /></label>
+              />
+
+              <span class="esconde-senha">
+                <img src="./src/public/images/img-checkout/olho.svg" alt="">
+              </span>
+
+            </label>
+
           </div>
 
-          <div>
-            <label for="validarSenha"
+          <div class="input-senha">
+            <label for="validar"
               >Confirme sua senha:<input
                 placeholder="Confirme senha:"
                 class="input-form"
-                type="text"
-                name="validarSenha"
-                id="validarSenha"
-            /></label>
+                type="password"
+                name="validar"
+                id="validar"
+            />
+
+            <!-- Img de Olho para esconder senha -->
+          
+            <!-- <span class="esconde-senha">
+              <img src="./src/public/images/img-checkout/olho.svg" alt="">
+            </span> -->
+          
+          </label>
           </div>
           <div>
             <label for="cpf"
@@ -181,16 +194,15 @@
                 placeholder="UF:"
             /></label>
           </div>
-      
         </article>
         <article class="card-radio">
           <label for="promo"
-            ><input class="input-radio" type="radio" name="" id="promo" />Deseja receber novidades e
-            promoções por e-mail?</label
+            ><input class="input-radio" type="radio" name="" id="promo" />Deseja
+            receber novidades e promoções por e-mail?</label
           >
           <label for="dados" class="radio"
-            ><input class="input-radio" type="radio" name="" id="dados" /> Li e aceito a forma de
-            tratamento dos meus dados.</label
+            ><input class="input-radio" type="radio" name="" id="dados" /> Li e
+            aceito a forma de tratamento dos meus dados.</label
           >
         </article>
 
@@ -202,6 +214,8 @@
 
     <page-footer></page-footer>
 
+
+    <script src="src/public/scripts/escondersenha.js"></script>
     <script src="src/public/scripts/globals/global.js"></script>
   </body>
 </html>
