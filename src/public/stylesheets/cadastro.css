@@ -34,11 +34,18 @@
 
 
 body {
-  background-image: linear-gradient(to bottom,var(--cp00), var(--cp11));
+  
+    background-color: #FFDEE9;
+    background-image: linear-gradient(to top , #FFDEE9 0%, #B5FFFC 100%);
+    
 }
-main {
-  background-color: transparent;
+body main {
+
+  background: transparent;
+  margin-bottom: 30px;
+
 }
+
 
 form {
   background-color: #47c8ef;

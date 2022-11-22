@@ -53,13 +53,18 @@ label {
 
 /* CSS MAIN */
 
-body {
-  background-color: var(--cp06);
+
+body main{
+    background-color: #FFDEE9;
+    background-image: linear-gradient(to top , #FFDEE9 0%, #B5FFFC 100%);
+    padding-bottom: 30px;
 }
 
-main {
-  background-color: transparent;
+body main h1{
+    padding: 15px;
+    
 }
+
 
 .card-01 {
   display: flex;
