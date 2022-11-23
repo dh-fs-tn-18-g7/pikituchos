@@ -218,7 +218,7 @@ highlights-section {
         var(--linearbg-01),
         var(--linearbg-09)
     );
-    padding-bottom: 2rem;
+    padding-bottom: 7vw;
     user-select: none;
 }
 highlights-section header {
@@ -243,13 +243,10 @@ highlights-section > slider {
 /* [ your baby section ]
 ================================================================= */
 yourBaby-section {
-    /* display: block;
-    min-height: 350px; */
-    
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 5rem;
-    padding-bottom: 2rem;
+    padding: 10vw 2vw;
     background-image: linear-gradient(
         to bottom,
         var(--linearbg-02),
@@ -259,6 +256,77 @@ yourBaby-section {
 }
 
 yourBaby-section > header { display: grid; place-items: center; }
+
+yourbaby-section > home {
+}
+
+yourbaby-section > spot {
+    display: grid;
+    position: relative;
+    min-width: 550px;
+    min-height: 550px;
+    border-radius: 6px;
+}
+
+yourbaby-section spot .wave {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    width: 100%; height: 100%;
+    opacity: 0.6;
+    background: radial-gradient(#353535, #383737);
+    border-radius: 40%;
+    -webkit-animation: wave 55s infinite linear;
+            animation: wave 55s infinite linear;
+}
+
+yourbaby-section spot .wave:nth-child(2),
+yourbaby-section spot .wave:nth-child(3) {
+     top: 10px;
+}
+
+yourbaby-section spot .wave:nth-child(2) {
+    -webkit-animation-duration: 50s;
+            animation-duration: 50s;
+}
+
+yourbaby-section spot .wave:nth-child(3) {
+    -webkit-animation-duration: 45s;
+            animation-duration: 45s;
+}
+
+yourbaby-section spot .wavePix {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+    border-radius: 40%;
+    background-color: linear-gradient( to bottom, transparent, transparent, #353535 );
+    background-image: url( ../../images/home-Noely/mc.webp );
+    background-size: cover;
+    overflow-x: hidden;
+}
+    
+@-webkit-keyframes wave {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+@keyframes wave {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+yourbaby-section > footer {
+    display: grid;
+    place-items: center;
+}
+
+yourbaby-section > footer p {
+    font-weight: 700;
+    color: var( --cp00 );
+}
 
 /* [ years section ]
 ================================================================= */
@@ -456,7 +524,7 @@ testimonials-section {
         var(--linearbg-09),
         var(--linearbg-10)
     );
-    padding-bottom: 2rem;
+    padding:5vw;
 }
 testimonials-section header {
     line-height: 2.9rem;
@@ -492,15 +560,68 @@ testimonials-section section {
 }
 
 testimonials-section section card {
+    position: relative;
     display: block;
-    width: 150px;
-    height: 150px;
-    background: #ff85;
+    width: clamp( 200px, 22vw, 240px );
+    height: clamp( 300px, 28vw, 317px );
+    background: var( --cp06 );
+    border-radius: 80px 16px 80px 5px;
+    border: var( --cp00 ) dashed;
+    box-shadow: var( --cp06 ) 0 0 0 10px;
+    filter: drop-shadow( #0003 -5px 5px 2px );
 }
 
-testimonials-section section card h2 {}
+testimonials-section section card card-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    position: absolute;
+    top: -16px;
+    left: 16px;
+    border-radius: 80px 16px 80px 5px;
+    border: var( --cp08 ) dashed;
+    box-shadow: var( --cp00 ) 0 0 0 10px;
+    filter: drop-shadow( #0003 -5px 5px 2px );
+    background: var( --cp00 );
+}
 
-testimonials-section section card testimonial {}
+testimonials-section section card card-home picture {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+    position: relative;
+}
+testimonials-section section card card-home picture img {
+    width: 50%;
+    position: absolute;
+    top: -25%;
+    border-radius: 5rem;
+    box-shadow: var( --cp05 ) 0 0 0 6px;
+    filter: drop-shadow( #0005 0 0 5px );
+    overflow: hidden;
+}
+
+testimonials-section section card card-home h3 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var( --cp08 );
+    margin-bottom: 1.5ch;
+}
+
+.testim-card {
+    background: var( --cp09 );
+    border: var( --cp05 ) dashed;
+    box-shadow: var( --cp09 ) 0 0 0 10px;
+}
+.testim-card-home {
+    background: var( --cp05 );
+    border: var( --cp00 ) dashed;
+    box-shadow: var( --cp05 ) 0 0 0 10px;
+}
 
 /* [ banner slider ]
 ================================== */
