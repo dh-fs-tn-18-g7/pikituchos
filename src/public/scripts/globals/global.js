@@ -6,6 +6,8 @@
 let pageHeader = document.createElement( "page-header" ),
 	pageFooter = document.createElement( "page-footer" ),
 	appbarTemplate = `
+<appbar>
+<appbar-home>
 <article class="appbar-left">
     <svg id="baby-logo" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" >
@@ -47,6 +49,8 @@ let pageHeader = document.createElement( "page-header" ),
             </span>
         </button>
 </article>
+</appbar-home>
+</appbar>
 <script>
     window.addEventListener( "load", ev => {
         /* [ properties ]
