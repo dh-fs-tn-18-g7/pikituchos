@@ -41,7 +41,7 @@ let pageHeader = document.createElement( "page-header" ),
 </label>
     <a id="btn-signin">Entre</a>
     <span>ou</span>
-    <a id="btn-signup">Cadastre-se</a>
+    <a href="./cadastro.html" id="btn-signup" >Cadastre-se</a>
 </article>
 <script>
     window.addEventListener( "load", ev => {
