@@ -11,7 +11,7 @@ window.addEventListener( "load", ev => {
 		prevSlide = document.querySelector( "banner-section slider .slider-btn-prev" );
 	/* ------------------------------ */
     
-	/* [ events ]
+	/* [ events ] 
     =============================== */
 
 	/* [ banner slider ]

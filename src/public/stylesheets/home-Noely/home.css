@@ -14,7 +14,6 @@ banner-section slider {
     display: block;
     width: 100%;
     height: 100%;
-    margin-top: 16px;
     position: relative;
     overflow: hidden;
 }
@@ -28,7 +27,7 @@ banner-section slider slide {
 }
 
 banner-section > slider slide 
-left main h2 {
+left section h2 {
     font-size: clamp( .1rem, 2vw,1.6rem );
 }
 
@@ -41,10 +40,9 @@ banner-section slider slide img {
 /* [ slide 00 ]
 ----------------------- */
 banner-section slider #slide00 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-image: url("../../images/home/baby-walls1.jpg");
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: url("../../images/home-Noely/baby-walls1.jpg");
     background-size: cover;
     color: var(--cp08);
     text-shadow: #fff5 0 0 6px;
@@ -59,7 +57,7 @@ banner-section slider #slide00 {
         #fff0
     );
 } banner-section slider 
-#slide00 left main {
+#slide00 left section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,7 +65,7 @@ banner-section slider #slide00 {
     padding: 30% 5%;
 }
 banner-section slider 
-#slide00 left main #mamae-e-bebe {
+#slide00 left section #mamae-e-bebe {
     width: 30.6vw;
     filter: drop-shadow(#0005 0 5px 3px);
     user-select: none;
@@ -103,7 +101,7 @@ banner-section slider #slide01 {
         #0000
     );
 } banner-section slider 
-#slide01 left main {
+#slide01 left section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,7 +109,7 @@ banner-section slider #slide01 {
     padding: 30% 5%;
 }
 banner-section slider 
-#slide01 left main #mamae-e-bebe {
+#slide01 left section #mamae-e-bebe {
     width: 30.6vw;
     filter: drop-shadow(#0005 0 5px 3px);
     user-select: none;
@@ -130,7 +128,7 @@ banner-section slider #slide02 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url("../../images/home/baby-walls2.jpg");
+    background-image: url("../../images/home-Noely/baby-walls2.jpg");
     background-size: cover;
     color: var(--cp08);
     text-shadow: #fff5 0 0 6px;
@@ -145,7 +143,7 @@ banner-section slider #slide02 {
         #fff0
     );
 } banner-section slider 
-#slide02 left main {
+#slide02 left section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -153,7 +151,7 @@ banner-section slider #slide02 {
     padding: 30% 5%;
 }
 banner-section slider 
-#slide02 left main #mamae-e-bebe {
+#slide02 left section #mamae-e-bebe {
     width: 30.6vw;
     filter: drop-shadow(#0005 0 5px 3px);
     user-select: none;
@@ -172,7 +170,7 @@ banner-section slider #slide03 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url("../../images/home/baby-walls3.jpg");
+    background-image: url("../../images/home-Noely/baby-walls3.jpg");
     background-size: cover;
     color: var(--cp08);
     text-shadow: #fff5 0 0 6px;
@@ -187,7 +185,7 @@ banner-section slider #slide03 {
         #fff0
     );
 } banner-section slider 
-#slide03 left main {
+#slide03 left section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,7 +193,7 @@ banner-section slider #slide03 {
     padding: 30% 5%;
 }
 banner-section slider 
-#slide03 left main #mamae-e-bebe {
+#slide03 left section #mamae-e-bebe {
     width: 30.6vw;
     filter: drop-shadow(#0005 0 5px 3px);
     user-select: none;
@@ -220,7 +218,7 @@ highlights-section {
         var(--linearbg-01),
         var(--linearbg-09)
     );
-    padding-bottom: 2rem;
+    padding-bottom: 7vw;
     user-select: none;
 }
 highlights-section header {
@@ -245,19 +243,89 @@ highlights-section > slider {
 /* [ your baby section ]
 ================================================================= */
 yourBaby-section {
-    /* display: block;
-    min-height: 350px; */
-    
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 5rem;
-    padding-bottom: 2rem;
+    padding: 10vw 2vw;
     background-image: linear-gradient(
         to bottom,
         var(--linearbg-02),
         var(--linearbg-03)
     );
     user-select: none;
+}
+
+yourBaby-section > header { display: grid; place-items: center; }
+
+yourbaby-section > home {
+}
+
+yourbaby-section > spot {
+    display: grid;
+    position: relative;
+    min-width: 550px;
+    min-height: 550px;
+    border-radius: 6px;
+}
+
+yourbaby-section spot .wave {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    width: 100%; height: 100%;
+    opacity: 0.6;
+    background: radial-gradient(#353535, #383737);
+    border-radius: 40%;
+    -webkit-animation: wave 55s infinite linear;
+            animation: wave 55s infinite linear;
+}
+
+yourbaby-section spot .wave:nth-child(2),
+yourbaby-section spot .wave:nth-child(3) {
+     top: 10px;
+}
+
+yourbaby-section spot .wave:nth-child(2) {
+    -webkit-animation-duration: 50s;
+            animation-duration: 50s;
+}
+
+yourbaby-section spot .wave:nth-child(3) {
+    -webkit-animation-duration: 45s;
+            animation-duration: 45s;
+}
+
+yourbaby-section spot .wavePix {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+    border-radius: 40%;
+    background-color: linear-gradient( to bottom, transparent, transparent, #353535 );
+    background-image: url( ../../images/home-Noely/mc.webp );
+    background-size: cover;
+    overflow-x: hidden;
+}
+    
+@-webkit-keyframes wave {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+@keyframes wave {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+yourbaby-section > footer {
+    display: grid;
+    place-items: center;
+}
+
+yourbaby-section > footer p {
+    font-weight: 700;
+    color: var( --cp00 );
 }
 
 /* [ years section ]
@@ -302,13 +370,6 @@ kids-section > slider {
     min-height: 649px;
     overflow-x: hidden;
 }
-/* baby-section > slider card,
-kids-section > slider card {
-    display: block;
-    width: 150px;
-    height: 150px;
-    background: #ff85;
-} */
 
 /* [ cards ]
 ------------------------ */
@@ -446,6 +507,13 @@ bottom bottom-bg button:hover {
     background: var(--cp06);
 }
 
+/* [ center-btn ]
+================================================================= */
+center-btn {
+    display: grid;
+    place-items: center;
+}
+
 /* [ testimonials section ]
 ================================================================= */
 testimonials-section {
@@ -456,7 +524,7 @@ testimonials-section {
         var(--linearbg-09),
         var(--linearbg-10)
     );
-    padding-bottom: 2rem;
+    padding:5vw;
 }
 testimonials-section header {
     line-height: 2.9rem;
@@ -484,20 +552,132 @@ testimonials-section header .text-bg {
     font-size: 2.5rem;
 }
 
-testimonials-section main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
+testimonials-section section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 18px;
 }
 
-testimonials-section main card {
+testimonials-section section card {
+    position: relative;
     display: block;
-    width: 150px;
-    height: 150px;
-    background: #ff85;
+    width: clamp( 200px, 22vw, 240px );
+    height: clamp( 300px, 28vw, 317px );
+    background: var( --cp06 );
+    border-radius: 80px 16px 80px 5px;
+    border: var( --cp00 ) dashed;
+    box-shadow: var( --cp06 ) 0 0 0 10px;
+    filter: drop-shadow( #0003 -5px 5px 2px );
 }
 
-testimonials-section main card h2 {}
+testimonials-section section card card-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    position: absolute;
+    top: -16px;
+    left: 16px;
+    border-radius: 80px 16px 80px 5px;
+    border: var( --cp08 ) dashed;
+    box-shadow: var( --cp00 ) 0 0 0 10px;
+    filter: drop-shadow( #0003 -5px 5px 2px );
+    background: var( --cp00 );
+}
 
-testimonials-section main card testimonial {}
+testimonials-section section card card-home picture {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+    position: relative;
+}
+testimonials-section section card card-home picture img {
+    width: 50%;
+    position: absolute;
+    top: -25%;
+    border-radius: 5rem;
+    box-shadow: var( --cp05 ) 0 0 0 6px;
+    filter: drop-shadow( #0005 0 0 5px );
+    overflow: hidden;
+}
+
+testimonials-section section card card-home h3 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var( --cp08 );
+    margin-bottom: 1.5ch;
+}
+
+.testim-card {
+    background: var( --cp09 );
+    border: var( --cp05 ) dashed;
+    box-shadow: var( --cp09 ) 0 0 0 10px;
+}
+.testim-card-home {
+    background: var( --cp05 );
+    border: var( --cp00 ) dashed;
+    box-shadow: var( --cp05 ) 0 0 0 10px;
+}
+
+/* [ banner slider ]
+================================== */
+.slider-btn {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    /* padding: 10px; */
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+    z-index: 9;
+    cursor: pointer;
+    background-color: #fff5;
+    background-color: #00000010;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.slider-btn:active {
+    transform: scale(1.1);
+}
+.slider-btn:hover {
+    box-shadow: #0003 0 0 6px;
+}
+.slider-btn-prev {
+    top: 50%;
+    left: 2%;
+} .slider-btn-prev:active {
+    transform: translateX(-5px);
+}
+.slider-btn-next {
+    top: 50%;
+    right: 2%;
+} .slider-btn-next:active {
+    transform: translateX(5px);
+}
+
+/* [ highlight slider ]
+====================================== */
+.carousel-slider {
+    overflow: hidden;
+}
+  
+.carousel-list:before,
+.carousel-list:after {
+    content: "";
+    display: table;
+}
+  
+.carousel-list:after {
+    clear: both;
+}
+  
+.carousel-slide {
+    float: left;
+}
+  

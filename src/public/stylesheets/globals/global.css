@@ -8,7 +8,7 @@
     /* [ color palette ] -------------------- */
     --cp00: #ffffff; --cp01: #00A599; --cp02: #FFAEBF; --cp03: #FFFADD;
     --cp04: #FDCDBF; --cp05: #FEB491; --cp06: #47C8EF; --cp07: #F190A3;
-    --cp08: #464646;
+    --cp08: #464646; --cp09: #f0003c;
 
     /* [ shadows ] -------------------- */
     --text-shadow-blue: #27f 0 0 5px;
@@ -51,6 +51,7 @@ l {
     display: list-item;
     text-align: -webkit-match-parent;
     list-style: none;
+    line-height: initial;
     cursor: pointer;
     user-select: none;
 }
@@ -88,7 +89,7 @@ a { text-decoration: none; }
 /* [ body ]
 ================================================================= */
 html {
-    background-image: url(../../images/home/htmlBackground.svg);
+    background-image: url(../../images/home-Noely/htmlBackground.svg);
     background-size: cover;
     background-position: center;
 }
@@ -183,7 +184,8 @@ page-header {
 .searchbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 70%;
     height: 36px;
     padding: 6px;
     border-radius: 23px;
@@ -252,20 +254,107 @@ page-header {
     transition: .2s;
     text-shadow: #0005 -3px 5px 2px;
 }
-#btn-signup {
-    display: grid;
-    place-items: center;
-    width: 110px;
-    height: 40%;
-    background: var(--cp07);
-    border: 2px solid #464646b8;
-    border-radius: 4px;
-    color: var(--cp00);
-    font-size: 1.2vw;
-    font-weight: 600;
-    transition: .5s ease-out;
+
+.button-pk {
+    position: relative;
+    border: none;
+    background: transparent;
+    /* width: 100%; */
+    width: fit-content;
+    padding: 0;
     cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
+
+.btn-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: #00000040;
+    will-change: transform;
+    transform: translateY(2px);
+    transition:
+        transform
+        600ms
+        cubic-bezier(.3, .7, .4, 1);
+}
+
+.btn-edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+        to left,
+        #52001b 0%,
+        #a30036 8%,
+        #a30036 92%,
+        #52001b 100%
+    );
+}
+
+.btn-front {
+    display: block;
+    position: relative;
+    padding: 6px;
+    min-width: 100px;
+    border-radius: 12px;
+    font-family: 'Baloo Da 2';
+    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    background: var( --cp09 );
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-pk:hover {
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+}
+
+.button-pk:hover .btn-front {
+    transform: translateY(-6px);
+    transition:
+        transform
+        250ms
+        cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-pk:active .btn-front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.button-pk:hover .btn-shadow {
+    transform: translateY(4px);
+    transition:
+        transform
+        250ms
+        cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-pk:active .btn-shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.button-pk:focus:not(:focus-visible) {
+    outline: none;
+}
+
+
 
 /* [ title-pk ]
 ================================================================ */
@@ -299,6 +388,14 @@ page-footer {
     gap: 5rem;
     padding-top: 5rem;
     background: var(--cp07);
+    background: var( --cp09 );
+    background-image: 
+        linear-gradient( 
+            to bottom,
+            #f190a3cc, 
+            var(--cp07), 
+            #f190a350
+        );
     user-select: none;
 }
 
@@ -319,17 +416,20 @@ page-footer {
     box-shadow: var(--cp06) 0 0 0 12px;
 }
 .newsletter #outline {
+    position: absolute;
     color: var(--cp07);
     -webkit-text-stroke: 9px var(--cp00);
     filter: drop-shadow(0px 4px #0005);
     font-family: Baloo Da;
     font-size: 1.8rem;
+    white-space: nowrap;
 }
 .newsletter .text-bg {
-    position: absolute;
+    position: relative;
     color: var(--cp07);
     font-family: Baloo Da;
     font-size: 1.8rem;
+    white-space: nowrap;
 }
 .newsletter txt {
     color: var(--cp08);
@@ -378,8 +478,8 @@ page-footer {
 /* [ top section ]
 -------------------------- */
 .footer-top {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 90%;
     color: var(--cp00);
     font-size: 1.125rem;
@@ -418,16 +518,21 @@ page-footer {
 .footer-top .support .h3 {
     color: var(--cp05);
     position: relative;
+    white-space: nowrap;
 }
 
 .footer-top .about .h3 {
     color: var(--cp06);
     position: relative;
+    letter-spacing: .2px;
+    white-space: nowrap;
 }
 
 .footer-top .contact-info .h3 {
     color: var(--cp07);
     position: relative;
+    letter-spacing: .2px;
+    white-space: nowrap;
 }
 div.title-pk {
     /* position: relative; */
@@ -436,6 +541,7 @@ div.title-pk {
     -webkit-text-stroke: 6px var(--cp00);
     font-family: Baloo Da;
     position: absolute;
+    white-space: nowrap;
 }
 
 /* [ bottom section ] ❤️
@@ -446,7 +552,7 @@ div.title-pk {
     width: 100%;
     height: 60px;
     padding: 8px 0;
-    background-image: url(../../images/home/clouds.svg);
+    background-image: url(../../images/home-Noely/clouds.svg);
     background-size: contain;
     background-position-x: center;
     filter: drop-shadow(#fff 0 0px 0px) 

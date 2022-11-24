@@ -25,15 +25,16 @@ let pageHeader = document.createElement( "page-header" ),
             <path class="pikituchos-class0" d="M 22.931 16.921 C 22.26 16.361 21.367 16.034 20.667 16.034 C 19.967 16.034 19.056 16.299 18.464 16.796" style="stroke-width: 1px; stroke-linecap: square; stroke: #464646;" />
         </g>
     </svg> 
-    <img id="logos-desc" src="src/public/images/home/pikituchos-logo-txt.png" alt="">
+    <img id="logos-desc" src="src/public/images/home-Noely/pikituchos-logo-txt.png" alt="">
 </article>
 <nav class="appbar-nav">
     <li url="#" data-title="Home">Home</li>
     <li url="#highlights" data-title="Produtos">Produtos</li>
     <li url="#" data-title="Contatos">Contato</li>
-    <li url="#" data-title="ver carrinho"><img src="src/public/images/home/shopping-cart.svg" alt=""></li>
+    <li url="#" data-title="ver carrinho"><img src="src/public/images/home-Noely/shopping-cart.svg" alt=""></li>
 </nav>
 <article class="appbar-right">
+<<<<<<< HEAD
 <label for="searchbar" class="searchbar">
     <input id="searchbar" type="text" placeholder=" procure aqui. . .">
     <!-- <button id="searchbar-btn"><txt>buscar</txt></button> -->
@@ -42,6 +43,20 @@ let pageHeader = document.createElement( "page-header" ),
     <a id="btn-signin">Entre</a>
     <span>ou</span>
     <a href="./cadastro.html" id="btn-signup" >Cadastre-se</a>
+=======
+    <label for="searchbar" class="searchbar">
+        <input id="searchbar" type="text" placeholder=" procure aqui. . .">
+        <!-- <button id="searchbar-btn"><txt>buscar</txt></button> -->
+        <input id="searchbar-btn" type="button" value="🔎 buscar">
+    </label>
+        <button class="button-pk" role="button">
+            <span class="btn-shadow"></span>
+            <span class="btn-edge"></span>
+            <span class="btn-front text">
+                Cadastre-se
+            </span>
+        </button>
+>>>>>>> 250611717f3d7efb3fc2ca80b8fc8ba14aaaa8bf
 </article>
 <script>
     window.addEventListener( "load", ev => {
@@ -67,22 +82,22 @@ let pageHeader = document.createElement( "page-header" ),
     <txt>receba ofertas exclusivas para o seu pikitucho <br> diretamente no seu e-mail.</txt>
     <label for="subscribe">
         <input type="text" placeholder="digite seu melhor e-mail...">
-        <input type="button" value="Assine agora!">
+        <button-pk name="Assine agora!" color="" width="90%"></button-pk>
     </label>
 </article>
 
 <article class="footer-top">
     <section class="socials">
         <header>
-            <img src="src/public/images/home/pikituchos-logo.svg" id="logo" alt=""> 
-            <img src="src/public/images/home/pikituchos-logo-txt.png" id="logo-txt" alt="">
+            <img src="src/public/images/home-Noely/pikituchos-logo.svg" id="logo" alt=""> 
+            <img src="src/public/images/home-Noely/pikituchos-logo-txt.png" id="logo-txt" alt="">
         </header>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         <footer>
-            <img src="src/public/images/home/socials/facebook-svgrepo-com.svg" alt="">
-            <img src="src/public/images/home/socials/instagram-svgrepo-com.svg" alt="">
-            <img src="src/public/images/home/socials/twitter-svgrepo-com.svg" alt="">
-            <img src="src/public/images/home/socials/youtube-svgrepo-com.svg" alt="">
+            <img src="src/public/images/home-Noely/socials/facebook-svgrepo-com.svg" alt="">
+            <img src="src/public/images/home-Noely/socials/instagram-svgrepo-com.svg" alt="">
+            <img src="src/public/images/home-Noely/socials/twitter-svgrepo-com.svg" alt="">
+            <img src="src/public/images/home-Noely/socials/youtube-svgrepo-com.svg" alt="">
         </footer>
     </section>
     <section class="support">
@@ -134,9 +149,9 @@ let pageHeader = document.createElement( "page-header" ),
     <txt>copyright © 2022 - Present | PIKITUCHOS LTDA.</txt>
     <txt>Made with 
         <!-- ❤️ -->
-        <img id="footer-heart" src="src/public/images/home/love_icon.svg" alt="">
+        <img id="footer-heart" src="src/public/images/home-Noely/love_icon.svg" alt="">
         by <a href="#">fs-tn-18</a> <strong>grupo 7</strong>
-        <img id="footer-DH" href="https://www.digitalhouse.com/br" src="src/public/images/home/DH-Logo.svg" alt="" data-title="www.digitalhouse.com/br">
+        <img id="footer-DH" href="https://www.digitalhouse.com/br" src="src/public/images/home-Noely/DH-Logo.svg" alt="" data-title="www.digitalhouse.com/br">
     </txt>
 </article>
 `,
@@ -250,15 +265,18 @@ let pageHeader = document.createElement( "page-header" ),
     }
     
     card-front bottom-bg #outline {
+        position: absolute;
         color: var(--cp07);
         -webkit-text-stroke: 10px var(--cp00);
         filter: drop-shadow(0px 4px #0005);
         font-family: Baloo Da;
+        white-space: nowrap;
     }
     card-front bottom-bg #text-bg {
-        position: absolute;
+        position: relative;
         color: var(--cp08);
         font-family: Baloo Da;
+        white-space: nowrap;
     }
     
     card-front valor {
@@ -293,10 +311,21 @@ let pageHeader = document.createElement( "page-header" ),
         font-weight: bold;
         font-size: 1rem;
         cursor: pointer;
+        outline-offset: 4px;
+        transition: filter 250ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
     }
     card-front bottom-bg button:hover {
-        background: var(--cp06);
+        background: var(--cp09);
         text-shadow: #00f7 0 0 10px;
+        box-shadow: var(--cp08) 0 6px 2px;
+        transform: translateY(-3px);
+        transition:
+            transform
+            250ms
+            cubic-bezier(.3, .7, .4, 1.5);
     }
 
     /* ------------------------------ */
@@ -358,10 +387,21 @@ let pageHeader = document.createElement( "page-header" ),
         font-weight: bold;
         font-size: 1rem;
         cursor: pointer;
+        outline-offset: 4px;
+        transition: filter 250ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
     }
     card-back bottom-bg button:hover {
-        background: var(--cp06);
+        background: var(--cp09);
         text-shadow: #00f7 0 0 10px;
+        box-shadow: var(--cp08) 0 6px 2px;
+        transform: translateY(-3px);
+        transition:
+            transform
+            250ms
+            cubic-bezier(.3, .7, .4, 1.5);
     }
 </style>
 <picture>
@@ -474,6 +514,8 @@ class Title extends HTMLElement {
 		this.shadowRoot.append( title.content.cloneNode( true ) );
 		this.shadowRoot.querySelector( "h2#outline" ).innerHTML = this.getAttribute( "name" );
 		this.shadowRoot.querySelector( "h2#text" ).innerHTML = this.getAttribute( "name" );
+		this.shadowRoot.querySelector( "h2#outline" ).style.fontSize = this.getAttribute( "font-size" );
+		this.shadowRoot.querySelector( "h2#text" ).style.fontSize = this.getAttribute( "font-size" );
 		this.shadowRoot.querySelector( "h2#text" ).style.color = this.getAttribute( "color" );
 	} 
 	connectedCallback() {
@@ -523,6 +565,140 @@ class Card extends HTMLElement {
 	}
 }
 window.customElements.define( "card-pk", Card );
+
+/* [ card-pk template ]
+===============================================================================*/
+class Button extends HTMLElement {
+	constructor() {
+		super();
+		let button = document.createElement( "template" );
+		button.innerHTML = ` <style>
+            @import url('https://fonts.googleapis.com/css2?family=Baloo+Da&family=Baloo+Da+2&family=Baloo+Da+2:wght@400;500;600;700;800&family=Baloo+Paaji&family=Londrina+Sketch&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Rajdhani:wght@400;500;600;700&display=swap');
+            .button-pk {
+                position: relative;
+                border: none;
+                background: transparent;
+                width: 100%;
+                padding: 0;
+                cursor: pointer;
+                outline-offset: 4px;
+                transition: filter 250ms;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+            }
+
+            .btn-shadow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                background: #00000040;
+                will-change: transform;
+                transform: translateY(2px);
+                transition:
+                    transform
+                    600ms
+                    cubic-bezier(.3, .7, .4, 1);
+            }
+
+            .btn-edge {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                background: linear-gradient(
+                    to left,
+                    #52001b 0%,
+                    #a30036 8%,
+                    #a30036 92%,
+                    #52001b 100%
+                );
+            }
+
+            .btn-front {
+                display: block;
+                position: relative;
+                padding: 6px 27px;
+                border-radius: 12px;
+                font-family: 'Baloo Da 2';
+                font-size: 1.1rem;
+                font-weight: 700;
+                color: white;
+                background: var( --cp09 );
+                will-change: transform;
+                transform: translateY(-4px);
+                transition:
+                    transform
+                    600ms
+                    cubic-bezier(.3, .7, .4, 1);
+            }
+
+            @media (min-width: 768px) {
+                .btn-front {
+                    padding: 6px 42px;
+                }
+            }
+
+            .button-pk:hover {
+                filter: brightness(110%);
+                -webkit-filter: brightness(110%);
+            }
+
+            .button-pk:hover .btn-front {
+                transform: translateY(-6px);
+                transition:
+                    transform
+                    250ms
+                    cubic-bezier(.3, .7, .4, 1.5);
+            }
+
+            .button-pk:active .btn-front {
+                transform: translateY(-2px);
+                transition: transform 34ms;
+            }
+
+            .button-pk:hover .btn-shadow {
+                transform: translateY(4px);
+                transition:
+                    transform
+                    250ms
+                    cubic-bezier(.3, .7, .4, 1.5);
+            }
+
+            .button-pk:active .btn-shadow {
+                transform: translateY(1px);
+                transition: transform 34ms;
+            }
+
+            .button-pk:focus:not(:focus-visible) {
+                outline: none;
+            }
+            </style>
+            <button class="button-pk" role="button">
+                <span class="btn-shadow"></span>
+                <span class="btn-edge"></span>
+                <span class="btn-front text">
+                </span>
+            </button> `;
+		this.attachShadow( { mode: "open" } );
+		this.shadowRoot.append( button.content.cloneNode( true ) );
+		this.style.cssText = " display: center; align-items: center; ";
+		this.style.width = this.getAttribute( "width" );
+		this.shadowRoot.querySelector( "span.btn-front" ).innerText = this.getAttribute( "name" );
+		this.shadowRoot.querySelector( ".btn-front" ).style.backgroundColor = this.getAttribute( "color" );
+	} 
+	connectedCallback() {
+		this.render();
+	}
+	render() {
+	}
+}
+window.customElements.define( "button-pk", Button );
 
 
 
