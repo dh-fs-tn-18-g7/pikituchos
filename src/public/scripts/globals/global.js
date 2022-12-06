@@ -43,30 +43,33 @@ let pageHeader = document.createElement( "page-header" ),
         <!-- <button id="searchbar-btn"><txt>buscar</txt></button> -->
         <input id="searchbar-btn" type="button" value="🔎 buscar">
     </label>
-        <button class="button-pk" role="button">
-            <span class="btn-shadow"></span>
-            <span class="btn-edge"></span>
-            <span class="btn-front text">
-                Cadastre-se
-            </span>
-        </button>
-</article>
-<script>
-    window.addEventListener( "load", ev => {
-        /* [ properties ]
-        =================================== */
-        let baby = document.querySelector( "svg#baby-logo" ),
-            babysEyes = document.querySelector( "#babys-eyes" );
-        /* -------------------------------- */
-    
-        baby.addEventListener( "mouseenter", ev => {
-            babysEyes.innerHTML = pikituchoHoverin;
-        } );
-        baby.addEventListener( "mouseleave", ev => {
-            babysEyes.innerHTML = pikitucho;
-        } );
-    } );
-</script>
+    <menu>
+        <li url="#" data-title="Home">
+            <div class="title-pk">
+                <h3 class="outline">Home</h3>
+                <h3 class="h3">Home</h3>
+            </div>
+        </li>
+        <li url="#highlights" data-title="Produtos">
+            <div class="title-pk">
+                <h3 class="outline">Produtos</h3>
+                <h3 class="h3">Produtos</h3>
+            </div>
+        </li>
+        <li url="#" data-title="Contatos">
+            <div class="title-pk">
+                <h3 class="outline">Contato</h3>
+                <h3 class="h3">Contato</h3>
+            </div>
+        </li>
+        <li url="#" data-title="ver carrinho">
+            <div class="title-pk" id="carrinho">
+                <h3 class="outline">Carrinho</h3>
+                <h3 class="h3">Carrinho</h3>
+            </div>
+        </li>
+    </menu> 
+</nav>
 `,
 	footerTemplate = `
 <article class="newsletter">
