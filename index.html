@@ -4,6 +4,7 @@
 <html lang="pt-br">
 <head>
     <title>Pikituchos</title>
+    <!-- --------------------------------------------------------- -->
     <link rel="icon" href="src/public/images/logo.svg" type="svg+xml">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,8 +12,15 @@
     <!-- <base href="/" target="_blank"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- [ styles ] 
+    ==================================================== -->
     <link rel="stylesheet" href="src/public/stylesheets/globals/global.css">
     <link rel="stylesheet" href="src/public/stylesheets/home-Noely/home.css">
+    <link rel="stylesheet" href="src/public/stylesheets/home-Noely/homeMediaqueries.css">
+    <!-- [ scripts ] 
+    ==================================================== -->
+    <script src="src/public/scripts/globals/global.js" defer></script>
+    <script src="src/public/scripts/home-Noely/home.js" defer></script>
 </head>
 <body>
         
@@ -70,43 +78,43 @@
                 <img class="slider-btn slider-btn-next" src="src/public/images/home-Noely/arrowRight.svg" alt="">
                 <img class="slider-btn slider-btn-prev" src="src/public/images/home-Noely/arrowLeft.svg" alt="">
             </slider>
-        </banner-section>
+        </banner-section> 
         
         <highlights-section>
             <header>
                 <title-pk name="Produtos mais procurados" color="var(--cp05)"></title-pk>
             </header>
             <slider>
-                <card-pk 
+                <card-pk class="slide"
                     name="Product's name" 
-                    desc="product description" 
+                    desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
                     real="99" 
                     cents="99"
                     src="src/public/images/home-Noely/ofertas/oferta-01.png" 
                     alt=""
                     btn="Ver detalhes"
                 ></card-pk>
-                <card-pk 
+                <card-pk class="slide"
                     name="Product's name" 
-                    desc="product description" 
+                    desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
                     real="99" 
                     cents="99"
                     src="src/public/images/home-Noely/ofertas/oferta-02.png" 
                     alt=""
                     btn="Ver detalhes"
                 ></card-pk>
-                <card-pk 
+                <card-pk class="slide"
                     name="Product's name" 
-                    desc="product description" 
+                    desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
                     real="99" 
                     cents="99"
                     src="src/public/images/home-Noely/ofertas/oferta-03.png" 
                     alt=""
                     btn="Ver detalhes"
                 ></card-pk>
-                <card-pk 
+                <card-pk class="slide"
                     name="Product's name" 
-                    desc="product description" 
+                    desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
                     real="99" 
                     cents="99"
                     src="src/public/images/home-Noely/ofertas/oferta-04.png" 
@@ -114,10 +122,14 @@
                     btn="Ver detalhes"
                 ></card-pk>
                 
-                <img class="slider-btn slider-btn-next" src="src/public/images/home-Noely/arrowRight.svg" alt="">
-                <img class="slider-btn slider-btn-prev" src="src/public/images/home-Noely/arrowLeft.svg" alt="">
+                <!-- <img class="slider-btn slider-btn-next" src="src/public/images/home-Noely/arrowRight.svg" alt="">
+                <img class="slider-btn slider-btn-prev" src="src/public/images/home-Noely/arrowLeft.svg" alt=""> -->
             </slider>
-        </highlights-section>
+
+            <center-btn>
+                <button-pk name="Ver mais" color="" width="50%"></button-pk>
+            </center-btn>
+        </highlights-section> 
 
         <yourbaby-section>
             <spot>
@@ -144,36 +156,36 @@
                     <title-pk name="Moda e acessórios para bebês <br> de 0 à 1 ano" color="var(--cp05)"></title-pk>
                 </header>
                 <slider>
-                    <card-pk 
+                    <card-pk  class="slide"
                         name="Product's name" 
-                        desc="product description" 
+                        desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
                         real="99" 
                         cents="99"
                         src="src/public/images/home-Noely/years-section/product-01.png" 
                         alt=""
                         btn="Ver detalhes"
                     ></card-pk>
-                    <card-pk 
+                    <card-pk  class="slide"
                         name="Product's name" 
-                        desc="product description" 
+                        desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
                         real="99" 
                         cents="99"
                         src="src/public/images/home-Noely/years-section/product-02.png" 
                         alt=""
                         btn="Ver detalhes"
                     ></card-pk>
-                    <card-pk 
+                    <card-pk  class="slide"
                         name="Product's name" 
-                        desc="product description" 
+                        desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
                         real="99" 
                         cents="99"
                         src="src/public/images/home-Noely/years-section/product-03.png" 
                         alt=""
                         btn="Ver detalhes"
                     ></card-pk>
-                    <card-pk 
+                    <card-pk  class="slide"
                         name="Product's name" 
-                        desc="product description" 
+                        desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
                         real="99" 
                         cents="99"
                         src="src/public/images/home-Noely/years-section/product-04.png" 
@@ -181,9 +193,13 @@
                         btn="Ver detalhes"
                     ></card-pk>
                 
-                    <img class="slider-btn slider-btn-next" src="src/public/images/home-Noely/arrowRight.svg" alt="">
-                    <img class="slider-btn slider-btn-prev" src="src/public/images/home-Noely/arrowLeft.svg" alt="">
+                    <!-- <img class="slider-btn slider-btn-next" src="src/public/images/home-Noely/arrowRight.svg" alt="">
+                    <img class="slider-btn slider-btn-prev" src="src/public/images/home-Noely/arrowLeft.svg" alt=""> -->
                 </slider>
+
+                <center-btn>
+                    <button-pk name="Ver mais" color="" width="50%"></button-pk>
+                </center-btn>
             </baby-section>
             <kids-section>
                 <header>
@@ -191,37 +207,36 @@
                 </header>
                 <slider>
 
-                    <card-pk 
+                    <card-pk class="slider"
                         name="Product's name" 
-                        desc="product description" 
+                        desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
                         real="99" 
                         cents="99"
                         src="src/public/images/home-Noely/years-section/product-05.png" 
                         alt=""
                         btn="Ver detalhes"
                     ></card-pk>
-                    
-                    <card-pk 
+                    <card-pk class="slider"
                         name="Product's name" 
-                        desc="product description" 
+                        desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
                         real="99" 
                         cents="99"
                         src="src/public/images/home-Noely/years-section/product-06.png" 
                         alt=""
                         btn="Ver detalhes"
                     ></card-pk>
-                    <card-pk 
+                    <card-pk class="slider"
                         name="Product's name" 
-                        desc="product description" 
+                        desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
                         real="99" 
                         cents="99"
                         src="src/public/images/home-Noely/years-section/product-07.png" 
                         alt=""
                         btn="Ver detalhes"
                     ></card-pk>
-                    <card-pk 
+                    <card-pk class="slider"
                         name="Product's name" 
-                        desc="product description" 
+                        desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
                         real="99" 
                         cents="99"
                         src="src/public/images/home-Noely/years-section/product-08.png" 
@@ -229,14 +244,14 @@
                         btn="Ver detalhes"
                     ></card-pk>
                 
-                    <img class="slider-btn slider-btn-next" src="src/public/images/home-Noely/arrowRight.svg" alt="">
-                    <img class="slider-btn slider-btn-prev" src="src/public/images/home-Noely/arrowLeft.svg" alt="">
+                    <!-- <img class="slider-btn slider-btn-next" src="src/public/images/home-Noely/arrowRight.svg" alt="">
+                    <img class="slider-btn slider-btn-prev" src="src/public/images/home-Noely/arrowLeft.svg" alt=""> -->
                 </slider>
+    
+                <center-btn>
+                    <button-pk name="Ver mais" color="" width="50%"></button-pk>
+                </center-btn>
             </kids-section>
-
-            <center-btn>
-                <button-pk name="Ver mais" color="" width="50%"></button-pk>
-            </center-btn>
 
         </years-section>
         
@@ -259,8 +274,8 @@
                     </card-home>
                 </card>
 
-                <card class="testim-card">
-                    <card-home class="testim-card-home">
+                <card class="card-destaq">
+                    <card-home class="card-destaq-home">
                         <picture>
                             <img src="src/public/images/home-Noely/testimonials/mom-testm-02.webp" alt="">
                         </picture>
@@ -288,14 +303,12 @@
                 </card>
             </section>
         </testimonials-section>
-        
+
     </main>
         
     <!-- <%- include( "includes/global/footer.ejs" ) %> -->
     <page-footer></page-footer>
     
-    <script src="src/public/scripts/globals/global.js"></script>
-    <script src="src/public/scripts/home-Noely/home.js"></script>
 </body>
 </html>
 
