@@ -68,7 +68,7 @@ let pageHeader = document.createElement( "page-header" ),
                 <h3 class="h3">Carrinho</h3>
             </div>
         </li>
-    </menu>
+    </menu> 
 </nav>
 `,
 	footerTemplate = `
