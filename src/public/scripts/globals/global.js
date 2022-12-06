@@ -9,7 +9,7 @@ let pageHeader = document.createElement( "page-header" ),
 <appbar>
     <appbar-home>
         <article class="appbar-left">
-            <img class="babyPikituchos" src="src/public/images/babyPikituchos.svg" alt="logo image">
+            <img class="babyPikituchos" src="src/public/images/pikitucho.svg" alt="logo image">
             <img id="logos-desc" src="src/public/images/home-Noely/pikituchos-logo-txt.png" alt="">
         </article>
         <nav class="appbar-nav">
@@ -24,19 +24,52 @@ let pageHeader = document.createElement( "page-header" ),
                 <!-- <button id="searchbar-btn"><txt>buscar</txt></button> -->
                 <input id="searchbar-btn" type="button" value="🔎 buscar">
             </label>
-                <button class="button-pk" role="button">
-                    <span class="btn-shadow"></span>
-                    <span class="btn-edge"></span>
-                    <span class="btn-front text">
-                        Cadastre-se
-                    </span>
-                </button>
+            <button class="button-pk" role="button">
+                <span class="btn-shadow"></span>
+                <span class="btn-edge"></span>
+                <span class="btn-front text">
+                    Cadastre-se
+                </span>
+            </button>
         </article>
         <h2 id="btn-mobile-nav-menu">
             <span>&#9776;</span>
         </h2>
     </appbar-home>
 </appbar>
+<nav id="header-nav-mobile">
+    <label for="searchbar" class="searchbar">
+        <input id="searchbar" type="text" placeholder=" procure aqui. . .">
+        <!-- <button id="searchbar-btn"><txt>buscar</txt></button> -->
+        <input id="searchbar-btn" type="button" value="🔎 buscar">
+    </label>
+    <menu>
+        <li url="#" data-title="Home">
+            <div class="title-pk">
+                <h3 class="outline">Home</h3>
+                <h3 class="h3">Home</h3>
+            </div>
+        </li>
+        <li url="#highlights" data-title="Produtos">
+            <div class="title-pk">
+                <h3 class="outline">Produtos</h3>
+                <h3 class="h3">Produtos</h3>
+            </div>
+        </li>
+        <li url="#" data-title="Contatos">
+            <div class="title-pk">
+                <h3 class="outline">Contato</h3>
+                <h3 class="h3">Contato</h3>
+            </div>
+        </li>
+        <li url="#" data-title="ver carrinho">
+            <div class="title-pk" id="carrinho">
+                <h3 class="outline">Carrinho</h3>
+                <h3 class="h3">Carrinho</h3>
+            </div>
+        </li>
+    </menu>
+</nav>
 `,
 	footerTemplate = `
 <article class="newsletter">
@@ -49,12 +82,10 @@ let pageHeader = document.createElement( "page-header" ),
     </label>
 </article>
 
-<hr>
-
 <article class="footer-top">
     <section class="socials">
         <header>
-            <img class="babyPikituchos" src="src/public/images/babyPikituchos.svg" alt="logo image">
+            <img class="babyPikituchos" src="src/public/images/pikitucho.svg" alt="logo image">
             <!-- <img src="src/public/images/home-Noely/pikituchos-logo.svg" id="logo" alt=""> -->
             <img src="src/public/images/home-Noely/pikituchos-logo-txt.png" id="logo-txt" alt="">
         </header>
@@ -437,29 +468,15 @@ class Appbar extends HTMLElement {
 	} 
 	connectedCallback() {
 		this.render();
-		let baby = document.querySelector( "svg#baby-logo" ),
-			babysEyes = document.querySelector( "#babys-eyes" ),
-			pageHeader = document.querySelector( "page-header" ),
+		let pageHeader = document.querySelector( "page-header" ),
 			btnMenu = document.querySelector( "h2#btn-mobile-nav-menu span" ),
-			pikitucho = `<path class="pikituchos-class0" d="M 13.757 16.921 C 13.086 16.361 12.193 16.034 11.493 16.034 C 10.793 16.034 9.882 16.299 9.29 16.796" style="stroke-width: 1px; stroke-linecap: square; stroke: rgb(70, 70, 70);" />
-    <path class="pikituchos-class0" d="M 22.931 16.921 C 22.26 16.361 21.367 16.034 20.667 16.034 C 19.967 16.034 19.056 16.299 18.464 16.796" style="stroke-width: 1px; stroke-linecap: square; stroke: rgb(70, 70, 70);" />
-    `,
-			pikituchoHoverin = `
-        <path class="pikituchos-class0" d="M 13.757 14.921 C 13.086 14.361 12.193 14.034 11.493 14.034 C 10.793 14.034 9.882 14.299 9.29 14.796" style="stroke-width: 1px; stroke-linecap: square; stroke: rgb(70, 70, 70);" />
-        <path class="pikituchos-class0" d="M 22.931 14.921 C 22.26 14.361 21.367 14.034 20.667 14.034 C 19.967 14.034 19.056 14.299 18.464 14.796" style="stroke-width: 1px; stroke-linecap: square; stroke: rgb(70, 70, 70);" />
-        <path style="fill: rgb(216, 216, 216); stroke-linecap: round; stroke-linejoin: round; stroke: rgb(70, 70, 70); stroke-width: 2px;" d="M 11.328 15.237 L 11.802 15.237" transform="matrix(0.037625, -0.999291, 0.999292, 0.037625, -4.096353, 26.220512)"/>
-        <path style="fill: rgb(216, 216, 216); stroke-linecap: round; stroke-linejoin: round; stroke: rgb(70, 70, 70); stroke-width: 2px;" d="M 20.328 15.237 L 20.802 15.237" transform="matrix(0.037625, -0.999291, 0.999292, 0.037625, 4.565021, 35.214133)"/>
-    `;
-        
-		// baby.addEventListener( "mouseenter", ev => {
-		// 	babysEyes.innerHTML = pikituchoHoverin;
-		// } );
-		// baby.addEventListener( "mouseleave", ev => {
-		// 	babysEyes.innerHTML = pikitucho;
-		// } );
+			headerNavMobile = document.querySelector( "nav#header-nav-mobile" );
 
 		btnMenu.addEventListener( "click", ev => {
 			pageHeader.classList.toggle( "open-mobile-nav-menu" );
+			pageHeader.classList.contains( "open-mobile-nav-menu" ) ?
+				headerNavMobile.style.display = "flex" :
+				headerNavMobile.style.display = "none";
 		} );
 	}
 	render() {
