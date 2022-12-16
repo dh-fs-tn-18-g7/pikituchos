@@ -6,6 +6,35 @@
 ----------------------------------------------------------------- */
 @media only screen and ( width <= 768px ) {
 
+    /* [ banner-section ]
+    =========================================================================================== */
+    banner-section {
+        height: 73vw;
+    }
+
+    banner-section slider #slide00 {
+        background-image: url(../../images/home-Noely/baby-walls1-9.webp);
+    }
+
+    banner-section slider #slide00 left section {
+        justify-content: space-between;
+        height: 100%;
+        padding: 10% 5%;
+    }
+
+    banner-section slider #slide00 left section #mamae-e-bebe {
+        width: 90%;
+        height: auto;
+    }
+
+    banner-section > slider slide left section h2 {
+        font-size: clamp( .1rem, 4vw, 1.8rem );
+        text-align: end;
+        color: #fff;
+    }
+
+    /* [ highlights-section ]
+    =========================================================================================== */
     highlights-section { grid-template-rows: auto 2.5fr; }
     highlights-section > slider {
         grid-template-areas: "card1" "card2" "card3" "card4";
