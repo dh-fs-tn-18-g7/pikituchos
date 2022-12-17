@@ -33,47 +33,29 @@
         color: #fff;
     }
 
+
+    /* [ slider ]
+    =========================================================================================== */
+    slider-modules {
+        /* padding: 116px 0 5.5vw clamp( 10px, 20vw, 82px ); */
+    }
+
     /* [ highlights-section ]
     =========================================================================================== */
-    highlights-section { grid-template-rows: auto 2.5fr; }
-    highlights-section > slider {
-        grid-template-areas: "card1" "card2" "card3" "card4";
-        gap: 13vw;
-        grid-template-columns: 1fr;
-    }
-    highlights-section > slider :nth-child( 1 ) { grid-area: card1; }
-    highlights-section > slider :nth-child( 2 ) { grid-area: card2; }
-    highlights-section > slider :nth-child( 3 ) { grid-area: card3; }
-    highlights-section > slider :nth-child( 4 ) { grid-area: card4; }
-
-    /* ------------------------- */
-    baby-section,
-    kids-section {
-        grid-template-rows: auto 2.5fr; 
-    }
-    baby-section > slider :nth-child( 1 ), kids-section > slider :nth-child( 1 ) { grid-area: card1; }
-    baby-section > slider :nth-child( 2 ), kids-section > slider :nth-child( 2 ) { grid-area: card2; }
-    baby-section > slider :nth-child( 3 ), kids-section > slider :nth-child( 3 ) { grid-area: card3; }
-    baby-section > slider :nth-child( 4 ), kids-section > slider :nth-child( 4 ) { grid-area: card4; }
-
-    baby-section > slider,
-    kids-section > slider {
-        grid-template-areas: "card1" "card2" "card3" "card4";
-        gap: 13vw;
-        grid-template-columns: 1fr;
-    }
 
     /* ------------------------- */
 
-    testimonials-section {
+    /* ------------------------- */
+
+    .testimonials {
         grid-template-rows: auto 1.8fr;
     }
 
-    testimonials-section header {
+    .testimonials header {
         padding: 3rem 10px;
     }
 
-    testimonials-section section {
+    .testimonials section {
         grid-template-columns: 1fr;
         gap: 13vw 0;
         width: clamp( 100px, 100%, 1200px );
@@ -83,7 +65,7 @@
     }
 
     /* ------------------------- */
-    yourBaby-section {
+    .yourbaby {
         grid-template-areas: "top" "bottom";
         grid-template-columns: 1fr;
         gap: 5rem;
@@ -91,20 +73,20 @@
         background-image: linear-gradient( to bottom, var(--linearbg-02), var(--linearbg-03) );
         user-select: none;
     }
-    yourBaby-section :nth-child( 1 ) { grid-area: bottom; }
-    yourBaby-section :nth-child( 2 ) { grid-area: top; }
+    .yourbaby :nth-child( 1 ) { grid-area: bottom; }
+    .yourbaby :nth-child( 2 ) { grid-area: top; }
 
-    yourbaby-section > footer {
+    .yourbaby > footer {
         grid-template-areas: "top" "bottom";
         place-items: center;
         grid-template-rows: auto 1fr;
         padding: 0;
         text-align: center;
     }
-    yourbaby-section > footer :nth-child( 1 ) { grid-area: top; }
-    yourbaby-section > footer :nth-child( 2 ) { grid-area: bottom; }
+    .yourbaby > footer :nth-child( 1 ) { grid-area: top; }
+    .yourbaby > footer :nth-child( 2 ) { grid-area: bottom; }
 
-    yourbaby-section > spot {
+    .yourbaby > spot {
         display: grid;
         position: relative;
         width: 50vw;
@@ -115,23 +97,23 @@
         border-radius: 6px;
     }
 
-    yourbaby-section spot .wave {
+    .yourbaby spot .wave {
         position: absolute;
     }
 
-    yourbaby-section spot .wave:nth-child( 1 ) {
+    .yourbaby spot .wave:nth-child( 1 ) {
             border-radius: 45%;
             -webkit-animation-duration: 50s;
             animation-duration: 50s;
         }
 
-    yourbaby-section spot .wave:nth-child( 2 ) {
+    .yourbaby spot .wave:nth-child( 2 ) {
         border-radius: 35%;
         -webkit-animation-duration: 50s;
                 animation-duration: 50s;
     }
     
-    yourbaby-section spot .wavePix {
+    .yourbaby spot .wavePix {
         position: absolute;
     }
 

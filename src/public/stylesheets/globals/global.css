@@ -28,23 +28,20 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    font-family: 'Baloo Da 2', cursive;
+    /* font-family: 'Baloo Da 2', cursive; */
+    font-family: 'Baloo Da 2';
     margin: 0; padding: 0;
     outline: none;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-        to bottom,
-        var( --cp06 ),
-        var( --cp07 )
-    ); 
-    border-radius: 2rem;
+    background: var( --cp05 ); 
+    border-radius: 5px;
 }
 ::-webkit-scrollbar {
     width: 10px;
     background: #21232990;
-    background: var( --cp05 );
+    background: var( --cp04 );
     backdrop-filter: blur( 12px );
 }
 l {
@@ -347,10 +344,10 @@ h2#btn-mobile-nav-menu { display: none; }
     border-radius: 12px;
     background: linear-gradient(
         to left,
-        #52001b 0%,
-        #a30036 8%,
-        #a30036 92%,
-        #52001b 100%
+        #cb314f 0%,
+        #eb496a 8%,
+        #eb496a 92%,
+        #cb314f 100%
     );
 }
 
@@ -365,7 +362,7 @@ h2#btn-mobile-nav-menu { display: none; }
     font-size: 1rem;
     font-weight: 700;
     color: #fff;
-    background: var( --cp09 );
+    background: var( --cp07 );
     will-change: transform;
     transform: translateY(-4px);
     transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
@@ -431,6 +428,7 @@ card-pk {
     border-radius: 18px;
     transition: .5s ease-out;
     perspective: 1000px;
+    white-space: normal;
 }
 card-pk:hover {
     background-attachment: fixed;
