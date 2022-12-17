@@ -1,8 +1,27 @@
 
 
 /* html { cursor: url(../../images/pacifier.svg), auto; } */
+/* [ section ]
+================================================================= */
+body > main > article {
+    width: 100%;
+    overflow: hidden;
+}
+.page-section {
+    display: grid;
+    grid-template-rows: .5fr 2fr .5fr;
+    user-select: none;
+}
+.page-section > header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.9rem;
+    /* background: #fff1; */
+}
 
-/* [ header section ]
+/* [ banner section ]
 ================================================================= */
 banner-section {
     display: block;
@@ -195,43 +214,18 @@ banner-section slider #slide03 right {
 
 /* [ highlights section ]
 ================================================================= */
-highlights-section {
-    display: grid;
-    grid-template-rows: 1fr 2.5fr;
-    gap: 2vw;
-    padding-bottom: 7.5vw;
-    background-image: linear-gradient(
-        to bottom,
-        var(--linearbg-01),
-        var(--linearbg-09)
+.highlights {
+    background-image: linear-gradient( 
+        to bottom, 
+        var(--linearbg-01), 
+        #f6eccd
     );
-    user-select: none;
-}
-highlights-section header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    line-height: 2.9rem;
-    background: #fff1;
-    text-align: center;
-    padding: 0;
 }
 
-highlights-section > slider {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center;
-    width: clamp( 100px, 90%, 1200px );
-    margin: 0 auto;
-    padding: 18px 18px 7.5vw 18px;
-    position: relative;
-    /* overflow-x: hidden; */
-}
 
 /* [ your baby section ]
 ================================================================= */
-yourBaby-section {
+.yourbaby {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
@@ -244,12 +238,7 @@ yourBaby-section {
     user-select: none;
 }
 
-yourBaby-section > header { display: grid; place-items: center; }
-
-yourbaby-section > home {
-}
-
-yourbaby-section > spot {
+.yourbaby > spot {
     display: grid;
     position: relative;
     width: 50vw;
@@ -258,7 +247,7 @@ yourbaby-section > spot {
     border-radius: 6px;
 }
 
-yourbaby-section spot .wave {
+.yourbaby spot .wave {
     position: absolute;
     top: 0; bottom: 0;
     left: 0; right: 0;
@@ -270,22 +259,22 @@ yourbaby-section spot .wave {
             animation: wave 55s infinite linear;
 }
 
-yourbaby-section spot .wave:nth-child(2),
-yourbaby-section spot .wave:nth-child(3) {
+.yourbaby spot .wave:nth-child(2),
+.yourbaby spot .wave:nth-child(3) {
      top: 10px;
 }
 
-yourbaby-section spot .wave:nth-child(2) {
+.yourbaby spot .wave:nth-child(2) {
     -webkit-animation-duration: 50s;
             animation-duration: 50s;
 }
 
-yourbaby-section spot .wave:nth-child(3) {
+.yourbaby spot .wave:nth-child(3) {
     -webkit-animation-duration: 45s;
             animation-duration: 45s;
 }
 
-yourbaby-section spot .wavePix {
+.yourbaby spot .wavePix {
     position: relative;
     top: 0;
     left: 0;
@@ -308,23 +297,21 @@ yourbaby-section spot .wavePix {
     100% { transform: rotate(360deg); }
 }
 
-yourbaby-section > footer {
+.yourbaby > footer {
     display: grid;
     place-items: center;
     grid-template-rows: auto 1fr;
     padding: 15% 0;
 }
 
-yourbaby-section > footer p {
+.yourbaby > footer p {
     font-weight: 700;
     color: var( --cp00 );
 }
 
 /* [ years section ]
 ================================================================= */
-years-section {
-    display: flex;
-    flex-direction: column;
+.years {
     background-image: linear-gradient(
         to bottom,
         var(--linearbg-04),
@@ -332,174 +319,8 @@ years-section {
         var(--linearbg-06),
         var(--linearbg-07)
     );
-    user-select: none;
 }
 
-baby-section,
-kids-section {
-    display: grid;
-    grid-template-rows: 1fr 2.5fr;
-    gap: 2vw;
-    padding-bottom: 7.5vw;
-    user-select: none;
-}
-
-baby-section header,
-kids-section header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    line-height: 2.9rem;
-}
-
-baby-section > slider,
-kids-section > slider {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center;
-    width: clamp( 100px, 90%, 1200px );
-    margin: 0 auto;
-    padding: 18px 18px 7.5vw 18px;
-    position: relative;
-    /* overflow-x: hidden; */
-}
-
-/* [ cards ]
------------------------- */
-baby-section > slider card,
-kids-section > slider card {
-    display: block;
-    width: clamp( 100px, 20vw, 450px );
-    width: 234px;
-    min-width: 234px;
-    height: calc(234px * 1.8);
-    margin-bottom: 5rem;
-    background: #fff;
-    box-shadow: #47c8ef 0 0px 1px 10px;
-    border-radius: 18px;
-    transition: .3s ease-in;
-    z-index: 1;
-}
-baby-section > slider card:hover,
-kids-section > slider card:hover {
-    filter: drop-shadow(2px 4px 6px #0005);
-    z-index: 3;
-}
-
-baby-section > slider card picture,
-kids-section > slider card picture {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 57%;
-}
-
-baby-section > slider card 
-picture img,
-kids-section > slider card 
-picture img {
-    transform: translateY(-55px) scale(1.1);
-    filter: drop-shadow(#0008 0 5px 3px);
-    cursor: pointer;
-    transition: .15s ease-in;
-}
-baby-section > slider card 
-picture img:hover,
-kids-section > slider card 
-picture img:hover {
-    transition: .3s cubic-bezier(0.99, -0.74, 0, 2.2);
-    transform: translateY(-55px) scale(1.3);
-    filter: drop-shadow(#000c 0 5px 3px);
-}
-
-baby-section > slider card bottom,
-kids-section > slider card bottom {
-    display: block;
-    background: var(--cp04);
-    box-shadow: #0002 0 5px 13px;
-    border-radius: 18px;
-    border: var(--cp07) solid 2px;
-    padding: 8px;
-}
-
-baby-section > slider 
-card bottom bottom-bg,
-kids-section > slider 
-card bottom bottom-bg {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 8px;
-    border: var(--cp00) dashed 4px;
-    border-radius: 18px;
-    color: var(--cp08);
-}
-baby-section > slider 
-card bottom bottom-bg:hover,
-kids-section > slider 
-card bottom bottom-bg:hover {
-    border: var(--cp08) dashed 4px;
-}
-
-baby-section > slider 
-card bottom bottom-bg #outline,
-kids-section > slider 
-card bottom bottom-bg #outline {
-    color: var(--cp07);
-    -webkit-text-stroke: 10px var(--cp00);
-    filter: drop-shadow(0px 4px #0005);
-    font-family: Baloo Da;
-}
-baby-section > slider 
-card bottom bottom-bg #text-bg,
-kids-section > slider 
-card bottom bottom-bg #text-bg {
-    position: absolute;
-    color: var(--cp08);
-    font-family: Baloo Da;
-}
-
-baby-section > slider 
-card bottom valor,
-kids-section > slider 
-card bottom valor {
-    display: flex;
-    justify-content: end;
-    font-size: 1.6rem;
-    font-weight: bolder;
-    color: var(--cp08);
-} 
-
-baby-section > slider 
-card bottom valor :nth-child(2),
-kids-section > slider 
-card bottom valor :nth-child(2) {
-    font-size: 1rem;
-    margin-top: 0.5ch;
-}
-
-baby-section > slider card 
-bottom bottom-bg button,
-kids-section > slider card 
-bottom bottom-bg button {
-    border-radius: 7px;
-    border: none;
-    box-shadow: var(--cp08) 0 3px 2px;
-    outline: none;
-    background: var(--cp07);
-    padding: .5ch 0;
-    color: var(--cp00);
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-}
-baby-section > slider card 
-bottom bottom-bg button:hover,
-kids-section > slider card 
-bottom bottom-bg button:hover {
-    background: var(--cp06);
-}
 
 /* [ center-btn ]
 ================================================================= */
@@ -510,11 +331,10 @@ center-btn {
 
 /* [ testimonials section ]
 ================================================================= */
-testimonials-section {
+.testimonials {
     display: grid;
     grid-template-rows: 1fr 1.8fr;
     gap: 2vw;
-    /* padding-bottom: 7.5vw; */
     user-select: none;
     background-image: linear-gradient(
         to bottom,
@@ -522,9 +342,8 @@ testimonials-section {
         var(--linearbg-09),
         var(--linearbg-10)
     );
-    /* padding:5vw; */
 }
-testimonials-section header {
+.testimonials header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -534,21 +353,8 @@ testimonials-section header {
     text-align: center;
     padding: 3rem 0;
 }
-testimonials-section header #outline {
-    color: var(--cp07);
-    -webkit-text-stroke: 10px var(--cp00);
-    filter: drop-shadow(0px 4px #0005);
-    font-family: Baloo Da;
-    font-size: 2.5rem;
-}
-testimonials-section header .text-bg {
-    position: absolute;
-    color: var(--cp07);
-    font-family: Baloo Da;
-    font-size: 2.5rem;
-}
 
-testimonials-section section {
+.testimonials section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
@@ -557,7 +363,7 @@ testimonials-section section {
     padding: 18px;
 }
 
-testimonials-section section card {
+.testimonials section card {
     position: relative;
     display: block;
     width: clamp( 200px, 22vw, 240px );
@@ -569,7 +375,7 @@ testimonials-section section card {
     filter: drop-shadow( #0003 -5px 5px 2px );
 }
 
-testimonials-section section card card-home {
+.testimonials section card card-home {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -586,14 +392,14 @@ testimonials-section section card card-home {
     background: var( --cp00 );
 }
 
-testimonials-section section card card-home picture {
+.testimonials section card card-home picture {
     display: flex;
     justify-content: center;
     width: 100%;
     height: 40%;
     position: relative;
 }
-testimonials-section section card card-home picture img {
+.testimonials section card card-home picture img {
     width: 50%;
     position: absolute;
     top: -25%;
@@ -603,22 +409,23 @@ testimonials-section section card card-home picture img {
     overflow: hidden;
 }
 
-testimonials-section section card card-home h3 {
+.testimonials section card card-home h3 {
     font-size: 1.2rem;
     font-weight: 900;
     color: var( --cp08 );
     margin-bottom: 1.5ch;
 }
 
-.card-destaq {
+.testimonials section .card-destaq {
     background: var( --cp09 );
     border: var( --cp05 ) dashed;
     box-shadow: var( --cp09 ) 0 0 0 10px;
 }
-.card-destaq-home {
+.testimonials section .card-destaq .card-destaq-home {
     background: var( --cp05 );
     border: var( --cp00 ) dashed;
     box-shadow: var( --cp05 ) 0 0 0 10px;
+    /* color: var( --cp00 ); */
 }
 
 /* [ banner slider ]
@@ -661,21 +468,4 @@ testimonials-section section card card-home h3 {
 
 /* [ highlight slider ]
 ====================================== */
-.carousel-slider {
-    overflow: hidden;
-}
-  
-.carousel-list:before,
-.carousel-list:after {
-    content: "";
-    display: table;
-}
-  
-.carousel-list:after {
-    clear: both;
-}
-  
-.carousel-slide {
-    float: left;
-}
   

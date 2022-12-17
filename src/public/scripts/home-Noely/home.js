@@ -1,3 +1,4 @@
+function print( v ) { console.log( v ); }
 
 
 "use strict";
@@ -35,6 +36,8 @@ window.addEventListener( "load", ev => {
 	} );
 
     
+
+
 
     
 } );
