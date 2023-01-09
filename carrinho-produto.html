@@ -21,6 +21,13 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+            
+        }
+        main {
+            font-size: 24px;
+        }
+        a {
+            color:black;
         }
         .allTable {
               margin: 0 auto;
@@ -37,10 +44,16 @@
         .endbuy {
             background-color: #99F02A;
             border-radius: 5px;
-            
+            position: relative;
+            margin-left: 70%;
+            bottom: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 400ms ease;            
 
             
         }
+        
     </style>
     
 </head>
@@ -53,8 +66,8 @@
         <h1>Seu pedido</h1>
         <h2>Após alterar quantidade, clique em atualizar:</h2>
         <div>
-            <a><srtrong> Continuar comprando</srtrong></a>
-            <a><strong>Atualizar carrinho</strong></a>
+            <a href="" target=""><srtrong> Continuar comprando</srtrong></a>
+            <a href="" target=""><strong>Atualizar carrinho</strong></a>
             <table class="allTable" border="1">
                 <tr>
                     <th>DESCRIÇÃO</th>
@@ -69,7 +82,7 @@
                     <p>Cor azul</p>
                    </th>
                    <th>
-                      - 1 +
+                      <a>-</a> 1 <a>+</a>
                    </th>
                    <th>
                     RS$ 359,99
@@ -78,8 +91,24 @@
                     RS$ 359,99
                    </th>
                 </tr>
+                <tr>
+                   <th>
+                        Digite o CEP para calcular o frete 
+                        <th><form action="" method="post">
+                            <input type="text" name="search" placeholder="Faça sua busca" required>
+                            <button type="submit"><strong>Ok</strong></button>
+                            </form>
+                        </th> 
+                   </th>
+                    
+                </tr>
+                <tr>
+                    <th>
+                        TOTAL do pedido: R$ 359,99
+                    </th>
+                </tr>
             </table>
-            <button class="endbuy"><strong>FINALIZAR PEDIDO</strong></button>
+            <button class="endbuy endbuy-1"><strong>FINALIZAR PEDIDO</strong></button>
         </div>
     </main>
         
