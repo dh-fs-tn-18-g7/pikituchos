@@ -1,0 +1,59 @@
+@import url(/src/public/stylesheets/globals/global.css);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  text-decoration: none;
+}
+a {
+  color: black;
+}
+
+/* estilo barra lateral */
+
+section {
+  height: 100vh;
+  background-image: linear-gradient(to top, #ffdee9 0%, #b5fffc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+}
+
+aside {
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  padding: 25px 10px;
+}
+
+/* sessão card lateral  */
+
+
+.boxCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2%;
+}
+
+.boxCard article{
+    display: flex;
+    
+
+}
+
+.cardUsuario{
+    background-color: yellow;
+    width: 250px;
+    height: 200px;
+}
+
+
+
+
