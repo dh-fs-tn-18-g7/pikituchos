@@ -86,19 +86,33 @@ a {
   display: flex;
   flex-direction: column;
   background-color: var(--cp00);
-  padding: 25px;
+  padding: 1.6rem;
   width: 650px;
 
 }
 
-.dadosPessoais form{
-  display: flex;
-  flex-direction: column;
-  font-size: 1.3rem;
+.dadosPessoais {
+
+font-size: 1.3rem;
+}
+
+.dadosPessoais div hr{
+  border: solid 1px black;
 
 }
 
+.formDadosPessoais{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  gap: 1rem;
 
+}
+
+.formBtnDados{
+  display: flex;
+  gap: 2.5rem;
+}
 
 
 

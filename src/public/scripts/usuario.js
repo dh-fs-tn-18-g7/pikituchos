@@ -43,8 +43,8 @@ btnCartoes.addEventListener("click", cartao);
 /* Funções */
 
 function inicio() {
-    let displayUsuario = "flex";
-    let displayNone = "none";
+    let displayUsuario = 'flex';
+    let displayNone = 'none';
 
     homeInicio.style.display = displayUsuario;
 
