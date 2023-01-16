@@ -15,7 +15,7 @@ a {
 
 /* estilo barra lateral */
 
-section {
+.usuario {
   height: 100vh;
   background-image: linear-gradient(to top, #ffdee9 0%, #b5fffc 100%);
   display: flex;
@@ -31,25 +31,96 @@ section {
   gap: 19px;
   padding: 25px 10px;
   border-radius: 8px;
-  box-shadow: 2px 0px 16px -7px rgba(0,0,0,0.75);
+  box-shadow: 2px 0px 16px -7px rgba(0, 0, 0, 0.75);
 }
+
+.boxBtn div h2 strong {
+    color: var(--cp07);
+}
+
+
 
 /* sessão card lateral  */
 
 .boxCard {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
-  gap: 2%;
+  gap: 20px;
 }
 
 .boxCard article {
   display: flex;
+  gap: 15px;
 }
 
 .cardUsuario {
-  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cp07);
+  color: var(--cp00);
   width: 250px;
   height: 200px;
-  box-shadow: 2px 0px 16px -7px rgba(0,0,0,0.75);
+  border-radius: 8px;
+  transition: 500ms;
+  cursor: pointer;
 }
+
+.cardUsuario:hover {
+  transform: scale(1.01);
+  transition: 500ms;
+  background-color: var(--cp06);
+  color: var(--cp07);
+  box-shadow: 2px 0px 16px -7px rgba(0, 0, 0, 0.75);
+}
+
+.cardUsuario div span > img {
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.dadosPessoais{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cp00);
+  padding: 25px;
+  width: 650px;
+
+}
+
+.dadosPessoais form{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+
+}
+
+
+
+
+
+.meusPedidos{
+  display: none;
+
+}
+
+.meusFavoritos{
+  display: none;
+}
+
+.informacoesDaConta{
+  display: none;
+}
+.trocarDevolver{
+  display: none;
+
+}
+
+.cartoes{
+  display: none;
+
+}
+
