@@ -30,6 +30,7 @@ window.addEventListener("load", ev => {
 		// slide.style.transform = `translateX( ${index * 100}% )`;
 		slide.style.transform = `translateX( ${(index + 1) * 30 + 160}% )`;
 	});
+	
 	prevSlideBaby.addEventListener("click", function () {
 		currentSlideBaby === 0 ? currentSlideBaby = maxSlideBaby : currentSlideBaby--;
 
