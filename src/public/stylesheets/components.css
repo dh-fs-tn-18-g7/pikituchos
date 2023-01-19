@@ -111,3 +111,29 @@
 }
 
 
+/* pagina de usuario */
+
+.btn-usuario{
+
+    color: var(--cp00);
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    width: 310px;
+    height: 45px;
+    outline: none;
+    padding: 0 50px;
+    background-color: var(--cp07);
+    transition: 500ms;
+    margin: 0 auto;
+    cursor: pointer;
+    display: block;
+  
+}
+.btn-usuario:hover{
+  transform: scale(1.01);
+  transition: 500ms;
+  background-color: var(--cp06);
+  color: var(--cp07);
+}
