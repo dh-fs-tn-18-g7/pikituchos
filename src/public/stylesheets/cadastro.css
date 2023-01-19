@@ -39,13 +39,11 @@ body {
     background-image: linear-gradient(to top , #FFDEE9 0%, #B5FFFC 100%);
     
 }
-body main {
 
-  background: transparent;
-  margin-bottom: 30px;
+.app{
+  background-color: transparent;
 
 }
-
 
 form {
   background-color: #47c8ef;
