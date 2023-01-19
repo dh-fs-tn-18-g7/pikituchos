@@ -120,7 +120,7 @@
     font-weight: bold;
     border: none;
     border-radius: 8px;
-    width: 310px;
+    width: 370px;
     height: 45px;
     outline: none;
     padding: 0 50px;
@@ -136,4 +136,23 @@
   transition: 500ms;
   background-color: var(--cp06);
   color: var(--cp07);
+}
+
+.btn-dadosPessoais{
+
+  color: var(--cp00);
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  width: 370px;
+  height: 45px;
+  outline: none;
+  padding: 0 50px;
+  background-color: var(--cp07);
+  transition: 500ms;
+  margin: 0 auto;
+  cursor: pointer;
+  display: block;
+
 }
