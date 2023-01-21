@@ -37,7 +37,7 @@
     /* [ slider ]
     =========================================================================================== */
     slider-modules {
-        padding: 116px 0 5.5vw clamp( 10px, 20vw, 82px );
+        /* padding: 116px 0 5.5vw clamp( 10px, 20vw, 82px ); */
     }
 
     /* [ highlights-section ]

@@ -24,6 +24,7 @@ let pageHeader = document.createElement( "page-header" ),
                 <!-- <button id="searchbar-btn"><txt>buscar</txt></button> -->
                 <input id="searchbar-btn" type="button" value="🔎 buscar">
             </label>
+
             <button class="button-pk" role="button">
                 <span class="btn-shadow"></span>
                 <span class="btn-edge"></span>
@@ -31,6 +32,7 @@ let pageHeader = document.createElement( "page-header" ),
                     Cadastre-se
                 </span>
             </button>
+
         </article>
         <h2 id="btn-mobile-nav-menu">
             <span>&#9776;</span>
@@ -527,6 +529,8 @@ class Title extends HTMLElement {
 		this.shadowRoot.querySelector( "h2#text" ).innerHTML = this.getAttribute( "name" );
 		this.shadowRoot.querySelector( "h2#outline" ).style.fontSize = this.getAttribute( "font-size" );
 		this.shadowRoot.querySelector( "h2#text" ).style.fontSize = this.getAttribute( "font-size" );
+		this.shadowRoot.querySelector( "h2#outline" ).style.margin = this.getAttribute( "margin" );
+		this.shadowRoot.querySelector( "h2#text" ).style.margin = this.getAttribute( "margin" );
 		this.shadowRoot.querySelector( "h2#text" ).style.color = this.getAttribute( "color" );
 	} 
 	connectedCallback() {
@@ -608,6 +612,7 @@ class Button extends HTMLElement {
                 height: 100%;
                 border-radius: 12px;
                 background: #00000040;
+                background: #0005;
                 will-change: transform;
                 transform: translateY(2px);
                 transition:
@@ -702,7 +707,9 @@ class Button extends HTMLElement {
 		this.style.cssText = " display: center; align-items: center; ";
 		this.style.width = this.getAttribute( "width" );
 		this.shadowRoot.querySelector( "span.btn-front" ).innerText = this.getAttribute( "name" );
-		this.shadowRoot.querySelector( ".btn-front" ).style.backgroundColor = this.getAttribute( "color" );
+		this.shadowRoot.querySelector( "span.btn-front" ).style.color = this.getAttribute( "text-color" );
+		this.shadowRoot.querySelector( ".btn-front" ).style.backgroundColor = this.getAttribute( "btn-color" );
+		this.shadowRoot.querySelector( ".btn-edge" ).style.background = this.getAttribute( "btn-shadow" );
 	} 
 	connectedCallback() {
 		this.render();

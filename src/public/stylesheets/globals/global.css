@@ -344,10 +344,10 @@ h2#btn-mobile-nav-menu { display: none; }
     border-radius: 12px;
     background: linear-gradient(
         to left,
-        #52001b 0%,
-        #a30036 8%,
-        #a30036 92%,
-        #52001b 100%
+        #cb314f 0%,
+        #eb496a 8%,
+        #eb496a 92%,
+        #cb314f 100%
     );
 }
 
@@ -362,7 +362,7 @@ h2#btn-mobile-nav-menu { display: none; }
     font-size: 1rem;
     font-weight: 700;
     color: #fff;
-    background: var( --cp09 );
+    background: var( --cp07 );
     will-change: transform;
     transform: translateY(-4px);
     transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
