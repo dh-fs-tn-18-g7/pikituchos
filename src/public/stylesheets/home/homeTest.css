@@ -1,0 +1,471 @@
+
+
+/* html { cursor: url(../../img/pacifier.svg), auto; } */
+/* [ section ]
+================================================================= */
+body > main > article {
+    width: 100%;
+    overflow: hidden;
+}
+.page-section {
+    display: grid;
+    grid-template-rows: .5fr 2fr .5fr;
+    user-select: none;
+}
+.page-section > header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.9rem;
+    /* background: #fff1; */
+}
+
+/* [ banner section ]
+================================================================= */
+banner-section {
+    display: block;
+    width: 100%;
+    /* min-height: 689px; */
+    height: 47vw;
+    background: #fce4fc;
+}
+
+banner-section slider {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+banner-section slider slide {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+banner-section > slider slide 
+left section h2 {
+    font-size: clamp( .1rem, 2vw,1.6rem );
+}
+
+banner-section slider slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* [ slide 00 ]
+----------------------- */
+banner-section slider #slide00 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: url("../../img/home-Noely/baby-walls1.jpg");
+    background-size: cover;
+    color: var(--cp08);
+    text-shadow: #fff5 0 0 6px;
+} banner-section slider #slide00 left {
+    flex: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* background-image: linear-gradient(
+        to right,
+        var(--cp00),
+        #fff0
+    ); */
+} banner-section slider 
+#slide00 left section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw;
+    padding: 30% 5%;
+}
+banner-section slider 
+#slide00 left section #mamae-e-bebe {
+    width: 30.6vw;
+    filter: drop-shadow(#0005 0 5px 3px);
+    user-select: none;
+}
+
+banner-section slider #slide00 right {
+    flex: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* background-image: linear-gradient(
+        to left,
+        var(--cp06),
+        #fff0
+    ); */
+}
+
+/* [ slide 01 ]
+----------------------- */
+banner-section slider #slide01 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--cp08);
+} banner-section slider #slide01 left {
+    flex: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+} banner-section slider 
+#slide01 left section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw;
+    padding: 30% 5%;
+}
+banner-section slider 
+#slide01 left section #mamae-e-bebe {
+    width: 30.6vw;
+    filter: drop-shadow(#0005 0 5px 3px);
+    user-select: none;
+}
+
+banner-section slider #slide01 right {
+    flex: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* [ slide 02 ]
+----------------------- */
+banner-section slider #slide02 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("../../img/home-Noely/baby-walls2.jpg");
+    background-size: cover;
+    color: var(--cp08);
+    text-shadow: #fff5 0 0 6px;
+} banner-section slider #slide02 left {
+    flex: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+} banner-section slider 
+#slide02 left section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw;
+    padding: 30% 5%;
+}
+banner-section slider 
+#slide02 left section #mamae-e-bebe {
+    width: 30.6vw;
+    filter: drop-shadow(#0005 0 5px 3px);
+    user-select: none;
+}
+
+banner-section slider #slide02 right {
+    flex: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* [ slide 03 ]
+----------------------- */
+banner-section slider #slide03 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("../../img/home-Noely/baby-walls3.jpg");
+    background-size: cover;
+    color: var(--cp08);
+    text-shadow: #fff5 0 0 6px;
+} banner-section slider #slide03 left {
+    flex: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+} banner-section slider 
+#slide03 left section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw;
+    padding: 30% 5%;
+}
+banner-section slider 
+#slide03 left section #mamae-e-bebe {
+    width: 30.6vw;
+    filter: drop-shadow(#0005 0 5px 3px);
+    user-select: none;
+}
+
+banner-section slider #slide03 right {
+    flex: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* [ highlights section ]
+================================================================= */
+.highlights {
+    background-image: linear-gradient( 
+        to bottom, 
+        var(--linearbg-01), 
+        #f6eccd
+    );
+}
+
+
+/* [ your baby section ]
+================================================================= */
+.yourbaby {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    padding: 10vw 2vw;
+    background-image: linear-gradient(
+        to bottom,
+        var(--linearbg-02),
+        var(--linearbg-03)
+    );
+    user-select: none;
+}
+
+.yourbaby > spot {
+    display: grid;
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    margin: auto;
+    border-radius: 6px;
+}
+
+.yourbaby spot .wave {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    width: 100%; height: 100%;
+    opacity: 0.6;
+    background: radial-gradient(#353535, #383737);
+    border-radius: 40%;
+    -webkit-animation: wave 55s infinite linear;
+            animation: wave 55s infinite linear;
+}
+
+.yourbaby spot .wave:nth-child(2),
+.yourbaby spot .wave:nth-child(3) {
+     top: 10px;
+}
+
+.yourbaby spot .wave:nth-child(2) {
+    -webkit-animation-duration: 50s;
+            animation-duration: 50s;
+}
+
+.yourbaby spot .wave:nth-child(3) {
+    -webkit-animation-duration: 45s;
+            animation-duration: 45s;
+}
+
+.yourbaby spot .wavePix {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+    border-radius: 40%;
+    background-color: linear-gradient( to bottom, transparent, transparent, #353535 );
+    background-image: url( ../../img/home-Noely/mc.webp );
+    background-size: cover;
+    overflow-x: hidden;
+}
+    
+@-webkit-keyframes wave {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+@keyframes wave {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.yourbaby > footer {
+    display: grid;
+    place-items: center;
+    grid-template-rows: auto 1fr;
+    padding: 15% 0;
+}
+
+.yourbaby > footer p {
+    font-weight: 700;
+    color: var( --cp00 );
+}
+
+/* [ years section ]
+================================================================= */
+.years {
+    background-image: linear-gradient(
+        to bottom,
+        var(--linearbg-04),
+        var(--linearbg-05),
+        var(--linearbg-06),
+        var(--linearbg-07)
+    );
+}
+
+
+/* [ center-btn ]
+================================================================= */
+center-btn {
+    display: grid;
+    place-items: center;
+}
+
+/* [ testimonials section ]
+================================================================= */
+.testimonials {
+    display: grid;
+    grid-template-rows: 1fr 1.8fr;
+    gap: 2vw;
+    user-select: none;
+    background-image: linear-gradient(
+        to bottom,
+        var(--linearbg-08),
+        var(--linearbg-09),
+        var(--linearbg-10)
+    );
+}
+.testimonials header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.9rem;
+    background: #fff1;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.testimonials section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    width: clamp( 100px, 90%, 1200px );
+    margin: 0 auto;
+    padding: 18px;
+}
+
+.testimonials section card {
+    position: relative;
+    display: block;
+    width: clamp( 200px, 22vw, 240px );
+    height: clamp( 300px, 28vw, 317px );
+    background: var( --cp06 );
+    border-radius: 80px 16px 80px 5px;
+    border: var( --cp00 ) dashed;
+    box-shadow: var( --cp06 ) 0 0 0 10px;
+    filter: drop-shadow( #0003 -5px 5px 2px );
+}
+
+.testimonials section card card-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    position: absolute;
+    top: -16px;
+    left: 16px;
+    border-radius: 80px 16px 80px 5px;
+    border: var( --cp08 ) dashed;
+    box-shadow: var( --cp00 ) 0 0 0 10px;
+    filter: drop-shadow( #0003 -5px 5px 2px );
+    background: var( --cp00 );
+}
+
+.testimonials section card card-home picture {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+    position: relative;
+}
+.testimonials section card card-home picture img {
+    width: 50%;
+    position: absolute;
+    top: -25%;
+    border-radius: 5rem;
+    box-shadow: var( --cp05 ) 0 0 0 6px;
+    filter: drop-shadow( #0005 0 0 5px );
+    overflow: hidden;
+}
+
+.testimonials section card card-home h3 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var( --cp08 );
+    margin-bottom: 1.5ch;
+}
+
+.testimonials section .card-destaq {
+    background: var( --cp09 );
+    border: var( --cp05 ) dashed;
+    box-shadow: var( --cp09 ) 0 0 0 10px;
+}
+.testimonials section .card-destaq .card-destaq-home {
+    background: var( --cp05 );
+    border: var( --cp00 ) dashed;
+    box-shadow: var( --cp05 ) 0 0 0 10px;
+    /* color: var( --cp00 ); */
+}
+
+/* [ banner slider ]
+================================== */
+.slider-btn {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    /* padding: 10px; */
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+    z-index: 3;
+    cursor: pointer;
+    background-color: #fff5;
+    background-color: #00000010;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.slider-btn:active {
+    transform: scale(1.1);
+}
+.slider-btn:hover {
+    box-shadow: #0003 0 0 6px;
+}
+.slider-btn-prev {
+    top: 50%;
+    left: 2%;
+} .slider-btn-prev:active {
+    transform: translateX(-5px);
+}
+.slider-btn-next {
+    top: 50%;
+    right: 2%;
+} .slider-btn-next:active {
+    transform: translateX(5px);
+}
+
+/* [ highlight slider ]
+====================================== */
+  
