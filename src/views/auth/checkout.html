@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <title>Finalização de compra</title>
+      <link rel="icon" href="src/public/images/logo.svg" type="svg+xml" />
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- <base href="/" target="_blank"> -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="stylesheet" href="src/public/stylesheets/globals/global.css" />
+      <link
+        rel="stylesheet"
+        href="src/public/stylesheets/globals/animations.css"
+      />
+      <link rel="stylesheet" href="./src/public/stylesheets/components.css" />
+      <link rel="stylesheet" href="./src/public/stylesheets/checkout.css" />
+      <!--  <link rel="stylesheet" href="./src/public/stylesheets/cadastro.css" /> -->
+    </head>
+  </head>
+  <body>
+    <page-header></page-header>
+
+    <main>
+      <h1 class="container">FINALIZAR COMPRA</h1>
+
+      <section class="checkou-card container">
+        <article class="card card-01">
+          <div>
+            <span
+              ><img src="./src/public/images/img-checkout/logo.png" alt=""
+            /></span>
+            <h2>DADOS PESSOAIS</h2>
+          </div>
+          <div>
+            <p>
+              Solicitamos apenas as informações essenciais para a realização da
+              compra.
+            </p>
+          </div>
+
+          <form action="" class="dados-pessoais">
+            <div>
+              <label for="email"
+                >Email:<input
+                  class="input-form"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Digite seu email"
+              /></label>
+            </div>
+
+            <article class="dados-cadastrais">
+              <div>
+                <label for="primeiro-nome"
+                  >Primeiro nome:<input
+                    class="input-form"
+                    type="text"
+                    name="primeiro-nome"
+                    id="primeiro-nome"
+                    placeholder="Digite seu primiero nome:"
+                /></label>
+
+                <label for="ultimo-nome"
+                  >Último nome:<input
+                    class="input-form"
+                    type="text"
+                    name="ultimo-nome"
+                    id="ultimo-nome"
+                    placeholder="Digite seu ultimo nome:"
+                /></label>
+              </div>
+
+              <div>
+                <label for="CPF"
+                  >CPF:<input
+                    class="input-form"
+                    type="CPF"
+                    name="CPF"
+                    id="CPF"
+                    placeholder="Digite seu CPF:"
+                /></label>
+
+                <label for="cel"
+                  >Contato:<input
+                    class="input-form"
+                    type="number"
+                    name="Telefone"
+                    id="cel"
+                    placeholder="Digite seu contato:"
+                /></label>
+              </div>
+            </article>
+
+            <div>
+              <a href="#Incluir dados de pessoa jurídica"></a>
+            </div>
+
+            <article class="checkbox-card">
+              <label for="potilica-de-privacidade">
+                <input
+                  type="checkbox"
+                  name="potilica-de-privacidade"
+                  id="potilica-de-privacidade"
+                />
+
+                <div>
+                  <a href="#"
+                    >Estou de acordo com a Política de Privacidade com os Termos
+                    de Uso e Condições e com o Regulamento Programa de Cashback,
+                    via CRM Bönus e ciente de que os dados de menores de 12 anos
+                    não são tratados pelo Grupo AFEET nos portais web. Para mais
+                    informações, leia nossa Política de Privacidade, nossos
+                    Termos de Uso e Condições e nosso Regulamento Programa de
+                    Cashback, via CRM Bönus.</a
+                  >
+                </div>
+              </label>
+
+              <label for="declaração-de-idade">
+                <input
+                  type="checkbox"
+                  name="declaração-de-idade"
+                  id="declaração-de-idade"
+                />
+
+                <div>
+                  <p>
+                    Declaro ser maior de 12 anos e concordo que os meus dados
+                    pessoais sejam coletados para o retorno das minhas
+                    solicitações, controle interno e acompanhamento da demanda.
+                  </p>
+                </div>
+              </label>
+
+              <label for="dado-pessoais">
+                <input
+                  type="checkbox"
+                  name="dado-pessoais"
+                  id="dado-pessoais"
+                />
+
+                <div>
+                  <p>
+                    Concordo que os meus dados pessoais sejam coletados para o
+                    envio de newsletter e ativações de campanhas de marketing,
+                    conforme descrito na
+                    <a href="#"><strong>Política de Privacidade..</strong> </a>
+                  </p>
+                </div>
+              </label>
+            </article>
+
+            <button class="buttom-form">Ir Para Entrega</button>
+          </form>
+        </article>
+
+        <article class="card card-02">
+          <div>
+            <span>
+              <img
+                src="./src/public/images/img-checkout/lado-do-caminhao.svg"
+                alt=""
+              />
+            </span>
+            <h2>ENTREGA</h2>
+          </div>
+
+          <form action="">
+            <h2>Endereço de entrega</h2>
+            <article>
+              <label for="endereço"
+                >Endereço :<input
+                  class="input-form"
+                  type="text"
+                  name="endereço"
+                  id="endereço"
+                  placeholder="Digite seu endereço:"
+              /></label>
+            </article>
+
+            <article class="entrega">
+              <div>
+                <label for="numero"
+                  >Número<input
+                    class="input-form number"
+                    type="number"
+                    name="numero"
+                    id="numero"
+                    placeholder="N:"
+                /></label>
+
+                <label for="compl"
+                  >Complemento e referência :<input
+                    class="input-form"
+                    type="text"
+                    name="compl"
+                    id="compl"
+                    placeholder="Opcional:"
+                /></label>
+              </div>
+
+              <label for="bairro"
+                >Bairro:<input
+                  class="input-form"
+                  type="text"
+                  name="bairro"
+                  id="bairro"
+                  placeholder="Bairro:"
+              /></label>
+
+              <div>
+                <label for="cidade"
+                  >Cidade:<input
+                    class="input-form"
+                    type="text"
+                    name="cidade"
+                    id="cidade"
+                    placeholder="Cidade:"
+                /></label>
+                <label for="estado"
+                  >Estado:
+                  <select class="input-form" name="estado" id="estado">
+                    <option value="SP">SP</option>
+                    <option value="RJ">RJ</option>
+                    <option value="BA">BA</option>
+                    <option value="MG">MG</option>
+                  </select>
+                </label>
+              </div>
+            </article>
+
+            <article class="formas-entrega">
+              <div class="card-entrega">
+                <input
+                  class="input-radio"
+                  type="radio"
+                  name="expressa"
+                  id="expressa"
+                  checked
+                />
+
+                <label for="expressa">
+                  Expressa
+                  <p>Em até 6 dias úteis</p>
+                </label>
+
+                <span>R$ 47,52</span>
+              </div>
+              <div class="card-entrega">
+                <input
+                  class="input-radio"
+                  type="radio"
+                  name="expressa"
+                  id="expressa"
+                />
+
+                <label for="expressa">
+                  Expressa
+                  <p>Em até 6 dias úteis</p>
+                </label>
+
+                <span>R$ 47,52</span>
+              </div>
+              <div class="card-entrega">
+                <input
+                  class="input-radio"
+                  type="radio"
+                  name="expressa"
+                  id="expressa"
+                />
+
+                <label for="expressa">
+                  Expressa
+                  <p>Em até 6 dias úteis</p>
+                </label>
+
+                <span>R$ 47,52</span>
+              </div>
+            </article>
+            <article>
+              <label for="destinatario"
+                >Destinatario:<input
+                  class="input-form"
+                  type="text"
+                  name="destinatario"
+                  id="destinatario"
+                  placeholder="Opcional:"
+              /></label>
+            </article>
+
+            <div>
+              <button class="buttom-form">Ir Para Pagamento</button>
+            </div>
+          </form>
+        </article>
+
+        <article class="card card-03">
+          <div>
+            <span
+              ><img
+                src="./src/public/images/img-checkout/cartao-de-debito 1.png"
+                alt=""
+            /></span>
+
+            <h2>PAGAMENTO</h2>
+          </div>
+
+          <form action="">
+            <h2>PAGAMENTO</h2>
+            <article>
+              <label for="cartao"
+                >Numero do Cartão:<input
+                  class="input-form"
+                  type="number"
+                  name="cartao"
+                  id="cartao"
+                  placeholder="Digite o numero do seu cartão"
+              /></label>
+
+              <label for="parcela"
+                >Numero de parcelas:
+                <select class="input-form" name="parcelas" id="parcelas">
+                  <option value="null" checked="">
+                    Em quantas parcelas deseja?
+                  </option>
+                  <option value="1X">1x com 15% de desconto</option>
+                  <option value="2X">2x sem juros</option>
+                  <option value="3X">3x Sem juros</option>
+                  <option value="4X">4x Sem juros</option>
+                  <option value="5X">5x Sem juros</option>
+                  <option value="6X">6x Sem juros</option>
+                  <option value="7X">7x Sem juros</option>
+                  <option value="8X">8x Sem juros</option>
+                  <option value="9X">9x Sem juros</option>
+                  <option value="10X">10x Sem juros</option>
+                  <option value="11X">11x Sem juros</option>
+                  <option value="12X">12x Sem juros</option>
+                </select>
+              </label>
+            </article>
+
+            <article class="formas-entrega">
+                <div class="card-entrega">
+                  <input
+                    class="input-radio"
+                    type="radio"
+                    name="expressa"
+                    id="expressa"
+                  />
+  
+                  <label for="marster-card">
+                    <p>MASTER CARD</p>
+                  </label>
+  
+                  <span
+                    ><img
+                      src="/src/public/images/img-checkout/mastercard-18.svg"
+                      alt=""
+                  /></span>
+                </div>
+  
+                <div class="card-entrega">
+                  <input class="input-radio" type="radio" name="visa" id="visa" />
+  
+                  <label for="visa">
+                    <p>VISA</p>
+                  </label>
+  
+                  <span
+                    ><img
+                      src="/src/public/images/img-checkout/visa-17.svg"
+                      alt=""
+                  /></span>
+                </div>
+  
+                <div class="card-entrega">
+                  <input class="input-radio" type="radio" name="elo" id="elo" />
+  
+                  <label for="elo"> ELO </label>
+  
+                  <span
+                    ><img src="/src/public/images/img-checkout/elo-30.svg" alt=""
+                  /></span>
+                </div>
+  
+                <div class="card-entrega">
+                  <input
+                    checked
+                    class="input-radio"
+                    type="radio"
+                    name="pix"
+                    id="pix"
+                  />
+  
+                  <label for="pix">
+                    <p>PIX</p>
+                  </label>
+  
+                  <span
+                    ><img
+                      src="/src/public/images/img-checkout/cartao-de-credito.svg"
+                      alt=""
+                  /></span>
+                </div>
+              </article>
+
+            <article class="dados-cartao">
+              <label for="parcela"
+                >Numero de parcelas:
+                <select class="input-form" name="parcelas" id="parcelas">
+                  <option value="null" checked="">MÊS:</option>
+                  <option value="01">Janeiro</option>
+                  <option value="02">Fevereiro</option>
+                  <option value="03">Março</option>
+                  <option value="04">Abril</option>
+                  <option value="05">Maio</option>
+                  <option value="06">Junho</option>
+                  <option value="07">Julho</option>
+                  <option value="08">Agosto</option>
+                  <option value="09">Setembro</option>
+                  <option value="10">Outrubro</option>
+                  <option value="11">Novembro</option>
+                  <option value="12">Desembro</option>
+                </select>
+              </label>
+
+              <label for="parcela"
+                >Ano vencimento:
+                <select class="input-form" name="parcelas" id="parcelas">
+                  <option value="null" checked="">ANO:</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                  <option value="2030">2030</option>
+                </select>
+              </label>
+            </article>
+
+            <article class="input-ccv">
+              <label for="ccv"
+                >Codigo de Segurança:
+                <input
+                  placeholder="CCV:"
+                  class="input-form"
+                  type="number"
+                  name="ccv"
+                  id="ccv"
+                />
+              </label>
+            </article>
+
+          
+
+            <div>
+              <button class="buttom-form">FINALIZAR COMPRA</button>
+            </div>
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <page-footer></page-footer>
+
+    <script src="src/public/scripts/globals/global.js"></script>
+  </body>
+</html>
