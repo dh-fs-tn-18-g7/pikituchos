@@ -17,5 +17,17 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "description": "",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dh-fs-tn-18-g7/pikituchos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dh-fs-tn-18-g7/pikituchos/issues"
+  },
+  "homepage": "https://github.com/dh-fs-tn-18-g7/pikituchos#readme"
 }
