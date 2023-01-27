@@ -54,10 +54,15 @@ label {
 /* CSS MAIN */
 
 
-body main{
+body{
     background-color: #FFDEE9;
     background-image: linear-gradient(to top , #FFDEE9 0%, #B5FFFC 100%);
     padding-bottom: 30px;
+}
+
+.app{
+  background-color: transparent;
+
 }
 
 body main h1{

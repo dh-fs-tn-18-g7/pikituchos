@@ -1,6 +1,5 @@
 @import url(/src/public/stylesheets/globals/global.css);
 
-
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +20,6 @@
 a {
   color: black;
 }
-
 
 :root {
   font-family: Baloo Da;
@@ -50,19 +48,28 @@ body {
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(to top, #ffdee9 0%, #b5fffc 100%);
-  border-radius: 5PX;  
-  
+  border-radius: 5px;
 }
 .boxLogin {
-    background-color:#def7ff;
-    display: flex;
-    padding: 4rem;
-    width: 1080px;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0px 0px 23px -10px rgba(0,0,0,0.75);
-    font-size: 1.25rem;
-    border-radius: 8px;
+  background-color: #def7ff;
+  display: flex;
+  padding: 4rem 1rem;
+  width: 720px;
+  
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 23px -10px rgb(0 0 0 / 75%);
+  font-size: 1.25rem;
+  border-radius: 8px;
+  gap: 60px;
+}
+
+.boxLogin > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
 }
 
 .boxLogin div img {
@@ -71,19 +78,16 @@ body {
 
 form {
   display: flex;
-  width: 100%;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  width: 100%;
 }
 
-.inputSenha{
-    display: flex;
-    flex-direction: column;
-    gap: 1.2px;
-    align-items: flex-end;
-
+.inputSenha {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2px;
+  align-items: flex-end;
 }
 
 .socialMedia button img {
@@ -123,4 +127,8 @@ form {
   color: #ffffff;
   padding: 5px;
   font-weight: bold;
+}
+
+label{
+  font-weight: 600;
 }
