@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.cards{
+    background-image: linear-gradient(to bottom right, rgb(155, 212, 235), rgb(400, 431, 438));
+}
+.container{
+    display:flex;
+    padding: 28px;
+    justify-content: space-between;
+    
+}
+
+.texto{
+    padding: 18px;
+    margin-bottom: 18px ;
+    font-family: Baloo Da;
+    font-weight: bold;
+    color: #000;
+    text-shadow: 
+             -5px -4px 2px #FFF, 
+             -5px 4px 2px #FFF,      
+              4px -3px 2px #FFF,    
+              5px 3px 3px #FFF;
+}
+@media (max-width:414px) {
+
+    .container{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        padding: 28px;
+    }
+
+   
+  }
