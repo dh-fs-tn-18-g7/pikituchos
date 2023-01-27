@@ -1,11 +1,9 @@
 @import url(/src/public/stylesheets/globals/global.css);
 
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -48,23 +46,17 @@ label {
   color: var(--cp08);
 }
 
-
-
-
 /* CSS MAIN */
 
-
-body main{
-    background-color: #FFDEE9;
-    background-image: linear-gradient(to top , #FFDEE9 0%, #B5FFFC 100%);
-    padding-bottom: 30px;
+body main {
+  background-color: #ffdee9;
+  background-image: linear-gradient(to top, #ffdee9 0%, #b5fffc 100%);
+  padding-bottom: 30px;
 }
 
-body main h1{
-    padding: 15px;
-    
+body main h1 {
+  padding: 15px;
 }
-
 
 .card-01 {
   display: flex;
