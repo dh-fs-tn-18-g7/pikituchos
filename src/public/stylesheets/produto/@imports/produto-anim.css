@@ -1,0 +1,46 @@
+
+
+@keyframes flash-hovering {
+    0% {
+        font-size: 1.4rem;
+        color: #e9e6e3;
+    }
+    70% {
+        color: var( --cp05 );
+    }
+    100% {
+        font-size: 1.4rem;
+        color: #e9e6e3;
+    }
+} @-webkit-keyframes flash-hovering {
+    0% {
+        font-size: 1.4rem;
+        color: #e9e6e3;
+    }
+    70% {
+        color: var( --cp05 );
+    }
+    100% {
+        font-size: 1.4rem;
+        color: #e9e6e3;
+    }
+}
+
+@keyframes thumbs-select {
+    0% {
+        border: var( --cp08 ) 4px dotted;
+    }
+    25% {
+        border: var( --cp08 ) 4px dashed;
+    }
+    50% {
+        border: var( --cp08 ) 4px solid;
+    }
+    75% {
+        border: var( --cp05 ) 4px dashed;
+    }
+    100% {
+        border: var( --cp05 ) 4px dotted;
+    }
+}
+

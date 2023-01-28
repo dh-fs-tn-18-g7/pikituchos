@@ -7,7 +7,8 @@ const logger = require( "morgan" );
 const ejs = require( "ejs" );
 
 const indexRouter = require( "./src/routes/index" );
-const usersRouter = require( "./src/routes/users" );
+const usersRouter = require( "./src/routes/users" ),
+	lyhTemps = require( "./src/routes/noely-temps" );
 
 /* Variaveis */
 
@@ -25,6 +26,7 @@ app.use( express.static( path.join( __dirname, "src/public" ) ) );
 
 app.use( "/", indexRouter );
 app.use( "/users", usersRouter );
+app.use( "/produto", lyhTemps );
 
 // catch 404 and forward to error handler
 

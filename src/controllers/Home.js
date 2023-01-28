@@ -12,6 +12,9 @@ const homeController = {
 	guide: function( l, y, h ) {
 		y.render( "guide" );
 	},
+	produto: function( l, y, h ) {
+		y.render( "produto" );
+	},
 };
 
 
