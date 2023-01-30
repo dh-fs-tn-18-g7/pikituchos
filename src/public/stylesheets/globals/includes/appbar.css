@@ -1,0 +1,201 @@
+
+
+/* [ appbar ]
+----------------------------------------------------------------- */
+page-header {
+    display: grid;
+    width: 100%;
+    height: calc( var(--appbar-height) + 16px );
+    position: absolute;
+    top: 0; left: 0;
+    background: var(--cp06);
+    box-shadow: 0px 0px 8px #0008;
+    z-index: 9;
+
+    background: var( --cp07 );
+    border-radius: 0 0 30px 30px;
+    border: var( --cp00 ) dashed;
+    box-shadow: var( --cp07 ) 0 0 0 6px;
+    filter: drop-shadow( #0009 0 0 5px );
+    transition: .3s ease;
+}
+
+nav#header-nav-mobile {
+    display: none;
+    width: 0;
+}
+
+
+appbar {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: var(--appbar-height);
+    
+    position: relative;
+    top: 0; left: 0;
+    background: var(--cp06);
+    box-shadow: 0px 0px 8px #0008;
+
+    background: var( --cp06 );
+    border-radius: 0 0 60px 60px;
+    border-left: var( --cp00 ) dashed;
+    border-bottom: var( --cp00 ) dashed;
+    border-right: var( --cp00 ) dashed;
+    box-shadow: var( --cp06 ) 0 0 0 6px;
+    filter: drop-shadow( #0009 0 0 5px );
+}
+
+appbar-home {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    /* gap: 1vw; */
+    width: clamp( 100px, 95%, 1400px );
+    height: var(--appbar-height);
+    padding: 0 .5%;
+    font-family: Baloo Da;
+    font-size: 18px;
+    user-select: none;
+}
+
+img.babyPikituchos {
+    width: 54px;
+    filter: drop-shadow(-3px 4px 1px #0006 );
+}
+
+h2#btn-mobile-nav-menu { display: none; }
+
+.open-mobile-nav-menu {
+    height: 90vh;
+}
+
+.appbar-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2%;
+    width: 15%;
+    min-width: fit-content;
+    max-width: 200px;
+    width: clamp( 10px, 10vw, 200px );
+    height: 100%;
+    cursor: pointer;
+}
+#baby-logo {
+    /* min-width: 70px; */
+    width: clamp( 60px, 6.5vw, 70px );
+    height: 100%;
+}
+#logos-desc {
+    /* max-width: 120px; */
+    width: clamp( 100px, 11vw, 120px );
+    filter: drop-shadow(#0005 -5px 6px 1px);
+} .appbar-left h2 {
+    width: 123px;
+    color: var(--cp00);
+    font-family: Baloo Da;
+    font-weight: Regular;
+    font-size: 22px;
+}
+
+.appbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.8vw;
+    /* width: clamp( 100px, 50%, 900px ); */
+    width: 100%;
+    height: 100%;
+    /* background: #000; */
+    list-style: none;
+} 
+
+.appbar-nav li {
+    color: var(--cp00);
+    text-shadow: var(--text-shadow-blue);
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 500;
+} .appbar-nav li:hover {
+    text-shadow: #0005 -3px 3px 2px;
+} .appbar-nav li img {
+    width: 30px;
+    width: 25px;
+    transform: translateY(5px);
+    transition: .3s;
+} .appbar-nav li:has( img ):hover {
+    filter: drop-shadow( #0005 -3px 5px 2px );
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 36px;
+    padding: 6px;
+    border-radius: 23px;
+    background: var(--cp00);
+    box-shadow: inset 0px 2px 5px #27fc;
+    color: #848484;
+    font-size: 16px;
+    cursor: text;
+} .searchbar input {
+    width: 70%;
+    padding-left: 0px;
+    border-radius: 2rem;
+    border: 0px;
+    outline: none;
+    overflow-x: hidden;
+    font-size: 16px;
+} #searchbar-btn {
+    display: grid;
+    place-items: center;
+    padding: 0 2%;
+    width: clamp( 81px, 30%, 81px );
+    min-width: fit-content;
+    /* height: 100%; */
+    background: var(--cp06);
+    stroke-width: 10px;
+    border-radius: 23px;
+    border: none;
+    box-shadow: 0px 1px 4px #0004;
+    cursor: pointer;
+    transition: .2s;
+    
+    color: var(--cp00);
+    text-shadow: var(--text-shadow-blue);
+    font-family: baloo Da;
+    font-size: 16px;
+    -webkit-text-stroke: #00000012 1px;
+} #searchbar-btn txt {
+}/*  #searchbar-btn txt::before {
+    content: "🔎";
+}*/ #searchbar-btn:hover {
+    transition: .3s;
+    box-shadow: -5px 5px 4px #0004;
+}
+
+.appbar-right {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 2%;
+    color: var(--cp00);
+}
+#btn-signin {
+    width: 50px;
+    color: var(--cp00);
+    border: none;
+    background: transparent;
+    text-shadow: var(--text-shadow-blue);
+    font-family: Baloo Da;
+    font-weight: Regular;
+    transition: .2s;
+    cursor: pointer;
+} #btn-signin:hover {
+    transition: .2s;
+    text-shadow: #0005 -3px 5px 2px;
+}
