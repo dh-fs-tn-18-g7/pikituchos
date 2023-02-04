@@ -113,6 +113,7 @@ h2#btn-mobile-nav-menu { display: none; }
     font-weight: 500;
 } .appbar-nav li:hover {
     text-shadow: #0005 -3px 3px 2px;
+    transform: translateY(-5px);
 } .appbar-nav li img {
     width: 30px;
     width: 25px;
