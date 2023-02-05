@@ -199,12 +199,12 @@ footer-overlay {
     font-size: 1.8rem;
     white-space: nowrap;
 }
-.newsletter .text-bg {
-    position: relative;
+.newsletter title-pk {
+    /* position: relative; */
     color: var(--cp05);
-    font-family: Baloo Da;
+    /* font-family: Baloo Da; */
     font-size: 1.8rem;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 .newsletter txt {
     color: var(--cp08);
@@ -324,19 +324,13 @@ page-footer > hr {
     grid-column: 4 / span 3;
 }
 
-.footer-top .support .h3 {
-    color: var(--cp05);
-    position: relative;
-    white-space: nowrap;
-}
-
 .footer-top .about {
     display: block;
     grid-column: 7 / span 3;
 }
-.footer-top .about .h3 {
+.footer-top .about title-pk {
     color: var(--cp06);
-    position: relative;
+    /* position: relative; */
     letter-spacing: .2px;
     white-space: nowrap;
 }
@@ -346,14 +340,12 @@ page-footer > hr {
     grid-column: 10 / span 3;
 }
 
-.footer-top .contact-info .h3 {
-    color: var(--cp07);
-    position: relative;
-    letter-spacing: .2px;
-    white-space: nowrap;
+header.title-pk-footer {
+    display: block;
 }
-div.title-pk {
+header.title-pk-footer > title-pk {
     /* position: relative; */
+    font-size: 1.17em;
 }
 .outline {
     -webkit-text-stroke: 6px var(--cp00);
@@ -564,11 +556,7 @@ div.title-pk {
         margin-bottom: 4.5vw;
     }
 
-    .footer-top .support .h3 {
-        color: var(--cp05);
-        position: relative;
-        white-space: nowrap;
-    }
+    
 
     .footer-top .about {
         grid-column: 7 / span 4;
@@ -576,12 +564,6 @@ div.title-pk {
 
     .footer-top .about header {
         margin-bottom: 2vw;
-    }
-    .footer-top .about .h3 {
-        color: var(--cp06);
-        position: relative;
-        letter-spacing: .2px;
-        white-space: nowrap;
     }
 
     .footer-top .contact-info {
@@ -592,12 +574,6 @@ div.title-pk {
         display: grid;
         place-items: center;
         margin-bottom: 4.5vw;
-    }
-    .footer-top .contact-info .h3 {
-        color: var(--cp07);
-        position: relative;
-        letter-spacing: .2px;
-        white-space: nowrap;
     }
     .outline {
         -webkit-text-stroke: 6px var(--cp00);

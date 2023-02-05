@@ -342,9 +342,9 @@
                     <img logo-text src="img/home/pikituchos-logo-txt.png" alt="">
                 </appbar-logo>
                 <menu appbar>
-                    <li url="#globals" data="g">Estilo global</li>
-                    <li url="#widgets" data="w">Widgets</li>
-                    <li url="#color-palette" data="c">Paleta de cores</li>
+                    <li url="#globals" data="g"><txt>Estilo global</txt></li>
+                    <li url="#widgets" data="w"><txt>Widgets</txt></li>
+                    <li url="#color-palette" data="c"><txt>Paleta de cores</txt></li>
                 </menu>
                 <appbar-right>
                     <button-pk test-views
@@ -383,7 +383,7 @@
         <article g>
             <header>
                 <title-pk 
-                    name="Importar o estilo global" 
+                    title-pk="Importar o estilo global" 
                     color="var( --cp07 )"
                     margin="0"
                 ></title-pk>
@@ -412,7 +412,7 @@
         <article id="header-footer" g>
             <header>
                 <title-pk 
-                    name="header e footer" 
+                    title-pk="header e footer" 
                     color="var( --cp06 )"
                     margin="0"
                 ></title-pk>
@@ -438,7 +438,7 @@
         <article id="title-pk" w>
             <header>
                 <title-pk 
-                    name="Título" 
+                    title-pk="Título" 
                     color="var( --cp08 )"
                     margin="0"
                 ></title-pk>
@@ -446,28 +446,29 @@
             <hr>
             <section>
                 <holder>
-                    <title-pk c2c="title"
-                        name="Seu pequeno é nossa prioridade"   
-                        color="var(--cp05)" 
-                        margin="0"
-                    ></title-pk>
+                    <p c2c="title"
+                        title-pk="Seu pequeno é nossa prioridade" 
+                    >Seu pequeno é nossa prioridade</p>
                 </holder>
                 <div c2c="title">
                     <tag-a-opn>title-pk</tag-a-opn> <br>
-                        <property>name</property>="Seu pequeno é nossa prioridade"  <br>
+                        <property>title-pk</property>="Seu pequeno é nossa prioridade"  <br>
                         <property>color</property>="var(--cp05)"    <br>
                     <w>&gt;</w><tag-f>title-pk</tag-f>
                 </div>
+            </section>
+            <section>
+                        
+                <title-pk div title-pk="Pikituchos 1.17em" color="var( --cp09 )" style="font-size: 1.17em"></title-pk>
+                <title-pk div title-pk="Pikituchos 1.5em" color="var( --cp07 )" style="font-size: 1.5em"></title-pk>
+                <title-pk div title-pk="Pikituchos 2em" color="#279" style="font-size: 2em"></title-pk>
+                <title-pk div title-pk="Pikituchos 2.5em" color="var( --cp05 )" style="font-size: 2.5em"></title-pk>
             </section>
         </article>
 
         <article id="button-pk" w>
             <header>
-                <title-pk 
-                    name="Botão" 
-                    text-color="var( --cp05 )"
-                    margin="0"
-                ></title-pk>
+                <p title-pk="Botão">Botão</p>
             </header>
             <hr>
             <section>
@@ -492,11 +493,7 @@
 
         <article id="card-pk" w>
             <header>
-                <title-pk 
-                    name="Card de produto" 
-                    color=""
-                    margin="0"
-                ></title-pk>
+                <p title-pk="Card de produto">Card de produto</p>
             </header>
             <hr>
             <section>
@@ -528,11 +525,7 @@
         <h1 id="color-palette">Paleta de cores</h1>
         <article c>
             <header>
-                <title-pk 
-                    name="Paleta de cores" 
-                    color="var( --cp04 )"
-                    margin="0"
-                ></title-pk>
+                <p title-pk="Paleta de cores">Paleta de cores</p>
             </header>
             <hr>
             <section>
@@ -550,18 +543,21 @@
     </home>
     
     <script>
+
+
         'use strict';
         window.addEventListener( 'load', ev => {
             /* [ properties ]
             =================================== */
-            let links = document.querySelectorAll( '*[link]' ),
-                appbarLinks = document.querySelectorAll( "menu[appbar] > *" ),
-                appbarBottom = document.querySelector( "appbar" ),
-                appbarMobMenu = document.querySelector( "appbar > menu" ),
-                clik2copy = document.querySelectorAll( "*[c2c]" ),
-                toggle = document.querySelector( "btn-appbar-menu-toggle" ),
-                viewsMenu = document.querySelector( "views-activated" ),
-                testViewsToggle = document.querySelector( "[test-views]" );
+            let links = $$( '*[link]' ),
+                appbarLinks = $$( "menu[appbar] > *" ),
+                appbarBottom = $( "appbar" ),
+                appbarMobMenu = $( "appbar > menu" ),
+                clik2copy = $$( "*[c2c]" ),
+                toggle = $( "btn-appbar-menu-toggle" ),
+                viewsMenu = $( "views-activated" ),
+                testViewsToggle = $( "[test-views]" ),
+                paleta = $( "[title-pk='Paleta de cores']" );
 
             let c2cValues = {
                 css: "<link rel='stylesheet' href='../public/stylesheets/globals/global.css'>", 
@@ -569,10 +565,8 @@
                 header: "<page-header></page-header>", 
                 footer: "<page-footer></page-footer>", 
                 title: `<title-pk 
-    name="Nome do título" 
-    font-size="1.5em" 
-    color="#daa250" 
-    margin="0"
+    title-pk="Nome do título" 
+    color="#daa250"
 ></title-pk>`, 
                 card: `<card-pk 
     src="img/pikitucho.svg" 
@@ -602,21 +596,21 @@
                 window.open( appbarLink.getAttribute( "url" ), "_self" );
                 switch( appbarLink.getAttribute( "data" ) ) {
                     case "g": {
-                        document.querySelectorAll( "*[g]" ).forEach( v => v.style.display = "grid" );
-                        document.querySelectorAll( "*[w]" ).forEach( v => v.style.display = "none" );
-                        document.querySelectorAll( "*[c]" ).forEach( v => v.style.display = "none" );
+                        $$( "*[g]" ).forEach( v => v.style.display = "grid" );
+                        $$( "*[w]" ).forEach( v => v.style.display = "none" );
+                        $$( "*[c]" ).forEach( v => v.style.display = "none" );
                     }
                     break;
                     case "w": {
-                        document.querySelectorAll( "*[g]" ).forEach( v => v.style.display = "none" );
-                        document.querySelectorAll( "*[w]" ).forEach( v => v.style.display = "grid" );
-                        document.querySelectorAll( "*[c]" ).forEach( v => v.style.display = "none" );
+                        $$( "*[g]" ).forEach( v => v.style.display = "none" );
+                        $$( "*[w]" ).forEach( v => v.style.display = "grid" );
+                        $$( "*[c]" ).forEach( v => v.style.display = "none" );
                     }
                     break;
                     case "c": {
-                        document.querySelectorAll( "*[g]" ).forEach( v => v.style.display = "none" );
-                        document.querySelectorAll( "*[w]" ).forEach( v => v.style.display = "none" );
-                        document.querySelectorAll( "*[c]" ).forEach( v => v.style.display = "grid" );
+                        $$( "*[g]" ).forEach( v => v.style.display = "none" );
+                        $$( "*[w]" ).forEach( v => v.style.display = "none" );
+                        $$( "*[c]" ).forEach( v => v.style.display = "grid" );
                     }
                     break;
                 }
@@ -719,9 +713,33 @@
                 toggleAttr( viewsMenu, "menu-views-activated" );
             } );
 
+            // paleta.charAt( 0 ).style.color = "blue"; 
+
         } );
 
 
+    </script>
+    <script>
+        addEventListener( "load", ev => {
+            var sounds = [
+                iteractionRadiateSound  = new Audio( 'audio/Holographic Interaction Radiate.wav' ),
+                iteractionSound = new Audio( 'audio/Holographic Interaction.wav' ),
+                activate = new Audio( "audio/Activate.wav" ),
+                lockOn = new Audio( "audio/Lock On.wav" ),
+                ambience = new Audio( "audio/AMBIENCE_HEARTBEAT.wav" ),
+            ];
+
+            $$( "menu[appbar] > li > txt" ).forEach( txt => txt.addEventListener( "mouseover", ev => {
+                    iteractionRadiateSound.load();
+                    iteractionRadiateSound.play();
+            } ) );
+        
+            $$( "menu[appbar] > li > txt" ).forEach( txt => txt.addEventListener( "click", ev => {
+                    lockOn.load();
+                    lockOn.play();
+            } ) );
+            
+        } );
     </script>
 </body>
 </html>
