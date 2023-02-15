@@ -175,10 +175,13 @@
             clip-path: polygon( 0 33px, 33px 0, 100% 0, 100% calc( 100% - 33px ), calc( 100% - 33px ) 100%, 0 100% );
         }
 
+        section { display: grid; place-items: center; }
+
         section[palette] {
             display: grid;
             grid-template-columns: repeat(4, 114px);
             grid-template-rows: repeat( 5, 80px );
+            place-items: baseline;
             gap: 15px;
         }
 
