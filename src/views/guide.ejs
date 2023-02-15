@@ -101,7 +101,7 @@
             position: absolute;
             top: 0; left: 0;
             z-index: 9;
-            background: #1b1d22;
+            background-color: #1b1d22;
             box-shadow: #1b1d22 0 0 0 6px;
             filter: drop-shadow( #0009 0 0 5px );
             border-left: #ffab00 2px dashed;
@@ -149,18 +149,37 @@
         img[logo-text] { max-width: 120px; }
 
         article {
+            display: block;
+            width: clamp( 100px, 100%, 900px );
+            min-height: 80vh !important;
+            margin: 4% auto;
+            padding: 4px;
+            border-radius: 5px;
+            background: #905;
+            background: linear-gradient( 
+                45deg,
+                #905, #ffab00
+            );
+            clip-path: polygon( 0 33px, 33px 0, 100% 0, 100% calc( 100% - 33px ), calc( 100% - 33px ) 100%, 0 100% );
+        } article > overlay {
             display: grid;
             grid-template-rows: .1fr 1px .9fr;
             justify-items: center;
             gap: 4%;
             width: clamp( 100px, 100%, 900px );
             min-height: 80vh !important;
-            /* min-height: fit-content !important; */
-            margin: 4% auto;
+            margin: 0 auto;
             padding: 4%;
-            border-radius: 24px;
+            border-radius: 5px;
             background: #212329;
-        } article > :where( * ) {
+            clip-path: polygon( 0 33px, 33px 0, 100% 0, 100% calc( 100% - 33px ), calc( 100% - 33px ) 100%, 0 100% );
+        }
+
+        section[palette] {
+            display: grid;
+            grid-template-columns: repeat(4, 114px);
+            grid-template-rows: repeat( 5, 80px );
+            gap: 15px;
         }
 
         hr {
@@ -178,6 +197,13 @@
 
     </style>
     <style>
+        body {
+            background-color: #1b1d22;
+            background-image:   linear-gradient(0deg, #00000000 24px, #313239 25px),
+                                linear-gradient(90deg, #00000000 24px, #313239 25px);
+            background-size: 25px 25px;
+            background-attachment: fixed;
+        }
         w { color: #fff; }
         t { color: #c00; }
         tag-a { color: #c00; }
@@ -219,7 +245,7 @@
             background: #f5f5f550;
             color: #505257;
             border-radius: 0.5em;
-            clip-path: polygon( 0 10%, 10% 0, 98% 0, 100% 2%, 100% 90%, 90% 100%, 2% 100%, 0 98%, 0 100% );
+            clip-path: polygon( 0 33px, 33px 0, 100% 0, 100% calc( 100% - 33px ), calc( 100% - 33px ) 100%, 0 100% );
         } [menu-views-activated] {
             display: block;
             animation: becomes-visible 1.8s;
@@ -381,164 +407,176 @@
     <home>
         <h1 id="globals">Estilo global</h1>
         <article g>
-            <header>
-                <title-pk 
-                    title-pk="Importar o estilo global" 
-                    color="var( --cp07 )"
-                    margin="0"
-                ></title-pk>
-            </header>
-            <hr>
-            <section>
-                <p>
-                    colar as tags de css e js antes da tag de fechamento da head &lt;/head&gt;
-                </p>
-                <div c2c="css">
-                    <h2>css:</h2>
-                    <tag-a-opn>link</tag-a-opn> 
-                        <prop>rel</prop>="stylesheet" 
-                        <prop>href</prop>="stylesheets/globals/global.css"
-                    <w>&gt;</w>
-                </div>
-                <div c2c="js">
-                    <h2>js:</h2>
-                    <tag-a-opn>script</tag-a-opn> 
-                        <prop>src</prop>="scripts/globals/global.js" <defer>defer</defer>
-                    <w>&gt;</w><tag-f>script</tag-f>
-                </div>
-            </section>
+            <overlay>
+                <header>
+                    <title-pk 
+                        title-pk="Importar o estilo global" 
+                        color="var( --cp07 )"
+                        margin="0"
+                    ></title-pk>
+                </header>
+                <hr>
+                <section>
+                    <p>
+                        colar as tags de css e js antes da tag de fechamento da head &lt;/head&gt;
+                    </p>
+                    <div c2c="css">
+                        <h2>css:</h2>
+                        <tag-a-opn>link</tag-a-opn> 
+                            <prop>rel</prop>="stylesheet" 
+                            <prop>href</prop>="stylesheets/globals/global.css"
+                        <w>&gt;</w>
+                    </div>
+                    <div c2c="js">
+                        <h2>js:</h2>
+                        <tag-a-opn>script</tag-a-opn> 
+                            <prop>src</prop>="scripts/globals/global.js" <defer>defer</defer>
+                        <w>&gt;</w><tag-f>script</tag-f>
+                    </div>
+                </section>
+            </overlay>
         </article>
 
         <article id="header-footer" g>
-            <header>
-                <title-pk 
-                    title-pk="header e footer" 
-                    color="var( --cp06 )"
-                    margin="0"
-                ></title-pk>
-            </header>
-            <hr>
-            <section>
-                <h3>novas páginas:  <br>
-                    <w>o conteúdo das novas páginas precisa ser envelopado na tag   <br>
-                    <tag-a>main</tag-a><tag-f>main</tag-f>
-                </h3>
-                <h3 c2c="header">
-                    adicionar o header na pagina com a tag: <br>
-                    <tag-a>page-header</tag-a><tag-f>page-header</tag-f>
-                </h3>
-                <h3 c2c="footer">
-                    adicionar o footer na pagina com a tag: <br>
-                    <tag-a>page-footer</tag-a><tag-f>page-footer</tag-f>
-                </h3>
-            </section>
+            <overlay>
+                <header>
+                    <title-pk 
+                        title-pk="header e footer" 
+                        color="var( --cp06 )"
+                        margin="0"
+                    ></title-pk>
+                </header>
+                <hr>
+                <section>
+                    <h3>novas páginas:  <br>
+                        <w>o conteúdo das novas páginas precisa ser envelopado na tag   <br>
+                        <tag-a>main</tag-a><tag-f>main</tag-f>
+                    </h3>
+                    <h3 c2c="header">
+                        adicionar o header na pagina com a tag: <br>
+                        <tag-a>page-header</tag-a><tag-f>page-header</tag-f>
+                    </h3>
+                    <h3 c2c="footer">
+                        adicionar o footer na pagina com a tag: <br>
+                        <tag-a>page-footer</tag-a><tag-f>page-footer</tag-f>
+                    </h3>
+                </section>
+            </overlay>
         </article>
         
         <h1 id="widgets">Widgets</h1>
         <article id="title-pk" w>
-            <header>
-                <title-pk 
-                    title-pk="Título" 
-                    color="var( --cp08 )"
-                    margin="0"
-                ></title-pk>
-            </header>
-            <hr>
-            <section>
-                <holder>
-                    <p c2c="title"
-                        title-pk="Seu pequeno é nossa prioridade" 
-                    >Seu pequeno é nossa prioridade</p>
-                </holder>
-                <div c2c="title">
-                    <tag-a-opn>title-pk</tag-a-opn> <br>
-                        <property>title-pk</property>="Seu pequeno é nossa prioridade"  <br>
-                        <property>color</property>="var(--cp05)"    <br>
-                    <w>&gt;</w><tag-f>title-pk</tag-f>
-                </div>
-            </section>
-            <section>
-                        
-                <title-pk div title-pk="Pikituchos 1.17em" color="var( --cp09 )" style="font-size: 1.17em"></title-pk>
-                <title-pk div title-pk="Pikituchos 1.5em" color="var( --cp07 )" style="font-size: 1.5em"></title-pk>
-                <title-pk div title-pk="Pikituchos 2em" color="#279" style="font-size: 2em"></title-pk>
-                <title-pk div title-pk="Pikituchos 2.5em" color="var( --cp05 )" style="font-size: 2.5em"></title-pk>
-            </section>
+            <overlay>
+                <header>
+                    <title-pk 
+                        title-pk="Título" 
+                        color="var( --cp08 )"
+                        margin="0"
+                    ></title-pk>
+                </header>
+                <hr>
+                <section>
+                    <holder>
+                        <p c2c="title"
+                            title-pk="Seu pequeno é nossa prioridade" 
+                        >Seu pequeno é nossa prioridade</p>
+                    </holder>
+                    <div c2c="title">
+                        <tag-a-opn>title-pk</tag-a-opn> <br>
+                            <property>title-pk</property>="Seu pequeno é nossa prioridade"  <br>
+                            <property>color</property>="var(--cp05)"    <br>
+                        <w>&gt;</w><tag-f>title-pk</tag-f>
+                    </div>
+                </section>
+                <section>
+                            
+                    <title-pk div title-pk="Pikituchos 1.17em" color="var( --cp09 )" style="font-size: 1.17em"></title-pk>
+                    <title-pk div title-pk="Pikituchos 1.5em" color="var( --cp07 )" style="font-size: 1.5em"></title-pk>
+                    <title-pk div title-pk="Pikituchos 2em" color="#279" style="font-size: 2em"></title-pk>
+                    <title-pk div title-pk="Pikituchos 2.5em" color="var( --cp05 )" style="font-size: 2.5em"></title-pk>
+                </section>
+            </overlay>
         </article>
 
         <article id="button-pk" w>
-            <header>
-                <p title-pk="Botão">Botão</p>
-            </header>
-            <hr>
-            <section>
-                <holder>
-                    <button-pk 
-                        name="Botão" 
-                        text-color="#fff"
-                        btn-color="var( --cp06 )"
-                        btn-shadow="#25f"
-                    ></button-pk>
-                </holder>
-                <div c2c="button">
-                    <tag-a-opn>button-pk</tag-a-opn> <br>
-                        <property>name</property>="Botão"  <br>
-                        <property>text-color</property>="#fff"    <br>
-                        <property>btn-color</property>="var( --cp06 )"    <br>
-                        <property>btn-shadow</property>="#25f"    <br>
-                    <w>&gt;</w><tag-f>button-pk</tag-f>
-                </div>
-            </section>
+            <overlay>
+                <header>
+                    <p title-pk="Botão">Botão</p>
+                </header>
+                <hr>
+                <section>
+                    <holder>
+                        <button-pk 
+                            name="Botão" 
+                            text-color="#fff"
+                            btn-color="var( --cp06 )"
+                            btn-shadow="#25f"
+                        ></button-pk>
+                    </holder>
+                    <div c2c="button">
+                        <tag-a-opn>button-pk</tag-a-opn> <br>
+                            <property>name</property>="Botão"  <br>
+                            <property>text-color</property>="#fff"    <br>
+                            <property>btn-color</property>="var( --cp06 )"    <br>
+                            <property>btn-shadow</property>="#25f"    <br>
+                        <w>&gt;</w><tag-f>button-pk</tag-f>
+                    </div>
+                </section>
+            </overlay>
         </article>
 
         <article id="card-pk" w>
-            <header>
-                <p title-pk="Card de produto">Card de produto</p>
-            </header>
-            <hr>
-            <section>
-                <holder>
-                    <card-pk c2c="card"
-                        name="Nome do produto" 
-                        desc="descrição do produto" 
-                        real="45" 
-                        cents="90"
-                        src="img/pikitucho.svg" 
-                        alt=""
-                        btn="Ver detalhes"
-                    ></card-pk>
-                </holder>
-                <div c2c="card">
-                    <tag-a-opn>card-pk</tag-a-opn>  <br>
-                        <property>name</property>="Nome do produto"  <br>
-                        <property>desc</property>="descrição do produto" <br>
-                        <property>real</property>="45"  <br>
-                        <property>cents</property>="90  <br>
-                        <property>src</property>="img/product-05.png" <br>
-                        <property>alt</property>="" <br>
-                        <property>btn</property>="Ver detalhes" <br>
-                    <w>&gt;</w> <tag-f>card-pk</tag-f>
-                </div>
-            </section>
+            <overlay>
+                <header>
+                    <p title-pk="Card de produto">Card de produto</p>
+                </header>
+                <hr>
+                <section>
+                    <holder>
+                        <card-pk c2c="card"
+                            name="Nome do produto" 
+                            desc="descrição do produto" 
+                            real="45" 
+                            cents="90"
+                            src="img/pikitucho.svg" 
+                            alt=""
+                            btn="Ver detalhes"
+                        ></card-pk>
+                    </holder>
+                    <div c2c="card">
+                        <tag-a-opn>card-pk</tag-a-opn>  <br>
+                            <property>name</property>="Nome do produto"  <br>
+                            <property>desc</property>="descrição do produto" <br>
+                            <property>real</property>="45"  <br>
+                            <property>cents</property>="90  <br>
+                            <property>src</property>="img/product-05.png" <br>
+                            <property>alt</property>="" <br>
+                            <property>btn</property>="Ver detalhes" <br>
+                        <w>&gt;</w> <tag-f>card-pk</tag-f>
+                    </div>
+                </section>
+            </overlay>
         </article>
 
         <h1 id="color-palette">Paleta de cores</h1>
         <article c>
-            <header>
-                <p title-pk="Paleta de cores">Paleta de cores</p>
-            </header>
-            <hr>
-            <section>
-                <color-palette color="var( --cp01 )"></color-palette>
-                <color-palette color="var( --cp02 )"></color-palette>
-                <color-palette color="var( --cp03 )"></color-palette>
-                <color-palette color="var( --cp04 )"></color-palette>
-                <color-palette color="var( --cp05 )"></color-palette>
-                <color-palette color="var( --cp06 )"></color-palette>
-                <color-palette color="var( --cp07 )"></color-palette>
-                <color-palette color="var( --cp08 )"></color-palette>
-                <color-palette color="var( --cp09 )"></color-palette>
-            </section>
+            <overlay>
+                <header>
+                    <p title-pk="Paleta de cores">Paleta de cores</p>
+                </header>
+                <hr>
+                <section palette>
+                    <color-palette color="var( --cp01 )"></color-palette>
+                    <color-palette color="var( --cp02 )"></color-palette>
+                    <color-palette color="var( --cp03 )"></color-palette>
+                    <color-palette color="var( --cp04 )"></color-palette>
+                    <color-palette color="var( --cp05 )"></color-palette>
+                    <color-palette color="var( --cp06 )"></color-palette>
+                    <color-palette color="var( --cp07 )"></color-palette>
+                    <color-palette color="var( --cp08 )"></color-palette>
+                    <color-palette color="var( --cp09 )"></color-palette>
+                </section>
+            </overlay>
         </article>
     </home>
     
@@ -670,24 +708,30 @@
                     colorPalette.innerHTML = titleTemplate = `
                         <style>
                             card-base {
-                                display: flex; align-items: center;
-                                gap: 4%;
+                                display: grid;
+                                grid-template-columns: 100%;
+                                grid-template-rows: .8fr .2fr;
+                                align-items: center;
                                 width: 100%;
+                                height: 100%;
                             }
                             box {
-                                display: block; width: 100%;
+                                display: block;
+                                width: 100%;
                                 aspect-ratio: 16 / 9;
                             }
                             h4 {
-                                min-width: 60%;
+                                width: 100%;
                                 color: #e9e6e3;
+                                height: 100%;
+                                text-align: center;
                             }
                         </style>
                         <card-base>
                             <box></box>
                             <h4></h4>
                         </card-base>`;
-                    this.style.width = "30%";
+                    this.style.width = "100%";
                     this.attachShadow( { mode: "open" } );
                     this.shadowRoot.append( colorPalette.content.cloneNode( true ) );
                     this.shadowRoot.querySelector( "box" ).style.background = this.getAttribute( "color" );
