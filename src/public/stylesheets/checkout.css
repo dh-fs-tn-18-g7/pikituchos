@@ -130,7 +130,7 @@ body main h1 {
   margin-top: 25px;
   display: flex;
   justify-content: space-between;
-  width: 300px;
+  width: 100%;
   margin-left: 20px;
 }
 
@@ -169,4 +169,34 @@ body main h1 {
   justify-content: center;
   align-items: center;
   gap: 0;
+}
+
+@media only screen and (width <= 910px) {
+  .card {
+    width: 45%;
+    border: 2px solid var(--cp07);
+    padding: 15px;
+    margin: 15px;
+    background-color: var(--cp06);
+    border-radius: 8px;
+    box-shadow: 2px 3px 11px -6px rgba(0, 0, 0, 1);
+  }
+
+  .checkou-card {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (width <= 610px){
+  .card {
+    width: 100%;
+    border: 2px solid var(--cp07);
+    padding: 15px;
+    margin: 15px;
+    background-color: var(--cp06);
+    border-radius: 8px;
+    box-shadow: 2px 3px 11px -6px rgba(0, 0, 0, 1);
+  }
 }

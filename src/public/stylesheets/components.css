@@ -60,10 +60,11 @@
     border-radius: 8px;
     height: 45px;
     outline: none;
-    padding: 0 50px;
+    /* padding: 0 50px; */
     background-color: var(--cp07);
     transition: 0.4s;
     margin: 0 auto;
+    width: 250px;
   }
   
   .buttom-form:hover {

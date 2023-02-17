@@ -129,7 +129,7 @@ let pageHeader = document.createElement( "page-header" ),
     </section>
     <section class="contact-info">
         <header>
-            <div class="title-pk">
+            <div class="title-pk-contact">
                 <h3 class="outline">Contact info</h3>
                 <h3 class="h3">Contact info</h3>
             </div>
