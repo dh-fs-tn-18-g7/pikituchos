@@ -9,14 +9,14 @@ let pageHeader = document.createElement( "page-header" ),
 <appbar>
     <appbar-home>
         <article class="appbar-left">
-            <img class="babyPikituchos" src="src/public/images/pikitucho.svg" alt="logo image">
-            <img id="logos-desc" src="src/public/images/home-Noely/pikituchos-logo-txt.png" alt="">
+            <img class="babyPikituchos" src="/images/pikitucho.svg" alt="logo image">
+            <img id="logos-desc" src="/images/home-Noely/pikituchos-logo-txt.png" alt="">
         </article>
         <nav class="appbar-nav">
             <li url="#" data-title="Home">Home</li>
             <li url="#highlights" data-title="Produtos">Produtos</li>
             <li url="#" data-title="Contatos">Contato</li>
-            <li url="#" data-title="ver carrinho"><img src="src/public/images/home-Noely/shopping-cart.svg" alt=""></li>
+            <li url="#" data-title="ver carrinho"><img src="/images/home-Noely/shopping-cart.svg" alt=""></li>
         </nav>
         <article class="appbar-right">
             <label for="searchbar" class="searchbar">
@@ -85,16 +85,16 @@ let pageHeader = document.createElement( "page-header" ),
 <article class="footer-top">
     <section class="socials">
         <header>
-            <img class="babyPikituchos" src="src/public/images/pikitucho.svg" alt="logo image">
-            <!-- <img src="src/public/images/home-Noely/pikituchos-logo.svg" id="logo" alt=""> -->
-            <img src="src/public/images/home-Noely/pikituchos-logo-txt.png" id="logo-txt" alt="">
+            <img class="babyPikituchos" src="/images/pikitucho.svg" alt="logo image">
+            <!-- <img src="/images/home-Noely/pikituchos-logo.svg" id="logo" alt=""> -->
+            <img src="/images/home-Noely/pikituchos-logo-txt.png" id="logo-txt" alt="">
         </header>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         <footer>
-            <img src="src/public/images/home-Noely/socials/facebook-svgrepo-com.svg" alt="">
-            <img src="src/public/images/home-Noely/socials/instagram-svgrepo-com.svg" alt="">
-            <img src="src/public/images/home-Noely/socials/twitter-svgrepo-com.svg" alt="">
-            <img src="src/public/images/home-Noely/socials/youtube-svgrepo-com.svg" alt="">
+            <img src="/images/home-Noely/socials/facebook-svgrepo-com.svg" alt="">
+            <img src="/images/home-Noely/socials/instagram-svgrepo-com.svg" alt="">
+            <img src="/images/home-Noely/socials/twitter-svgrepo-com.svg" alt="">
+            <img src="/images/home-Noely/socials/youtube-svgrepo-com.svg" alt="">
         </footer>
     </section>
     <section class="support">
@@ -146,9 +146,9 @@ let pageHeader = document.createElement( "page-header" ),
     <txt>copyright © 2022 - Present | PIKITUCHOS LTDA.</txt>
     <txt>Made with 
         <!-- ❤️ -->
-        <img id="footer-heart" src="src/public/images/home-Noely/love_icon.svg" alt="">
+        <img id="footer-heart" src="/images/home-Noely/love_icon.svg" alt="">
         by <a href="#">fs-tn-18</a> <strong>grupo 7</strong>
-        <img id="footer-DH" href="https://www.digitalhouse.com/br" src="src/public/images/home-Noely/DH-Logo.svg" alt="" data-title="www.digitalhouse.com/br">
+        <img id="footer-DH" href="https://www.digitalhouse.com/br" src="/images/home-Noely/DH-Logo.svg" alt="" data-title="www.digitalhouse.com/br">
     </txt>
 </article>
 `,
@@ -193,7 +193,7 @@ let pageHeader = document.createElement( "page-header" ),
         border-radius: 18px 18px 0 0;
         overflow: hidden;
         transition: 0s ease; /*
-        background-image: url( "src/public/images/globals/card-backgrounds/background-liquid.svg" ); */
+        background-image: url( "/images/globals/card-backgrounds/background-liquid.svg" ); */
         background-size: cover;
     }
     picture:hover {
