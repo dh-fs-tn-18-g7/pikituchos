@@ -7,4 +7,4 @@ const getInfoModel = (jsonFile) => {
     return JSON.parse(readFile)
 }
 
-console.log(getInfoModel("users"))
+getInfoModel("users")
