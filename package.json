@@ -1,0 +1,25 @@
+{
+  "name": "pikituchos",
+  "version": "1.0.0",
+  "description": "> [![img](https://rawcdn.githack.com/dh-fs-tn-18-g7/.github/3dec8e2c134c1dd9ae8fdb6d89cbccd93fde2469/profile/dh-fstn-18-g7.svg)](https://github.com/dh-fs-tn-18-g7)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dh-fs-tn-18-g7/pikituchos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dh-fs-tn-18-g7/pikituchos/issues"
+  },
+  "homepage": "https://github.com/dh-fs-tn-18-g7/pikituchos#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.21"
+  }
+}
