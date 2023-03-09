@@ -15,6 +15,10 @@ const LoginController = {
         response.json({message: "Não existe nenhum usuário com esse id"})
        }
        return response.json(userFound)
+    },
+
+    showLogin: (request, response) => {
+        return response.render('login')
     }
 
 }

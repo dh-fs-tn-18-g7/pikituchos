@@ -1,12 +1,14 @@
 const express = require('express')
-const LoginController = require ('./controllers/LoginController')
-const loginRoutes = require('./routes/loginRoutes')
+const loginRoutes = require ('./routes/loginRoutes')
 
 const server = express()
 const port = 5000
 
-server.use(loginRoutes)
+server.set('view engine', 'ejs')
+//server.set('views', path.resolve('src', 'views'))
 server.use(express.json())
+server.use(loginRoutes)
+
 
 
 server.listen(port, ()=> console.log(`Servidor rodando no http://localhost:${port}`))
