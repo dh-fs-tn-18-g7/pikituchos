@@ -18,7 +18,7 @@ const LoginController = {
     },
 
     showLogin: (request, response) => {
-        return response.render('login')
+        return response.render('/auth/login')
     }
 
 }

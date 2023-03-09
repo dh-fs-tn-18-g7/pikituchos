@@ -9,5 +9,5 @@ const getInfoModel = (jsonFile) => {
 }
 
 
-getInfoModel('users')
+
 module.exports = getInfoModel
