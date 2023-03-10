@@ -1,0 +1,202 @@
+@import url(/src/public/stylesheets/globals/global.css);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  text-decoration: none;
+}
+a {
+  color: black;
+}
+
+/* CSS Padrão*/
+
+.checkou-card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 30%;
+  border: 2px solid var(--cp07);
+  padding: 15px;
+  margin: 15px;
+  background-color: var(--cp06);
+  border-radius: 8px;
+  box-shadow: 2px 3px 11px -6px rgba(0, 0, 0, 1);
+}
+
+.input-form {
+  font-size: 14px;
+  width: 100%;
+}
+
+.card button {
+  margin-top: 30px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--cp08);
+}
+
+/* CSS MAIN */
+
+body main {
+  background-color: #ffdee9;
+  background-image: linear-gradient(to top, #ffdee9 0%, #b5fffc 100%);
+  padding-bottom: 30px;
+}
+
+body main h1 {
+  padding: 15px;
+}
+
+.card-01 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-01 div {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.dados-pessoais {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dado-pessoais div {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.dados-cadastrais {
+  display: flex;
+  gap: 15px;
+}
+
+.dados-cadastrais div {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-card {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-card label {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.checkbox-card label input {
+  margin-top: 7px;
+}
+
+/* Card de entrega */
+
+.card-02 div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px;
+}
+
+.card-02 div span img {
+  width: 25px;
+}
+
+.formas-entregas {
+  width: 90%;
+  padding: 12px;
+}
+
+.card-entrega {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.card-entrega:hover {
+  border-radius: 3px;
+  border: 1px solid var(--cp07);
+  box-shadow: var(--cp02) 0px 0px 5px 1px inset, var(--cp02) 0px 0px 5px 1px;
+  transition: 0.1s;
+}
+
+/* Card - Pagamento */
+
+.card-03 div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+}
+
+.card-03 div span img {
+  width: 1.5rem;
+}
+
+.dados-cartao {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-pag div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+@media only screen and (width <= 910px) {
+  .card {
+    width: 45%;
+    border: 2px solid var(--cp07);
+    padding: 15px;
+    margin: 15px;
+    background-color: var(--cp06);
+    border-radius: 8px;
+    box-shadow: 2px 3px 11px -6px rgba(0, 0, 0, 1);
+  }
+
+  .checkou-card {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (width <= 610px){
+  .card {
+    width: 100%;
+    border: 2px solid var(--cp07);
+    padding: 15px;
+    margin: 15px;
+    background-color: var(--cp06);
+    border-radius: 8px;
+    box-shadow: 2px 3px 11px -6px rgba(0, 0, 0, 1);
+  }
+}

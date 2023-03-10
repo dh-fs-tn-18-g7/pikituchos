@@ -1,0 +1,177 @@
+
+/* Reset CSS + Importações */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da&family=Baloo+Da+2&family=Baloo+Da+2:wght@400;500;600;700;800&family=Baloo+Paaji&family=Londrina+Sketch&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Rajdhani:wght@400;500;600;700&display=swap");
+
+:root {
+  font-family: Baloo Da;
+
+  /*  pateta de cores com variaveis */
+
+  --cp00: #ffffff;
+  --cp01: #00a599;
+  --cp02: #ffaebf;
+  --cp03: #fffadd;
+  --cp04: #fdcdbf;
+  --cp05: #feb491;
+  --cp06: #47c8ef;
+  --cp07: #f190a3;
+  --cp08: #464646;
+  --cp09: #;
+  --cp10: #c5d3d9;
+  --cp11: #ededed;
+}
+
+
+/* 
+//Estilo CSS - Formulario PIKITUCHOS// */
+
+
+body {
+  
+    background-color: #FFDEE9;
+    background-image: linear-gradient(to top , #FFDEE9 0%, #B5FFFC 100%);
+    
+}
+body main {
+
+  background: transparent;
+  margin-bottom: 30px;
+
+}
+
+
+form {
+  background-color: #47c8ef;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+form article img {
+  width: 200px;
+}
+
+.dados-cadastrais {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  color: #f190a3;
+  font-weight: bolder;
+}
+
+.dados-cadastrais div h2,
+div h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+.dados-cadastrais div label {
+  margin-bottom: 10px;
+}
+
+form section img {
+  width: 180px;
+}
+
+.input-card {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 1.2rem;
+  color: var(--cp08);
+  font-weight: 600;
+}
+
+.input-form {
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  height: 50px;
+  outline: none;
+  padding: 0 16px;
+  background-color: var(--cp00);
+  font-size: 18px;
+  transition: 0.4s;
+  gap: 10px;
+  letter-spacing: 1px;
+
+}
+.input-form:hover {
+  border: 1px solid var(--cp07);
+  box-shadow: var(--cp02) 0px 0px 5px 1px inset, var(--cp02) 0px 0px 5px 1px;
+  transition: 0.1s;
+}
+
+.card-radio {
+  margin-left: 14%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: bolder;
+  align-items: flex-start;
+}
+
+.radio-buttom {
+  margin-right: 10px;
+  
+}
+
+
+.card-radio label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttom-form {
+  color: var(--cp00);
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  height: 45px;
+  outline: none;
+  padding: 0 50px;
+  background-color: var(--cp07);
+  transition: 0.4s;
+}
+
+.buttom-form:hover {
+  border: 1px solid var(--cp07);
+  box-shadow: var(--cp02) 0px 0px 8px 1px inset, var(--cp02) 0px 0px 10px 1px;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.title-pk {
+  margin-right: 100%;
+}
+
+.title-pk-contact {
+  margin-right: 100%;
+}
+
+@media only screen and (width <= 710px){
+  .title-pk-contact {
+    margin-right: 0px;
+  }
+}
