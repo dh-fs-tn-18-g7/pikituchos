@@ -5,8 +5,7 @@
     =========================================================================== */
 let pageHeader = document.createElement( "page-header" ),
 	pageFooter = document.createElement( "page-footer" ),
-	appbarTemplate = `
-<appbar>
+	appbarTemplate = `<appbar>
     <appbar-home>
         <article class="appbar-left">
             <img class="babyPikituchos" src="/images/pikitucho.svg" alt="logo image">
@@ -71,8 +70,7 @@ let pageHeader = document.createElement( "page-header" ),
     </menu> 
 </nav>
 `,
-	footerTemplate = `
-<article class="newsletter">
+	footerTemplate = `<article class="newsletter">
     <h2 id="outline">Assine a nossa newsletter</h2>
     <h2 class="text-bg">Assine a nossa newsletter</h2>
     <txt>receba ofertas exclusivas para o seu pikitucho <br> diretamente no seu e-mail.</txt>
@@ -520,7 +518,7 @@ class Title extends HTMLElement {
 	constructor() {
 		super();
 		let title = document.createElement( "template" );
-		title.innerHTML = titleTemplate;
+		title.innerHTML =  titleTemplate;
 		this.attachShadow( { mode: "open" } );
 		this.shadowRoot.append( title.content.cloneNode( true ) );
 		this.shadowRoot.querySelector( "h2#outline" ).innerHTML = this.getAttribute( "name" );
