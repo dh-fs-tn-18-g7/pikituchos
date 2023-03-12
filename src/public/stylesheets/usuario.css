@@ -15,7 +15,9 @@ a {
 
 /* estilo barra lateral */
 
-section {
+
+.usuario {
+
   height: 100vh;
   background-image: linear-gradient(to top, #ffdee9 0%, #b5fffc 100%);
   display: flex;
@@ -24,36 +26,120 @@ section {
   gap: 3%;
 }
 
-aside {
-  background-color: yellow;
+.boxBtn {
+  background-color: var(--cp00);
   display: flex;
   flex-direction: column;
   gap: 19px;
   padding: 25px 10px;
+
+  border-radius: 8px;
+  box-shadow: 2px 0px 16px -7px rgba(0, 0, 0, 0.75);
 }
+
+.boxBtn div h2 strong {
+    color: var(--cp07);
+}
+
+
 
 /* sessão card lateral  */
 
-
-.boxCard{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2%;
+.boxCard {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
 
-.boxCard article{
-    display: flex;
-    
+.boxCard article {
+  display: flex;
+  gap: 15px;
+}
+
+.cardUsuario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cp07);
+  color: var(--cp00);
+  width: 250px;
+  height: 200px;
+  border-radius: 8px;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.cardUsuario:hover {
+  transform: scale(1.01);
+  transition: 500ms;
+  background-color: var(--cp06);
+  color: var(--cp07);
+  box-shadow: 2px 0px 16px -7px rgba(0, 0, 0, 0.75);
+}
+
+.cardUsuario div span > img {
+    width: 80px;
+    display: block;
+    margin: 0 auto;
 
 }
 
-.cardUsuario{
-    background-color: yellow;
-    width: 250px;
-    height: 200px;
+.dadosPessoais{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cp00);
+  padding: 1.6rem;
+  width: 650px;
+
+}
+
+.dadosPessoais {
+
+font-size: 1.3rem;
+}
+
+.dadosPessoais div hr{
+  border: solid 1px black;
+
+}
+
+.formDadosPessoais{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  gap: 1rem;
+
+}
+
+.formBtnDados{
+  display: flex;
+  gap: 2.5rem;
 }
 
 
+
+
+.meusPedidos{
+  display: none;
+
+}
+
+.meusFavoritos{
+  display: none;
+}
+
+.informacoesDaConta{
+  display: none;
+}
+.trocarDevolver{
+  display: none;
+
+}
+
+.cartoes{
+  display: none;
+
+}
 
 

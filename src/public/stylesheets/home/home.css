@@ -1,0 +1,27 @@
+
+
+@import url( home-main.css );
+@import url( animation.css );
+@import url( swiper.css );
+@import url( homeMediaqueries.css );
+
+/* @media only screen and ( min-width: 1040px ) {
+
+    card-pk {
+        width: clamp( 100px, 18vw, 243px );
+    }
+    card-base {
+    }
+    card-front {
+        padding: 6px;
+        position: relative;
+    }
+
+    slider-spot {
+        background: #212329 !important;
+    }
+    
+} */
+/* slider-spot {
+    background: #212329 !important;
+} */
