@@ -1,0 +1,122 @@
+
+
+
+/* [ highlights section ]
+----------------------------------------------------------------- */
+@media only screen and ( width <= 768px ) {
+
+    /* [ banner-section ]
+    =========================================================================================== */
+    banner-section {
+        height: 73vw;
+    }
+
+    banner-section slider #slide00 {
+        background-image: url(../../../img/home/baby-walls1-9.webp);
+    }
+
+    banner-section slider #slide00 left section {
+        justify-content: space-between;
+        height: 100%;
+        padding: 10% 5%;
+    }
+
+    banner-section slider #slide00 left section #mamae-e-bebe {
+        width: 90%;
+        height: auto;
+    }
+
+    banner-section > slider slide left section h2 {
+        font-size: clamp( .1rem, 4vw, 1.8rem );
+        text-align: end;
+        color: #fff;
+    }
+
+
+    /* [ slider ]
+    =========================================================================================== */
+    slider-modules {
+        /* padding: 116px 0 5.5vw clamp( 10px, 20vw, 82px ); */
+    }
+
+    /* [ highlights-section ]
+    =========================================================================================== */
+
+    /* ------------------------- */
+
+    /* ------------------------- */
+
+    .testimonials {
+        grid-template-rows: auto 1.8fr;
+    }
+
+    .testimonials header {
+        padding: 3rem 10px;
+    }
+
+    .testimonials section {
+        grid-template-columns: 1fr;
+        gap: 13vw 0;
+        width: clamp( 100px, 100%, 1200px );
+        margin: 0 auto;
+        padding: 12vw;
+        overflow-x: hidden;
+    }
+
+    /* ------------------------- */
+    .yourbaby {
+        grid-template-areas: "top" "bottom";
+        grid-template-columns: 1fr;
+        gap: 5rem;
+        padding: 10vw 2vw;
+        background-image: linear-gradient( to bottom, var(--linearbg-02), var(--linearbg-03) );
+        user-select: none;
+    }
+    .yourbaby :nth-child( 1 ) { grid-area: bottom; }
+    .yourbaby :nth-child( 2 ) { grid-area: top; }
+
+    .yourbaby > footer {
+        grid-template-areas: "top" "bottom";
+        place-items: center;
+        grid-template-rows: auto 1fr;
+        padding: 0;
+        text-align: center;
+    }
+    .yourbaby > footer :nth-child( 1 ) { grid-area: top; }
+    .yourbaby > footer :nth-child( 2 ) { grid-area: bottom; }
+
+    .yourbaby > spot {
+        display: grid;
+        position: relative;
+        width: 50vw;
+        height: 43vw;
+        min-width: 70vw;
+        min-height: 70vw;
+        margin: 0 auto;
+        border-radius: 6px;
+    }
+
+    .yourbaby spot .wave {
+        position: absolute;
+    }
+
+    .yourbaby spot .wave:nth-child( 1 ) {
+            border-radius: 45%;
+            -webkit-animation-duration: 50s;
+            animation-duration: 50s;
+        }
+
+    .yourbaby spot .wave:nth-child( 2 ) {
+        border-radius: 35%;
+        -webkit-animation-duration: 50s;
+                animation-duration: 50s;
+    }
+    
+    .yourbaby spot .wavePix {
+        position: absolute;
+    }
+
+}
+/* -------------------------------------- */
+
+
