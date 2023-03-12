@@ -11,6 +11,7 @@ const indexRouter = require( "./src/routes/index" );
 const usersRouter = require( "./src/routes/usersRouter" )
 const lyhTemps = require( "./src/routes/noely-temps" );
 const checkoutRouter = require ('./src/routes/checkoutRouter')
+const loginRouter = require ("./src/routes/loginRouter")
 
 /* Variaveis */
 
@@ -33,6 +34,7 @@ app.use( "/", indexRouter );
 app.use(usersRouter );
 app.use( "/produto", lyhTemps );
 app.use(checkoutRouter)
+app.use(loginRouter)
 
 
 // catch 404 and forward to error handler
