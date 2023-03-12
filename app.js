@@ -10,6 +10,7 @@ const ejs = require( "ejs" );
 const indexRouter = require( "./src/routes/index" );
 const usersRouter = require( "./src/routes/usersRouter" )
 const lyhTemps = require( "./src/routes/noely-temps" );
+const checkoutRouter = require ('./src/routes/checkoutRouter')
 
 /* Variaveis */
 
@@ -31,6 +32,7 @@ app.use( express.static( path.join( __dirname, "src/public" ) ) );
 app.use( "/", indexRouter );
 app.use(usersRouter );
 app.use( "/produto", lyhTemps );
+app.use(checkoutRouter)
 
 
 // catch 404 and forward to error handler
