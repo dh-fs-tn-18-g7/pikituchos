@@ -6,27 +6,41 @@ const cookieParser = require( "cookie-parser" );
 const logger = require( "morgan" );
 const ejs = require( "ejs" );
 
+/* Importações das rotas */
+
 const indexRouter = require( "./src/routes/index" );
-const usersRouter = require( "./src/routes/users" ),
-	lyhTemps = require( "./src/routes/noely-temps" );
+const lyhTemps = require( "./src/routes/noely-temps" );
+const usersRouter = require('./src/routes/usersRouter')
 
 /* Variaveis */
 
 const app = express();
+const port = 3838
 
-// view engine setup
+// Define a coniguração do ejs
 app.set( "views", path.join( __dirname, "src/views" ) );
 app.set( "view engine", "ejs" );
 
 app.use( logger( "dev" ) );
-app.use( express.json() );
+
+app.use( express.json() ); // define para que express ententa arquivos JSON
+
 app.use( express.urlencoded( { extended: false } ) );
+
 app.use( cookieParser() );
-app.use( express.static( path.join( __dirname, "src/public" ) ) );
+
+app.use( express.static( path.join( __dirname, "src/public" ) ) ); // define onde vao estar os arquivos estaticos
+
+
+/* Rotas */
 
 app.use( "/", indexRouter );
-app.use( "/users", usersRouter );
 app.use( "/produto", lyhTemps );
+
+app.use(usersRouter)
+
+
+/* Middleware */
 
 // catch 404 and forward to error handler
 
@@ -45,4 +59,6 @@ app.use( function( err, req, res, next ) {
 	res.render( "error" );
 } );
 
-module.exports = app;
+app.listen(port, (err)=>{
+	console.log(`Servidor esta rodando da port${port}`)
+})

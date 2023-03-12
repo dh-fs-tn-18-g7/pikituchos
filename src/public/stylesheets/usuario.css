@@ -15,11 +15,9 @@ a {
 
 /* estilo barra lateral */
 
-<<<<<<< HEAD
-section {
-=======
+
+
 .usuario {
->>>>>>> 3b49ce99d1afa277b1b8af02764a37b3cf3d69e8
   height: 100vh;
   background-image: linear-gradient(to top, #ffdee9 0%, #b5fffc 100%);
   display: flex;
@@ -28,41 +26,12 @@ section {
   gap: 3%;
 }
 
-<<<<<<< HEAD
-aside {
-  background-color: yellow;
-=======
 .boxBtn {
   background-color: var(--cp00);
->>>>>>> 3b49ce99d1afa277b1b8af02764a37b3cf3d69e8
   display: flex;
   flex-direction: column;
   gap: 19px;
   padding: 25px 10px;
-<<<<<<< HEAD
-}
-
-/* sessão card lateral  */
-
-
-.boxCard{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2%;
-}
-
-.boxCard article{
-    display: flex;
-    
-
-}
-
-.cardUsuario{
-    background-color: yellow;
-    width: 250px;
-    height: 200px;
-=======
   border-radius: 8px;
   box-shadow: 2px 0px 16px -7px rgba(0, 0, 0, 0.75);
 }
@@ -145,13 +114,10 @@ font-size: 1.3rem;
 .formBtnDados{
   display: flex;
   gap: 2.5rem;
->>>>>>> 3b49ce99d1afa277b1b8af02764a37b3cf3d69e8
 }
 
 
 
-<<<<<<< HEAD
-=======
 .meusPedidos{
   display: none;
 
@@ -173,5 +139,4 @@ font-size: 1.3rem;
   display: none;
 
 }
->>>>>>> 3b49ce99d1afa277b1b8af02764a37b3cf3d69e8
 
