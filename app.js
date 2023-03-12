@@ -15,7 +15,7 @@ const usersRouter = require('./src/routes/usersRouter')
 /* Variaveis */
 
 const app = express();
-const port = 3838
+const port = 3880
 
 // Define a coniguração do ejs
 app.set( "views", path.join( __dirname, "src/views" ) );
@@ -28,7 +28,6 @@ app.use( express.json() ); // define para que express ententa arquivos JSON
 app.use( express.urlencoded( { extended: false } ) );
 
 app.use( cookieParser() );
-
 app.use( express.static( path.join( __dirname, "src/public" ) ) ); // define onde vao estar os arquivos estaticos
 
 
@@ -36,7 +35,6 @@ app.use( express.static( path.join( __dirname, "src/public" ) ) ); // define ond
 
 app.use( "/", indexRouter );
 app.use( "/produto", lyhTemps );
-
 app.use(usersRouter)
 
 

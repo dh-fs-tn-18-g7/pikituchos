@@ -15,8 +15,6 @@ a {
 
 /* estilo barra lateral */
 
-
-
 .usuario {
   height: 100vh;
   background-image: linear-gradient(to top, #ffdee9 0%, #b5fffc 100%);
@@ -139,4 +137,3 @@ font-size: 1.3rem;
   display: none;
 
 }
-
