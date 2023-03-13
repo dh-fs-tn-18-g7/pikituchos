@@ -1,8 +1,7 @@
 const UserController = {
     showUser: (req,res)=>{
-        res.render('usuario')
+        res.render("usuario")
     }
 }
-
 
 module.exports = UserController

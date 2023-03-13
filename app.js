@@ -11,6 +11,7 @@ const ejs = require( "ejs" );
 const indexRouter = require( "./src/routes/index" );
 const lyhTemps = require( "./src/routes/noely-temps" );
 const usersRouter = require('./src/routes/usersRouter')
+const loginRouter = require('./src/routes/loginRouter')
 
 /* Variaveis */
 
@@ -30,12 +31,12 @@ app.use( express.urlencoded( { extended: false } ) );
 app.use( cookieParser() );
 app.use( express.static( path.join( __dirname, "src/public" ) ) ); // define onde vao estar os arquivos estaticos
 
-
 /* Rotas */
 
 app.use( "/", indexRouter );
 app.use( "/produto", lyhTemps );
 app.use(usersRouter)
+app.use(loginRouter)
 
 
 /* Middleware */
