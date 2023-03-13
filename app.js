@@ -8,7 +8,7 @@ const ejs = require( "ejs" );
 
 /* Importações das rotas */
 
-const indexRouter = require( "./src/routes/index" );
+const indexRouter = require( "./src/routes/indexRouter" );
 const lyhTemps = require( "./src/routes/noely-temps" );
 const usersRouter = require('./src/routes/usersRouter')
 const loginRouter = require('./src/routes/loginRouter')
