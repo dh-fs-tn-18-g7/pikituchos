@@ -15,6 +15,9 @@ const homeController = {
 	produto: function( l, y, h ) {
 		y.render( "produto" );
 	},
+	users: (req, res) => {
+		res.render('auth/admin/usuario')
+	}
 };
 
 

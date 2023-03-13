@@ -4,12 +4,12 @@ const express = require( "express" );
 const path = require( "path" );
 const cookieParser = require( "cookie-parser" );
 const logger = require( "morgan" );
-const ejs = require( "ejs" );
 
 const indexRouter = require( "./src/routes/index" );
 const usersRouter = require( "./src/routes/users" ),
 	lyhTemps = require( "./src/routes/noely-temps" );
-
+const authRouter = require('./src/routes/authRouter')
+const productsRouter = require('./src/routes/productsRouter')
 /* Variaveis */
 
 const app = express();
@@ -27,6 +27,8 @@ app.use( express.static( path.join( __dirname, "src/public" ) ) );
 app.use( "/", indexRouter );
 app.use( "/users", usersRouter );
 app.use( "/produto", lyhTemps );
+app.use(authRouter)
+app.use(productsRouter)
 
 // catch 404 and forward to error handler
 
