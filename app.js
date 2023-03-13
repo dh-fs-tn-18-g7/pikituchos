@@ -7,7 +7,7 @@ const logger = require( "morgan" );
 const ejs = require( "ejs" );
 
 
-const indexRouter = require( "./src/routes/index" );
+const indexRouter = require( "./src/routes/indexRouter" );
 const usersRouter = require( "./src/routes/usersRouter" )
 const lyhTemps = require( "./src/routes/noely-temps" );
 const checkoutRouter = require ('./src/routes/checkoutRouter')
@@ -16,7 +16,7 @@ const loginRouter = require ("./src/routes/loginRouter")
 /* Variaveis */
 
 const app = express();
-const port = 3839
+const port = 3939
 
 // view engine setup
 app.set( "views", path.join( __dirname, "src/views" ) );

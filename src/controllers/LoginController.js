@@ -1,6 +1,6 @@
 const LoginController = {
     showLogin: (req,res) => {
-        res.render('login')
+        res.render('auth/login')
     }
 }
 
