@@ -12,6 +12,7 @@ const indexRouter = require( "./src/routes/index" );
 const lyhTemps = require( "./src/routes/noely-temps" );
 const usersRouter = require('./src/routes/usersRouter')
 const loginRouter = require('./src/routes/loginRouter')
+const checkoutRouter = require ("./src/routes/checkoutRouter")
 
 /* Variaveis */
 
@@ -37,6 +38,7 @@ app.use( "/", indexRouter );
 app.use( "/produto", lyhTemps );
 app.use(usersRouter)
 app.use(loginRouter)
+app.use(checkoutRouter)
 
 
 /* Middleware */
