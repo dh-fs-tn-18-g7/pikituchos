@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-
     <title>Pikituchos - Login</title>
-    
+
     <link rel="icon" href="/images/logo.svg" type="svg+xml" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,48 +14,43 @@
     <!-- Style -->
 
     <link rel="stylesheet" href="/stylesheets/components.css" />
-
     <link rel="stylesheet" href="/stylesheets/login.css">
-
+    <link rel="stylesheet" href="/stylesheets/globals/global.css">
     <!-- Scripts -->
 </head>
 
-
-
 <body>
-
-    
-
+    <%- include( "../includes/appbar.ejs" ) %>
 
     <main class="boxLogin">
-        <div>
-            <img src="/img/home/pikituchos-logo-txt.png" alt="" />
-            <h2>Bem Vindo de Volta!</h2>
-        </div>
-
-        <form action="">
             <div>
-                <label for="email">Email:<input class="input-login" type="email" id="email" /></label>
+                <img src="/img/home/pikituchos-logo-txt.png" alt="" />
+                <h2>Bem Vindo de Volta!</h2>
             </div>
-            <div class="inputSenha">
-                <label for="senha">Senha:<input class="input-login" type="password" id="senha" /></label>
 
+            <form action="">
                 <div>
-                    <a href="#">Esqueci minha senha</a>
+                    <label for="email">Email:<input class="input-login" type="email" id="email" /></label>
                 </div>
-            </div>
+                <div class="inputSenha">
+                    <label for="senha">Senha:<input class="input-login" type="password" id="senha" /></label>
 
-            <div class="boxBtn">
-                <button class="btn-login">ENTRAR</button>
-
-                <div>
-                    <a href="#">Ainda não é cadastrado?</a>
+                    <div>
+                        <a href="#">Esqueci minha senha</a>
+                    </div>
                 </div>
-            </div>
-        </form>
+
+                <div class="boxBtn">
+                    <button class="btn-login">ENTRAR</button>
+
+                    <div>
+                        <a href="#">Ainda não é cadastrado?</a>
+                    </div>
+                </div>
+            </form>
     </main>
-
-    <script defer src="/js/globals/global.js"></script>
+    
+    <%- include( "../includes/footer.ejs" ) %>          
 </body>
 
 </html>

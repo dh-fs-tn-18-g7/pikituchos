@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <!-- [ styles ] 
 ==================================================== -->
- 
+
   <link rel="stylesheet" href="/stylesheets/components.css" />
   <link rel="stylesheet" href="/stylesheets/usuario.css" />
 
@@ -22,165 +22,153 @@
 </head>
 
 <body>
-  
 
-  <main>
-    <section class="usuario">
-      <aside class="boxBtn">
-        <div>
-          <h2>Olá <strong>usuario</strong></h2>
-        </div>
-        <div><button id="inicio" class="btn-usuario">Inicio</button></div>
-        <div>
-          <button id="dadosPessoais" class="btn-usuario">
-            Dados pessoais
-          </button>
-        </div>
-        <div>
-          <button id="meusPedidos" class="btn-usuario">Meus pedidos</button>
-        </div>
-        <div>
-          <button id="meusFavoritos" class="btn-usuario">
-            Meus Favoritos
-          </button>
-        </div>
-        <div>
-          <button id="informacoes" class="btn-usuario">
-            Informações da conta
-          </button>
-        </div>
+  <%- include( "includes/appbar.ejs" ) %>
 
-        <div>
-          <button id="trocarDevolver" class="btn-usuario">
-            Trocar e devolver
-          </button>
-        </div>
-        <div><button id="cartoes" class="btn-usuario">Cartões</button></div>
-        <div>
-          <button src="./index.html" class="btn-usuario">Sair</button>
-        </div>
-      </aside>
-
-      <div class="diplayUsuario">
-        <section class="boxCard">
-          <article>
-            <div class="cardUsuario">
-              <div>
-                <span></span>
-                <h4>Meus Favoritos</h4>
-              </div>
-            </div>
-            <div class="cardUsuario">
-              <div>
-                <span></span>
-                <h4>Meus Pedidos</h4>
-              </div>
-            </div>
-            <div class="cardUsuario">
-              <div>
-                <span><img src="" alt="" /></span>
-                <h4>Dados pessoais</h4>
-              </div>
-            </div>
-          </article>
-
-          <article>
-            <div class="cardUsuario">
-              <div>
-                <span><img src="" alt="" /></span>
-                <h4>Trocar e devolver</h4>
-              </div>
-            </div>
-            <div class="cardUsuario">
-              <div>
-                <span><img src="" alt="" /></span>
-                <h4>Cartões</h4>
-              </div>
-            </div>
-            <div class="cardUsuario">
-              <div>
-                <span><img src="" alt="" /></span>
-                <h4>Informações da conta</h4>
-              </div>
-            </div>
-          </article>
-        </section>
-
-        <section class="dadosPessoais">
+    <main>
+      <section class="usuario">
+        <aside class="boxBtn">
           <div>
-            <h2>Dados pessoais</h2>
-
+            <h2>Olá <strong>usuario</strong></h2>
+          </div>
+          <div><button id="inicio" class="btn-usuario">Inicio</button></div>
+          <div>
+            <button id="dadosPessoais" class="btn-usuario">
+              Dados pessoais
+            </button>
+          </div>
+          <div>
+            <button id="meusPedidos" class="btn-usuario">Meus pedidos</button>
+          </div>
+          <div>
+            <button id="meusFavoritos" class="btn-usuario">
+              Meus Favoritos
+            </button>
+          </div>
+          <div>
+            <button id="informacoes" class="btn-usuario">
+              Informações da conta
+            </button>
           </div>
 
           <div>
-            <hr>
+            <button id="trocarDevolver" class="btn-usuario">
+              Trocar e devolver
+            </button>
           </div>
+          <div><button id="cartoes" class="btn-usuario">Cartões</button></div>
+          <div>
+            <button src="./index.html" class="btn-usuario">Sair</button>
+          </div>
+        </aside>
 
-          <form class="formDadosPessoais">
+        <div class="diplayUsuario">
+          <section class="boxCard">
+            <article>
+              <div class="cardUsuario">
+                <div>
+                  <span></span>
+                  <h4>Meus Favoritos</h4>
+                </div>
+              </div>
+              <div class="cardUsuario">
+                <div>
+                  <span></span>
+                  <h4>Meus Pedidos</h4>
+                </div>
+              </div>
+              <div class="cardUsuario">
+                <div>
+                  <span><img src="" alt="" /></span>
+                  <h4>Dados pessoais</h4>
+                </div>
+              </div>
+            </article>
 
-            <label for="">Nome<input class="input-form" type="text" placeholder="Digite seu nome"></label>
+            <article>
+              <div class="cardUsuario">
+                <div>
+                  <span><img src="" alt="" /></span>
+                  <h4>Trocar e devolver</h4>
+                </div>
+              </div>
+              <div class="cardUsuario">
+                <div>
+                  <span><img src="" alt="" /></span>
+                  <h4>Cartões</h4>
+                </div>
+              </div>
+              <div class="cardUsuario">
+                <div>
+                  <span><img src="" alt="" /></span>
+                  <h4>Informações da conta</h4>
+                </div>
+              </div>
+            </article>
+          </section>
 
-            <label for="">Sobrenome<input class="input-form" type="text" placeholder="Digite seu sobrenome"></label>
+          <section class="dadosPessoais">
+            <div>
+              <h2>Dados pessoais</h2>
 
-            <label for="">E-mail<input class="input-form" type="email" placeholder="Digite seu sobrenome"></label>
-            <label for="CPF">CPF<input class="input-form" type="text" placeholder="Digite seu CPF"></label>
+            </div>
 
+            <div>
+              <hr>
+            </div>
 
-         
+            <form class="formDadosPessoais">
 
+              <label for="">Nome<input class="input-form" type="text" placeholder="Digite seu nome"></label>
 
-            <label for="dataNascimento">Data de Nasciment0:
-              <input class="input-form" type="date">
-            </label>
+              <label for="">Sobrenome<input class="input-form" type="text" placeholder="Digite seu sobrenome"></label>
 
-          </form>
-          
-          <form action="" class="formBtnDados">
-            <button class="btn-dadosPessoais" class = "button-form">Alterar</button>
-            <button 
-            class="btn-dadosPessoais"
-            class = "button-form">Cancelar</button>
-
-          </form>
-      
-
-
-
-
-        </section>
-
-        <section class="meusPedidos">
+              <label for="">E-mail<input class="input-form" type="email" placeholder="Digite seu sobrenome"></label>
+              <label for="CPF">CPF<input class="input-form" type="text" placeholder="Digite seu CPF"></label>
 
 
 
 
 
+              <label for="dataNascimento">Data de Nasciment0:
+                <input class="input-form" type="date">
+              </label>
 
+            </form>
 
+            <form action="" class="formBtnDados">
+              <button class="btn-dadosPessoais" class="button-form">Alterar</button>
+              <button class="btn-dadosPessoais" class="button-form">Cancelar</button>
 
+            </form>
 
-        </section>
+          </section>
 
-        <section class="meusFavoritos">
-          <h1>Meus Favoritos</h1>
-        </section>
+          <section class="meusPedidos">
 
-        <section class="informacoesDaConta">
-          <h1>Informações da conta </h1>
-        </section>
+          </section>
 
-        <section class="trocarDevolver">
-          <h1>Trocar e devolver</h1>
-        </section>
+          <section class="meusFavoritos">
+            <h1>Meus Favoritos</h1>
+          </section>
 
-        <section class="cartoes">
-          <h1>Cartoes</h1>
-        </section>
-      </div>
-    </section>
-  </main>
+          <section class="informacoesDaConta">
+            <h1>Informações da conta </h1>
+          </section>
 
- 
+          <section class="trocarDevolver">
+            <h1>Trocar e devolver</h1>
+          </section>
+
+          <section class="cartoes">
+            <h1>Cartoes</h1>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <%- include( "includes/footer.ejs" ) %>
+
 </body>
 
 </html>

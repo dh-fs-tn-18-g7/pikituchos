@@ -17,7 +17,7 @@ const checkoutRouter = require ("./src/routes/checkoutRouter")
 /* Variaveis */
 
 const app = express();
-const port = 3880
+const port = 4444
 
 // Define a coniguração do ejs
 app.set( "views", path.join( __dirname, "src/views" ) );
