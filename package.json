@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./src/bin/www",
     "dev": "nodemon ./src/bin/www",
-    "lyh": "nodemon ./src/bin/www"
+    "lyh": "nodemon ./src/bin/lyh"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
