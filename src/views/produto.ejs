@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Pikituchos</title>
+    <link rel="icon" href="img/logo.svg" type="svg+xml">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <base href="/" target="_blank"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="stylesheets/globals/global.css">
+    <link rel="stylesheet" href="stylesheets/produto/produto.css">
+    <script src="js/globals/global.js" defer></script>
+    <script src="js/produto/produto.js" defer></script>
+</head>
+<body>
+        
+    <%- include( "includes/global/appbar.ejs" ) %>
+    <!-- <page-header></page-header> -->
+
+    <main>
+
+        <nav page-nav>
+            <menu page-nav-menu>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">roupas</a></li>
+                <li><a href="#">meninos</a></li>
+                <li><a href="#">conjuntos</a></li>
+                <li><a href="#">dinosaur</a></li>
+            </menu>
+        </nav>
+        <article>
+            <section id="product-section">
+                <main-frame>
+                    <sidebar>
+                        <menu>
+                            <label sidebar-item active>
+                                <input type="radio" name="sidebar" >
+                                <img src="img/pikitucho.svg" alt="">
+                            </label>
+                            <label sidebar-item>
+                                <input type="radio" name="sidebar">
+                                <img src="img/produto/roupas/conjuntos/meninos/p-m-g-gg/dinosaur/0/0.webp" alt="">
+                            </label>
+                            <label sidebar-item>
+                                <input type="radio" name="sidebar">
+                                <img src="img/produto/roupas/conjuntos/meninos/p-m-g-gg/dinosaur/0/1.webp" alt="">
+                            </label>
+                            <label sidebar-item>
+                                <input type="radio" name="sidebar">
+                                <img src="img/produto/roupas/conjuntos/meninos/p-m-g-gg/dinosaur/0/2.webp" alt="">
+                            </label>
+                            <label sidebar-item>
+                                <input type="radio" name="sidebar">
+                                <img src="img/produto/roupas/conjuntos/meninos/p-m-g-gg/dinosaur/0/3.webp" alt="">
+                            </label>
+                        </menu>
+                    </sidebar>
+                    <picture sidebar-item-target>
+                        <img src="img/pikitucho.svg" alt="">
+                    </picture>
+                </main-frame>
+
+                <frame-details>
+                    <details-header>
+                        <title-pk name="Nome do produto " margin="0 0 0 4px"></title-pk>
+                        <footer>
+                            <p>REF: pk5643</p>
+                        </footer>
+                    </details-header>
+                    <details-price>
+                        <header>
+                            <p>
+                                <strike>R$ 114,90</strike>
+                            </p>
+                            <h2>R$ 45,90</h2>
+                        </header>
+                        <footer>
+                            <p>*Consulte as condições de parcelamento no carrinho.</p>
+                        </footer>
+                    </details-price>
+                    <hr>
+                    <details-sizes>
+                        <p>Tamanhos:</p>
+                        <footer>
+                            <label active>
+                                <input type="radio" name="s" >
+                                <h3>P</h3>
+                            </label>
+                            <label>
+                                <input type="radio" name="sizes">
+                                <h3>M</h3>
+                            </label>
+                            <label>
+                                <input type="radio" name="sizes">
+                                <h3>G</h3>
+                            </label>
+                            <label>
+                                <input type="radio" name="sizes">
+                                <h3>GG</h3>
+                            </label>
+                        </footer>
+                    </details-sizes>
+                    <details-colors>
+                        <p>Cores:</p>
+                        <footer>
+                            <label>
+                                <input type="radio" name="color" checked>
+                                <img src="img/produto/fabrics/cotton-verde-agua.webp" alt="">
+                            </label>
+                            <label>
+                                <input type="radio" name="color">
+                                <img src="img/produto/fabrics/cotton-red.jpg" alt="">
+                            </label>
+                            <label>
+                                <input type="radio" name="color">
+                                <img src="img/produto/fabrics/cotton-blue.jpg" alt="">
+                            </label>
+                        </footer>
+                    </details-colors>
+                    <details-quantity>
+                        <p>Quantidade</p>
+                        <footer>
+                            <box>
+                                <input type="button" value="-" quantity-decrement>
+                                <label quantity-label>
+                                    <input type="text" value="1" quantity readonly>
+                                </label>
+                                <input type="button" value="+" quantity-increment>
+                            </box>
+                        </footer>
+                    </details-quantity>
+                    <details-footer>
+                        <button-pk name="Adicionar à Sacola" width="150px"></button-pk>
+                        <desc>
+                            <header>
+                                <h4 desc-toggle>Descrição do produto</h4>
+                                <h4>|</h4>
+                                <h4 devoluções-toggle>Devoluções</h4>
+                            </header>
+                            <footer desc>
+                                <p>
+                                    <strong>O Conjunto Infantil Pks</strong> é composto por Camiseta em Meia Malha e Bermuda em Moletom
+                                    com modelagem tradicional e estampa em relevo.
+                                </p>
+                            </footer>
+                            <footer devoluções>
+                                <p>
+                                    Nosso prazo é <strong>30 dias</strong> para troca ou <strong>7 dias</strong> para devolução. Para mais informações consulte nossa política de trocas.
+                                </p>
+                            </footer>
+                        </desc>
+                    </details-footer>
+                </frame-details>
+            </section>
+            <section id="more-from-this-collection"></section>
+        </article>
+        
+    </main>
+        
+    <%- include( "includes/global/footer.ejs" ) %>
+    <!-- <page-footer></page-footer> -->
+    
+    <!-- <script src="js/produto/produto.js" ></script> -->
+</body>
+</html>
+
