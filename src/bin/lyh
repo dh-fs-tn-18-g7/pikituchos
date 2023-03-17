@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require( "../../app" );
+var app = require( "./priv/priv" );
 var debug = require( "debug" )( "pikituchos:server" );
 var http = require( "http" );
 
@@ -12,11 +12,7 @@ var http = require( "http" );
  * Get port from environment and store in Express.
  */
 
-<<<<<<< HEAD
-var port = normalizePort( process.env.PORT || "3330" );
-=======
 var port = normalizePort( process.env.PORT || "3000" );
->>>>>>> feature/home
 app.set( "port", port );
 
 /**

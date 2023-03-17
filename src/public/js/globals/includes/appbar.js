@@ -1,10 +1,15 @@
 
 
 "use strict";
+
+
+
+
 window.addEventListener( "load", ev => {
 	let pageHeader = document.querySelector( "page-header" ),
 		btnMenu = document.querySelector( "h2#btn-mobile-nav-menu span" ),
-		headerNavMobile = document.querySelector( "nav#header-nav-mobile" );
+		headerNavMobile = document.querySelector( "nav#header-nav-mobile" ),
+		urls = document.querySelectorAll( "[url]" );
 
 	btnMenu.addEventListener( "click", ev => {
 		pageHeader.classList.toggle( "open-mobile-nav-menu" );
@@ -12,6 +17,12 @@ window.addEventListener( "load", ev => {
 			headerNavMobile.style.display = "flex" :
 			headerNavMobile.style.display = "none";
 	} );
+    
+	for( let url of urls ) {
+		url.addEventListener( "click", ev => {
+			window.open( url.getAttribute( "url" ), "_self" );
+		} );
+	}
 
 	const typeTarget = document.querySelector( "input#searchbar" ),
 		frases = [

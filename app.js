@@ -4,21 +4,22 @@ const express = require( "express" );
 const path = require( "path" );
 const cookieParser = require( "cookie-parser" );
 const logger = require( "morgan" );
-const ejs = require( "ejs" );
 
 /* Importações das rotas */
 
 const indexRouter = require( "./src/routes/indexRouter" );
 const guide = require( "./src/routes/noely-temps" );
-const usersRouter = require('./src/routes/usersRouter')
-const loginRouter = require('./src/routes/loginRouter')
-const checkoutRouter = require ("./src/routes/checkoutRouter")
-const authRouter = require('./src/routes/authRouter')
+const usersRouter = require( "./src/routes/usersRouter" );
+const loginRouter = require( "./src/routes/loginRouter" );
+const checkoutRouter = require( "./src/routes/checkoutRouter" );
+const authRouter = require( "./src/routes/authRouter" );
+
+const lyhTemps = require( "./src/routes/noely-temps" );
 
 /* Variaveis */
 
 const app = express();
-const port = 4444
+const port = 4444;
 
 // Define a coniguração do ejs
 app.set( "views", path.join( __dirname, "src/views" ) );
@@ -35,15 +36,14 @@ app.use( express.static( path.join( __dirname, "src/public" ) ) ); // define ond
 
 /* Rotas */
 
-app.use (indexRouter);
-app.use(guide);
-app.use(usersRouter)
-app.use(loginRouter)
-app.use(checkoutRouter)
-app.use(authRouter)
+app.use( indexRouter );
+app.use( usersRouter );
+app.use( loginRouter );
+app.use( checkoutRouter );
+app.use( authRouter );
 
 
-/* Middleware */
+app.use( lyhTemps );
 
 // catch 404 and forward to error handler
 
@@ -62,6 +62,7 @@ app.use( function( err, req, res, next ) {
 	res.render( "error" );
 } );
 
-app.listen(port, (err)=>{
-	console.log(`Servidor esta rodando da port${port}`)
-})
+app.listen( port, ( err )=>{
+	console.log( `Servidor esta rodando da port${port}` );
+} );
+module.exports = app;

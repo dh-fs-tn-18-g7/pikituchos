@@ -1,19 +1,19 @@
 
 
 <link rel="stylesheet" href="stylesheets/globals/includes/appbar.css">
-<script defer src="js/globals/includes/appbar.js"></script>
+<script src="js/globals/includes/appbar.js"></script>
 <page-header>
 <appbar>
     <appbar-home>
-        <article class="appbar-left">
+        <article class="appbar-left" url="/">
             <img class="babyPikituchos" src="img/pikitucho.svg" alt="logo image">
             <img id="logos-desc" src="img/home/pikituchos-logo-txt.png" alt="">
         </article>
         <nav class="appbar-nav">
-            <li url="#" data-title="Home">Home</li>
+            <li url="/" data-title="Home">Home</li>
             <li url="#highlights" data-title="Produtos">Produtos</li>
             <li url="#" data-title="Contatos">Contato</li>
-            <li url="#" data-title="ver carrinho"><img src="img/home/shopping-cart.svg" alt=""></li>
+            <li url="/checkout" data-title="ver carrinho"><img src="img/home/shopping-cart.svg" alt=""></li>
         </nav>
         <article class="appbar-right">
             <label for="searchbar" class="searchbar">
@@ -22,7 +22,7 @@
                 <input id="searchbar-btn" type="button" value="🔎 buscar">
             </label>
 
-            <button class="button-pk" role="button" type="submit">
+            <button class="button-pk" role="button" type="submit" url="/login">
                 <btn-shadow class=""></btn-shadow>
                 <btn-edge class=""></btn-edge>
                 <btn-front class=" text">

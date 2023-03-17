@@ -1,4 +1,5 @@
-@import url(/src/public/stylesheets/globals/global.css);
+/* @import url(/src/public/stylesheets/globals/global.css); */
+@import url(globals/global.css);
 
 /* Estilo input: */
 

@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./app.js",
-    "dev": "nodemon ./app.js"
+    "dev": "nodemon ./app.js",
+    "lyh": "nodemon ./src/bin/lyh"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -30,4 +31,5 @@
     "url": "https://github.com/dh-fs-tn-18-g7/pikituchos/issues"
   },
   "homepage": "https://github.com/dh-fs-tn-18-g7/pikituchos#readme"
+
 }

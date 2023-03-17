@@ -1,4 +1,5 @@
-@import url(/stylesheets/globals/global.css);
+/* @import url(/stylesheets/globals/global.css); */
+@import url(globals/global.css);
 
 * {
   padding: 0;
