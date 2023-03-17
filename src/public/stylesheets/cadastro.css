@@ -49,7 +49,7 @@ body main {
 
 form {
   background-color: #47c8ef;
-  width: 800px;
+  width: 100%;
   margin: 0 auto;
   padding: 16px;
   margin-top: 50px;
@@ -144,7 +144,7 @@ form section img {
 
 .buttom-form {
   color: var(--cp00);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
   border: none;
   border-radius: 8px;
@@ -162,5 +162,16 @@ form section img {
   cursor: pointer;
 }
 
+.title-pk {
+  margin-right: 100%;
+}
 
+.title-pk-contact {
+  margin-right: 100%;
+}
 
+@media only screen and (width <= 710px){
+  .title-pk-contact {
+    margin-right: 0px;
+  }
+}

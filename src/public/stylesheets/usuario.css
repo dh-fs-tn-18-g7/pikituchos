@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @import url(/src/public/stylesheets/globals/global.css);
+=======
+@import url(/stylesheets/globals/global.css);
+>>>>>>> main
 
 * {
   padding: 0;
@@ -137,4 +141,7 @@ font-size: 1.3rem;
   display: none;
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main

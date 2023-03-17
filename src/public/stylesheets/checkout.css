@@ -1,11 +1,9 @@
 @import url(/src/public/stylesheets/globals/global.css);
 
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -48,23 +46,17 @@ label {
   color: var(--cp08);
 }
 
-
-
-
 /* CSS MAIN */
 
-
-body main{
-    background-color: #FFDEE9;
-    background-image: linear-gradient(to top , #FFDEE9 0%, #B5FFFC 100%);
-    padding-bottom: 30px;
+body main {
+  background-color: #ffdee9;
+  background-image: linear-gradient(to top, #ffdee9 0%, #b5fffc 100%);
+  padding-bottom: 30px;
 }
 
-body main h1{
-    padding: 15px;
-    
+body main h1 {
+  padding: 15px;
 }
-
 
 .card-01 {
   display: flex;
@@ -138,7 +130,7 @@ body main h1{
   margin-top: 25px;
   display: flex;
   justify-content: space-between;
-  width: 300px;
+  width: 100%;
   margin-left: 20px;
 }
 
@@ -177,4 +169,34 @@ body main h1{
   justify-content: center;
   align-items: center;
   gap: 0;
+}
+
+@media only screen and (width <= 910px) {
+  .card {
+    width: 45%;
+    border: 2px solid var(--cp07);
+    padding: 15px;
+    margin: 15px;
+    background-color: var(--cp06);
+    border-radius: 8px;
+    box-shadow: 2px 3px 11px -6px rgba(0, 0, 0, 1);
+  }
+
+  .checkou-card {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (width <= 610px){
+  .card {
+    width: 100%;
+    border: 2px solid var(--cp07);
+    padding: 15px;
+    margin: 15px;
+    background-color: var(--cp06);
+    border-radius: 8px;
+    box-shadow: 2px 3px 11px -6px rgba(0, 0, 0, 1);
+  }
 }

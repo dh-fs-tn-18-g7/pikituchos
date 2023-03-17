@@ -162,9 +162,21 @@ let pageHeader = document.createElement( "page-header" ),
     </section>
     <section class="contact-info">
         <header>
+<<<<<<< HEAD
             <div class="title-pk">
                 <h3 class="outline">Atendimento</h3>
                 <h3 class="h3">Atendimento</h3>
+=======
+<<<<<<< HEAD:src/public/scripts/globals/global.js
+            <div class="title-pk-contact">
+                <h3 class="outline">Contact info</h3>
+                <h3 class="h3">Contact info</h3>
+=======
+            <div class="title-pk">
+                <h3 class="outline">Atendimento</h3>
+                <h3 class="h3">Atendimento</h3>
+>>>>>>> 3b49ce99d1afa277b1b8af02764a37b3cf3d69e8:src/public/js/globals/global copy.js
+>>>>>>> main
             </div>
         </header>
         <nav>
