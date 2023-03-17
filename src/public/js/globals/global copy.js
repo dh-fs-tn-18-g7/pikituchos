@@ -23,23 +23,14 @@ let pageHeader = document.createElement( "page-header" ),
 	appbarTemplate = `<appbar>
     <appbar-home>
         <article class="appbar-left">
-<<<<<<< HEAD:src/public/scripts/globals/global.js
-            <img class="babyPikituchos" src="/images/pikitucho.svg" alt="logo image">
-            <img id="logos-desc" src="/images/home-Noely/pikituchos-logo-txt.png" alt="">
-=======
             <img class="babyPikituchos" src="../public/img/pikitucho.svg" alt="logo image">
             <img id="logos-desc" src="../public/img/home/pikituchos-logo-txt.png" alt="">
->>>>>>> 97d4a133d7ca3cfa3c6a4032f1331a66a368eed0:src/public/js/globals/global copy.js
         </article>
         <nav class="appbar-nav">
             <li url="#" data-title="Home">Home</li>
             <li url="#highlights" data-title="Produtos">Produtos</li>
             <li url="#" data-title="Contatos">Contato</li>
-<<<<<<< HEAD:src/public/scripts/globals/global.js
-            <li url="#" data-title="ver carrinho"><img src="/images/home-Noely/shopping-cart.svg" alt=""></li>
-=======
             <li url="#" data-title="ver carrinho"><img src="../public/img/home/shopping-cart.svg" alt=""></li>
->>>>>>> 97d4a133d7ca3cfa3c6a4032f1331a66a368eed0:src/public/js/globals/global copy.js
         </nav>
         <article class="appbar-right">
             <label for="searchbar" class="searchbar">
@@ -101,7 +92,6 @@ let pageHeader = document.createElement( "page-header" ),
 	footerTemplate = `
 <footer-overlay>
 <article class="newsletter"> <!---
->>>>>>> 97d4a133d7ca3cfa3c6a4032f1331a66a368eed0:src/public/js/globals/global copy.js
     <h2 id="outline">Assine a nossa newsletter</h2>
     <h2 class="text-bg">Assine a nossa newsletter</h2> --->
     <h2 id="outline">GANHE 20% DE DESCONTO</h2>
@@ -129,18 +119,6 @@ let pageHeader = document.createElement( "page-header" ),
 <article class="footer-top">
     <section class="socials">
         <header>
-<<<<<<< HEAD:src/public/scripts/globals/global.js
-            <img class="babyPikituchos" src="/images/pikitucho.svg" alt="logo image">
-            <!-- <img src="/images/home-Noely/pikituchos-logo.svg" id="logo" alt=""> -->
-            <img src="/images/home-Noely/pikituchos-logo-txt.png" id="logo-txt" alt="">
-        </header>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        <footer>
-            <img src="/images/home-Noely/socials/facebook-svgrepo-com.svg" alt="">
-            <img src="/images/home-Noely/socials/instagram-svgrepo-com.svg" alt="">
-            <img src="/images/home-Noely/socials/twitter-svgrepo-com.svg" alt="">
-            <img src="/images/home-Noely/socials/youtube-svgrepo-com.svg" alt="">
-=======
             <img class="babyPikituchos" src="../public/img/pikitucho.svg" alt="logo image">
             <!-- <img src="../public/img/home/pikituchos-logo.svg" id="logo" alt=""> -->
             <img src="../public/img/home/pikituchos-logo-txt.png" id="logo-txt" alt="">
@@ -151,7 +129,6 @@ let pageHeader = document.createElement( "page-header" ),
             <img src="../public/img/home/socials/instagram-svgrepo-com.svg" alt="">
             <img src="../public/img/home/socials/twitter-svgrepo-com.svg" alt="">
             <img src="../public/img/home/socials/youtube-svgrepo-com.svg" alt="">
->>>>>>> 97d4a133d7ca3cfa3c6a4032f1331a66a368eed0:src/public/js/globals/global copy.js
         </footer>
     </section>
     <section class="support">
@@ -195,7 +172,7 @@ let pageHeader = document.createElement( "page-header" ),
             <div class="title-pk">
                 <h3 class="outline">Atendimento</h3>
                 <h3 class="h3">Atendimento</h3>
->>>>>>> 97d4a133d7ca3cfa3c6a4032f1331a66a368eed0:src/public/js/globals/global copy.js
+>>>>>>> 3b49ce99d1afa277b1b8af02764a37b3cf3d69e8:src/public/js/globals/global copy.js
             </div>
         </header>
         <nav>
@@ -211,15 +188,9 @@ let pageHeader = document.createElement( "page-header" ),
     <txt>copyright © 2022 - Present | PIKITUCHOS LTDA.</txt>
     <txt>Made with 
         <!-- ❤️ -->
-<<<<<<< HEAD:src/public/scripts/globals/global.js
-        <img id="footer-heart" src="/images/home-Noely/love_icon.svg" alt="">
-        by <a href="#">fs-tn-18</a> <strong>grupo 7</strong>
-        <img id="footer-DH" href="https://www.digitalhouse.com/br" src="/images/home-Noely/DH-Logo.svg" alt="" data-title="www.digitalhouse.com/br">
-=======
         <img id="footer-heart" src="../public/img/home/love_icon.svg" alt="">
         by <a href="#">fs-tn-18</a> <strong>grupo 7</strong>
         <img id="footer-DH" href="https://www.digitalhouse.com/br" src="../public/img/home/DH-Logo.svg" alt="" data-title="www.digitalhouse.com/br">
->>>>>>> 97d4a133d7ca3cfa3c6a4032f1331a66a368eed0:src/public/js/globals/global copy.js
     </txt>
 </article>
 </footer-overlay>
@@ -265,11 +236,7 @@ let pageHeader = document.createElement( "page-header" ),
         border-radius: 18px 18px 0 0;
         overflow: hidden;
         transition: 0s ease; /*
-<<<<<<< HEAD:src/public/scripts/globals/global.js
-        background-image: url( "/images/globals/card-backgrounds/background-liquid.svg" ); */
-=======
         background-image: url( "../public/img/globals/card-backgrounds/background-liquid.svg" ); */
->>>>>>> 97d4a133d7ca3cfa3c6a4032f1331a66a368eed0:src/public/js/globals/global copy.js
         background-size: cover;
     }
     picture:hover {

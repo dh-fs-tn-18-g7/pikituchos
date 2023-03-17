@@ -1,4 +1,4 @@
-@import url(/src/public/stylesheets/globals/global.css);
+@import url(/stylesheets/globals/global.css);
 
 * {
   padding: 0;
@@ -15,11 +15,7 @@ a {
 
 /* estilo barra lateral */
 
-<<<<<<< HEAD
-section {
-=======
 .usuario {
->>>>>>> 97d4a133d7ca3cfa3c6a4032f1331a66a368eed0
   height: 100vh;
   background-image: linear-gradient(to top, #ffdee9 0%, #b5fffc 100%);
   display: flex;
@@ -28,41 +24,12 @@ section {
   gap: 3%;
 }
 
-<<<<<<< HEAD
-aside {
-  background-color: yellow;
-=======
 .boxBtn {
   background-color: var(--cp00);
->>>>>>> 97d4a133d7ca3cfa3c6a4032f1331a66a368eed0
   display: flex;
   flex-direction: column;
   gap: 19px;
   padding: 25px 10px;
-<<<<<<< HEAD
-}
-
-/* sessão card lateral  */
-
-
-.boxCard{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2%;
-}
-
-.boxCard article{
-    display: flex;
-    
-
-}
-
-.cardUsuario{
-    background-color: yellow;
-    width: 250px;
-    height: 200px;
-=======
   border-radius: 8px;
   box-shadow: 2px 0px 16px -7px rgba(0, 0, 0, 0.75);
 }
@@ -145,13 +112,10 @@ font-size: 1.3rem;
 .formBtnDados{
   display: flex;
   gap: 2.5rem;
->>>>>>> 97d4a133d7ca3cfa3c6a4032f1331a66a368eed0
 }
 
 
 
-<<<<<<< HEAD
-=======
 .meusPedidos{
   display: none;
 
@@ -173,5 +137,3 @@ font-size: 1.3rem;
   display: none;
 
 }
->>>>>>> 97d4a133d7ca3cfa3c6a4032f1331a66a368eed0
-

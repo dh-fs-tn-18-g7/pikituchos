@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin: 0;
     padding: 0;
@@ -107,4 +108,131 @@ form div label input{
     color:#ffffff;
     padding:5px;
     font-weight: bold;
+=======
+@import url(/stylesheets/globals/global.css);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  text-decoration: none;
+}
+a {
+  color: black;
+}
+
+:root {
+  font-family: Baloo Da;
+
+  /*  pateta de cores com variaveis */
+
+  --cp00: #ffffff;
+  --cp01: #00a599;
+  --cp02: #ffaebf;
+  --cp03: #fffadd;
+  --cp04: #fdcdbf;
+  --cp05: #feb491;
+  --cp06: #47c8ef;
+  --cp07: #f190a3;
+  --cp08: #464646;
+  --cp09: #;
+  --cp10: #c5d3d9;
+  --cp11: #ededed;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top, #ffdee9 0%, #b5fffc 100%);
+  border-radius: 5px;
+}
+.boxLogin {
+  background-color: #def7ff;
+  display: flex;
+  padding: 4rem 1rem;
+  width: 720px;
+  
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 23px -10px rgb(0 0 0 / 75%);
+  font-size: 1.25rem;
+  border-radius: 8px;
+  gap: 60px;
+}
+
+.boxLogin > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.boxLogin div img {
+  width: 200px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.inputSenha {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2px;
+  align-items: flex-end;
+}
+
+.socialMedia button img {
+  width: 30px;
+}
+
+.socialMedia button {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: row;
+  gap: 65px;
+}
+
+.btn-facebook {
+  background-color: #3b5998;
+  color: #ffffff;
+  border-radius: 6px;
+}
+
+.btn-instagram {
+  background-color: var(--cp04);
+  border-radius: 6px;
+}
+
+.btn-entrar {
+  width: 100%;
+  border: none;
+  background-color: #f190a3;
+  border-radius: 6px;
+  color: #ffffff;
+  padding: 5px;
+  font-weight: bold;
+}
+
+label{
+  font-weight: 600;
+>>>>>>> 7cfbaa0b3585faf05388767cf393be130b9d0c16
 }

@@ -230,7 +230,42 @@
 >>>>>>> 97d4a133d7ca3cfa3c6a4032f1331a66a368eed0
 /* pagina de usuario */
 
-.btn-usuario{
+.btn-usuario {
+  color: var(--cp00);
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  width: 370px;
+  height: 45px;
+  outline: none;
+  padding: 0 50px;
+  background-color: var(--cp07);
+  transition: 500ms;
+  margin: 0 auto;
+  cursor: pointer;
+  display: block;
+}
+.btn-usuario:hover {
+  transform: scale(1.01);
+  transition: 500ms;
+  background-color: var(--cp06);
+  color: var(--cp07);
+  box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.75);
+
+}
+
+.btn-usuario:active {
+  transform: scale(.97);
+  transition: 500ms;
+  background-color: var(--cp06);
+  color: var(--cp07);
+  box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.75);
+
+
+}
+
+
 
     color: var(--cp00);
     font-size: 1.3rem;
@@ -252,8 +287,81 @@
     display: block;
   
 }
-.btn-usuario:hover{
+
+.btn-dadosPessoais:hover {
   transform: scale(1.01);
+  transition: 200ms;
+  box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.75);
+
+}
+
+.btn-dadosPessoais:active {
+
+  transform: scale(.97);
+  transition: 500ms;
+}
+
+
+
+
+
+
+
+
+
+/* Pagina de login  */
+
+.input-login {
+  width: 516px;
+  border: 1px solid var(--cp07);
+  display: block;
+  border-radius: 8px;
+  height: 50px;
+  outline: none;
+  padding: 0px 16px;
+  background-color: var(--cp00);
+  font-size: 18px;
+  transition: 500ms;
+  gap: 10px;
+  letter-spacing: 1px;
+}
+
+.input-login:active {
+  border: 1px solid var(--cp07);
+  box-shadow: var(--cp02) 0px 0px 5px 1px inset, var(--cp02) 0px 0px 5px 1px;
+  transition: 0.1s;
+}
+
+.input-login:focus-visible {
+  border: 1px solid var(--cp07);
+  box-shadow: var(--cp02) 0px 0px 5px 1px inset, var(--cp02) 0px 0px 5px 1px;
+  transition: 0.1s;
+}
+
+
+.btn-login {
+  color: var(--cp00);
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  width: 499px;
+  height: 45px;
+  outline: none;
+  padding: 0 50px;
+  background-color: var(--cp07);
+  transition: 500ms;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.btn-login:hover {
+  transform: scale(1.02);
+  transition: 500ms;
+  box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.75);
+}
+
+.btn-login:active {
+  transform: scale(0.98);
   transition: 500ms;
   background-color: var(--cp06);
   color: var(--cp07);

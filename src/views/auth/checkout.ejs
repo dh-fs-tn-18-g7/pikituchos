@@ -3,7 +3,7 @@
   <head>
     <head>
       <title>Finalização de compra</title>
-      <link rel="icon" href="/images/logo.svg" type="svg+xml" />
+      <link rel="icon" href="src//images/logo.svg" type="svg+xml" />
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,15 +13,16 @@
       <link rel="stylesheet" href="/stylesheets/globals/global.css" />
       <link
         rel="stylesheet"
-        href="src/public/stylesheets/globals/animations.css"
+        href="src//stylesheets/globals/animations.css"
       />
       <link rel="stylesheet" href="/stylesheets/components.css" />
       <link rel="stylesheet" href="/stylesheets/checkout.css" />
+
       <!--  <link rel="stylesheet" href="./src/public/stylesheets/cadastro.css" /> -->
     </head>
   </head>
   <body>
-    <page-header></page-header>
+    <%- include( "../includes/appbar.ejs" ) %>
 
     <main>
       <h1 class="container">FINALIZAR COMPRA</h1>
@@ -467,7 +468,7 @@
       </section>
     </main>
 
-    <page-footer></page-footer>
+    <%- include( "../includes/footer.ejs" ) %>
 
     <script src="/scripts/globals/global.js"></script>
   </body>
