@@ -34,14 +34,11 @@ app.use( express.static( path.join( __dirname, "src/public" ) ) ); // define ond
 
 /* Rotas */
 
-app.use (indexRouter );
+app.use (indexRouter);
 app.use(guide);
 app.use(usersRouter)
 app.use(loginRouter)
 app.use(checkoutRouter)
-
-
-
 
 
 /* Middleware */
