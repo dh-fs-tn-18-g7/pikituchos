@@ -17,7 +17,7 @@ const checkoutRouter = require ("./src/routes/checkoutRouter")
 /* Variaveis */
 
 const app = express();
-const port = 4444
+const port = 5050
 
 // Define a coniguração do ejs
 app.set( "views", path.join( __dirname, "src/views" ) );
@@ -64,5 +64,5 @@ app.use( function( err, req, res, next ) {
 } );
 
 app.listen(port, (err)=>{
-	console.log(`Servidor esta rodando da port${port}`)
+	console.log(`Servidor esta rodando na Porta => ${port}`)
 })
