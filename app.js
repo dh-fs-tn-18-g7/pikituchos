@@ -64,5 +64,17 @@ app.use( function( err, req, res, next ) {
 
 app.listen( port, ( err )=>{
 	console.log( `Servidor esta rodando da port${port}` );
+    
+	console.log( `\x1b[34m[===============================]\n\x1b[0m
+--------- server is on ---------
+server:
+        \x1b[33mhttp://localhost:${port}\x1b[0m
+
+guide:
+        \x1b[33mhttp://localhost:${port}/guide\x1b[0m
+--------------------------------
+\x1b[34m[===============================]\x1b[0m` );
 } );
+
+
 module.exports = app;
