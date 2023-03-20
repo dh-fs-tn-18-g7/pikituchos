@@ -24,7 +24,10 @@ const productsModel = {
     },
 
     //Método que irá atualizar um produto no banco de dados
-    update: (id, product) => {},
+    update: (id, product) => {
+        const product = database.products.find(product => product.id === id);
+        //precisa definir quais serão as informações cadastradas do produto e criar a lógica pra atualizar o produto
+    },
 
     //Metodo que irá deletar um produto no banco de dados
     delete: (id) => {}

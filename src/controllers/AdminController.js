@@ -1,17 +1,17 @@
 const { randomUUID } = require('crypto');
-const productsModel = require('../models/productsModel');
+//const productsModel = require('../models/productsModel');
 //const produtoModel = require('../models/productsModel');
 
 const AdminController = {
     showLogin: (req, res) => {
-        return res.render('admin/auth/login');
+        return res.render('admin/auth/loginAdmin.ejs');
     },
 
      showHome: (req, res) => {
-        const url = req.originalUrl;
-        const products = produtoModel.findAll();
+        /* const url = req.originalUrl;
+        const products = produtoModel.findAll(); */
 
-        return res.render('admin/home', {url, products});
+        return res.render('admin/homeAdmin.ejs'/* , {url, products} */);
     } /* ,
 
     showDashboard: (req, res) => {
