@@ -1,0 +1,45 @@
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*  */
+
+body{
+    background-image: linear-gradient(to top, #ffdee9 0%, #b5fffc 100%);
+    background-repeat: no-repeat;
+ 
+   
+}
+
+main{
+    background-color: transparent;
+    display: flex;
+
+   
+}
+
+.appBar{
+    width: 250px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.appBar header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px 10px;
+     
+    background-color: yellow;       
+    width: 100%;                    
+}
+
+.appBar header div h2 {
+    font-size: 1rem;
+}
