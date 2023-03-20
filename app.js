@@ -4,6 +4,7 @@ const express = require( "express" );
 const path = require( "path" );
 const cookieParser = require( "cookie-parser" );
 const logger = require( "morgan" );
+const session = require( "express-session" );
 
 /* Importações das rotas */
 
@@ -26,6 +27,12 @@ app.set( "views", path.join( __dirname, "src/views" ) );
 app.set( "view engine", "ejs" );
 
 app.use( logger( "dev" ) );
+
+app.use( session( {
+	secret:"secretpassword",
+	resave: true,
+	saveUninitialized: true
+} ) );
 
 app.use( express.json() ); // define para que express ententa arquivos JSON
 
