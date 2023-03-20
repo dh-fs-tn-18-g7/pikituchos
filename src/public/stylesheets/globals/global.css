@@ -28,23 +28,20 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    font-family: 'Baloo Da 2', cursive;
+    /* font-family: 'Baloo Da 2', cursive; */
+    font-family: 'Baloo Da 2';
     margin: 0; padding: 0;
     outline: none;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-        to bottom,
-        var( --cp06 ),
-        var( --cp07 )
-    ); 
-    border-radius: 2rem;
+    background: var( --cp05 ); 
+    border-radius: 5px;
 }
 ::-webkit-scrollbar {
     width: 10px;
     background: #21232990;
-    background: var( --cp05 );
+    background: var( --cp04 );
     backdrop-filter: blur( 12px );
 }
 l {
@@ -92,7 +89,7 @@ a { text-decoration: none; }
 /* [ body ]
 ================================================================= */
 html {
-    background-image: url(../../images/home-Noely/htmlBackground.svg);
+    background-image: url(../../img/home/htmlBackground.svg);
     background-size: cover;
     background-position: center;
 }
@@ -107,18 +104,8 @@ body > main {
     background: var(--cp00);
 }
 
-/* [ appbar ]
------------------------------------------------------------------ */
-page-header {
-    display: grid;
-    width: 100%;
-    height: calc( var(--appbar-height) + 16px );
-    position: absolute;
-    top: 0; left: 0;
-    background: var(--cp06);
-    box-shadow: 0px 0px 8px #0008;
-    z-index: 9;
 
+<<<<<<< HEAD
     background: var( --cp07 );
     border-radius: 0 0 30px 30px;
     border: var( --cp00 ) dashed;
@@ -307,6 +294,8 @@ h2#btn-mobile-nav-menu { display: none; }
     transition: .2s;
     text-shadow: #0005 -3px 5px 2px;
 }
+=======
+>>>>>>> 3b49ce99d1afa277b1b8af02764a37b3cf3d69e8
 
 .button-pk {
     position: relative;
@@ -323,7 +312,7 @@ h2#btn-mobile-nav-menu { display: none; }
     touch-action: manipulation;
 }
 
-.btn-shadow {
+btn-shadow {
     position: absolute;
     top: 0;
     left: 0;
@@ -339,7 +328,7 @@ h2#btn-mobile-nav-menu { display: none; }
         cubic-bezier(.3, .7, .4, 1);
 }
 
-.btn-edge {
+btn-edge {
     position: absolute;
     top: 0;
     left: 0;
@@ -348,14 +337,14 @@ h2#btn-mobile-nav-menu { display: none; }
     border-radius: 12px;
     background: linear-gradient(
         to left,
-        #52001b 0%,
-        #a30036 8%,
-        #a30036 92%,
-        #52001b 100%
+        #cb314f 0%,
+        #eb496a 8%,
+        #eb496a 92%,
+        #cb314f 100%
     );
 }
 
-.btn-front {
+btn-front {
     display: block;
     position: relative;
     padding: 6px;
@@ -366,7 +355,7 @@ h2#btn-mobile-nav-menu { display: none; }
     font-size: 1rem;
     font-weight: 700;
     color: #fff;
-    background: var( --cp09 );
+    background: var( --cp07 );
     will-change: transform;
     transform: translateY(-4px);
     transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
@@ -377,7 +366,7 @@ h2#btn-mobile-nav-menu { display: none; }
     -webkit-filter: brightness(110%);
 }
 
-.button-pk:hover .btn-front {
+.button-pk:hover btn-front {
     transform: translateY(-6px);
     transition:
         transform
@@ -385,12 +374,12 @@ h2#btn-mobile-nav-menu { display: none; }
         cubic-bezier(.3, .7, .4, 1.5);
 }
 
-.button-pk:active .btn-front {
+.button-pk:active btn-front {
     transform: translateY(-2px);
     transition: transform 34ms;
 }
 
-.button-pk:hover .btn-shadow {
+.button-pk:hover btn-shadow {
     transform: translateY(4px);
     transition:
         transform
@@ -398,7 +387,7 @@ h2#btn-mobile-nav-menu { display: none; }
         cubic-bezier(.3, .7, .4, 1.5);
 }
 
-.button-pk:active .btn-shadow {
+.button-pk:active btn-shadow {
     transform: translateY(1px);
     transition: transform 34ms;
 }
@@ -422,9 +411,12 @@ card-pk {
     display: block;
     width: clamp( 100px, 20vw, 450px );
     width: 234px;
-    height: calc(234px * 1.8);
+    width: clamp( 100px, 38vw, 231px );
+    aspect-ratio: 8.8 / 16;
+    top: 0;
+    /* height: calc(234px * 1.8); */
     background: #fff;
-    background-image: url( "../../images/globals/card-backgrounds/background-vortex.svg" );
+    background-image: url( "../../img/globals/card-backgrounds/background-vortex.svg" );
     background-size: cover;
     box-shadow: #47c8ef 0 0px 1px 10px;
     box-shadow: var( --cp07 ) 0 0px 1px 10px;
@@ -432,6 +424,7 @@ card-pk {
     border-radius: 18px;
     transition: .5s ease-out;
     perspective: 1000px;
+    white-space: normal;
 }
 card-pk:hover {
     background-attachment: fixed;
@@ -446,10 +439,21 @@ card-pk:hover {
 /* [ footer ]
 ================================================================ */
 page-footer {
+    display: block;
+    padding-top: 5rem;
+    background: var(--cp07);
+    background: var( --cp09 );
+    background-image: radial-gradient(
+        at center,
+        var(--linearbg-10) 0% , var( --cp09 )
+    );
+}
+footer-overlay {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5rem;
+    margin: 0 auto;
     padding-top: 5rem;
     background: var(--cp07);
     background: var( --cp09 );
@@ -460,6 +464,7 @@ page-footer {
             var(--cp07), 
             #f190a350
         );
+    clip-path: ellipse( 100% 65% at 50% 65% );
     user-select: none;
 }
 
@@ -476,7 +481,8 @@ page-footer {
     background: #f0f3fb;
     border-radius: 13px;
     border: var(--cp06) 6px dashed;
-    /* box-shadow: var(--cp05) 0 0 0 12px; */
+    color: var( --cp08 );
+    font-weight: 500;
     box-shadow: var(--cp06) 0 0 0 12px;
 }
 .newsletter #outline {
@@ -490,7 +496,7 @@ page-footer {
 }
 .newsletter .text-bg {
     position: relative;
-    color: var(--cp07);
+    color: var(--cp05);
     font-family: Baloo Da;
     font-size: 1.8rem;
     white-space: nowrap;
@@ -500,6 +506,24 @@ page-footer {
     font-family: Baloo Da;
     font-size: 1.2rem;
     filter: drop-shadow(0 4px 4px #0004);
+}
+.newsletter > form {
+    width: 100%;
+    position: relative;
+}
+.newsletter > form > p[error] {
+    position: absolute;
+    top: -15%; left: 0; right: 0;
+    background: #ce363550;
+    color: #ce3635;
+    display: none;
+}
+.newsletter > form > p[success] {
+    position: absolute;
+    top: -15%; left: 0; right: 0;
+    background: #149cbe50;
+    color: #149cbe;
+    display: none;
 }
 .newsletter label {
     display: grid;
@@ -517,25 +541,10 @@ page-footer {
     /* box-shadow:#0003 0 5px 10px; */
     box-shadow:inset #27f5 0 2px 5px 2px;
 }
-.newsletter label input[type=button] {
-    display: block;
-    border-radius: 6px 6px 6px 6px;
-    border: none;
+.newsletter label button {
     width: 90%;
-    margin: 12px 0;
-    padding: 4px;
-    background: var(--cp06);
-    box-shadow: #6129D750 3px 5px 0;
-    color: var(--cp00);
-    text-shadow: var(--text-shadow-blue);
-    font-family: Baloo Da;
-    font-size: 1.1rem;
-    cursor: pointer;
-} .newsletter label input[type=button]:hover {
-    animation:  btnPress .3s ;
-} .newsletter label input[type=button]:active {
-    transform: translate( 2px, 5px );
-    box-shadow: #6129D750 0px 2px 0;
+} .newsletter label button > btn-front {
+    background: var( --cp09 );
 }
 
 
@@ -557,6 +566,7 @@ page-footer * nav > li, page-footer * nav > l {
     position: relative;
     filter: drop-shadow(2px 4px 6px #0005);
     transition: .3s ease-in;
+    font-size: 0.8em;
 }
 
 page-footer * nav > li:hover, page-footer * nav > l:hover {
@@ -655,7 +665,7 @@ div.title-pk {
     width: 100%;
     height: 60px;
     padding: 8px 0;
-    background-image: url(../../images/home-Noely/clouds.svg);
+    background-image: url(../../img/home/clouds.svg);
     background-size: contain;
     background-position-x: center;
     filter: drop-shadow(#fff 0 0px 0px) 
@@ -922,23 +932,21 @@ div.title-pk {
         touch-action: manipulation;
     }
 
-    .btn-shadow {
+    btn-shadow {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
         border-radius: 12px;
         background: #00000040;
         will-change: transform;
-        transform: translateY(2px);
+        transform: translateY( 2px );
         transition:
             transform
             600ms
             cubic-bezier(.3, .7, .4, 1);
     }
 
-    .btn-edge {
+    btn-edge {
         position: absolute;
         top: 0;
         left: 0;
@@ -954,7 +962,7 @@ div.title-pk {
         );
     }
 
-    .btn-front {
+    btn-front {
         display: block;
         position: relative;
         padding: 6px;
@@ -976,7 +984,7 @@ div.title-pk {
         -webkit-filter: brightness(110%);
     }
 
-    .button-pk:hover .btn-front {
+    .button-pk:hover btn-front {
         transform: translateY(-6px);
         transition:
             transform
@@ -984,12 +992,12 @@ div.title-pk {
             cubic-bezier(.3, .7, .4, 1.5);
     }
 
-    .button-pk:active .btn-front {
+    .button-pk:active btn-front {
         transform: translateY(-2px);
         transition: transform 34ms;
     }
 
-    .button-pk:hover .btn-shadow {
+    .button-pk:hover btn-shadow {
         transform: translateY(4px);
         transition:
             transform
@@ -997,7 +1005,7 @@ div.title-pk {
             cubic-bezier(.3, .7, .4, 1.5);
     }
 
-    .button-pk:active .btn-shadow {
+    .button-pk:active btn-shadow {
         transform: translateY(1px);
         transition: transform 34ms;
     }
@@ -1036,7 +1044,7 @@ div.title-pk {
 
     nav#header-nav-mobile > menu li { width: 100%; margin: 22px 0; }
     nav#header-nav-mobile > menu li > .title-pk#carrinho::before { 
-        content: url( "../../images/home-Noely/shopping-cart.svg" );
+        content: url( "../../img/home/shopping-cart.svg" );
         height: 1.8rem; 
     }
 
@@ -1259,7 +1267,7 @@ div.title-pk {
         width: 100%;
         height: 60px;
         padding: 8px 0;
-        background-image: url(../../images/home-Noely/clouds.svg);
+        background-image: url(../../img/home/clouds.svg);
         background-size: contain;
         background-position-x: center;
         filter: drop-shadow(#fff 0 0px 0px) 
