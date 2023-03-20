@@ -1,0 +1,70 @@
+
+
+{
+    "users": [
+        {
+            "id": "",
+            "name": "",
+            "email": "",
+            "password": "",
+            "genre": "",
+            "cpf": "",
+            "birthday": "",
+            "cel": "",
+            "tel": "",
+            "profilePicture": "",
+            "address": {
+                "zipCode": "",
+                "city": "",
+                "state": "",
+                "number": "",
+                "complement": "",
+                "district": "",
+                "reference": ""
+            }
+        },
+        {
+            "id": "",
+            "name": "",
+            "email": "",
+            "password": "",
+            "genre": "",
+            "cpf": "",
+            "birthday": "",
+            "cel": "",
+            "tel": "",
+            "profilePicture": "",
+            "address": {
+                "zipCode": "",
+                "city": "",
+                "state": "",
+                "number": "",
+                "complement": "",
+                "district": "",
+                "reference": ""
+            }
+        }
+    ],
+    "products": [
+        {
+            "id": 0,
+            "name": "",
+            "price": 0.0,
+            "image": "",
+            "imageLogo": "",
+            "image-a": "",
+            "image-b": "",
+            "refs": ""
+        },
+        {
+            "id": 0,
+            "name": "",
+            "price": 0.0,
+            "image": "",
+            "imageLogo": "",
+            "image-a": "",
+            "image-b": "",
+            "refs": ""
+        }
+    ]
+}
