@@ -1,28 +1,28 @@
 const { randomUUID } = require('crypto');
 const productsModel = require('../models/productsModel');
-const produtoModel = require('../models/productsModel');
+//const produtoModel = require('../models/productsModel');
 
 const AdminController = {
     showLogin: (req, res) => {
         return res.render('admin/auth/login');
     },
 
-    showHome: (req, res) => {
+     showHome: (req, res) => {
         const url = req.originalUrl;
         const products = produtoModel.findAll();
 
         return res.render('admin/home', {url, products});
-    },
+    } /* ,
 
     showDashboard: (req, res) => {
         const url = req.originalUrl;
         return res.render('admin/dashboard', {url});
-    },
+    } *//* ,
 
     showCadastroProdutos: (req, res) => {
         const url = req.originalUrl;
         return res.render('admin/products/cadastro', {url});
-    },
+    } *//* ,
 
     showEditarProdutos: (req, res) => {
         const url = req.originalUrl;
@@ -31,7 +31,9 @@ const AdminController = {
         const productFound = database.products.find(product => product.id === id)
 
         return res.render('admin/products/editar', { url, product: productFound });
-    },
+    } */
+}
+    /* ,
 
     login: (req, res) => {
         const users = database.users
@@ -107,6 +109,6 @@ const AdminController = {
 
         return res.redirect('/admin/home')
     }
-};
+}; */
 
 module.exports = AdminController;
