@@ -43,7 +43,7 @@ app.use(usersRouter)
 app.use(loginRouter)
 app.use(checkoutRouter)
 app.use(authRouter)
-app.use(adminRouter)
+
 
 
 /* Middleware */
