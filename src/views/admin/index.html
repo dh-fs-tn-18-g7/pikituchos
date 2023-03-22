@@ -14,87 +14,113 @@
     <!-- Bootostrap -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
 
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 
     <!-- Style CSS -->
-    <link rel="stylesheet" href="../../../public/stylesheets/admin/admin.css">
-    <link rel="stylesheet" href="../../../public/stylesheets/components.css">
+    <link rel="stylesheet" href="../../public/stylesheets/admin/admin.css" />
+    <link rel="stylesheet" href="../../public/stylesheets/components.css" />
 
+    <!-- Icons -->
+    <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <title>Tela de Admim</title>
 </head>
 
 <body>
-
     <main>
-
-        <aside class=" appBar">
-
-            <button type="button" class="btn-close" disabled aria-label="Close"></button>
-          
-
+        <aside class="appBar">
+            <button id = "btn-closes"type="button" class="btn-close" disabled aria-label="Close"></button>
 
             <header>
-
-                <div>Logo</div>
+                <div><img src="../../public/img/logo.svg" alt="" /></div>
 
                 <div>
                     <h2>Usuario</h2>
-                    <p>Admin</p>
                 </div>
-
+                <hr />
             </header>
 
-            <nav class="nav">
-                <li>
-                    <a href="#">dashbord</a>
-                </li>
-                <li>
-                    <a href="#">Produtos</a>
-                </li>
-                <li>
-                    <a href="#">Cadastrar produto</a>
-                </li>
+            <div class="dashboard">
+                <i class="ph-bold ph-graph"></i>
+                <h3>Dashboard</h3>
+            </div>
 
+            <nav class="nav">
+
+
+                <button class="btn-navbar-admin">
+                    <i class="ph-bold ph-tray"></i>
+                    Produtos
+                </button>
+
+
+                <button class="btn-navbar-admin">
+                    <i class="ph-bold ph-list"></i>
+                    Lista de produtos</button>
+
+
+                <button class="btn-navbar-admin">
+                    <i class="ph-bold ph-tag-chevron"></i>
+                    Cadastrar produto</button>
+
+
+
+                <button class="btn-navbar-admin">
+                    <i class="ph-bold ph-basket"></i>
+                    Pedidos</button>
 
 
             </nav>
 
-
-
+            <footer>
+                <button class="btn-navbar-admin">
+                    <i class="ph-bold ph-gear-six"></i>
+                    Configurações
+                </button>
+            </footer>
         </aside>
 
         <section class="app">
-            <div class="container text-center">
-                <div class="row">
-                  <div class="col">
-                    Column
-                  </div>
-                  <div class="col">
-                    Column
-                  </div>
-                  <div class="col">
-                    Column
-                  </div>
-                </div>
-              </div>
+            <section class="produtos">
+
+
+                <main>
+
+                    <div class="card-produto">
+                        <div>
+                            <img src="../../public/img/produto/product.png" alt="" />
+                        </div>
+                        <div>
+                            <h3>Nome do produto</h3>
+                            <h4>30,00</h4>
+                        </div>
+
+                        <div class = "box-btn-card">
+                            <button class="btn-edit">
+                                <i class="ph-bold ph-pencil-simple"></i> Editar
+                            </button>
+                            <button class="btn-delete">
+                                <i class="ph-bold ph-trash-simple"></i> Deletar
+                            </button>
+                        </div>
+                    </div>
+       
+
+
+                </main>
+
+
+            </section>
         </section>
-
-
     </main>
-
 
     <footer>
         <div></div>
-
     </footer>
-
-
-
 </body>
 
 </html>

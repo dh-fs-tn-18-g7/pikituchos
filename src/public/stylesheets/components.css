@@ -1,4 +1,4 @@
-
+@import url(/stylesheets/globals/global.css);
 
 /* Estilo input: */
 
@@ -180,11 +180,6 @@
 
 
 
-
-
-
-
-
 /* Pagina de login  */
 
 .input-login {
@@ -239,4 +234,103 @@
 .btn-login:active {
   transform: scale(0.98);
   transition: 500ms;
+}
+
+
+
+/* Pagina de Admin */
+
+/* Btn nav bar */
+
+
+.btn-navbar-admin{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #FFAEBF;
+  color: whitesmoke;
+  cursor: pointer;
+  font-weight: bold;
+  gap: 10px;
+  border-radius: 5px;
+  transition: 500ms;
+}
+
+.btn-navbar-admin:hover{
+  transform: scale(1.01);
+  transition: 500ms;
+  box-shadow: 0px 0px 42px 1px rgba(0,0,0,0,75);
+  background-color: #F190A3;
+
+
+}
+
+.btn-navbar-admin:active{
+  transform: scale(.97);
+  box-shadow: 0px 0px 42px 1px rgba(0,0,0,0,75);
+
+ 
+}
+
+
+
+
+/* btn cards */
+.btn-edit{
+  border: none;
+  background-color:#47C8EF;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 500ms;
+  
+}
+
+.btn-edit:hover{
+  transform: scale(1.01);
+  transition: 500ms;
+  box-shadow: 0px 0px 42px -11px rgba(0,0,0,0,75);
+}
+
+.btn-edit:active{
+  transform: scale(.97);
+}
+
+.btn-delete{
+  color: whitesmoke;
+  border: none;
+  background-color: red;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 500ms;
+  
+}
+
+.btn-delete:hover{
+  transform: scale(1.01);
+  transition: 500ms;
+  box-shadow: 0px 0px 42px -11px rgba(0,0,0,0,75);
+}
+
+.btn-delete:active{
+  transform: scale(.97);
+}
+
+
+/* Btn footer navbar */
+
+.btn-admin-config{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #FFAEBF;
+  color: whitesmoke;
+  cursor: pointer;
+  font-weight: bold;
+  gap: 10px;
+  border-radius: 5px;
+  transition: 500ms;
+
+
 }

@@ -1,5 +1,3 @@
-
-
 * {
   padding: 0;
   margin: 0;
@@ -8,38 +6,111 @@
 
 /*  */
 
-body{
-    background-image: linear-gradient(to top, #ffdee9 0%, #b5fffc 100%);
-    background-repeat: no-repeat;
- 
-   
+body {
+    background-image: linear-gradient(to left top, #b5fffc, #bff7ff, #dcedff, #f5e3ff, #ffdee9);  background-repeat: no-repeat;
 }
 
-main{
-    background-color: transparent;
-    display: flex;
-
-   
+main {
+  background-color: transparent;
+  display: flex;
+  gap: 1rem;
 }
 
-.appBar{
-    width: 250px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+/* Menu lateral */
+
+.appBar {
+  width: 250px;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 4px;
+  box-shadow: 0px 0px 35px -3px rgba(0, 0, 0, 0.1);
+  background-color: whitesmoke;
 }
 
-.appBar header{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 15px 10px;
-     
-    background-color: yellow;       
-    width: 100%;                    
+.appBar header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+  width: 100%;
 }
 
 .appBar header div h2 {
-    font-size: 1rem;
+  font-size: 1rem;
+}
+
+.dashboard {
+  display: flex;
+  align-items: first baseline;
+  justify-content: space-around;
+  width: 100%;
+  padding: 15px;
+  gap: 10px;
+  color:#F190A3 ;
+}
+
+.dashboard i {
+    font-size: 1.8rem;
+}
+
+.dashboard h3{
+    font-size: 1.4rem;
+
+}
+.nav {
+  margin-top: 2rem;
+  display: block;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.appBar footer {
+  margin-top: 70%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+}
+
+/* lista de produtos */
+
+.produtos {
+  margin-top: 1rem;
+}
+
+.produtos main {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card-produto {
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 35px -3px rgba(0, 0, 0, 0.1);
+}
+.card-produto div img {
+  width: 200px;
+  display: block;
+}
+
+.card-produto div h3,
+div h4 {
+  font-size: 1rem;
+}
+
+.box-btn-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
