@@ -27,13 +27,19 @@
     <!-- Icons -->
     <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
 
+
+    <!-- JS -->
+
+    <script src="../../public/js/admin.js" defer></script>
+
     <title>Tela de Admim</title>
 </head>
 
 <body>
     <main>
         <aside class="appBar">
-            <button id = "btn-closes"type="button" class="btn-close" disabled aria-label="Close"></button>
+
+            <button id ="btn-close"type="button" class="btn-close" disabled aria-label="Close"></button>
 
             <header>
                 <div><img src="../../public/img/logo.svg" alt="" /></div>
@@ -52,24 +58,32 @@
             <nav class="nav">
 
 
-                <button class="btn-navbar-admin">
+                <button 
+                id="btn-produtos"
+                class="btn-navbar-admin">
                     <i class="ph-bold ph-tray"></i>
                     Produtos
                 </button>
 
 
-                <button class="btn-navbar-admin">
+                <button 
+                id="btn-listaProdutos"
+                class="btn-navbar-admin">
                     <i class="ph-bold ph-list"></i>
                     Lista de produtos</button>
 
 
-                <button class="btn-navbar-admin">
+                <button 
+                id="btn-cadastrarPordutos"
+                class="btn-navbar-admin">
                     <i class="ph-bold ph-tag-chevron"></i>
                     Cadastrar produto</button>
 
 
 
-                <button class="btn-navbar-admin">
+                <button 
+                    id="btn-pedidos"
+                class="btn-navbar-admin">
                     <i class="ph-bold ph-basket"></i>
                     Pedidos</button>
 
@@ -77,7 +91,9 @@
             </nav>
 
             <footer>
-                <button class="btn-navbar-admin">
+                <button 
+                id="btn-config"
+                class="btn-navbar-admin">
                     <i class="ph-bold ph-gear-six"></i>
                     Configurações
                 </button>
@@ -85,7 +101,10 @@
         </aside>
 
         <section class="app">
-            <section class="produtos">
+           
+            <section 
+            id="displayProdutos"    
+            class="produtos">
 
 
                 <main>

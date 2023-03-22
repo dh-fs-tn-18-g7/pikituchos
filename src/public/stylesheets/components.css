@@ -260,7 +260,6 @@
   transform: scale(1.01);
   transition: 500ms;
   box-shadow: 0px 0px 42px 1px rgba(0,0,0,0,75);
-  background-color: #F190A3;
 
 
 }
@@ -331,6 +330,4 @@
   gap: 10px;
   border-radius: 5px;
   transition: 500ms;
-
-
 }
