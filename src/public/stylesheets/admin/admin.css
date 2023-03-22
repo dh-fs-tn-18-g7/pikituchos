@@ -7,7 +7,15 @@
 /*  */
 
 body {
-    background-image: linear-gradient(to left top, #b5fffc, #bff7ff, #dcedff, #f5e3ff, #ffdee9);  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    to left top,
+    #b5fffc,
+    #bff7ff,
+    #dcedff,
+    #f5e3ff,
+    #ffdee9
+  );
+  background-repeat: no-repeat;
 }
 
 main {
@@ -18,11 +26,9 @@ main {
 
 /* Menu lateral */
 
-.btn-close{
-    cursor: pointer;
-
+.btn-close {
+  cursor: pointer;
 }
-
 
 .appBar {
   width: 250px;
@@ -34,7 +40,6 @@ main {
   padding: 4px;
   box-shadow: 0px 0px 35px -3px rgba(0, 0, 0, 0.1);
   background-color: #def7ff;
-
 }
 
 .appBar header {
@@ -56,16 +61,15 @@ main {
   width: 100%;
   padding: 15px;
   gap: 10px;
-  color:#F190A3 ;
+  color: #f190a3;
 }
 
 .dashboard i {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
-.dashboard h3{
-    font-size: 1.4rem;
-
+.dashboard h3 {
+  font-size: 1.4rem;
 }
 .nav {
   margin-top: 2rem;
@@ -90,14 +94,69 @@ main {
 
 /* lista de produtos */
 
+.app {
+  width: 100%;
+}
+
 .produtos {
   margin-top: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 10px 50px;
+  background-color: #ffff;
 }
+
+.produtos header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.buscar{
+    display: flex;
+    align-items: center;
+    width: 516px;
+    border: 1px solid var(--cp07);
+    border-radius: 8px;
+    height: 50px;
+    padding: 0px 16px;
+    background-color: var(--cp00);
+    font-size: 1rem;
+    transition: 500ms;
+    gap: 10px;
+    letter-spacing: 1px;
+  }
+
+  .buscar input{
+    border: none;
+    width: 100%;
+    outline: none;
+  }
+
+.buscar:active{
+    border: 1px solid var(--cp07);
+    box-shadow: var(--cp02) 0px 0px 5px 1px inset, var(--cp02) 0px 0px 5px 1px;
+    transition: 0.1s;
+
+}
+
+  .buscar:focus-visible{
+    border: 1px solid var(--cp07);
+    box-shadow: var(--cp02) 0px 0px 5px 1px inset, var(--cp02) 0px 0px 5px 1px;
+    transition: 0.1s;
+
+}
+
 
 .produtos main {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .card-produto {

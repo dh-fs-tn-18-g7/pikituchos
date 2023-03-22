@@ -37,9 +37,10 @@
 
 <body>
     <main>
+
         <aside class="appBar">
 
-            <button id ="btn-close"type="button" class="btn-close" disabled aria-label="Close"></button>
+            <button id="btn-close" type="button" class="btn-close" disabled aria-label="Close"></button>
 
             <header>
                 <div><img src="../../public/img/logo.svg" alt="" /></div>
@@ -58,32 +59,24 @@
             <nav class="nav">
 
 
-                <button 
-                id="btn-produtos"
-                class="btn-navbar-admin">
+                <button id="btn-produtos" class="btn-navbar-admin">
                     <i class="ph-bold ph-tray"></i>
                     Produtos
                 </button>
 
 
-                <button 
-                id="btn-listaProdutos"
-                class="btn-navbar-admin">
+                <button id="btn-listaProdutos" class="btn-navbar-admin">
                     <i class="ph-bold ph-list"></i>
                     Lista de produtos</button>
 
 
-                <button 
-                id="btn-cadastrarPordutos"
-                class="btn-navbar-admin">
+                <button id="btn-cadastrarPordutos" class="btn-navbar-admin">
                     <i class="ph-bold ph-tag-chevron"></i>
                     Cadastrar produto</button>
 
 
 
-                <button 
-                    id="btn-pedidos"
-                class="btn-navbar-admin">
+                <button id="btn-pedidos" class="btn-navbar-admin">
                     <i class="ph-bold ph-basket"></i>
                     Pedidos</button>
 
@@ -91,9 +84,7 @@
             </nav>
 
             <footer>
-                <button 
-                id="btn-config"
-                class="btn-navbar-admin">
+                <button id="btn-config" class="btn-navbar-admin">
                     <i class="ph-bold ph-gear-six"></i>
                     Configurações
                 </button>
@@ -101,13 +92,35 @@
         </aside>
 
         <section class="app">
-           
-            <section 
-            id="displayProdutos"    
-            class="produtos">
+
+            <section id="displayProdutos" class="produtos">
+
+                <header>
+
+                    <div>
+                        <h2>Grid produtos</h2>
+                    </div>
+
+
+                    <form class="buscar">
+                        <i class="ph-bold ph-magnifying-glass"></i>
+                        <input type="text">
+
+                    </form>
+
+
+
+                    <div><button>
+                            <i class="ph-bold ph-plus"></i>
+                            Novo produto</button></div>
+                </header>
 
 
                 <main>
+
+
+
+
 
                     <div class="card-produto">
                         <div>
@@ -118,7 +131,7 @@
                             <h4>30,00</h4>
                         </div>
 
-                        <div class = "box-btn-card">
+                        <div class="box-btn-card">
                             <button class="btn-edit">
                                 <i class="ph-bold ph-pencil-simple"></i> Editar
                             </button>
@@ -127,7 +140,7 @@
                             </button>
                         </div>
                     </div>
-       
+
 
 
                 </main>
