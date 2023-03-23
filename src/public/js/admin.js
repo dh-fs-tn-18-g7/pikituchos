@@ -1,8 +1,8 @@
-console.log('start js')
+console.log("start js");
 
 /* Botões */
 
-const produtos = document.querySelector('#btn-produtos');
+const produtos = document.querySelector("#btn-produtos");
 
 const litasProdutos = document.querySelector("#btn-listaProdutos");
 const cadastrarProdutos = document.querySelector("#btn-cadastrarPordutos");
@@ -11,41 +11,29 @@ const config = document.querySelector("#btn-config");
 
 /* display */
 
-const displayProdutos = document.querySelector('#displayProdutos')
+const displayProdutos = document.querySelector("#displayProdutos");
 
-console.log(displayProdutos)
-
+console.log(displayProdutos);
 
 /* Eventos */
 
-produtos.addEventListener('click',exibirProduto)
-litasProdutos.addEventListener('click',exibirListaProduto)
-
+produtos.addEventListener("click", exibirProduto);
+litasProdutos.addEventListener("click", exibirListaProduto);
 
 /* Funções */
 
-
 function exibirElemento(elemento) {
-    elemento.style.display = "flex";
-  }
-  
-  function ocultarElemento(elemento) {
-   
-    elemento.style.display = 'none';
-
-  }
-  
-  function exibirProduto() {
-   exibirElemento(displayProdutos)
-
-   
-
+  elemento.style.display = "flex";
 }
-  
-  function exibirListaProduto() {
-    ocultarElemento(displayProdutos)
 
-   
-  }
-  
-  
+function ocultarElemento(elemento) {
+  elemento.style.display = "none";
+}
+
+function exibirProduto() {
+  exibirElemento(displayProdutos);
+}
+
+function exibirListaProduto() {
+  ocultarElemento(displayProdutos);
+}

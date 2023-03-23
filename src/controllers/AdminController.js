@@ -1,4 +1,10 @@
-const { randomUUID } = require('crypto');
-const productsModel = require('../models/productsModel');
-const produtoModel = require('../models/productsModel');
+const AdminController = { 
+    showLogin: (req,res)=>{
+        res.render('admin/login')
+
+    }
+
+}
+
+module.exports = AdminController
 
