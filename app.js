@@ -34,8 +34,8 @@ app.use( express.static( path.join( __dirname, "src/public" ) ) ); // define ond
 
 /* Rotas */
 
-app.use( "/", indexRouter );
-app.use( "/produto", lyhTemps );
+app.use(indexRouter );
+app.use(lyhTemps);
 app.use(usersRouter)
 app.use(loginRouter)
 app.use(checkoutRouter)
