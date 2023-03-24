@@ -29,7 +29,7 @@
 
      
       
-      <form action="">
+      <form action="/cadastro" method="POST">
         <article>
           <img src="/images/home/pikituchos-logo-txt.png" alt="" />
         </article>
@@ -103,7 +103,7 @@
                 placeholder="Digite seu celular:"
                 class="input-form"
                 type="number"
-                name="celular"
+                name="telefone"
                 id="celular"
             /></label>
           </div>
@@ -113,7 +113,7 @@
                 placeholder="Digite seu nome:"
                 class="input-form"
                 type="text"
-                name="nome"
+                name="name"
                 id="nome"
             /></label>
           </div>
@@ -122,10 +122,14 @@
               >Data de nascimento:<input
                 class="input-form"
                 type="date"
-                name="data"
+                name="data_de_nascimento"
                 id="data"
             /></label>
           </div>
+          <label for="admin"
+            ><input class="input-radio" type="radio" name="is_admin" id="promo" />É administrador?</label
+          >
+          
         </article>
 
         <article class="dados-cadastrais">
@@ -151,7 +155,7 @@
               >Numero:<input
                 class="input-form"
                 type="number"
-                name="number"
+                name="numero"
                 id="number"
                 placeholder="Numero:"
             /></label>
@@ -172,8 +176,8 @@
               >Endereço:<input
                 class="input-form"
                 type="text"
-                name="Endereço"
-                id="Endereço"
+                name="rua"
+                id="endereco"
                 placeholder="Endereço:"
             /></label>
           </div>

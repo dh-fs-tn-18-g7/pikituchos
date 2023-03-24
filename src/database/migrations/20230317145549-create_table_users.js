@@ -6,9 +6,13 @@ module.exports = {
     
     await queryInterface.createTable('users', { 
       id: { 
-        type: Sequelize.INTEGER(10), 
-        primaryKey: true, 
-        autoIncrement: true, 
+        type: Sequelize.STRING(100), 
+        primaryKey: true,  
+        allowNull: false 
+      }, 
+
+      senha: { 
+        type: Sequelize.STRING(50), 
         allowNull: false 
       }, 
       
@@ -37,15 +41,35 @@ module.exports = {
         allowNull: false 
       }, 
 
-      endereco_id: {
-        type: Sequelize.INTEGER(10),
-        allowNull: false,
-      },
-
       is_admin: { 
         type: Sequelize.BOOLEAN, 
         allowNull: false
       }, 
+
+      rua: {
+        type: Sequelize.STRING(50),
+        allowNull: false
+      },
+
+      numero: {
+        type: Sequelize.INTEGER(10),
+        allowNull: false
+    },
+
+      cep: {
+        type: Sequelize.INTEGER(50),
+        allowNull: false
+      },
+
+      cidade: {
+        type: Sequelize.STRING(50),
+        allowNull: false
+      },
+
+      estado: {
+        type: Sequelize.STRING(50),
+        allowNull: false
+      },
 
         
       createdAt: Sequelize.DATE, 

@@ -1,6 +1,40 @@
+const { randomUUID } = require("crypto")
+
+const { User } = require('../models')
+
+
 const CadastroController = {
     showCadastro: (req, res) => {
-        res.render('auth/cadastro')
+        const url = req.originalUrl
+        res.render('auth/cadastro', {url})
+    },
+    store: async (req, res) => {
+        const {email, senha, cpf, telefone, name, data_de_nascimento, cep, numero, compl, rua, cidade, estado, is_admin} = req.body
+
+        const newUser = {
+            id: randomUUID(),
+            email,
+            senha,
+            cpf,
+           telefone,
+            name,
+            data_de_nascimento,
+            is_admin: is_admin === "on"? true: false,
+            cep,
+            numero,
+            compl,
+            rua,
+            cidade,
+            estado
+        }
+
+        console.log(newUser)
+
+        await User.create(newUser)
+
+        
+
+        return res.redirect('/cadastro')
     }
 }
 

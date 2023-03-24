@@ -1,9 +1,13 @@
 module.exports = (sequelize, DataTypes) => {
-    const Users = sequelize.define('Users', {
+    const User = sequelize.define('User', {
         id: { 
-            type: DataTypes.INTEGER(10), 
-            primaryKey: true, 
-            autoIncrement: true, 
+            type: DataTypes.STRING(100), 
+            primaryKey: true,  
+            allowNull: false 
+          }, 
+
+          senha: { 
+            type: DataTypes.STRING(50), 
             allowNull: false 
           }, 
           
@@ -32,23 +36,37 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false 
           }, 
     
-          endereco_id: {
-            type: DataTypes.INTEGER(10),
-            allowNull: false
-          },
-    
           is_admin: { 
             type: DataTypes.BOOLEAN, 
             allowNull: false
-          }
+          },
+
+          rua: {
+            type: DataTypes.STRING(50),
+            allowNull: false
+          },
+    
+          numero: {
+            type: DataTypes.INTEGER(10),
+            allowNull: false
+        },
+    
+          cep: {
+            type: DataTypes.INTEGER(50),
+            allowNull: false
+          },
+    
+          cidade: {
+            type: DataTypes.STRING(50),
+            allowNull: false
+          },
+    
+          estado: {
+            type: DataTypes.STRING(50),
+            allowNull: false
+          },
     }, {
         tablename: 'users'
     })
-
-    Users.associate = (models) => {
-        Users.belongsTo(models.enderecos, {
-            constraint: true,
-            foreignKey: 'endereco_id'
-        })
-    }
+      return User
 }

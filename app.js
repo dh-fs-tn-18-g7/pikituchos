@@ -14,6 +14,7 @@ const usersRouter = require('./src/routes/usersRouter')
 const loginRouter = require('./src/routes/loginRouter')
 const checkoutRouter = require ("./src/routes/checkoutRouter")
 const authRouter = require('./src/routes/authRouter')
+const listagemRouter = require('./src/routes/listagemRouter')
 
 /* Variaveis */
 
@@ -41,6 +42,7 @@ app.use(usersRouter)
 app.use(loginRouter)
 app.use(checkoutRouter)
 app.use(authRouter)
+app.use(listagemRouter)
 
 
 /* Middleware */
