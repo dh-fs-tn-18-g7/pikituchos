@@ -2,28 +2,29 @@
 <html lang="pt-BR">
   <head>
     <title>Cadastro - Pikituchos</title>
-    <link rel="icon" href="src/public/images/logo.svg" type="svg+xml" />
+    <link rel="icon" href="/images/logo.svg" type="svg+xml" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <!-- <base href="/" target="_blank"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="src/public/stylesheets/globals/global.css" />
+    <link rel="stylesheet" href="/stylesheets/globals/global.css" />
 
     <link
       rel="stylesheet"
-      href="src/public/stylesheets/globals/animations.css"
+      href="/stylesheets/globals/animations.css"
     />
 
     <!-- CSS da pagina e dos componentes -->
 
-    <link rel="stylesheet" href="./src/public/stylesheets/cadastro.css" />
-    <link rel="stylesheet" href="/src/public/stylesheets/components.css" />
+    <link rel="stylesheet" href="/stylesheets/cadastro.css" />
+    <link rel="stylesheet" href="/stylesheets/components.css" />
   </head>
 
   <body>
-    <page-header></page-header>
+    <%- include( "../includes/appbar.ejs" ) %>
 
     <main>
 
@@ -31,7 +32,7 @@
       
       <form action="">
         <article>
-          <img src="./src/public/images/home/pikituchos-logo-txt.png" alt="" />
+          <img src="/images/home/pikituchos-logo-txt.png" alt="" />
         </article>
 
         <article class="dados-cadastrais">
@@ -62,7 +63,7 @@
               />
 
               <span class="esconde-senha">
-                <img src="./src/public/images/img-checkout/olho.svg" alt="">
+                <img src="/images/img-checkout/olho.svg" alt="">
               </span>
 
             </label>
@@ -82,7 +83,7 @@
             <!-- Img de Olho para esconder senha -->
           
             <!-- <span class="esconde-senha">
-              <img src="./src/public/images/img-checkout/olho.svg" alt="">
+              <img src=".//images/img-checkout/olho.svg" alt="">
             </span> -->
           
           </label>
@@ -215,10 +216,10 @@
       </form>
     </main>
 
-    <page-footer></page-footer>
+    <%- include( "../includes/footer.ejs" ) %>
 
 
-    <script src="src/public/scripts/cadastro.js"></script>
-    <script src="src/public/scripts/globals/global.js"></script>
+    <script src="/scripts/cadastro.js"></script>
+    <script src="/scripts/globals/global.js"></script>
   </body>
 </html>

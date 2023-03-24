@@ -1,4 +1,26 @@
+<<<<<<< HEAD
 @import url(/stylesheets/globals/global.css);
+=======
+
+:root {
+  font-family: Baloo Da;
+
+  /*  pateta de cores com variaveis */
+
+  --cp00: #ffffff;
+  --cp01: #00a599;
+  --cp02: #ffaebf;
+  --cp03: #fffadd;
+  --cp04: #fdcdbf;
+  --cp05: #feb491;
+  --cp06: #47c8ef;
+  --cp07: #f190a3;
+  --cp08: #464646;
+  --cp09: #;
+  --cp10: #c5d3d9;
+  --cp11: #ededed;
+}
+>>>>>>> a12b47a6211ed8bcecaae4eb5d0a95436bd4ccfe
 
 /* Estilo input: */
 
@@ -180,11 +202,6 @@
 
 
 
-
-
-
-
-
 /* Pagina de login  */
 
 .input-login {
@@ -238,5 +255,101 @@
 
 .btn-login:active {
   transform: scale(0.98);
+  transition: 500ms;
+}
+
+
+
+/* Pagina de Admin */
+
+/* Btn nav bar */
+
+
+.btn-navbar-admin{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #FFAEBF;
+  color: whitesmoke;
+  cursor: pointer;
+  font-weight: bold;
+  gap: 10px;
+  border-radius: 5px;
+  transition: 500ms;
+}
+
+.btn-navbar-admin:hover{
+  transform: scale(1.01);
+  transition: 500ms;
+  box-shadow: 0px 0px 42px 1px rgba(0,0,0,0,75);
+
+
+}
+
+.btn-navbar-admin:active{
+  transform: scale(.97);
+  box-shadow: 0px 0px 42px 1px rgba(0,0,0,0,75);
+
+ 
+}
+
+
+
+
+/* btn cards */
+.btn-edit{
+  border: none;
+  background-color:#47C8EF;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 500ms;
+  
+}
+
+.btn-edit:hover{
+  transform: scale(1.01);
+  transition: 500ms;
+  box-shadow: 0px 0px 42px -11px rgba(0,0,0,0,75);
+}
+
+.btn-edit:active{
+  transform: scale(.97);
+}
+
+.btn-delete{
+  color: whitesmoke;
+  border: none;
+  background-color: red;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 500ms;
+  
+}
+
+.btn-delete:hover{
+  transform: scale(1.01);
+  transition: 500ms;
+  box-shadow: 0px 0px 42px -11px rgba(0,0,0,0,75);
+}
+
+.btn-delete:active{
+  transform: scale(.97);
+}
+
+
+/* Btn footer navbar */
+
+.btn-admin-config{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #FFAEBF;
+  color: whitesmoke;
+  cursor: pointer;
+  font-weight: bold;
+  gap: 10px;
+  border-radius: 5px;
   transition: 500ms;
 }
