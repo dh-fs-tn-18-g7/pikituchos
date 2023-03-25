@@ -37,6 +37,9 @@
         <article class="dados-cadastrais">
           <div>
             <h2>Dados cadastrais:</h2>
+            <% if(typeof error !== "undefined") { %>
+            <h3 style="color: red"> Email já cadastrado </h3>
+              <% } %>
           </div>
         </article>
 

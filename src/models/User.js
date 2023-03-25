@@ -52,7 +52,7 @@ module.exports = (sequelize, DataTypes) => {
         },
     
           cep: {
-            type: DataTypes.INTEGER(50),
+            type: DataTypes.STRING(50),
             allowNull: false
           },
     

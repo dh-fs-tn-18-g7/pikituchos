@@ -5,6 +5,7 @@ const path = require( "path" );
 const cookieParser = require( "cookie-parser" );
 const logger = require( "morgan" );
 const ejs = require( "ejs" );
+const session = require('express-session');
 
 /* Importações das rotas */
 
@@ -34,6 +35,14 @@ app.use( express.urlencoded( { extended: false } ) );
 app.use( cookieParser() );
 app.use( express.static( path.join( __dirname, "src/public" ) ) ); // define onde vao estar os arquivos estaticos
 
+/* Middleware */
+
+app.use(session({
+	secret: "keyboard cat",
+	resave: false,
+	saveUninitialized: true
+}))
+
 /* Rotas */
 
 app.use (indexRouter);
@@ -45,7 +54,7 @@ app.use(authRouter)
 app.use(listagemRouter)
 
 
-/* Middleware */
+
 
 // catch 404 and forward to error handler
 

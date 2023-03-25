@@ -12,7 +12,7 @@ module.exports = {
       }, 
 
       senha: { 
-        type: Sequelize.STRING(50), 
+        type: Sequelize.STRING(200), 
         allowNull: false 
       }, 
       
@@ -57,7 +57,7 @@ module.exports = {
     },
 
       cep: {
-        type: Sequelize.INTEGER(50),
+        type: Sequelize.STRING(50),
         allowNull: false
       },
 
