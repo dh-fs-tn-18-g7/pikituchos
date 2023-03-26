@@ -1,0 +1,25 @@
+{
+  "user": [
+    {
+      "id": "12345336",
+      "name": "Bryan Abranches",
+      "email": "bryan@mail.com",
+      "password": "12344",
+      "isAdmin": "true"
+    },
+    {
+      "id": "12345633",
+      "name": "Joao Guilherme",
+      "email": "jaoao@mail.com",
+      "password": "1234",
+      "isAdmin": "false"
+    },
+    {
+      "id": "12345623",
+      "name": "Kevin Abranches",
+      "email": "kevinn@mail.com",
+      "password": "123",
+      "isAdmin": "false"
+    }
+  ]
+}
