@@ -1,5 +1,5 @@
 {
-  "user": [
+  "users": [
     {
       "id": "12345336",
       "name": "Bryan Abranches",
@@ -17,7 +17,7 @@
     {
       "id": "12345623",
       "name": "Kevin Abranches",
-      "email": "kevinn@mail.com",
+      "email": "kevin@mail.com",
       "password": "123",
       "isAdmin": "false"
     }

@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    
+
 
 
     <section>
@@ -31,20 +31,22 @@
                 <h2>Bem Vindo</h2>
             </div>
 
-            <form action="">
+            <form action="/admin/login" method="POST">
+    <!-- Formulario configurado para enviar uam requisição do tipo POST -->
+
                 <div>
-                    <label for="email">Email:<input class="input-login" type="email" id="email" /></label>
+                    <label for="email">Email:<input class="input-login" name = "email" type="email" id="email" /></label>
                 </div>
                 <div class="inputSenha">
-                    <label for="senha">Senha:<input class="input-login" type="password" id="senha" /></label>
+                    <label for="password">Senha:<input class="input-login" type="password" name="password"id="password" /></label>
 
                     <div>
-                        <a href="">Esqueci minha senha</a>
+                        <a href="/cadastro">Esqueci minha senha</a>
                     </div>
                 </div>
 
                 <div class="boxBtn">
-                    <button class="btn-login">ENTRAR</button>
+                    <button type = "submit"class="btn-login">ENTRAR</button>
 
                     <div>
                         <a href="/cadastro.html">Ainda não é cadastrado?</a>
@@ -52,10 +54,10 @@
                 </div>
             </form>
 
-          
 
-    </main>
-   
+
+        </main>
+
 </body>
 
 </html>
