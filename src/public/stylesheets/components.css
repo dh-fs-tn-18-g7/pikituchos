@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-@import url(/stylesheets/globals/global.css);
-=======
 
-:root {
-  font-family: Baloo Da;
-
-  /*  pateta de cores com variaveis */
-
-  --cp00: #ffffff;
-  --cp01: #00a599;
-  --cp02: #ffaebf;
-  --cp03: #fffadd;
-  --cp04: #fdcdbf;
-  --cp05: #feb491;
-  --cp06: #47c8ef;
-  --cp07: #f190a3;
-  --cp08: #464646;
-  --cp09: #;
-  --cp10: #c5d3d9;
-  --cp11: #ededed;
-}
->>>>>>> a12b47a6211ed8bcecaae4eb5d0a95436bd4ccfe
 
 /* Estilo input: */
 
@@ -303,7 +281,7 @@
   text-align: center;
   padding: 5px;
   border-radius: 5px;
-  transition: 500ms;
+ 
   
 }
 
@@ -324,7 +302,7 @@
   text-align: center;
   padding: 5px;
   border-radius: 5px;
-  transition: 500ms;
+
   
 }
 

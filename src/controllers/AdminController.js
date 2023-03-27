@@ -8,6 +8,17 @@ const AdminController = {
     res.render("admin/login");
   },
 
+  showAdminHome: (req, res) => {
+    res.render("admin/adminHome");
+  },
+
+  showCadastro: (req, res) => {
+    res.render("admin/adminCadastro");
+  },
+  showProdutos: (req, res) => {
+    res.render("admin/adminProdutos");
+  },
+
   login: (req, res) => {
     const user = databese.users;
     const { email, password } = req.body;
@@ -25,18 +36,17 @@ const AdminController = {
     console.log(isValidPassword);
 
     if (!isValidPassword) {
-        console.log("E-mail ou senha invalidos");
-        return
+      console.log("E-mail ou senha invalidos");
+      return;
     }
 
-    console.log( userFound.isAdmin)
-   
-    if (userFound.isAdmin === false ) {
-        
+    console.log(userFound.isAdmin);
+
+    if (userFound.isAdmin === false) {
       return res.redirect("/");
     }
-    
-    return res.redirect("/admin/home"); 
+
+    return res.redirect("/admin/home");
   },
 };
 
