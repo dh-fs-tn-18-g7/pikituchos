@@ -194,3 +194,48 @@ div h4 {
 }
 
 
+/* Formulario de cadastro de produtos */
+
+
+.form-cadastro-produto{
+  background-color: #b5fffc;
+  width: 550px;
+  margin: 4rem auto;
+  padding: 20px ;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px -1px #000000bf;
+
+}
+
+.form-cadastro-produto div{
+  width: 100%;
+ 
+}
+
+.form-cadastro-produto div label{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+.form-cadastro-produto div label input{
+ width: 500px;
+
+}
+
+.admin-radio{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+input[type = "file"]{
+  display: none;
+
+}

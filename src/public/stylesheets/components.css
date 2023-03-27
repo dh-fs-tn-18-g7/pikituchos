@@ -1,3 +1,22 @@
+:root {
+  --appbar-height: 80px;
+
+  /* [ color palette ] -------------------- */
+  --cp00: #ffffff; --cp01: #00A599; --cp02: #FFAEBF; --cp03: #FFFADD;
+  --cp04: #FDCDBF; --cp05: #FEB491; --cp06: #47C8EF; --cp07: #F190A3;
+  --cp08: #464646; --cp09: #f0003c;
+
+  /* [ shadows ] -------------------- */
+  --text-shadow-blue: #27f 0 0 5px;
+  --logo-text-shadow: drop-shadow(#0005 -5px 6px 1px);
+
+  --linearbg-00: #fff;    --linearbg-01: #ebebec;
+  --linearbg-02: #71CDC6; --linearbg-03: #00A599;
+  --linearbg-04: #ebebec; --linearbg-05: #fffef4;
+  --linearbg-06: #fffdf3; --linearbg-07: #fff0e4;
+  --linearbg-08: #fff0e4; --linearbg-09: #fee4d9;
+  --linearbg-10: #ffe5da; --linearbg-11: #fce1dd;
+}
 
 
 /* Estilo input: */
@@ -98,7 +117,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.input-radio:checked {
+.input-radio:checked{
   border: 3px;
   background-color: var(--cp07);
 }
@@ -319,7 +338,7 @@
 
 /* Btn footer navbar */
 
-.btn-admin-config{
+.btn-file{
   width: 100%;
   padding: 10px;
   border: none;
@@ -329,5 +348,32 @@
   font-weight: bold;
   gap: 10px;
   border-radius: 5px;
+  transition: 500ms;
+}
+
+
+.btn-cadastro-admin{
+  color: var(--cp00);
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  
+  height: 45px;
+  outline: none;
+  padding: 0 50px;
+  background-color: var(--cp07);
+  transition: 500ms;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.btn-cadastro-admin:hover {
+  transform: scale(1.02);
+  transition: 500ms;
+  box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.75);
+}
+
+.btn-cadastro-admin:active {
+  transform: scale(0.98);
   transition: 500ms;
 }

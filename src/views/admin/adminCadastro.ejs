@@ -9,7 +9,7 @@
     <!-- <base href="/" target="_blank"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-   
+
     <!-- Bootostrap -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -37,23 +37,67 @@
 <body>
     <main>
 
-        <%- include('./components/navbar.ejs')  %>
+        <%- include('./components/navbar.ejs') %>
 
 
-        <section class="app">
+            <section class="app">
 
-            <form action="" method="">
+                <form class="form-cadastro-produto" action="admin/adminProdutos" method="POST">
+
+                    <article>
+
+                        <h2>Cadastrar produto</h2>
+
+                    </article>
 
 
-                
+                    <div>
 
-            </form>
+                        <label for="email">Nome:<input class="input-form" type="text" name="nome" id="nome"
+                                placeholder="Digite o nome do produto:" /></label>
+                    </div>
+
+                    <div>
+
+                        <label for="preco">Preço:
+                            
+                            <input class="input-form" type="number" name="preco" id="preco" placeholder="Digite o valor do produto:" /></label>
+                    </div>
 
 
-           
-         </section>
+                    <article class="admin-radio">
+                        <label for=""><input class="input-radio" type="radio" name="" id="" /> Ativo</label>
+                        <label for="dados" class="radio"><input class="input-radio" type="radio" name="" id="dados" />
+                            Em estoque</label>
+                    </article>
 
-        </section>
+
+                    <article>
+
+                        <label for="file" type="file" name="file" id="file" class="btn-cadastro-admin"> Enviar arquivo 
+                            <input type="file" name="file" id="file"> 
+                            
+                        </label>
+
+                    </article>
+
+
+                    <article class="btn-box">
+
+                        <button type="submit" class="btn-login">Cadastrar</button>
+
+                    </article>
+
+
+
+
+                </form>
+
+
+
+            </section>
+
+            </section>
     </main>
 
     <footer>

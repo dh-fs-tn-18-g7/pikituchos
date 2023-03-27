@@ -1,0 +1,37 @@
+{
+    "produtos": [
+      {
+        "id": "12ss345336",
+        "img": "",
+        "name": "Carrinho de bebe",
+        "preco": "100,00",
+        "ativo": "ativo",
+        "estoque": "sim"
+      },
+      {
+        "id": "123ss45336",
+        "img": "",
+        "name": "Carrinho de bebe",
+        "preco": "100,00",
+        "ativo": "ativo",
+        "estoque": "sim"
+      },
+      {
+        "id": "1234ss5336",
+        "img": "",
+        "name": "Carrinho de bebe",
+        "preco": "100,00",
+        "ativo": "ativo",
+        "estoque": "sim"
+      },
+      {
+        "id": "123a4ss336",
+        "img": "",
+        "name": "Carrinho de bebe",
+        "preco": "100,00",
+        "ativo": "ativo",
+        "estoque": "sim"
+      }
+    ]
+  }
+  

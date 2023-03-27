@@ -1,5 +1,8 @@
 /* Models */
 const databese = require("../database/db.json");
+const produtosDb = require("../database/produtos.json")
+
+
 
 /* Controller */
 
@@ -9,14 +12,17 @@ const AdminController = {
   },
 
   showAdminHome: (req, res) => {
-    res.render("admin/adminHome");
+    const produtos = produtosDb.produtos
+    res.render("admin/adminHome",{ produtos });
+
   },
 
   showCadastro: (req, res) => {
     res.render("admin/adminCadastro");
   },
   showProdutos: (req, res) => {
-    res.render("admin/adminProdutos");
+    const produtos = produtosDb.produtos
+    res.render("admin/adminProdutos", { produtos });
   },
 
   login: (req, res) => {
@@ -48,6 +54,10 @@ const AdminController = {
 
     return res.redirect("/admin/home");
   },
+
+
+
+
 };
 
 module.exports = AdminController;

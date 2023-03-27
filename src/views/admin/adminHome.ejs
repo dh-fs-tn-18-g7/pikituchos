@@ -39,15 +39,57 @@
 
         <%- include('./components/navbar.ejs') %>
 
-
             <section class="app">
 
                 <section id="displayListaProdutos">
 
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#id</th>
+                                    <th>Imagem</th>
+                                    <th>Nome</th>
+                                    <th>Preço</th>
+                                    <th>Ativo</th>
+                                    <th>Estoque</th>
+                                    <th>Acões</th>
+                                </tr><!-- linha da tabela -->
 
-                    <!-- Estrutura de uma tabela -->
-                    <table class="table table-striped">
-                        <thead>
+                            </thead> <!-- Header  -->
+                            
+                            <% for (let produto of produtos) { %>
+                                <tbody>
+                                           <!-- main -->
+                                <tr>
+                                    <th><%= produto.id%></th>
+                                    <td>
+                                        <div class="img-produto">
+                                            <img src="/images/produtos/carrinho bebe.jpg" alt="">
+                                        </div>
+                                    </td>
+                                    
+                                    <td><%= produto.name %></td>
+                                    <td><%= produto.preco %></td>
+                                    <td><% produto.ativo %></td>
+                                    <td><%= produto.estoque %></td>
+                                    
+                                    <td>
+                                        <div class="btns-listagemProduto">
+
+                                            <button id="btn-edit" class="btn-edit">
+                                                Editar
+                                            </button>
+                                            <button id="Btn-delete" class="btn-delete">Deletar</button>
+
+
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                </tbody> 
+                            <% } %>
+                            
+                     
                             <tr>
                                 <th>#id</th>
                                 <th>Imagem</th>
@@ -56,55 +98,17 @@
                                 <th>Ativo</th>
                                 <th>Estoque</th>
                                 <th>Acões</th>
-                            </tr><!-- linha da tabela -->
-
-                        </thead> <!-- Header  -->
-                        <tbody>
-
-                            <tr>
-                                <th>1</th>
-                                <td>
-                                    <div class="img-produto">
-                                        <img src="/images/produtos/carrinho bebe.jpg" alt="">
-
-                                    </div>
-
-                                </td>
-                                <td>Carrinho de Bebe</td>
-                                <td>100,00</td>
-                                <td>Ativo</td>
-                                <td>true</td>
-                                <td>
-                                    <div class="btns-listagemProduto">
-
-                                        <button class="btn-edit">
-                                            Editar
-                                        </button>
-                                        <button class="btn-delete">Deletar</button>
-
-
-                                    </div>
-
-                                </td>
                             </tr>
 
 
+                            </tfoot><!-- footer -->
 
-                        </tbody> <!-- main -->
-                        <tr>
-                            <th>#id</th>
-                            <th>Imagem</th>
-                            <th>Nome</th>
-                            <th>Preço</th>
-                            <th>Ativo</th>
-                            <th>Estoque</th>
-                            <th>Acões</th>
-                        </tr><
+                        </table>
 
+                    
 
-                        </tfoot><!-- footer -->
+                            <!-- Estrutura de uma tabela -->
 
-                    </table>
 
 
 
@@ -115,9 +119,5 @@
             </section>
     </main>
 
-    <footer>
-        <div></div>
-    </footer>
-</body>
 
 </html>
