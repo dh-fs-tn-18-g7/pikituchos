@@ -1,0 +1,111 @@
+const users = [
+    {
+        id: "1", 
+        senha: "123456",
+        name: "Arthur", 
+        email: "arthur@mail.com", 
+        telefone: "11912345678912", 
+        cpf: "12345678912", 
+        data_de_nascimento: "01/01/2000", 
+        is_admin: true,
+        rua: "teste1",
+        numero: "11",
+        cep: "123456789",
+        cidade: "sao paulo",
+        estado: "sp",
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+
+    {
+        id: "2", 
+        senha: "123456",
+        name: "Jady", 
+        email: "jady@mail.com", 
+        telefone: "11912345678912", 
+        cpf: "12345678912", 
+        data_de_nascimento: "01/01/1999", 
+        is_admin: false,
+        rua: "teste2",
+        numero: "22",
+        cep: "123456789",
+        cidade: "sao paulo",
+        estado: "sp",
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+
+    {
+        id: "3", 
+        senha: "123456",
+        name: "Bryan", 
+        email: "bryan@mail.com", 
+        telefone: 11912345678912, 
+        cpf: 12345678912, 
+        data_de_nascimento: "01/01/1998", 
+        is_admin: true,
+        rua: "teste3",
+        numero: "33",
+        cep: "123456789",
+        cidade: "sao paulo",
+        estado: "sp",
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+
+    {
+        id: "4", 
+        senha: "123456",
+        name: "Emerson", 
+        email: "emerson@mail.com", 
+        telefone: 11912345678912, 
+        cpf: 12345678912, 
+        data_de_nascimento: "01/04/1997", 
+        is_admin: false,
+        rua: "teste4",
+        numero: "44",
+        cep: "123456789",
+        cidade: "sao paulo",
+        estado: "sp",
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+
+    {
+        id: "5", 
+        senha: "123456",
+        name: "Rafaela", 
+        email: "rafaela@mail.com", 
+        telefone: 11912345678912, 
+        cpf: 12345678912, 
+        data_de_nascimento: "01/04/1996", 
+        is_admin: true,
+        rua: "teste5",
+        numero: "55",
+        cep: "123456789",
+        cidade: "sao paulo",
+        estado: "sp",
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+
+    {
+        id: "6", 
+        senha: "123456",
+        name: "Noely", 
+        email: "noely@mail.com", 
+        telefone: 11912345678912, 
+        cpf: 12345678912, 
+        data_de_nascimento: "01/04/1995", 
+        is_admin: false,
+        rua: "teste6",
+        numero: "66",
+        cep: "123456789",
+        cidade: "sao paulo",
+        estado: "sp",
+        createdAt: new Date(),
+        updatedAt: new Date()
+    },
+]
+
+module.exports = users

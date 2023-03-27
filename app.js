@@ -1,21 +1,21 @@
 /* Importações */
-const createError = require("http-errors");
-const express = require("express");
-const path = require("path");
-const cookieParser = require("cookie-parser");
-const logger = require("morgan");
-const ejs = require("ejs");
-const methodOverride = require("method-override");
+const createError = require( "http-errors" );
+const express = require( "express" );
+const path = require( "path" );
+const cookieParser = require( "cookie-parser" );
+const logger = require( "morgan" );
+const ejs = require( "ejs" );
+const session = require('express-session');
 
 /* Importações das rotas */
 
-const indexRouter = require("./src/routes/indexRouter");
-const guide = require("./src/routes/noely-temps");
-const usersRouter = require("./src/routes/usersRouter");
-const loginRouter = require("./src/routes/loginRouter");
-const checkoutRouter = require("./src/routes/checkoutRouter");
-const authRouter = require("./src/routes/authRouter");
-const adminRouter = require("./src/routes/adminRouter");
+const indexRouter = require( "./src/routes/indexRouter" );
+const guide = require( "./src/routes/noely-temps" );
+const usersRouter = require('./src/routes/usersRouter')
+const loginRouter = require('./src/routes/loginRouter')
+const checkoutRouter = require ("./src/routes/checkoutRouter")
+const authRouter = require('./src/routes/authRouter')
+const listagemRouter = require('./src/routes/listagemRouter')
 
 /* Variaveis */
 
@@ -36,17 +36,26 @@ app.use(methodOverride("_method")); // Sobrescreve os metodos Http para criaçã
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "src/public"))); // define onde vao estar os arquivos estaticos
 
+/* Middleware */
+
+app.use(session({
+	secret: "keyboard cat",
+	resave: false,
+	saveUninitialized: true
+}))
+
 /* Rotas */
 
-app.use(indexRouter);
+app.use (indexRouter);
 app.use(guide);
-app.use(usersRouter);
-app.use(loginRouter);
-app.use(checkoutRouter);
-app.use(authRouter);
-app.use(adminRouter);
+app.use(usersRouter)
+app.use(loginRouter)
+app.use(checkoutRouter)
+app.use(authRouter)
+app.use(listagemRouter)
 
-/* Middleware */
+
+
 
 // catch 404 and forward to error handler
 

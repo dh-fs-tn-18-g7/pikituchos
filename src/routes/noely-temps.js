@@ -1,9 +1,8 @@
-const express = require("express"),
-  	  router = express.Router();
+const express = require("express")
+const homeController = require('../controllers/HomeController')
+router = express.Router();
 
-router.get("/", (l, y, h) => {
-  y.render("produto");
-});
+router.get("/produto", homeController.produto);
 
 /* [ exports ]
 =========================================== */

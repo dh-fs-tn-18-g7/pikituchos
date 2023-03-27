@@ -30,14 +30,17 @@
             <div>
                 <img src="/img/home/pikituchos-logo-txt.png" alt="" />
                 <h2>Bem Vindo de Volta!</h2>
+                <% if(typeof error !== "undefined") { %>
+                <h3 style="color: red;"><%= error %>  </h3>
+                <% } %>
             </div>
 
-            <form action="">
+            <form action="/login" method="POST">
                 <div>
-                    <label for="email">Email:<input class="input-login" type="email" id="email" /></label>
+                    <label for="email">Email:<input class="input-login" type="email" id="email" name="email" /></label>
                 </div>
                 <div class="inputSenha">
-                    <label for="senha">Senha:<input class="input-login" type="password" id="senha" /></label>
+                    <label for="senha">Senha:<input class="input-login" type="password" id="senha" name="senha" /></label>
 
                     <div>
                         <a href="">Esqueci minha senha</a>
@@ -52,6 +55,13 @@
                     </div>
                 </div>
             </form>
+<<<<<<< HEAD
+=======
+
+            <%- include( "../includes/footer.ejs" ) %>
+
+    </main>
+>>>>>>> b85a1e846547dd5b8c87a7d7ed16e8098518fd9f
 
           
 
