@@ -43,8 +43,15 @@
 
                 <section id="displayListaProdutos">
 
+                        <article>
+
+                            <h2>Lista de produtos</h2>
+
+                        </article>
+
+
                         <table class="table table-striped">
-                            <thead>
+                            <thead class = "table-danger">
                                 <tr>
                                     <th>#id</th>
                                     <th>Imagem</th>
@@ -58,7 +65,7 @@
                             </thead> <!-- Header  -->
                             
                             <% for (let produto of produtos) { %>
-                                <tbody>
+                                <tbody class="table-info">
                                            <!-- main -->
                                 <tr>
                                     <th><%= produto.id%></th>
@@ -90,18 +97,22 @@
                             <% } %>
                             
                      
-                            <tr>
-                                <th>#id</th>
-                                <th>Imagem</th>
-                                <th>Nome</th>
-                                <th>Preço</th>
-                                <th>Ativo</th>
-                                <th>Estoque</th>
-                                <th>Acões</th>
-                            </tr>
+                            <tfoot class = "table-danger">
+
+                                <tr>
+                                    <th>#id</th>
+                                    <th>Imagem</th>
+                                    <th>Nome</th>
+                                    <th>Preço</th>
+                                    <th>Ativo</th>
+                                    <th>Estoque</th>
+                                    <th>Acões</th>
+                                </tr>
+
+                            </tfoot>
 
 
-                            </tfoot><!-- footer -->
+                            <!-- footer -->
 
                         </table>
 

@@ -51,17 +51,13 @@
                         </div>
 
 
-                        <form class="buscar">
-                            <i class="ph-bold ph-magnifying-glass"></i>
-                            <input type="text">
-
-                        </form>
 
 
 
-                        <div><button>
+
+                        <div><button class="btn-criar-produto">
                                 <i class="ph-bold ph-plus"></i>
-                                Novo produto</button></div>
+                                <a href="/admin/cadastroProduto">Novo Produto</a></button></div>
                     </header>
 
 
@@ -71,26 +67,29 @@
 
                         <% for (let produto of produtos) { %>
 
-                        <div class="card-produto">
-                            <div>
-                                <img src="/img/produto/product.png" alt="" />
-                            </div>
-                            <div>
-                                <h3><%= produto.nome %></h3>
-                                <h4><%= produto.preco%></h4>
+                            <div class="card-produto">
+                                <div>
+                                    <img src="/img/produto/product.png" alt="" />
+                                </div>
+                                <div>
+                                    <h3>
+                                        <%= produto.nome %>
+                                    </h3>
+                                    <h4>R$ <%= produto.preco%>
+                                    </h4>
+                                </div>
+
+                                <div class="box-btn-card">
+                                    <button class="btn-edit">
+                                        <i class="ph-bold ph-pencil-simple"></i> Editar
+                                    </button>
+                                    <button class="btn-delete">
+                                        <i class="ph-bold ph-trash-simple"></i> Deletar
+                                    </button>
+                                </div>
                             </div>
 
-                            <div class="box-btn-card">
-                                <button class="btn-edit">
-                                    <i class="ph-bold ph-pencil-simple"></i> Editar
-                                </button>
-                                <button class="btn-delete">
-                                    <i class="ph-bold ph-trash-simple"></i> Deletar
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <% } %>
+                            <% } %>
 
 
                     </main>

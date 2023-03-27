@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-const CadastroController = {
-    showCadastro: (req, res) => {
-        res.render('auth/cadastro')
-=======
 const { randomUUID } = require("crypto")
 const { hashSync } = require('bcryptjs')
 
@@ -62,7 +57,6 @@ const CadastroController = {
                 id: id
             }
         })
->>>>>>> b85a1e846547dd5b8c87a7d7ed16e8098518fd9f
     }
 }
 

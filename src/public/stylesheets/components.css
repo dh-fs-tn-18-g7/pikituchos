@@ -112,9 +112,8 @@
   height: 1rem;
   box-shadow: 0px 0px 5px var(--cp07);
   background-color: whitesmoke;
-
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: 500ms;
 }
 
 .input-radio:checked{
@@ -276,6 +275,7 @@
 }
 
 .btn-navbar-admin:hover{
+  background-color:#ffaebfd7 ;
   transform: scale(1.01);
   transition: 500ms;
   box-shadow: 0px 0px 42px 1px rgba(0,0,0,0,75);
@@ -293,7 +293,8 @@
 
 
 
-/* btn cards */
+/* Btns Lista de Produtos*/
+
 .btn-edit{
   border: none;
   background-color:#47C8EF;
@@ -336,7 +337,7 @@
 }
 
 
-/* Btn footer navbar */
+/* Btns cadastro produto */
 
 .btn-file{
   width: 100%;
@@ -376,4 +377,32 @@
 .btn-cadastro-admin:active {
   transform: scale(0.98);
   transition: 500ms;
+}
+
+
+/* Btns Grid de Produtos */
+
+.btn-criar-produto{
+  border: none;
+  background-color:dodgerblue;
+  color: #ebebec;
+  padding: 10px;
+  transition: 500ms;
+  border-radius: 3px;
+}
+
+.btn-criar-produto:hover{
+  background-color:rgb(108, 182, 255);
+  color: #fff;
+  transform: scale(1.02);
+  transition: 500ms;
+  box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+
+
+}
+
+.btn-criar-produto:active{
+  transform: scale(.98);
+  transition: 500ms;
+
 }

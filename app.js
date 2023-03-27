@@ -6,6 +6,7 @@ const cookieParser = require( "cookie-parser" );
 const logger = require( "morgan" );
 const ejs = require( "ejs" );
 const session = require('express-session');
+const methodOverride = require("method-override")
 
 /* Importações das rotas */
 
@@ -16,11 +17,12 @@ const loginRouter = require('./src/routes/loginRouter')
 const checkoutRouter = require ("./src/routes/checkoutRouter")
 const authRouter = require('./src/routes/authRouter')
 const listagemRouter = require('./src/routes/listagemRouter')
+const adminRouter = require('./src/routes/adminRouter')
 
 /* Variaveis */
 
 const app = express();
-const port = 5050;
+const port = 6060;
 
 // Define a coniguração do ejs
 app.set("views", path.join(__dirname, "src/views"));
@@ -46,13 +48,14 @@ app.use(session({
 
 /* Rotas */
 
-app.use (indexRouter);
+app.use(indexRouter);
 app.use(guide);
 app.use(usersRouter)
 app.use(loginRouter)
 app.use(checkoutRouter)
 app.use(authRouter)
 app.use(listagemRouter)
+app.use(adminRouter)
 
 
 
