@@ -23,28 +23,6 @@
     <script src="js/globals/swiper-bundle.min.js"></script>
     <script src="js/globals/global.js" defer></script>
     <script src="js/home/home.js" defer></script>
-    <style>
-        hover-btn {
-            display: grid;
-            place-items: center;
-            width: 63px;
-            aspect-ratio: 1 / 1;
-            position: absolute;
-            inset: 2rem .5rem 0 auto;
-            border-radius: 5rem;
-            background: #920c;
-            color: #f5f5f5;
-            filter: drop-shadow( #0005 0 0 5px );
-        }
-        hover-btn btn {
-            border: transparent;
-            outline: transparent;
-            background: transparent;
-            color: #f5f5f5;
-            font-size: 1rem;
-        }
-
-    </style>
 </head>
 <body>
         
@@ -76,13 +54,20 @@
                                         btn="Editar"
                                         url="/admin/edit-product/<%= product.id %>"
                                     ></card-pk>
-                                    <hover-btn>
+                                    <delete-btn>
                                         <!-- <a btn href="/admin/edit-product/<%= product.id %>" title="<%= product.id %>" btn>Edit</a> -->
                                         <form action="/admin/delete" method="post">
                                             <input type="hidden" name="productId" value="<%= product.id %>">
                                             <button>Deletar</button>
                                         </form>
-                                    </hover-btn>
+                                    </delete-btn>
+                                    <view-product-btn>
+                                            <button>
+                                                <a href="/admin/product-details/<%= product.id %>">
+                                                    Ver
+                                                </a>
+                                            </button>
+                                    </view-product-btn>
                                     <% } else { %>
                                         btn="Ver detalhes"
                                         url="/admin/edit-product/<%= product.id %>"

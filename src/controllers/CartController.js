@@ -16,6 +16,7 @@ exports.CartController = [
 		// console.log( req.body );
 		getCartDetailsFromFile( cart => {
 			const cartProducts = cart.products;
+			// const cartProducts = {...cart.products};
 
 			fetchAllProducts( products => {
 				const productsData = [];
@@ -35,7 +36,8 @@ exports.CartController = [
 					cartProducts: productsData,
 					totalPrice
 				};
-				// console.log( viewsData );
+				console.log( `\x1b[33mviewsData` );
+				console.log( viewsData );
 				res.render( "cart", viewsData );
 			} );
 

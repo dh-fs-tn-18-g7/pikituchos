@@ -6,13 +6,16 @@ const fs = require( "fs" ),
 
 exports.CartModel = [
 	getCartDetailsFromFile = ( handler ) => {
+        console.log( `\x1b[33mmodels/Cart.js: getCartDetailsFromFile` );
 		const cartPath = path.join( rootDir, "../data", "cart.json" );
 		fs.readFile( cartPath, ( error, cartContent ) => {
 			let cart = { products: [] };
+            console.log(cart);
 			if( !error ) {
-				cart = JSON.parse( cartContent );
-				// cart.products = JSON.parse( cartContent );
+				// cart = JSON.parse( cartContent );
+				cart.products = JSON.parse( cartContent );
 			}
+            console.log(cart);
 			return handler( cart );
 		} );
 	},
@@ -25,22 +28,26 @@ exports.CartModel = [
 		const cartPath = path.join( rootDir, "../data", "cart.json" );
 		getCartDetailsFromFile( cart => {
 			// console.log( `\x1b[33moi`,cart.products.findIndex( p => p.id.toString() == "1679646792617") );
-			const Cart = { ...cart };
+			// const Cart = { ...cart };
+			const Cart = cart.products;
 			console.log( "\x1b[33moi", Cart );
-			console.log( "\x1b[33moi", Cart.products.findIndex( p => p.id.toString() == "1679646811096" ) );
 
-			let existingProductIndex = Cart.products.findIndex( p => p.id.toString() === productId );
+			// let existingProductIndex = Cart.products.findIndex( p => p.id.toString() === productId );
+			let existingProductIndex = Cart.findIndex( p => p.id.toString() === productId );
 
 			let updatedProduct;
 
 			if( existingProductIndex !== -1 ) {
-				updatedProduct = { ...Cart.products[ existingProductIndex ] };
+				// updatedProduct = { ...Cart.products[ existingProductIndex ] };
+				updatedProduct = { ...Cart[ existingProductIndex ] };
 				updatedProduct.quantity += 1;
-				Cart.products = [ ...Cart.products ];
-				Cart.products[ existingProductIndex ] = updatedProduct;
+				// Cart.products = [ ...Cart.products ];
+				// Cart.products[ existingProductIndex ] = updatedProduct;
+				Cart[ existingProductIndex ] = updatedProduct;
 			} else {
 				updatedProduct = { id: productId, quantity: 1 };
-				Cart.products = [ ...Cart.products, updatedProduct ];
+				// Cart.products = [ ...Cart.products, updatedProduct ];
+				Cart = [ ...Cart, updatedProduct ];
 			}
 
 			// cart.totalPrice += +productPrice;

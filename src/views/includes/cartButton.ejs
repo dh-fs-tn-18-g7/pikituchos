@@ -1,0 +1,14 @@
+
+
+<link rel="stylesheet" href="stylesheets/cart/cart.css">
+<form method="post" action="/cart">
+    <input type="hidden" value="<%= product.id %>" name="productId">
+    <button class="button-pk" 
+        role="button" type="submit">
+        <btn-shadow class=""></btn-shadow>
+        <btn-edge class=""></btn-edge>
+        <btn-front class=" text">
+            Adicionar à Sacola
+        </btn-front>
+    </button>
+</form>

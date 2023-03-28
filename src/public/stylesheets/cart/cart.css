@@ -1,0 +1,9 @@
+
+
+
+form[action="/cart"] > .button-pk {
+    width: 100%;
+} 
+form[action="/cart"] > .button-pk > btn-front {
+    background: var( --cp09 );
+}
