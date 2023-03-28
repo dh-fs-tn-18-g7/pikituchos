@@ -28,7 +28,7 @@ body > main > article {
 
 /* [ title-pk ]
 ----------------------------------- */
-header:has(title-pk) {
+article > header:has(title-pk) {
     display: grid; place-items: center;
 }
 
@@ -239,7 +239,9 @@ banner-section slider #slide03 right {
 ================================================================= */
 .yourbaby {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(26vw, 550px) minmax(27vw, 550px);;
+    place-items: center;
+    justify-content: center;
     gap: 5rem;
     padding: 10vw 2vw;
     background-image: linear-gradient(
@@ -247,6 +249,7 @@ banner-section slider #slide03 right {
         var(--linearbg-02),
         var(--linearbg-03)
     );
+    font-size: 1.3em;
     user-select: none;
 }
 
@@ -371,6 +374,8 @@ center-btn {
     display: grid;
     place-items: center;
     position: relative;
+    width: clamp( 100px, 80%, 750px );
+    margin: 0 auto;
     z-index: 9;
 }
 

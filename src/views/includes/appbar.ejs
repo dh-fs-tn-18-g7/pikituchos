@@ -1,0 +1,71 @@
+
+
+<link rel="stylesheet" href="stylesheets/globals/includes/appbar.css">
+<script src="js/globals/includes/appbar.js"></script>
+<page-header>
+<appbar>
+    <appbar-home>
+        <article class="appbar-left" url="/">
+            <img class="babyPikituchos" src="img/pikitucho.svg" alt="logo image">
+            <img id="logos-desc" src="img/home/pikituchos-logo-txt.png" alt="">
+        </article>
+        <nav class="appbar-nav">
+            <li url="/" data-title="Home">Home</li>
+            <li url="/produto" data-title="Produtos">Produtos</li>
+            <li url="#" data-title="Contatos">Contato</li>
+            <li url="/checkout" data-title="ver carrinho"><img src="img/home/shopping-cart.svg" alt=""></li>
+        </nav>
+        <article class="appbar-right">
+            <label for="searchbar" class="searchbar">
+                <input id="searchbar" type="text" placeholder="">
+                <!-- <button id="searchbar-btn"><txt>buscar</txt></button> -->
+                <input id="searchbar-btn" type="button" value="🔎 buscar">
+            </label>
+
+            <button class="button-pk" role="button" type="submit" url="/login">
+                <btn-shadow class=""></btn-shadow>
+                <btn-edge class=""></btn-edge>
+                <btn-front class=" text">
+                    Cadastre-se
+                </btn-front>
+            </button>
+
+        </article>
+        <h2 id="btn-mobile-nav-menu">
+            <span>&#9776;</span>
+        </h2>
+    </appbar-home>
+</appbar>
+</page-header>
+<nav id="header-nav-mobile">
+    <label for="searchbar" class="searchbar">
+        <input id="searchbar" type="text" placeholder="">
+        <input id="searchbar-btn" type="button" value="🔎 buscar">
+    </label>
+    <menu>
+        <li url="#" data-title="Home">
+            <div class="title-pk">
+                <h3 class="outline">Home</h3>
+                <h3 class="h3">Home</h3>
+            </div>
+        </li>
+        <li url="#highlights" data-title="Produtos">
+            <div class="title-pk">
+                <h3 class="outline">Produtos</h3>
+                <h3 class="h3">Produtos</h3>
+            </div>
+        </li>
+        <li url="#" data-title="Contatos">
+            <div class="title-pk">
+                <h3 class="outline">Contato</h3>
+                <h3 class="h3">Contato</h3>
+            </div>
+        </li>
+        <li url="#" data-title="ver carrinho">
+            <div class="title-pk" id="carrinho">
+                <h3 class="outline">Carrinho</h3>
+                <h3 class="h3">Carrinho</h3>
+            </div>
+        </li>
+    </menu> 
+</nav>

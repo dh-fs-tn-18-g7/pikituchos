@@ -1,26 +1,47 @@
 
-/* [ imports ]
-=============================================== */
-const express = require( "express" );
 
-/* [ properties ]
-=============================================== */
-const homeController = {
-	index: function( req, res, next ) {
-		res.render( "index" );
+const productModel = require( "../models/Products" );
+
+exports.HomeController = [
+	getHomePage = ( req, res ) => {
+		fetchAllProducts( products => {
+			const viewsData = {
+				admin: false,
+				products,
+				pageTitle: "Home page - Products List"
+			};
+			res.render( "index", viewsData );
+			console.clear();
+			console.log( req.body );
+		} );
 	},
-	guide: function( l, y, h ) {
-		y.render( "guide" );
+	getProductDetailPage = ( req, res ) => {
+		const productId = req.params.productId;
+		getProductById( productId, product => {
+			const viewsData = {
+				admin: false,
+				product,
+				pageTitle: req.body.title,
+			};
+			res.render( "productDetails", viewsData );
+		} );
 	},
-	produto: function( l, y, h ) {
-		y.render( "produto" );
+	getGuidePage = ( req, res, next ) => {
+		const viewsData = {
+			pageTitle: "Pikituchos Guide Page"
+		};
+		res.render( "guide", viewsData );
 	},
-};
-
-
-
-
-
-/* [ exports ]
-=============================================== */
-module.exports = homeController;
+	getProdutoPageModel = ( req, res, next ) => {
+		const viewsData = {
+			pageTitle: "Product Page Model"
+		};
+		res.render( "produto", viewsData );
+	},
+	getPKHomePage = ( req, res, next ) => {
+		const viewsData = {
+			pageTitle: "Pikituchos Homepage"
+		};
+		res.render( "home", viewsData );
+	},
+];

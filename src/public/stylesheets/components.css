@@ -115,6 +115,7 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 @import url(/src/public/stylesheets/globals/global.css);
 
 /* Estilo input: */
@@ -267,25 +268,26 @@
 
 
 
-    color: var(--cp00);
-    font-size: 1.3rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-<<<<<<< HEAD
-    width: 310px;
 =======
-    width: 370px;
->>>>>>> 97d4a133d7ca3cfa3c6a4032f1331a66a368eed0
-    height: 45px;
-    outline: none;
-    padding: 0 50px;
-    background-color: var(--cp07);
-    transition: 500ms;
-    margin: 0 auto;
-    cursor: pointer;
-    display: block;
-  
+.btn-dadosPessoais {
+>>>>>>> main
+  color: var(--cp00);
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  width: 370px;
+  height: 45px;
+  outline: none;
+  padding: 0 50px;
+  background-color: var(--cp07);
+  transition: 500ms;
+  margin: 0 auto;
+  cursor: pointer;
+  display: block;
+
+<<<<<<< HEAD
+=======
 }
 
 .btn-dadosPessoais:hover {
@@ -363,28 +365,5 @@
 .btn-login:active {
   transform: scale(0.98);
   transition: 500ms;
-  background-color: var(--cp06);
-  color: var(--cp07);
-<<<<<<< HEAD
-=======
-}
-
-.btn-dadosPessoais{
-
-  color: var(--cp00);
-  font-size: 1.3rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  width: 370px;
-  height: 45px;
-  outline: none;
-  padding: 0 50px;
-  background-color: var(--cp07);
-  transition: 500ms;
-  margin: 0 auto;
-  cursor: pointer;
-  display: block;
-
->>>>>>> 97d4a133d7ca3cfa3c6a4032f1331a66a368eed0
+>>>>>>> main
 }

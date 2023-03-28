@@ -3,22 +3,26 @@ const createError = require( "http-errors" );
 const express = require( "express" );
 const path = require( "path" );
 const cookieParser = require( "cookie-parser" );
-const logger = require( "morgan" );
-const ejs = require( "ejs" );
+const logger = require( "morgan" ),
+	rootDir = require( "./src/utils/path" );
 
 /* Importações das rotas */
 
-const indexRouter = require( "./src/routes/indexRouter" );
-const guide = require( "./src/routes/noely-temps" );
-const usersRouter = require('./src/routes/usersRouter')
-const loginRouter = require('./src/routes/loginRouter')
-const checkoutRouter = require ("./src/routes/checkoutRouter")
-const authRouter = require('./src/routes/authRouter')
+// const indexRouter = require( "./src/routes/indexRouter" );
+// const guide = require( "./src/routes/noely-temps" );
+const usersRouter = require( "./src/routes/usersRouter" );
+const loginRouter = require( "./src/routes/loginRouter" );
+const checkoutRouter = require( "./src/routes/checkoutRouter" );
+
+/* ==[ Lyh Routes ]============================ */
+const indexRoutes = require( "./src/routes/index" ),
+	adminRoutes = require( "./src/routes/admin" );
+/* ============================================ */
 
 /* Variaveis */
 
 const app = express();
-const port = 4444
+const port = 4444;
 
 // Define a coniguração do ejs
 app.set( "views", path.join( __dirname, "src/views" ) );
@@ -33,14 +37,30 @@ app.use( express.urlencoded( { extended: false } ) );
 app.use( cookieParser() );
 app.use( express.static( path.join( __dirname, "src/public" ) ) ); // define onde vao estar os arquivos estaticos
 
+
+/* ==[ Lyh Statics ]====================== */
+app.use( "/home", express.static( "src/public" ) );
+app.use( "/products", express.static( "src/public" ) );
+app.use( "/products/edit", express.static( "src/public" ) );
+app.use( "/produto", express.static( "src/public" ) );
+app.use( "/admin", express.static( "src/public" ) );
+app.use( "/admin/edit-product", express.static( "src/public" ) );
+app.use( "/admin/product-details", express.static( "src/public" ) );
+// app.use( "/", express.static( "src/public" ) );
+/* ======================================= */
+
+/* ==[ Lyh uses routes ]================== */
+app.use( "/", indexRoutes );
+app.use( "/admin", adminRoutes );
+
+
 /* Rotas */
 
-app.use (indexRouter);
-app.use(guide);
-app.use(usersRouter)
-app.use(loginRouter)
-app.use(checkoutRouter)
-app.use(authRouter)
+// app.use( indexRouter );
+// app.use( guide );
+app.use( usersRouter );
+app.use( loginRouter );
+app.use( checkoutRouter );
 
 
 /* Middleware */
@@ -62,6 +82,8 @@ app.use( function( err, req, res, next ) {
 	res.render( "error" );
 } );
 
-app.listen(port, (err)=>{
-	console.log(`Servidor esta rodando da port${port}`)
-})
+// app.listen( port, ( err )=>{
+// 	console.log( `Servidor esta rodando da port${port}` );
+// } );
+
+module.exports = app;
