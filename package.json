@@ -16,6 +16,7 @@
     "express-session": "^1.17.3",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+<<<<<<< HEAD
     "method-override": "^3.0.0",
     "morgan": "~1.9.1",
     "mysql2": "^3.2.0",
@@ -26,6 +27,15 @@
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
     "nodemon": "^2.0.20"
+=======
+    "morgan": "~1.9.1",
+    "mysql2": "^3.2.0",
+    "sequelize": "^6.30.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sequelize-cli": "^6.6.0"
+>>>>>>> 508754163431f28107467420c310cb5f5e49edde
   },
   "description": "<!-- > [![img](https://rawcdn.githack.com/dh-fs-tn-18-g7/.github/3dec8e2c134c1dd9ae8fdb6d89cbccd93fde2469/profile/dh-fstn-18-g7.svg)](https://github.com/dh-fs-tn-18-g7) -->\r <p align=\"center\">\r     <a href=\"https://github.com/dh-fs-tn-18-g7\">\r         <img src=\"https://rawcdn.githack.com/dh-fs-tn-18-g7/.github/3dec8e2c134c1dd9ae8fdb6d89cbccd93fde2469/profile/dh-fstn-18-g7.svg\">\r     </a>\r </p>",
   "main": "app.js",

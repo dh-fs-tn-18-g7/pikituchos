@@ -10,7 +10,7 @@
   text-decoration: none;
 }
 a {
-  color: black;
+  color: whitesmoke;
 }
 
 /* estilo barra lateral */
@@ -43,7 +43,7 @@ a {
 /* sessão card lateral  */
 
 .boxCard {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
