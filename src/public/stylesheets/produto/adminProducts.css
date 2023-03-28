@@ -1,0 +1,9 @@
+
+
+form[action="/admin/delete"] > button {
+    border: transparent;
+    background: none;
+    color: #f5f5f5;
+    font-weight: 900;
+}
+
