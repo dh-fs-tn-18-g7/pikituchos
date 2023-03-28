@@ -1,6 +1,8 @@
 const UserController = {
-    showUser: (req,res)=>{
-        res.render("usuario")
+    showUser: (req, res)=>{
+        const url = req.originalUrl
+        console.log(url)
+        res.render("usuario", { url })
     }
 }
 
