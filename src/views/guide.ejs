@@ -3,14 +3,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Guia Pikituchos</title>
+    <title><%= pageTitle %></title>
     
-    <link rel="icon" href="img/pikitucho.svg" type="svg+xml">
+    <link rel="icon" href="/img/pikitucho.svg" type="svg+xml">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/globals/global.css">
-    <script src="js/globals/global.js" defer></script>
+    <link rel="stylesheet" href="/stylesheets/globals/global.css">
+    <script src="/js/globals/global.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cinzel+Decorative:wght@400;700;900&family=Open+Sans:wght@500;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&display=swap');
 
@@ -101,7 +101,7 @@
             position: absolute;
             top: 0; left: 0;
             z-index: 9;
-            background: #1b1d22;
+            background-color: #1b1d22;
             box-shadow: #1b1d22 0 0 0 6px;
             filter: drop-shadow( #0009 0 0 5px );
             border-left: #ffab00 2px dashed;
@@ -149,18 +149,40 @@
         img[logo-text] { max-width: 120px; }
 
         article {
+            display: block;
+            width: clamp( 100px, 100%, 900px );
+            min-height: 80vh !important;
+            margin: 4% auto;
+            padding: 4px;
+            border-radius: 5px;
+            background: #905;
+            background: linear-gradient( 
+                45deg,
+                #905, #ffab00
+            );
+            clip-path: polygon( 0 33px, 33px 0, 100% 0, 100% calc( 100% - 33px ), calc( 100% - 33px ) 100%, 0 100% );
+        } article > overlay {
             display: grid;
             grid-template-rows: .1fr 1px .9fr;
             justify-items: center;
             gap: 4%;
             width: clamp( 100px, 100%, 900px );
             min-height: 80vh !important;
-            /* min-height: fit-content !important; */
-            margin: 4% auto;
+            margin: 0 auto;
             padding: 4%;
-            border-radius: 24px;
+            border-radius: 5px;
             background: #212329;
-        } article > :where( * ) {
+            clip-path: polygon( 0 33px, 33px 0, 100% 0, 100% calc( 100% - 33px ), calc( 100% - 33px ) 100%, 0 100% );
+        }
+
+        section { display: grid; place-items: center; }
+
+        section[palette] {
+            display: grid;
+            grid-template-columns: repeat(4, 114px);
+            grid-template-rows: repeat( 5, 80px );
+            place-items: baseline;
+            gap: 15px;
         }
 
         hr {
@@ -178,6 +200,13 @@
 
     </style>
     <style>
+        body {
+            background-color: #1b1d22;
+            background-image:   linear-gradient(0deg, #00000000 24px, #313239 25px),
+                                linear-gradient(90deg, #00000000 24px, #313239 25px);
+            background-size: 25px 25px;
+            background-attachment: fixed;
+        }
         w { color: #fff; }
         t { color: #c00; }
         tag-a { color: #c00; }
@@ -213,13 +242,14 @@
         }
         views-activated {
             display: none;
-            width: 50%;
+            width: 95%;
+            height: 100%;
             margin: 0 auto;
             padding: 1.5em 2.5em;
             background: #f5f5f550;
             color: #505257;
             border-radius: 0.5em;
-            clip-path: polygon( 0 10%, 10% 0, 98% 0, 100% 2%, 100% 90%, 90% 100%, 2% 100%, 0 98%, 0 100% );
+            clip-path: polygon( 0 33px, 33px 0, 100% 0, 100% calc( 100% - 33px ), calc( 100% - 33px ) 100%, 0 100% );
         } [menu-views-activated] {
             display: block;
             animation: becomes-visible 1.8s;
@@ -338,13 +368,13 @@
         <appbar-overlay>
             <appbar-home>
                 <appbar-logo>
-                    <img logo-icon src="img/pikitucho.svg" alt="logo image">
-                    <img logo-text src="img/home/pikituchos-logo-txt.png" alt="">
+                    <img logo-icon src="/img/pikitucho.svg" alt="logo image">
+                    <img logo-text src="/img/home/pikituchos-logo-txt.png" alt="">
                 </appbar-logo>
                 <menu appbar>
-                    <li url="#globals" data="g">Estilo global</li>
-                    <li url="#widgets" data="w">Widgets</li>
-                    <li url="#color-palette" data="c">Paleta de cores</li>
+                    <li url="#globals" data="g"><txt>Estilo global</txt></li>
+                    <li url="#widgets" data="w"><txt>Widgets</txt></li>
+                    <li url="#color-palette" data="c"><txt>Paleta de cores</txt></li>
                 </menu>
                 <appbar-right>
                     <button-pk test-views
@@ -372,8 +402,10 @@
             </header>
             <home>
                 <h2 link="/">index</h2>
-                <h2 link="/">home</h2>
-                <h2 link="/produto">produto</h2>
+                <h2 link="/">Pikituchos</h2>
+                <h2 link="/admin">Admin Panel</h2>
+                <h2 link="/admin/add-product">Add Product</h2>
+                <h2 link="/produto">Product Page Model</h2>
             </home>
         </views-activated>
     </appbar>
@@ -381,201 +413,207 @@
     <home>
         <h1 id="globals">Estilo global</h1>
         <article g>
-            <header>
-                <title-pk 
-                    name="Importar o estilo global" 
-                    color="var( --cp07 )"
-                    margin="0"
-                ></title-pk>
-            </header>
-            <hr>
-            <section>
-                <p>
-                    colar as tags de css e js antes da tag de fechamento da head &lt;/head&gt;
-                </p>
-                <div c2c="css">
-                    <h2>css:</h2>
-                    <tag-a-opn>link</tag-a-opn> 
-                        <prop>rel</prop>="stylesheet" 
-                        <prop>href</prop>="stylesheets/globals/global.css"
-                    <w>&gt;</w>
-                </div>
-                <div c2c="js">
-                    <h2>js:</h2>
-                    <tag-a-opn>script</tag-a-opn> 
-                        <prop>src</prop>="scripts/globals/global.js" <defer>defer</defer>
-                    <w>&gt;</w><tag-f>script</tag-f>
-                </div>
-            </section>
+            <overlay>
+                <header>
+                    <title-pk 
+                        title-pk="Importar o estilo global" 
+                        color="var( --cp07 )"
+                        margin="0"
+                    ></title-pk>
+                </header>
+                <hr>
+                <section>
+                    <p>
+                        colar as tags de css e js antes da tag de fechamento da head &lt;/head&gt;
+                    </p>
+                    <div c2c="css">
+                        <h2>css:</h2>
+                        <tag-a-opn>link</tag-a-opn> 
+                            <prop>rel</prop>="stylesheet" 
+                            <prop>href</prop>="stylesheets/globals/global.css"
+                        <w>&gt;</w>
+                    </div>
+                    <div c2c="js">
+                        <h2>js:</h2>
+                        <tag-a-opn>script</tag-a-opn> 
+                            <prop>src</prop>="scripts/globals/global.js" <defer>defer</defer>
+                        <w>&gt;</w><tag-f>script</tag-f>
+                    </div>
+                </section>
+            </overlay>
         </article>
 
         <article id="header-footer" g>
-            <header>
-                <title-pk 
-                    name="header e footer" 
-                    color="var( --cp06 )"
-                    margin="0"
-                ></title-pk>
-            </header>
-            <hr>
-            <section>
-                <h3>novas páginas:  <br>
-                    <w>o conteúdo das novas páginas precisa ser envelopado na tag   <br>
-                    <tag-a>main</tag-a><tag-f>main</tag-f>
-                </h3>
-                <h3 c2c="header">
-                    adicionar o header na pagina com a tag: <br>
-                    <tag-a>page-header</tag-a><tag-f>page-header</tag-f>
-                </h3>
-                <h3 c2c="footer">
-                    adicionar o footer na pagina com a tag: <br>
-                    <tag-a>page-footer</tag-a><tag-f>page-footer</tag-f>
-                </h3>
-            </section>
+            <overlay>
+                <header>
+                    <title-pk 
+                        title-pk="header e footer" 
+                        color="var( --cp06 )"
+                        margin="0"
+                    ></title-pk>
+                </header>
+                <hr>
+                <section>
+                    <h3>novas páginas:  <br>
+                        <w>o conteúdo das novas páginas precisa ser envelopado na tag   <br>
+                        <tag-a>main</tag-a><tag-f>main</tag-f>
+                    </h3>
+                    <h3 c2c="header">
+                        adicionar o header na pagina com a tag: <br>
+                        <tag-a>page-header</tag-a><tag-f>page-header</tag-f>
+                    </h3>
+                    <h3 c2c="footer">
+                        adicionar o footer na pagina com a tag: <br>
+                        <tag-a>page-footer</tag-a><tag-f>page-footer</tag-f>
+                    </h3>
+                </section>
+            </overlay>
         </article>
         
         <h1 id="widgets">Widgets</h1>
         <article id="title-pk" w>
-            <header>
-                <title-pk 
-                    name="Título" 
-                    color="var( --cp08 )"
-                    margin="0"
-                ></title-pk>
-            </header>
-            <hr>
-            <section>
-                <holder>
-                    <title-pk c2c="title"
-                        name="Seu pequeno é nossa prioridade"   
-                        color="var(--cp05)" 
+            <overlay>
+                <header>
+                    <title-pk 
+                        title-pk="Título" 
+                        color="var( --cp08 )"
                         margin="0"
                     ></title-pk>
-                </holder>
-                <div c2c="title">
-                    <tag-a-opn>title-pk</tag-a-opn> <br>
-                        <property>name</property>="Seu pequeno é nossa prioridade"  <br>
-                        <property>color</property>="var(--cp05)"    <br>
-                    <w>&gt;</w><tag-f>title-pk</tag-f>
-                </div>
-            </section>
+                </header>
+                <hr>
+                <section>
+                    <holder>
+                        <p c2c="title"
+                            title-pk="Seu pequeno é nossa prioridade" 
+                        >Seu pequeno é nossa prioridade</p>
+                    </holder>
+                    <div c2c="title">
+                        <tag-a-opn>title-pk</tag-a-opn> <br>
+                            <property>title-pk</property>="Seu pequeno é nossa prioridade"  <br>
+                            <property>color</property>="var(--cp05)"    <br>
+                        <w>&gt;</w><tag-f>title-pk</tag-f>
+                    </div>
+                </section>
+                <section>
+                            
+                    <title-pk div title-pk="Pikituchos 1.17em" color="var( --cp09 )" style="font-size: 1.17em"></title-pk>
+                    <title-pk div title-pk="Pikituchos 1.5em" color="var( --cp07 )" style="font-size: 1.5em"></title-pk>
+                    <title-pk div title-pk="Pikituchos 2em" color="#279" style="font-size: 2em"></title-pk>
+                    <title-pk div title-pk="Pikituchos 2.5em" color="var( --cp05 )" style="font-size: 2.5em"></title-pk>
+                </section>
+            </overlay>
         </article>
 
         <article id="button-pk" w>
-            <header>
-                <title-pk 
-                    name="Botão" 
-                    text-color="var( --cp05 )"
-                    margin="0"
-                ></title-pk>
-            </header>
-            <hr>
-            <section>
-                <holder>
-                    <button-pk 
-                        name="Botão" 
-                        text-color="#fff"
-                        btn-color="var( --cp06 )"
-                        btn-shadow="#25f"
-                    ></button-pk>
-                </holder>
-                <div c2c="button">
-                    <tag-a-opn>button-pk</tag-a-opn> <br>
-                        <property>name</property>="Botão"  <br>
-                        <property>text-color</property>="#fff"    <br>
-                        <property>btn-color</property>="var( --cp06 )"    <br>
-                        <property>btn-shadow</property>="#25f"    <br>
-                    <w>&gt;</w><tag-f>button-pk</tag-f>
-                </div>
-            </section>
+            <overlay>
+                <header>
+                    <p title-pk="Botão">Botão</p>
+                </header>
+                <hr>
+                <section>
+                    <holder>
+                        <button-pk 
+                            name="Botão" 
+                            text-color="#fff"
+                            btn-color="var( --cp06 )"
+                            btn-shadow="#25f"
+                        ></button-pk>
+                    </holder>
+                    <div c2c="button">
+                        <tag-a-opn>button-pk</tag-a-opn> <br>
+                            <property>name</property>="Botão"  <br>
+                            <property>text-color</property>="#fff"    <br>
+                            <property>btn-color</property>="var( --cp06 )"    <br>
+                            <property>btn-shadow</property>="#25f"    <br>
+                        <w>&gt;</w><tag-f>button-pk</tag-f>
+                    </div>
+                </section>
+            </overlay>
         </article>
 
         <article id="card-pk" w>
-            <header>
-                <title-pk 
-                    name="Card de produto" 
-                    color=""
-                    margin="0"
-                ></title-pk>
-            </header>
-            <hr>
-            <section>
-                <holder>
-                    <card-pk c2c="card"
-                        name="Nome do produto" 
-                        desc="descrição do produto" 
-                        real="45" 
-                        cents="90"
-                        src="img/pikitucho.svg" 
-                        alt=""
-                        btn="Ver detalhes"
-                    ></card-pk>
-                </holder>
-                <div c2c="card">
-                    <tag-a-opn>card-pk</tag-a-opn>  <br>
-                        <property>name</property>="Nome do produto"  <br>
-                        <property>desc</property>="descrição do produto" <br>
-                        <property>real</property>="45"  <br>
-                        <property>cents</property>="90  <br>
-                        <property>src</property>="img/product-05.png" <br>
-                        <property>alt</property>="" <br>
-                        <property>btn</property>="Ver detalhes" <br>
-                    <w>&gt;</w> <tag-f>card-pk</tag-f>
-                </div>
-            </section>
+            <overlay>
+                <header>
+                    <p title-pk="Card de produto">Card de produto</p>
+                </header>
+                <hr>
+                <section>
+                    <holder>
+                        <card-pk c2c="card"
+                            name="Nome do produto" 
+                            desc="descrição do produto" 
+                            real="45" 
+                            cents="90"
+                            src="/img/pikitucho.svg" 
+                            alt=""
+                            btn="Ver detalhes"
+                        ></card-pk>
+                    </holder>
+                    <div c2c="card">
+                        <tag-a-opn>card-pk</tag-a-opn>  <br>
+                            <property>name</property>="Nome do produto"  <br>
+                            <property>desc</property>="descrição do produto" <br>
+                            <property>real</property>="45"  <br>
+                            <property>cents</property>="90  <br>
+                            <property>src</property>="img/product-05.png" <br>
+                            <property>alt</property>="" <br>
+                            <property>btn</property>="Ver detalhes" <br>
+                        <w>&gt;</w> <tag-f>card-pk</tag-f>
+                    </div>
+                </section>
+            </overlay>
         </article>
 
         <h1 id="color-palette">Paleta de cores</h1>
         <article c>
-            <header>
-                <title-pk 
-                    name="Paleta de cores" 
-                    color="var( --cp04 )"
-                    margin="0"
-                ></title-pk>
-            </header>
-            <hr>
-            <section>
-                <color-palette color="var( --cp01 )"></color-palette>
-                <color-palette color="var( --cp02 )"></color-palette>
-                <color-palette color="var( --cp03 )"></color-palette>
-                <color-palette color="var( --cp04 )"></color-palette>
-                <color-palette color="var( --cp05 )"></color-palette>
-                <color-palette color="var( --cp06 )"></color-palette>
-                <color-palette color="var( --cp07 )"></color-palette>
-                <color-palette color="var( --cp08 )"></color-palette>
-                <color-palette color="var( --cp09 )"></color-palette>
-            </section>
+            <overlay>
+                <header>
+                    <p title-pk="Paleta de cores">Paleta de cores</p>
+                </header>
+                <hr>
+                <section palette>
+                    <color-palette color="var( --cp01 )"></color-palette>
+                    <color-palette color="var( --cp02 )"></color-palette>
+                    <color-palette color="var( --cp03 )"></color-palette>
+                    <color-palette color="var( --cp04 )"></color-palette>
+                    <color-palette color="var( --cp05 )"></color-palette>
+                    <color-palette color="var( --cp06 )"></color-palette>
+                    <color-palette color="var( --cp07 )"></color-palette>
+                    <color-palette color="var( --cp08 )"></color-palette>
+                    <color-palette color="var( --cp09 )"></color-palette>
+                </section>
+            </overlay>
         </article>
     </home>
     
     <script>
+
+
         'use strict';
         window.addEventListener( 'load', ev => {
             /* [ properties ]
             =================================== */
-            let links = document.querySelectorAll( '*[link]' ),
-                appbarLinks = document.querySelectorAll( "menu[appbar] > *" ),
-                appbarBottom = document.querySelector( "appbar" ),
-                appbarMobMenu = document.querySelector( "appbar > menu" ),
-                clik2copy = document.querySelectorAll( "*[c2c]" ),
-                toggle = document.querySelector( "btn-appbar-menu-toggle" ),
-                viewsMenu = document.querySelector( "views-activated" ),
-                testViewsToggle = document.querySelector( "[test-views]" );
+            let links = $$( '*[link]' ),
+                appbarLinks = $$( "menu[appbar] > *" ),
+                appbarBottom = $( "appbar" ),
+                appbarMobMenu = $( "appbar > menu" ),
+                clik2copy = $$( "*[c2c]" ),
+                toggle = $( "btn-appbar-menu-toggle" ),
+                viewsMenu = $( "views-activated" ),
+                testViewsToggle = $( "[test-views]" ),
+                paleta = $( "[title-pk='Paleta de cores']" );
 
             let c2cValues = {
                 css: "<link rel='stylesheet' href='../public/stylesheets/globals/global.css'>", 
-                js: '<script src="js/globals/global.js" defer><' + '/script>',
+                js: '<script src="/js/globals/global.js" defer><' + '/script>',
                 header: "<page-header></page-header>", 
                 footer: "<page-footer></page-footer>", 
                 title: `<title-pk 
-    name="Nome do título" 
-    font-size="1.5em" 
-    color="#daa250" 
-    margin="0"
+    title-pk="Nome do título" 
+    color="#daa250"
 ></title-pk>`, 
                 card: `<card-pk 
-    src="img/pikitucho.svg" 
+    src="/img/pikitucho.svg" 
     alt="Descrição da imagem" 
     name="Titulo do card" 
     desc="descrição do card" 
@@ -602,21 +640,21 @@
                 window.open( appbarLink.getAttribute( "url" ), "_self" );
                 switch( appbarLink.getAttribute( "data" ) ) {
                     case "g": {
-                        document.querySelectorAll( "*[g]" ).forEach( v => v.style.display = "grid" );
-                        document.querySelectorAll( "*[w]" ).forEach( v => v.style.display = "none" );
-                        document.querySelectorAll( "*[c]" ).forEach( v => v.style.display = "none" );
+                        $$( "*[g]" ).forEach( v => v.style.display = "grid" );
+                        $$( "*[w]" ).forEach( v => v.style.display = "none" );
+                        $$( "*[c]" ).forEach( v => v.style.display = "none" );
                     }
                     break;
                     case "w": {
-                        document.querySelectorAll( "*[g]" ).forEach( v => v.style.display = "none" );
-                        document.querySelectorAll( "*[w]" ).forEach( v => v.style.display = "grid" );
-                        document.querySelectorAll( "*[c]" ).forEach( v => v.style.display = "none" );
+                        $$( "*[g]" ).forEach( v => v.style.display = "none" );
+                        $$( "*[w]" ).forEach( v => v.style.display = "grid" );
+                        $$( "*[c]" ).forEach( v => v.style.display = "none" );
                     }
                     break;
                     case "c": {
-                        document.querySelectorAll( "*[g]" ).forEach( v => v.style.display = "none" );
-                        document.querySelectorAll( "*[w]" ).forEach( v => v.style.display = "none" );
-                        document.querySelectorAll( "*[c]" ).forEach( v => v.style.display = "grid" );
+                        $$( "*[g]" ).forEach( v => v.style.display = "none" );
+                        $$( "*[w]" ).forEach( v => v.style.display = "none" );
+                        $$( "*[c]" ).forEach( v => v.style.display = "grid" );
                     }
                     break;
                 }
@@ -676,24 +714,30 @@
                     colorPalette.innerHTML = titleTemplate = `
                         <style>
                             card-base {
-                                display: flex; align-items: center;
-                                gap: 4%;
+                                display: grid;
+                                grid-template-columns: 100%;
+                                grid-template-rows: .8fr .2fr;
+                                align-items: center;
                                 width: 100%;
+                                height: 100%;
                             }
                             box {
-                                display: block; width: 100%;
+                                display: block;
+                                width: 100%;
                                 aspect-ratio: 16 / 9;
                             }
                             h4 {
-                                min-width: 60%;
+                                width: 100%;
                                 color: #e9e6e3;
+                                height: 100%;
+                                text-align: center;
                             }
                         </style>
                         <card-base>
                             <box></box>
                             <h4></h4>
                         </card-base>`;
-                    this.style.width = "30%";
+                    this.style.width = "100%";
                     this.attachShadow( { mode: "open" } );
                     this.shadowRoot.append( colorPalette.content.cloneNode( true ) );
                     this.shadowRoot.querySelector( "box" ).style.background = this.getAttribute( "color" );
@@ -719,9 +763,33 @@
                 toggleAttr( viewsMenu, "menu-views-activated" );
             } );
 
+            // paleta.charAt( 0 ).style.color = "blue"; 
+
         } );
 
 
+    </script>
+    <script>
+        addEventListener( "load", ev => {
+            var sounds = [
+                iteractionRadiateSound  = new Audio( './audio/Holographic Interaction Radiate.wav' ),
+                iteractionSound = new Audio( './audio/Holographic Interaction.wav' ),
+                activate = new Audio( "./audio/Activate.wav" ),
+                lockOn = new Audio( "./audio/Lock On.wav" ),
+                ambience = new Audio( "./audio/AMBIENCE_HEARTBEAT.wav" ),
+            ];
+
+            $$( "menu[appbar] > li > txt" ).forEach( txt => txt.addEventListener( "mouseover", ev => {
+                    iteractionRadiateSound.load();
+                    iteractionRadiateSound.play();
+            } ) );
+        
+            $$( "menu[appbar] > li > txt" ).forEach( txt => txt.addEventListener( "click", ev => {
+                    lockOn.load();
+                    lockOn.play();
+            } ) );
+            
+        } );
     </script>
 </body>
 </html>

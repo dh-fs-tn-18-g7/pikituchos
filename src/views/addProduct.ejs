@@ -1,0 +1,177 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title><%= pageTitle %></title>
+    <!-- --------------------------------------------------------- -->
+    <link rel="icon" href="img/logo.svg" type="svg+xml">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <base href="/" target="_blank"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- [ styles ] 
+    ==================================================== -->
+    <link rel="stylesheet" href="stylesheets/globals/global.css">
+    <link rel="stylesheet" href="stylesheets/globals/swiper-bundle.min.css">
+    <link rel="stylesheet" href="stylesheets/home/home.css">
+    <link rel="stylesheet" href="stylesheets/produto/addProduct.css">
+    <!-- [ scripts ] 
+    ==================================================== -->
+    <!-- <script src="js/globals/swiper-bundle.min.js"></script> -->
+    <!-- <script src="js/globals/global.js" defer></script> -->
+    <!-- <script src="js/home/home.js" defer></script> -->
+    <style>
+    </style>
+</head>
+<body>
+        
+    <%- include( "includes/appbar.ejs" ) %>
+    <!-- <page-header></page-header> -->
+
+    <main>        
+        <!-- [ highlights section ]
+        ========================================================= -->
+        <article class="highlights">
+            <header>
+                <p title-pk="<%= edit ? 'Edição do Produto' : 'Cadastro de Produtos' %>"><%= edit ? 'Edição do Produto' : 'Cadastro de Produtos' %></p>
+            </header>
+            <form pk="card" method="POST" action="<%= edit ? '/admin/edit-product' : '/admin/add-product' %>">
+                <% if( edit ) { %>
+                    <input type="hidden" name="productId" value="<%= product.id %>">
+                <% } %>
+                <article>
+                    <label>
+                        <p>Título do produto</p>
+                        <input type="text" class="form-control" name="title"
+                        value="<%= edit ? product.title : '' %>">
+                    </label>
+                </article>
+                <% if( edit ) { %>
+                    <article>
+                        <label>
+                            <p>ref</p>
+                            <input type="text" class="form-control" name="ref"
+                            value="<%= product.ref %>" readonly="readonly">
+                        </label>
+                    </article>
+                <% } %>
+                <article pic>
+                    <label pic>
+                        <section>
+                            <p>Imagem de capa do card</p>
+                            <input type="text" class="form-control" name="cover"
+                            value="<%= edit ? product.cover : '' %>">
+                        </section>
+                        <% if( edit ) { %>
+                         <img thumb src="<%= product.cover %>" alt="">
+                        <% } %>
+                    </label>
+                    <label pic>
+                        <section>
+                            <p>Imagem</p>
+                            <input type="text" class="form-control" name="image"
+                            value="<%= edit ? product.image : '' %>">
+                        </section>
+                        <% if( edit ) { %>
+                         <img thumb src="<%= product.image %>" alt="">
+                        <% } %>
+                    </label>
+                    <label pic>
+                        <section>
+                            <p>Imagem 01</p>
+                            <input type="text" class="form-control" name="image01"
+                            value="<%= edit ? product.image01 : '' %>">
+                        </section>
+                        <% if( edit ) { %>
+                         <img thumb src="<%= product.image01 %>" alt="">
+                        <% } %>
+                    </label>
+                    <label pic>
+                        <section>
+                            <p>Imagem 02</p>
+                            <input type="text" class="form-control" name="image02"
+                            value="<%= edit ? product.image02 : '' %>">
+                        </section>
+                        <% if( edit ) { %>
+                         <img thumb src="<%= product.image02 %>" alt="">
+                        <% } %>
+                    </label>
+                    <label pic>
+                        <section>
+                            <p>Imagem 03</p>
+                            <input type="text" class="form-control" name="image03"
+                            value="<%= edit ? product.image03 : '' %>">
+                        </section>
+                        <% if( edit ) { %>
+                         <img thumb src="<%= product.image03 %>" alt="">
+                        <% } %>
+                    </label>
+                </article>
+                <section col="2">
+                    <fieldset>
+                        <legend>Preço</legend>
+                        <label>Reais
+                            <input type="number" step="any" class="form-control" name="price"
+                            value="<%= edit ? product.price : '' %>">
+                        </label><br>
+                        <label>Centavos
+                            <input type="number" step="any" class="form-control" name="cents"
+                            value="<%= edit ? product.cents : '' %>">
+                        </label><br>
+                        <label>Preço antigo
+                            <input type="number" step="any" class="form-control" name="oldPrice"
+                            value="<%= edit ? product.oldPrice : '' %>">
+                        </label>
+                    </fieldset>
+                    <article>
+                        <label>
+                            <p>Categoria</p>
+                            <input type="text" class="form-control" name="category"
+                            value="<%= edit ? product.category : '' %>">
+                        </label>
+                        <label>
+                            <p>Gênero</p>
+                            <input type="text" class="form-control" name="genre"
+                            value="<%= edit ? product.genre : '' %>">
+                        </label>
+                        <label>
+                            <p>Tipo do produto</p>
+                            <input type="text" class="form-control" name="type"
+                            value="<%= edit ? product.type : '' %>">
+                        </label>
+                    </article>
+                </section>
+                <p>
+                    <label>
+                        <p>Descrição do produto</p>
+                        <textarea 
+                        cols="30" 
+                        rows="5" 
+                        class="form-control" 
+                        name="description"
+                        ><%= edit ? product.description : '' %></textarea>
+                    </label>
+                </p>
+                <button class="button-pk" 
+                    role="button" type="submit">
+                    <btn-shadow class=""></btn-shadow>
+                    <btn-edge class=""></btn-edge>
+                    <btn-front class=" text">
+                        <%= edit ? 'Salvar Alterações' : 'Cadastrar o Produto' %>
+                    </btn-front>
+                </button>
+            </form>
+            
+        </article>
+        
+    </main>
+        
+    <%- include( "includes/footer.ejs" ) %>
+    <!-- <page-footer></page-footer> -->
+    
+    
+</body>
+</html>

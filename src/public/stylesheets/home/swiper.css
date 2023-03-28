@@ -3,8 +3,9 @@
 slider-spot {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: clamp( 100px, 100%, 1368px );
     height: 100%;
+    margin: 0 auto;
     padding: 0 54px 24px 54px;
     position: relative;
     overflow: hidden;

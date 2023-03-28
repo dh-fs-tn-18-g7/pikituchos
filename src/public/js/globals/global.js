@@ -3,42 +3,41 @@
 // "use strict";
 /* [ properties ]
     =========================================================================== */
-const $ = function( l, y ) {
-		if( !y ) {
-			return document.querySelector( l );
-		} else {
-			return y.querySelector( l );
-		}
-	},
-	$$ = function( l, y ) {
-		if( !y ) {
-			return document.querySelectorAll( l );
-		} else {
-			return y.querySelectorAll( l );
-		}
-	};
+const $ = ( l, y ) => !y ? document.querySelector( l ) : y.querySelector( l ),
+	$$ = ( l, y ) => !y ? document.querySelectorAll( l ) : y.querySelectorAll( l ),
+	log = v => console.log( v );
+    
+// let titleTemplate = `
+// <style>
+//     h2#outline {
+//         position: relative;
+//         top: 0; left: 0;
+//         color: var(--cp00);
+//         -webkit-text-stroke: 10px var(--cp00);
+//         filter: drop-shadow(0px 4px #0005);
+//         font-family: Baloo Da;
+//         font-size: 2.5rem;
+//     }
+//     h2#text {
+//         position: absolute;
+//         top: 0; left: 0;
+//         color: var(--cp05);
+//         font-family: Baloo Da;
+//         font-size: 2.5rem;
+//     }
+// </style>
+// <h2 id="outline"></h2>
+// <h2 id="text"></h2>
+// `,
     
 let titleTemplate = `
 <style>
-    h2#outline {
-        position: relative;
-        top: 0; left: 0;
-        color: var(--cp00);
-        -webkit-text-stroke: 10px var(--cp00);
-        filter: drop-shadow(0px 4px #0005);
-        font-family: Baloo Da;
-        font-size: 2.5rem;
-    }
-    h2#text {
-        position: absolute;
-        top: 0; left: 0;
-        color: var(--cp05);
-        font-family: Baloo Da;
-        font-size: 2.5rem;
+    p[title-pk] {
+        margin: 0;
     }
 </style>
-<h2 id="outline"></h2>
-<h2 id="text"></h2>
+<p title-pk="">
+</p>
 `,
 	cardTemplate = `
 <style>  
@@ -331,22 +330,16 @@ class Title extends HTMLElement {
 		title.innerHTML = titleTemplate;
 		this.attachShadow( { mode: "open" } );
 		this.shadowRoot.append( title.content.cloneNode( true ) );
-		this.shadowRoot.querySelector( "h2#outline" ).innerHTML = this.getAttribute( "name" );
-		this.shadowRoot.querySelector( "h2#text" ).innerHTML = this.getAttribute( "name" );
-		this.shadowRoot.querySelector( "h2#outline" ).style.fontSize = this.getAttribute( "font-size" );
-		this.shadowRoot.querySelector( "h2#text" ).style.fontSize = this.getAttribute( "font-size" );
-		this.shadowRoot.querySelector( "h2#outline" ).style.margin = this.getAttribute( "margin" );
-		this.shadowRoot.querySelector( "h2#text" ).style.margin = this.getAttribute( "margin" );
-		this.shadowRoot.querySelector( "h2#text" ).style.color = this.getAttribute( "color" );
+		this.shadowRoot.querySelector( "[title-pk]" ).innerHTML = this.getAttribute( "title-pk" );
+		this.shadowRoot.querySelector( "[title-pk]" ).style.fontSize = this.getAttribute( "font-size" );
+		// this.shadowRoot.querySelector( "[title-pk]" ).style.margin = this.getAttribute( "margin" );
+		this.shadowRoot.querySelector( "[title-pk]" ).style.color = this.getAttribute( "color" );
 	} 
 	connectedCallback() {
-		this.outline = this.getAttribute( "name" );
-		this.text = this.getAttribute( "name" );
+		console.log( this.getAttribute( "title-pk" ) );
 		this.render();
 	}
 	render() {
-		this.outline;
-		this.text;
 	}
 }
 window.customElements.define( "title-pk", Title );

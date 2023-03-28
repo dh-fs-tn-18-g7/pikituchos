@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= pageTitle %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+        gallery {
+            display: grid;
+            gap: 1.5rem;
+        }
+        card {
+            display: grid;
+            width: 150px;
+            aspect-ratio: 1 /2.5;
+            box-shadow: #0005 0 0 5px;
+        }
+    </style>
+  </head>
+  <body>
+    <%- include( "./includes/appbar0" ) %>
+    <main>
+        <h1><%= pageTitle %></h1>
+        
+        <div>
+            <p>Product Name</p>
+            <p>Quantity</p>
+            <p>Price per Product</p>
+            <p>Total Price</p>
+            <p>Actions</p>
+        </div>
+        <% for( let product of cartProducts ) { %>
+            <card>
+                <h2><%= product.title %></h2>
+                <p><%= product.quantity %></p>
+                <p><%= product.price %></p>
+                <p><%= product.cartPrice %></p>
+                <p>
+                    <form action="/cart/delete-item" method="post">
+                        <input type="hidden" name="productId" value="<%= product.id %>">
+                        <button>Delete</button>
+                    </form>
+                </p>
+            </card>
+        <% } %>
+
+        x x
+    </main>
+  </body>
+</html>

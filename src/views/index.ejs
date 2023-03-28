@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Pikituchos</title>
+    <title><%= pageTitle %></title>
     <!-- --------------------------------------------------------- -->
     <link rel="icon" href="img/logo.svg" type="svg+xml">
     <meta charset="UTF-8">
@@ -87,118 +87,29 @@
         ========================================================= -->
         <article class="highlights">
             <header>
-                <title-pk name="Produtos mais procurados" color="var(--cp05)"></title-pk>
+                <title-pk title-pk="Produtos mais procurados" color="var(--cp05)"></title-pk>
             </header>
+            <% if( products.length ) { %>
             <slider-spot>
                 <slider class="swiper" slider-heighlights>
                     <slider-modules class="swiper-wrapper">
-                        <slide class="swiper-slide">
-                            <card-pk
-                                name="Product's name" 
-                                desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
-                                real="99" 
-                                cents="99"
-                                src="img/home/ofertas/oferta-01.png" 
-                                alt=""
-                                btn="Ver detalhes"
-                            ></card-pk>
-                        </slide>
+                        <% for( let product of products ) { %>
 
-                        <slide class="swiper-slide">
-                            <card-pk
-                                name="Product's name" 
-                                desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
-                                real="99" 
-                                cents="99"
-                                src="img/home/ofertas/oferta-02.png" 
-                                alt=""
-                                btn="Ver detalhes"
-                            ></card-pk>
-                        </slide>
+                            <slide class="swiper-slide">
+                                <card-pk
+                                    name="<%= product.title %>" 
+                                    desc="<%= product.description %>"
+                                    real="<%= product.price %>" 
+                                    cents="<%= product.cents %>"
+                                    src="<%= product.cover %>" 
+                                    alt=""
+                                    btn="Ver detalhes"
+                                    url="/admin/product-details/<%= product.id %>"
+                                ></card-pk>
+                            </slide>
+                            <% } %>
 
-                        <slide class="swiper-slide">
-                            <card-pk
-                                name="Product's name" 
-                                desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
-                                real="99" 
-                                cents="99"
-                                src="img/home/ofertas/oferta-03.png" 
-                                alt=""
-                                btn="Ver detalhes"
-                            ></card-pk>
-                        </slide>
 
-                        <slide class="swiper-slide">
-                            <card-pk
-                                name="Product's name" 
-                                desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
-                                real="99" 
-                                cents="99"
-                                src="img/home/ofertas/oferta-04.png" 
-                                alt=""
-                                btn="Ver detalhes"
-                            ></card-pk>
-                        </slide>
-
-                        <slide class="swiper-slide">
-                            <card-pk
-                                name="Product's name" 
-                                desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
-                                real="99" 
-                                cents="99"
-                                src="img/home/ofertas/oferta-04.png" 
-                                alt=""
-                                btn="Ver detalhes"
-                            ></card-pk>
-                        </slide>
-
-                        <slide class="swiper-slide">
-                            <card-pk
-                                name="Product's name" 
-                                desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
-                                real="99" 
-                                cents="99"
-                                src="img/home/ofertas/oferta-04.png" 
-                                alt=""
-                                btn="Ver detalhes"
-                            ></card-pk>
-                        </slide>
-
-                        <slide class="swiper-slide">
-                            <card-pk
-                                name="Product's name" 
-                                desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
-                                real="99" 
-                                cents="99"
-                                src="img/home/ofertas/oferta-04.png" 
-                                alt=""
-                                btn="Ver detalhes"
-                            ></card-pk>
-                        </slide>
-
-                        <slide class="swiper-slide">
-                            <card-pk
-                                name="Product's name" 
-                                desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
-                                real="99" 
-                                cents="99"
-                                src="img/home/ofertas/oferta-04.png" 
-                                alt=""
-                                btn="Ver detalhes"
-                            ></card-pk>
-                        </slide>
-                        
-                        <slide class="swiper-slide">
-                            <card-pk
-                                name="Product's name" 
-                                desc="Lorem ipsum sit amet consectetur elit. Accusamus recusandae, vel. Quae sit non eius!"
-                                real="99" 
-                                cents="99"
-                                src="img/home/ofertas/oferta-01.png" 
-                                alt=""
-                                btn="Ver detalhes"
-                            ></card-pk>
-                        </slide>
                     </slider-modules>
                     <div class="swiper-pagination"></div>
                 </slider>
@@ -208,6 +119,7 @@
             <center-btn>
                 <button-pk name="Ver mais" color="" width="50%"></button-pk>
             </center-btn>
+            <% } %>
         </article>
 
         
@@ -224,7 +136,7 @@
             </spot>
             <footer>
                 <header>
-                    <title-pk name="Seu pequeno é nossa prioridade" color="var(--cp06)"></title-pk>
+                    <title-pk title-pk="Seu pequeno é nossa prioridade" color="var(--cp06)"></title-pk>
                 </header>
                 <p>Nossa meta é trazer inovação e tudo que há de melhor para seu bebê, para garantir à
                     mamãe e seu pequeno todo o conforto e alegria que a vida pode oferecer.
@@ -254,6 +166,7 @@
                                     src="img/home/years-section/product-01.png" 
                                     alt=""
                                     btn="Ver detalhes"
+                                url="/produto"
                                 ></card-pk>
                             </slide>
 
@@ -266,6 +179,7 @@
                                     src="img/home/years-section/product-02.png" 
                                     alt=""
                                     btn="Ver detalhes"
+                                url="/produto"
                                 ></card-pk>
                             </slide>
 
@@ -278,6 +192,7 @@
                                     src="img/home/years-section/product-03.png" 
                                     alt=""
                                     btn="Ver detalhes"
+                                url="/produto"
                                 ></card-pk>
                             </slide>
 
@@ -290,6 +205,7 @@
                                     src="img/home/years-section/product-04.png" 
                                     alt=""
                                     btn="Ver detalhes"
+                                url="/produto"
                                 ></card-pk>
                             </slide>
 
@@ -302,6 +218,7 @@
                                     src="img/home/years-section/product-01.png" 
                                     alt=""
                                     btn="Ver detalhes"
+                                url="/produto"
                                 ></card-pk>
                             </slide>
 
@@ -314,6 +231,7 @@
                                     src="img/home/years-section/product-02.png" 
                                     alt=""
                                     btn="Ver detalhes"
+                                url="/produto"
                                 ></card-pk>
                             </slide>
 
@@ -326,6 +244,7 @@
                                     src="img/home/years-section/product-03.png" 
                                     alt=""
                                     btn="Ver detalhes"
+                                url="/produto"
                                 ></card-pk>
                             </slide>
 
@@ -338,6 +257,7 @@
                                     src="img/home/years-section/product-04.png" 
                                     alt=""
                                     btn="Ver detalhes"
+                                url="/produto"
                                 ></card-pk>
                             </slide>
 
@@ -354,7 +274,8 @@
 
             <article>
                 <header>
-                    <title-pk name="Moda e acessórios para pequenos <br> de 2 à 3 anos" color="var(--cp05)"></title-pk>
+                    <title-pk title-pk="Moda e acessórios para pequenos" color="var(--cp05)"></title-pk>
+                    <title-pk title-pk="de 2 à 3 anos" color="var(--cp05)"></title-pk>
                 </header>
                 <slider-spot>
                     <slider class="swiper" slider-2-3anos>
@@ -368,6 +289,7 @@
                                     src="img/home/years-section/product-05.png" 
                                     alt=""
                                     btn="Ver detalhes"
+                                url="/produto"
                                 ></card-pk>
                             </slide>
                             
@@ -380,6 +302,7 @@
                                     src="img/home/years-section/product-06.png" 
                                     alt=""
                                     btn="Ver detalhes"
+                                url="/produto"
                                 ></card-pk>
                             </slide>
 
@@ -392,6 +315,7 @@
                                     src="img/home/years-section/product-07.png" 
                                     alt=""
                                     btn="Ver detalhes"
+                                url="/produto"
                                 ></card-pk>
                             </slide>
                             
@@ -404,6 +328,7 @@
                                     src="img/home/years-section/product-08.png" 
                                     alt=""
                                     btn="Ver detalhes"
+                                url="/produto"
                                 ></card-pk>
                             </slide>
                             
@@ -416,6 +341,7 @@
                                     src="img/home/years-section/product-05.png" 
                                     alt=""
                                     btn="Ver detalhes"
+                                url="/produto"
                                 ></card-pk>
                             </slide>
                             
@@ -428,6 +354,7 @@
                                     src="img/home/years-section/product-06.png" 
                                     alt=""
                                     btn="Ver detalhes"
+                                url="/produto"
                                 ></card-pk>
                             </slide>
                             
@@ -440,6 +367,7 @@
                                     src="img/home/years-section/product-07.png" 
                                     alt=""
                                     btn="Ver detalhes"
+                                url="/produto"
                                 ></card-pk>
                             </slide>
                             
@@ -452,6 +380,7 @@
                                     src="img/home/years-section/product-08.png" 
                                     alt=""
                                     btn="Ver detalhes"
+                                url="/produto"
                                 ></card-pk>
                             </slide>
 
@@ -471,7 +400,8 @@
         ========================================================= -->
         <article class="testimonials">
             <header>
-                <title-pk name="O que outras mamâes estão dizendo <br> sobre nossos serviços" color="var(--cp07)"></title-pk>
+                <title-pk title-pk="O que outras mamâes estão dizendo" color="var(--cp07)"></title-pk>
+                <title-pk title-pk="sobre nossos serviços" color="var(--cp07)"></title-pk>
             </header>
             <section>
                 <card>
