@@ -1,7 +1,7 @@
 
 const ListagemController = {
     showListagem: (req,res)=>{
-        res.render ("listagem-produto")
+        res.render("listagem-produto")
     }
 }
 

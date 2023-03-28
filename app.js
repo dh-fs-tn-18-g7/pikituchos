@@ -5,6 +5,7 @@ const path = require( "path" );
 const cookieParser = require( "cookie-parser" );
 const logger = require( "morgan" );
 const ejs = require( "ejs" );
+// const methodOverride = require('method-override')
 
 /* Importações das rotas */
 
@@ -28,7 +29,8 @@ app.use( logger( "dev" ) );
 
 app.use( express.json() ); // define para que express ententa arquivos JSON
 
-app.use( express.urlencoded( { extended: false } ) );
+app.use( express.urlencoded( { extended: true } ) );
+// app.use(methodOverride("_method"))
 
 app.use( cookieParser() );
 app.use( express.static( path.join( __dirname, "src/public" ) ) ); // define onde vao estar os arquivos estaticos
