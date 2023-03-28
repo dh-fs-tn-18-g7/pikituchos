@@ -16,7 +16,7 @@ const UserController = {
 
     },
     ShowUserCard:(req,res)=>{
-        res.render('userCards')
+        res.render('userCard')
 
     }
 
