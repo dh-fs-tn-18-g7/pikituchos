@@ -4,7 +4,7 @@ const UserController = {
     }, 
 
     ShowUserDadosPessoais: (req,res)=>{
-        res.render('usuerDadosPessoais')
+        res.render('userDadosPessoais')
 
     },
     ShowUserPedidos:(req,res)=>{
