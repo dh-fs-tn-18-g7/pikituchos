@@ -9,12 +9,12 @@ img[thumb] {
     margin: 1rem 0;
 }
 
-article > header {
+article.add-product > header {
     display: grid;
     place-items: center;
     padding: 2.8rem;
 }
-article > header > [title-pk] {
+article.add-product > header > [title-pk] {
     color: var( --cp05 );
 }
 
@@ -47,7 +47,7 @@ input.form-control, textarea {
     gap: 1.5rem;
 }
 
-button.button-pk {
+form[pk="card"] > button.button-pk {
     margin: 2rem;
     width: 90%;
 }
