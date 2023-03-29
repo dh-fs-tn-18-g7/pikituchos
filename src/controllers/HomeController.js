@@ -4,16 +4,24 @@ const productModel = require( "../models/Products" );
 
 exports.HomeController = [
 	getHomePage = ( req, res ) => {
-		fetchAllProducts( products => {
-			const viewsData = {
-				admin: false,
-				products,
-				pageTitle: "Home page - Products List"
-			};
-			res.render( "index", viewsData );
-			console.clear();
-			console.log( req.body );
-		} );
+		fetchAllProducts().then( ([ products ]) => {
+            const viewsData = {
+                admin: false,
+                products,
+                pageTitle: "Home page - Products List"
+            };
+            res.render( "index", viewsData );
+        } ).catch( error => console.log( error ) );
+		// fetchAllProducts( products => {
+		// 	const viewsData = {
+		// 		admin: false,
+		// 		products,
+		// 		pageTitle: "Home page - Products List"
+		// 	};
+		// 	res.render( "index", viewsData );
+		// 	console.clear();
+		// 	console.log( req.body );
+		// } );
 	},
 	getProductDetailPage = ( req, res ) => {
 		const productId = req.params.productId;
