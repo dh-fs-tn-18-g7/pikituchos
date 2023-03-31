@@ -18,7 +18,6 @@ const checkoutRouter = require( "./src/routes/checkoutRouter" );
 const indexRoutes = require( "./src/routes/index" ),
 	adminRoutes = require( "./src/routes/admin" );
 /* ============================================ */
-const db = require( "./src/utils/database" );
 
 /* Variaveis */
 
@@ -28,19 +27,6 @@ const port = 4444;
 // Define a coniguração do ejs
 app.set( "views", path.join( __dirname, "src/views" ) );
 app.set( "view engine", "ejs" );
-
-
-
-
-// db.execute( `SELECT * FROM PK_ecommerce_app.produtos` )
-// .then( ( [ data, fields ] ) => {
-//     console.log( data );
-// } )
-// .catch( error => {
-//     console.log( error );
-// } );
-
-
 
 app.use( logger( "dev" ) );
 

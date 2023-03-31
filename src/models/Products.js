@@ -3,8 +3,7 @@
 const fs = require( "fs" ),
 	path = require( "path" ),
 	rootDir = require( "../utils/path" ),
-	CartModel = require( "./Cart" ),
-    db = require( "../utils/database" );
+	CartModel = require( "./Cart" );
 
 
 const getProductsFromFile = handler => {
@@ -27,19 +26,16 @@ exports.ProductModel = [
 			} );
 		} );
 	},
-	fetchAllProducts = () => {
-		return db.execute( `SELECT * FROM produtos` );
-	},
-	// fetchAllProducts = ( handler ) => {
-	// 	getProductsFromFile( handler );
+	fetchAllProducts = ( handler ) => {
+		getProductsFromFile( handler );
 
-	// 	const productsPath = path.join( rootDir, "../data", "products.json" );
-	// 	fs.readFile( productsPath, ( error, productsData ) => {
-	// 		let products = [];
-	// 		products = JSON.parse( productsData );
-	// 		handler( products );
-	// 	} );
-	// },
+		const productsPath = path.join( rootDir, "../data", "products.json" );
+		fs.readFile( productsPath, ( error, productsData ) => {
+			let products = [];
+			products = JSON.parse( productsData );
+			handler( products );
+		} );
+	},
 	getProductById = ( productId, handler ) => {
 		getProductsFromFile( products => {
 			const product = products.find( p => p.id.toString() == productId );

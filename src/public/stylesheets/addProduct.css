@@ -1,0 +1,53 @@
+
+
+[hidden] {
+    display: none;
+}
+
+img[thumb] {
+    width: 140px;
+    margin: 1rem 0;
+}
+
+article.add-product > header {
+    display: grid;
+    place-items: center;
+    padding: 2.8rem;
+}
+article.add-product > header > [title-pk] {
+    color: var( --cp05 );
+}
+
+form[pk="card"] article {
+    width: 100%;
+    margin: 1rem 0;
+}
+form[pk="card"] article[pic] {
+    display: grid;
+    grid-template-columns: repeat( 2, .5fr .5fr );
+}
+
+label {
+    margin: 1rem 0;
+}
+label[pic] {
+    display: grid;
+    place-items: center;
+}
+input.form-control, textarea {
+    width: 100%;
+    border: 2px solid #2075;
+    border-radius: 9px;
+    padding: 5px;
+    box-shadow: #9051 0 0 0 5px;
+}
+[pk="card"] > [col="2"] {
+    display: grid;
+    grid-template-columns: .5fr .5fr;
+    gap: 1.5rem;
+}
+
+form[pk="card"] > button.button-pk {
+    margin: 2rem;
+    width: 90%;
+}
