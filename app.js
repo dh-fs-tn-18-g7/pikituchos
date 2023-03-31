@@ -5,6 +5,7 @@ const path = require( "path" );
 const cookieParser = require( "cookie-parser" );
 const logger = require( "morgan" );
 const ejs = require( "ejs" );
+const session = require('express-session');
 
 /* Importações das rotas */
 
@@ -13,6 +14,8 @@ const guide = require( "./src/routes/noely-temps" );
 const usersRouter = require('./src/routes/usersRouter')
 const loginRouter = require('./src/routes/loginRouter')
 const checkoutRouter = require ("./src/routes/checkoutRouter")
+const authRouter = require('./src/routes/authRouter')
+const listagemRouter = require('./src/routes/listagemRouter')
 
 /* Variaveis */
 
@@ -32,6 +35,14 @@ app.use( express.urlencoded( { extended: false } ) );
 app.use( cookieParser() );
 app.use( express.static( path.join( __dirname, "src/public" ) ) ); // define onde vao estar os arquivos estaticos
 
+/* Middleware */
+
+app.use(session({
+	secret: "keyboard cat",
+	resave: false,
+	saveUninitialized: true
+}))
+
 /* Rotas */
 
 app.use (indexRouter);
@@ -39,9 +50,11 @@ app.use(guide);
 app.use(usersRouter)
 app.use(loginRouter)
 app.use(checkoutRouter)
+app.use(authRouter)
+app.use(listagemRouter)
 
 
-/* Middleware */
+
 
 // catch 404 and forward to error handler
 
