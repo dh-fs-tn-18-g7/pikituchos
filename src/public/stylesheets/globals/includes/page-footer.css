@@ -585,6 +585,16 @@ header.title-pk-footer > title-pk {
         white-space: nowrap;
     }
 
+    .contact-info nav li:has( ico ) {
+        display: grid;
+        gap: 0 5px;
+        grid-template-columns: repeat( 1, .1fr 1fr );
+    }
+    .contact-info nav li ico {
+        display: grid;
+        place-items: center;
+    }
+
     /* [ bottom section ] ❤️
     -------------------------- */
     #bottom-clouds {

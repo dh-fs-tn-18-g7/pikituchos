@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title><%= pageTitle %></title>
+    <!-- --------------------------------------------------------- -->
+    <link rel="icon" href="img/logo.svg" type="svg+xml">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <base href="/" target="_blank"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- [ styles ] 
+    ==================================================== -->
+    <link rel="stylesheet" href="stylesheets/globals/global.css">
+    <link rel="stylesheet" href="stylesheets/globals/swiper-bundle.min.css">
+    <link rel="stylesheet" href="stylesheets/home/home.css">
+    <link rel="stylesheet" href="stylesheets/policy/policy.css">
+    <!-- [ scripts ] 
+    ==================================================== -->
+    <script src="js/globals/swiper-bundle.min.js"></script>
+    <script src="js/globals/global.js" defer></script>
+    <script src="js/home/home.js" defer></script>
+</head>
+<body>
+        
+    <%- include( "includes/appbar.ejs" ) %>
+
+    <main>
+        
+        <!-- [ highlights section ]
+        ========================================================= -->
+        <article class="highlights">
+            <header>
+                <title-pk title-pk="<%= pageTitle %>" color="var(--cp05)"></title-pk>
+            </header>
+
+            <section bg="card">
+                <h1>
+                    LOJA 100% SEGURA
+                </h1>
+                <small>
+                    Compre na Loja Pikituchos com 100% de segurança! <br><br> 
+                    Para garantir uma operação 100% segura, os dados de sua compra são criptografados. A criptografia é um sistema de codificação de informações criado para garantir que ninguém, em nenhuma hipótese, tenha acesso aos seus dados. Nenhuma informação trafega pela rede sem ser criptografada, utilizando os melhores sistemas disponíveis no mercado. A proteção é absoluta. <br>
+                    <br> A segurança da nossa loja é certificada pela Digicert, a maior autoridade em segurança na Internet.
+                    <br> Estamos prontos para lhe atender em nossos canais, caso reste alguma dúvida, acesse o Central de Atendimento:
+                    <br> <strong> Telefones: (13) 9 9117-6924 / Whatsapp (13) 9 9117-6924</strong>
+                    <br> <strong> E-mail: saq@pikituchos.com.br</strong><br><br>
+                    Horário de funcionamento do atendimento: De segunda a sexta das 09:00hrs as 17:00hrs
+                </small>
+            </section>
+
+        </article>
+
+
+    </main>
+        
+    <%- include( "includes/footer.ejs" ) %>
+    
+</body>
+</html>
+
+

@@ -1,0 +1,122 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title><%= pageTitle %></title>
+    <!-- --------------------------------------------------------- -->
+    <link rel="icon" href="img/logo.svg" type="svg+xml">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <base href="/" target="_blank"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- [ styles ] 
+    ==================================================== -->
+    <link rel="stylesheet" href="stylesheets/globals/global.css">
+    <link rel="stylesheet" href="stylesheets/globals/swiper-bundle.min.css">
+    <link rel="stylesheet" href="stylesheets/home/home.css">
+    <link rel="stylesheet" href="stylesheets/policy/policy.css">
+    <!-- [ scripts ] 
+    ==================================================== -->
+    <script src="js/globals/swiper-bundle.min.js"></script>
+    <script src="js/globals/global.js" defer></script>
+    <script src="js/home/home.js" defer></script>
+</head>
+<body>
+        
+    <%- include( "includes/appbar.ejs" ) %>
+
+    <main>
+        
+        <!-- [ highlights section ]
+        ========================================================= -->
+        <article class="highlights">
+            <header>
+                <title-pk title-pk="<%= pageTitle %>" color="var(--cp05)"></title-pk>
+            </header>
+            <section bg="card">
+                
+
+                <h1>
+                    Política de Envio e Entrega
+                </h1>
+                <small>
+                    As entregas são realizadas em todo o Brasil via Correios ou Transportadora, dependendo do CEP destino. O prazo pode variar de acordo com a cidade e o tipo de frete escolhido na hora da compra. O tempo médio estimado para envio é de até 7 dias úteis e se dá a partir da aprovação do pedido, que ocorre após a confirmação do pagamento pela administradora do cartão de crédito ou a confirmação do banco pelo pagamento do boleto, podendo em alguns casos demorar até 3 dias úteis.
+                    <br><br>
+                    Ao realizar seu pedido, digite o CEP do endereço de entrega e as opções de frete disponíveis para a sua região serão exibidas automaticamente. O custo do frete será calculado durante o processo de finalização da compra e você poderá visualizar o valor total antes de finalizar seu pedido. Independente da modalidade de frete, as entregas serão realizadas somente em dias úteis, de segunda à sexta-feira.
+                    <br><br>
+                    Nota: O serviço de PAC pelos Correios, não terá mais prazo de entrega garantido, o prazo passará a ser estimado, ou seja, os prazos mencionados no site são apenas para estimar um período de entrega, podendo ser entregue antes ou depois.
+                </small>
+                <br>
+                <h3>
+                    RASTREAMENTO DO PEDIDO
+                </h3>
+                <small>
+                    Sobre o rastreamento do pedido, você pode acompanhar através do link enviado automaticamente pelo sistema para o seu email, ou através da sua conta na aba acompanhar pedidos.
+                    <br><br>
+                    Atenção: A Pikituchos está levando em média até 7 dias úteis para a emissão da Nfe e separação do pedido. O prazo de entrega começa a ser contado logo após a coleta da transportadora.
+                </small>
+                <br>
+
+                <h3>
+                    CONSIDERAÇÕES IMPORTANTES:
+                </h3>
+                <small>
+                    Pedidos realizados aos sábados, domingos e feriados serão expedidos a partir do dia útil sequente.
+A entrega poderá ser feita a terceiros, como porteiros ou parentes, certifique-se de autorizar alguém a receber por você caso necessário.
+Lembre-se! Nós começamos a contar a data da entrega a partir da data de envio da mercadoria.
+Para o sucesso de sua entrega, é imprescindível que as informações de endereço e telefone do seu cadastro estejam atualizadas corretamente. No caso de insucesso de entrega provocado por: cliente ausente, dados cadastrais incorretos ou mudança de endereço, o pedido será devolvido a nossa central de distribuição e seu pedido será cancelado e reembolsado ou reenviado mediante a pagamento de novo frete.
+Alguns fatores climáticos ou situações adversas podem interferir na entrega de suas compras. Nesses casos, verifique se ocorreram greves, paralisações ou acidentes em sua localidade.
+Importante! Em algumas situações, dependendo da localidade do CEP, há a possibilidade do seu pedido ficar disponível para retirada na agência do Correios mais próxima da sua residência. Assim como, pode ocorrer um redespacho pela Transportadora escolhida para uma agência dos Correios, onde o pedido também poderá ficar disponível para retirada ou ter a entrega finalizada pelos Correios. A cobrança do frete, se realizada no momento do fechamento da compra, continuará valendo independentemente se a entrega for realizada no endereço indicado ou em uma agência dos Correios. Fique atenta às atualizações acessando o seu rastreio e faça o acompanhamento do seu pedido para evitar quaisquer ocorrências.
+Recuse a entrega se a embalagem não estiver em condições adequadas. Caso note que o pedido foi violado somente após o recebimento, entre em contato conosco em até 72h. Se o produto estiver danificado avise a Pikituchos o quanto antes através da nossa central de atendimento pelo e-mail sac@pikituchos.com.br
+                </small>
+                <br>
+                <h3>
+                    DEVOLUÇÃO DA MERCADORIA
+                </h3>
+                <br>
+                <small>
+                    Em caso de devolução da mercadoria, pode-se solicitar o ressarcimento do valor do pedido ou o reenvio do pedido entrando em contato conosco. Ressalta-se que em casos de solicitação de ressarcimento do valor do pedido, será necessário aguardar a confirmação de devolução pela transportadora para a nossa empresa, assim que realizado a confirmação de devolução, o valor será repassado ao setor financeiro e dentro do prazo de 7 dias será realizado.
+                </small>
+                <br>
+                <h3>
+                    DESTINÁTARIO AUSENTE
+                </h3>
+                <br>
+                <small>
+                    Certifique-se de que haverá alguém no endereço para receber os seus produtos.
+Os Correios realizam duas tentativas de entrega, caso não haja ninguém no endereço para receber a encomenda em nenhuma das tentativas, o pacote será levado para a agência dos Correios mais próxima ao endereço e neste caso, será necessário que o destinatário do pacote, realize a retirada do mesmo na agência dos Correios, em até 7 dias corridos. Caso o destinatário da encomenda não realize a retirada, por norma dos Correios, o pacote retornará ao remetente, sendo necessário o pagamento de um novo frete para o reenvio do produto.
+Todos os detalhes relacionados às tentativas de entrega, bem como o endereço da agência dos Correios na qual o destinatário deverá buscar seu pacote no caso de ausência no endereço, ficam registrados no rastreio do pedido, que pode ser acompanhado no site dos Correios, utilizando o código de rastreio fornecido pela loja, ou acessado diretamente pelo link que é enviado para o email cadastrado no pedido.
+No caso das Transportadoras, serão realizadas duas tentativas de entrega da mercadoria, caso não haja ninguém no endereço para receber a encomenda em nenhuma das tentativas, o pacote voltará para o Centro de Distribuição da Transportadora e após retornará para a Pikituchos, sendo necessário o pagamento de um novo frete para o reenvio do produto.
+                </small>
+                <br>
+                <h3>
+                    ENDEREÇAMENTO DO PEDIDO
+                </h3>
+                <br>
+                <small>
+                    A Pikituchos não se responsabiliza pelo preenchimento incorreto ou incompleto do endereço de destino dos pedidos realizados no momento de preenchimento do cadastro. Caso ocorra o endereçamento incorreto ou incompleto, por norma dos Correios, o pacote retornará ao remetente, e não serão mais realizadas outras tentativas de entrega naquele endereço. Neste caso, será necessário o pagamento de um novo frete pelo cliente para que possamos reenviar o pedido.
+<br><br>
+Caso seja necesssário realizar a alteração do seu endereço de entrega, acesse sua conta aqui. Nessa página, você poderá editar o endereço cadastrado ou adicionar um novo. Nós efetuamos entregas em caixas postais somente pela opção de entrega por Correios PAC/Sedex.
+<br><br>
+Importante! Por motivos de segurança, para pedidos já finalizados, não é possível alterar o endereço de entrega. A alteração do endereço só será possível para uma nova compra. Caso o seu pedido já tenha saído para entrega e o seu endereço esteja incorreto, entre em contato conosco atráves da nossa Central de Atendimento.
+<br><br>
+A Pikituchos se responsabiliza inteiramente pela qualidade dos produtos durante todo o trajeto do transporte até a entrega no destino do cliente. O mesmo acontece em caso de presentes entregues em endereço de terceiros. Uma vez protocolada a entrega, a responsabilidade passa a ser imediatamente da pessoa que a recebeu.
+                </small>
+
+
+
+            </section>
+        </article>
+
+
+    </main>
+        
+    <%- include( "includes/footer.ejs" ) %>
+    
+</body>
+</html>
+
+

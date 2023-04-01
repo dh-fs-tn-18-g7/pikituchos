@@ -1,0 +1,89 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title><%= pageTitle %></title>
+    <!-- --------------------------------------------------------- -->
+    <link rel="icon" href="img/logo.svg" type="svg+xml">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <base href="/" target="_blank"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- [ styles ] 
+    ==================================================== -->
+    <link rel="stylesheet" href="stylesheets/globals/global.css">
+    <link rel="stylesheet" href="stylesheets/globals/swiper-bundle.min.css">
+    <link rel="stylesheet" href="stylesheets/home/home.css">
+    <link rel="stylesheet" href="stylesheets/policy/policy.css">
+    <!-- [ scripts ] 
+    ==================================================== -->
+    <script src="js/globals/swiper-bundle.min.js"></script>
+    <script src="js/globals/global.js" defer></script>
+    <script src="js/home/home.js" defer></script>
+</head>
+<body>
+        
+    <%- include( "includes/appbar.ejs" ) %>
+
+    <main>
+        
+        <!-- [ highlights section ]
+        ========================================================= -->
+        <article class="highlights">
+            <header>
+                <title-pk title-pk="<%= pageTitle %>" color="var(--cp05)"></title-pk>
+            </header>
+
+            <section bg="card">
+                <h1>Trocas e Devoluções</h1>
+                <hr>
+                <h5><br>
+                    A Pikituchos revende produtos de qualidade, zelando pela satisfação de seus clientes. Seguindo o Código de Defesa do Consumidor, a empresa criou sua política de troca e devolução de forma simples para produtos comprados na Pikituchos.
+                </h5>
+                <br>
+                <p>
+                    O envio da primeira troca/devolução para a Pikituchos é gratuito, mas fique atento as regras que devem ser seguidas para que sua solicitação seja aceita:
+                </p>
+                <ol>
+                    <li>Todos os itens da solicitação de troca devem ser enviados seguindo orientações da loja;</li>
+                    <li>O produto deve ser devolvido em sua embalagem original;</li>
+                    <li>O produto não deve conter indícios de uso ou lavagem;</li>
+                    <li>O produto não deve ser secado na secadora;</li>
+                    <li>O produto deve estar com todas as etiquetas intactas;</li>
+                    <li>O produto deve ser enviado juntamente com sua nota fiscal, manuais e acessórios(se houver);</li>
+                </ol><br>
+                <p>Se as regras não forem cumpridas, os itens da solicitação serão devolvidos para você e terá custo adicional de frete. Estando ciente de todas as regras, basta preencher o formulário, informando seu nome completo, número do pedido, motivo da troca e e-mail de contato.</p> <br><br><br>
+
+                <h1>A TROCA/DEVOLUÇÃO PODERÁ SER RECUSADA E A MERCADORIA DEVOLVIDA EM CASOS DE:</h1>
+                <hr>
+                <h5><br>
+                    Ausência de defeito (não constatação do dano informado pelo cliente).
+                    Desgaste natural em decorrência do uso.
+                    Indícios de dano acidental ou provocado.
+                    Lavagem inadequada do produto.
+                    Indícios de uso inadequado do produto.
+                    Envio sem a etiqueta ou tag do produto. 
+                </h5><br>
+                <p alert="">ATENÇÃO!</p><br><br>
+                <ul>
+                    <li>Para pedidos realizados com desconto, valores promocionais e combos, o valor a ser reembolsado na devolução ou troca, será o mesmo pago pelo produto conforme Nota Fiscal emitida.</li>
+                    <li>Em casos de devolução total do pedido com o frete pago pelo consumidor, o valor a ser ressarcido pela Moda Love será o valor efetivamente pago pelo produto, acrescido do valor proporcional ao frete.</li>
+                    <li>Cupom de crédito para troca não inclui frete para nova compra.</li>
+                    <li>Caso você tenha utilizado um cupom promocional na sua compra, não será possível aplicar o mesmo no processo de troca. O sistema aceita apenas um cupom por pedido.</li>
+                </ul>
+            </section>
+
+        </article>
+
+
+    </main>
+        
+    <%- include( "includes/footer.ejs" ) %>
+    
+</body>
+</html>
+
+

@@ -1,0 +1,90 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title><%= pageTitle %></title>
+    <!-- --------------------------------------------------------- -->
+    <link rel="icon" href="img/logo.svg" type="svg+xml">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <base href="/" target="_blank"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- [ styles ] 
+    ==================================================== -->
+    <link rel="stylesheet" href="stylesheets/globals/global.css">
+    <link rel="stylesheet" href="stylesheets/globals/swiper-bundle.min.css">
+    <link rel="stylesheet" href="stylesheets/home/home.css">
+    <link rel="stylesheet" href="stylesheets/policy/policy.css">
+    <!-- [ scripts ] 
+    ==================================================== -->
+    <script src="js/globals/swiper-bundle.min.js"></script>
+    <script src="js/globals/global.js" defer></script>
+    <script src="js/home/home.js" defer></script>
+</head>
+<body>
+        
+    <%- include( "includes/appbar.ejs" ) %>
+
+    <main>
+        
+        <!-- [ highlights section ]
+        ========================================================= -->
+        <article class="highlights">
+            <header>
+                <title-pk title-pk="<%= pageTitle %>" color="var(--cp05)"></title-pk>
+            </header>
+
+            <section bg="card">
+                <h1>
+                    Bem Vindos a Nossa Loja pikituchos
+                </h1><br>
+                <small>
+
+                    Optamos em fazer parte do momento mais importante da sua vida.
+                    <br><br>
+                    Somos mamães, papais, titios e titias preparados para fazer parte dos melhores momentos 
+                    da sua vida e de quem você ama e quer presentear.
+                    <br><br>
+                    De família para família.
+                    <br><br><hr><br>
+                </small>
+
+                <h3>
+                    Como nascemos?
+                </h3>
+                <small>
+
+                    Após quase 5 anos fazendo amizades e construindo laços com nossos clientes da nossa 
+                    loja de moda para bebês, decidimos fazer parte também da vida 
+                    das crianças de nossos clientes, através da nossa loja de moda baby e infantil e desde 
+                    então (21/07/2022) o cheirinho de bebês, as ansiedades das futuras mamães 
+                    (papais, Vovôs e titias) e o mundo de super heróis e das princesas fazem parte do 
+                    nosso cotidiano.
+                    <br><br>
+                    Somos extremamente realizados em podermos fazer parte desses momentos...
+                    <br><br>
+                    Dos pés a cabeça, da mamãe até a maternidade, do batizado até o presente do amiguinho 
+                    que se inspira no  Homem Aranha, da luvinha rosa até a sapatilha de ballet... 
+                    Estamos prontos e felizes por termos vocês aqui... Falou em criança, muito prazer 
+                    somos a pikituchos.
+                <br><br>
+                    Somos especialistas em cuidar de quem amamos! Por isso cuidamos de cada detalhe importante para trazer
+                    conforto, inovação e segurança, e garantir com isso que você possa gastar mais tempo ao lado daquele
+                    que você tanto ama! seu <pk>Pikitucho</pk> .
+                </small>
+            </section>
+
+        </article>
+
+
+    </main>
+        
+    <%- include( "includes/footer.ejs" ) %>
+    
+</body>
+</html>
+
+

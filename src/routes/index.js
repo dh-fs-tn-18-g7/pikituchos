@@ -14,4 +14,11 @@ router.post( "/cart", postCartPage );
 router.get( "/cart", getCartPage );
 router.post( "/cart/delete-item", deleteCartItem );
 
+router.get( "/returns-policy", getReturnsPolicyPage );
+router.get( "/privacy-policy", getPrivacyPolicyPage );
+router.get( "/politica-de-entrega", getPoliticaDeEntregaPage );
+router.get( "/quem-somos", getQuemSomosPage );
+router.get( "/seguranca", getSegurancaPage );
+
+
 module.exports = router;

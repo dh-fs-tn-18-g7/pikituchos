@@ -44,4 +44,34 @@ exports.HomeController = [
 		};
 		res.render( "home", viewsData );
 	},
+	getReturnsPolicyPage = ( req, res, next ) => {
+		const viewsData = {
+			pageTitle: "Pikituchos - Política de trocas e devoluções"
+		};
+		res.render( "returns-policy", viewsData );
+	},
+	getPrivacyPolicyPage = ( req, res, next ) => {
+		const viewsData = {
+			pageTitle: "Pikituchos - Política de privacidade"
+		};
+		res.render( "privacy-policy", viewsData );
+	},
+	getPoliticaDeEntregaPage = ( req, res, next ) => {
+		const viewsData = {
+			pageTitle: "Pikituchos - Política de entrega"
+		};
+		res.render( "politica-de-entrega", viewsData );
+	},
+	getQuemSomosPage = ( req, res, next ) => {
+		const viewsData = {
+			pageTitle: "Quem Somos"
+		};
+		res.render( "quem-somos", viewsData );
+	},
+	getSegurancaPage = ( req, res, next ) => {
+		const viewsData = {
+			pageTitle: "Segurança"
+		};
+		res.render( "seguranca", viewsData );
+	},
 ];
