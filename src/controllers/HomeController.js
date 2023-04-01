@@ -70,7 +70,11 @@ exports.HomeController = [
 	},
 	getSegurancaPage = ( req, res, next ) => {
 		const viewsData = {
-			pageTitle: "Segurança"
+			pageTitle: "Pikituchos - Segurança",
+			title: "Segurança",
+			email: "saq@pikituchos.com.br",
+			tel: "(13) 9 9117-6924",
+			whats: "(13) 9 9117-6924"
 		};
 		res.render( "seguranca", viewsData );
 	},

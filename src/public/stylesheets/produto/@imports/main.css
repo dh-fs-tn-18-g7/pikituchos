@@ -5,9 +5,64 @@ main {
     margin: 16px auto 150px auto;
 }
 
+.main-bg {
+    background-image: linear-gradient( 
+        to bottom, 
+        var(--linearbg-01), 
+        #f6eccd
+    );
+    /* padding: 2vw 0 5vw 0; */
+}
 
 
 
+/* ==[ Tabela de medidas ]=========================== */
 
+[tabelas] {
+    display: grid;
+    grid-template-columns: .5fr .5fr;
+    gap: 2rem;
+    width: clamp( 100px, 90%, 950px );
+    margin: 3rem auto;
+    border-radius: 13px;
+    color: var(--cp08);
+}
 
+[tabelas] > .tabela-medidas {
+    display: block;
+    width: 100%;
+    padding: 2rem;
+    background: #f5f5f5;
+    border-radius: 13px;
+    box-shadow: #fff5 0 0 0 13px;
+    filter: drop-shadow( #0001 0 0 24px );
+}
+[tabelas] > .tabela-medidas > header {
+    display: grid;
+    place-items: center;
+    margin: 0 0 1rem 0;
+}
 
+[tabelas] > .tabela-medidas :where( table, thead, tbody, tr ) {
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
+[tabelas] > .tabela-medidas table :where( tr ) {
+    display: grid;
+    grid-template-columns: repeat( 1, .5fr .5fr );
+}
+
+thead {
+    margin: 0 0 1rem 0;
+}
+
+tbody :nth-child( 1n ) {
+    width: 100%;
+    text-align: center;
+    margin: 0.1rem 0;
+} 
+tbody > :nth-child( odd ) {
+    background: #e3e1e1;
+}

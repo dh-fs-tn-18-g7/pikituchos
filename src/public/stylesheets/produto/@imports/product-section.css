@@ -65,6 +65,7 @@ main-frame > picture {
     background: #f5f5f5;
     aspect-ratio: 1 / 1.2;
     padding: 16px;
+    border-radius: 13px;
     overflow: hidden;
 }
 main-frame > picture > img {
