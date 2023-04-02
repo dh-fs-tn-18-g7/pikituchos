@@ -1,0 +1,55 @@
+
+
+/* ==[ whatsapp ]====================================== */
+
+@keyframes whatsapp {
+    0% {
+        box-shadow: #18943355 0 0 0 5px;
+    }
+    55% {
+        /* box-shadow: #18943355 0 0 0 9px; */
+    }
+    75% {
+        box-shadow: #18943355 0 0 0 9px;
+    }
+    100% {
+        box-shadow: #18943355 0 0 0 5px;
+    }
+}
+
+
+/* ==[ intros ]====================================== */
+
+@keyframes intro-l {
+    0% {
+        transform: translate3d( -100px, 0, 0 );
+    }
+    100% {
+        transform: translate3d( 0, 0, 0 );
+    }
+}
+@keyframes intro-r {
+    0% {
+        transform: translate3d( 100px, 0, 0 );
+    }
+    100% {
+        transform: translate3d( 0, 0, 0 );
+    }
+}
+@keyframes intro-b {
+    0% {
+        transform: translate3d( 0, 100px, 0 );
+    }
+    100% {
+        transform: translate3d( 0, 0, 0 );
+    }
+}
+@keyframes intro-t {
+    0% {
+        transform: translate3d( 0, -100px, 0 );
+    }
+    100% {
+        transform: translate3d( 0, 0, 0 );
+    }
+}
+

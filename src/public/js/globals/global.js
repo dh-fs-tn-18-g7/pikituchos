@@ -523,7 +523,74 @@ window.customElements.define( "button-pk", Button );
 window.addEventListener( "load", ev => {
 /* [ properties ]
     =================================== */
+	var introsList = $$( "[intro]" ),
+		whatsappBubble = $( "whatsapp-bubble" ),
+		message = $( "[message]" );
 
+	if( introsList.length ) {
+		window.addEventListener( "scroll", () => {
+			fadeIn();                   
+		} );
+	}
+
+	// function fadeIn() {
+	// 	let pageHeight = window.pageYOffset + ( ( window.innerHeight * 3 ) / 4 );
+
+	// 	introsList.forEach( intro => {
+	// 		pageHeight > intro.offsetTop ?
+	// 			intro.setAttribute( "active", "" ) :
+	// 			// intro.removeAttribute( "active" );
+	// 			console.log( "" );
+	// 	} );
+	// }
+
+	function fadeIn() {
+		let pageHeight = window.pageYOffset + ( ( window.innerHeight * 3 ) / 4 );
+
+		introsList.forEach( intro => {
+			switch( intro.getAttribute( "intro" ) ) {
+			case "l": {
+				pageHeight > intro.offsetTop ?
+					intro.setAttribute( "active", "l" ) :
+				// intro.removeAttribute( "active" );
+					console.log( "" );
+			}
+				break;
+			case "r": {
+				pageHeight > intro.offsetTop ?
+					intro.setAttribute( "active", "r" ) :
+				// intro.removeAttribute( "active" );
+					console.log( "" );
+			}
+				break;
+			case "b": {
+				pageHeight > intro.offsetTop ?
+					intro.setAttribute( "active", "b" ) :
+				// intro.removeAttribute( "active" );
+					console.log( "" );
+			}
+				break;
+			case "t": {
+				pageHeight > intro.offsetTop ?
+					intro.setAttribute( "active", "t" ) :
+				// intro.removeAttribute( "active" );
+					console.log( "" );
+			}
+				break;
+			} 
+		} );
+	}
+
+
+
+	// whatsappBubble.addEventListener( "mouseenter", ev => {
+	// 	whatsappBubble.setAttribute( "active", "1" );
+	// 	message.setAttribute( "message", "1" );
+	// } );
+	// whatsappBubble.addEventListener( "mouseleave", ev => {
+	// 	whatsappBubble.setAttribute( "active", "0" );
+	// 	message.setAttribute( "message", "0" );
+	// } );
     
 } );
 

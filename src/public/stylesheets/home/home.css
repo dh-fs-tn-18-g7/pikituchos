@@ -1,6 +1,11 @@
 
 
 @import url( home-main.css );
+@import url( banner.css );
+@import url( highlights.css );
+@import url( your-baby.css );
+@import url( years.css );
+@import url( testimonials.css );
 @import url( animation.css );
 @import url( swiper.css );
 @import url( homeMediaqueries.css );

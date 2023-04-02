@@ -86,7 +86,7 @@
         <!-- [ highlights section ]
         ========================================================= -->
         <article class="highlights">
-            <header>
+            <header intro="l">
                 <title-pk title-pk="Produtos mais procurados" color="var(--cp05)"></title-pk>
             </header>
             <% if( products.length ) { %>
@@ -95,7 +95,7 @@
                     <slider-modules class="swiper-wrapper">
                         <% for( let product of products ) { %>
 
-                            <slide class="swiper-slide">
+                            <slide class="swiper-slide" intro="b">
                                 <card-pk
                                     name="<%= product.title %>" 
                                     desc="<%= product.description %>"
@@ -113,10 +113,10 @@
                     </slider-modules>
                     <div class="swiper-pagination"></div>
                 </slider>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next" intro="l"></div>
+                <div class="swiper-button-prev" intro="r"></div>
             </slider-spot>
-            <center-btn>
+            <center-btn intro="t">
                 <button-pk name="Ver mais" color="" width="50%"></button-pk>
             </center-btn>
             <% } %>
@@ -126,7 +126,7 @@
         <!-- [ yourBaby section ]
         ========================================================= -->
         <article class="yourbaby">
-            <spot>
+            <spot intro="l">
                 <wave></wave>
                 <wave></wave>
                 <wave></wave>
@@ -135,10 +135,10 @@
                 </wave-pix>
             </spot>
             <footer>
-                <header>
+                <header intro="r">
                     <title-pk title-pk="Seu pequeno é nossa prioridade" color="var(--cp06)"></title-pk>
                 </header>
-                <p>Nossa meta é trazer inovação e tudo que há de melhor para seu bebê, para garantir à
+                <p intro="b">Nossa meta é trazer inovação e tudo que há de melhor para seu bebê, para garantir à
                     mamãe e seu pequeno todo o conforto e alegria que a vida pode oferecer.
                     <br> <br>
                     É incrível como algo tão pequenino pode te fazer sentir algo tão grande.
@@ -149,9 +149,10 @@
         <!-- [ sample-products section ]
         ========================================================= -->
         <section class="sample-products">
-            <article class="">
+            <article>
                 <header>
-                    <title-pk name="Moda e acessórios para bebês <br> de 0 à 1 ano" color="var(--cp05)"></title-pk>
+                    <title-pk title-pk="Moda e acessórios para bebês" color="var(--cp05)" intro="r"></title-pk>
+                    <title-pk title-pk="de 0 à 1 ano" color="var(--cp05)" intro="l"></title-pk>
                 </header>
                 <slider-spot>
                     <slider class="swiper" slider-0-1anos>
@@ -267,15 +268,15 @@
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </slider-spot>
-                <center-btn>
+                <center-btn intro="t">
                     <button-pk name="Ver mais" color="" width="50%"></button-pk>
                 </center-btn>
             </article>
 
             <article>
                 <header>
-                    <title-pk title-pk="Moda e acessórios para pequenos" color="var(--cp05)"></title-pk>
-                    <title-pk title-pk="de 2 à 3 anos" color="var(--cp05)"></title-pk>
+                    <title-pk title-pk="Moda e acessórios para crianças" color="var(--cp05)" intro="l"></title-pk>
+                    <title-pk title-pk="de 2 à 3 anos" color="var(--cp05)" intro="r"></title-pk>
                 </header>
                 <slider-spot>
                     <slider class="swiper" slider-2-3anos>
@@ -390,7 +391,7 @@
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </slider-spot>
-                <center-btn>
+                <center-btn intro="t">
                     <button-pk name="Ver mais" color="" width="50%"></button-pk>
                 </center-btn>
             </article>
@@ -400,8 +401,8 @@
         ========================================================= -->
         <article class="testimonials">
             <header>
-                <title-pk title-pk="O que outras mamâes estão dizendo" color="var(--cp07)"></title-pk>
-                <title-pk title-pk="sobre nossos serviços" color="var(--cp07)"></title-pk>
+                <title-pk title-pk="O que outras mamâes estão dizendo" color="var(--cp07)" intro="r"></title-pk>
+                <title-pk title-pk="sobre nossos serviços" color="var(--cp07)" intro="l"></title-pk>
             </header>
             <section>
                 <card>
@@ -449,6 +450,8 @@
         </article>
 
     </main>
+
+    <%- include( "includes/whatsapp-bubble" ) %>
         
     <%- include( "includes/footer.ejs" ) %>
     <!-- <page-footer></page-footer> -->

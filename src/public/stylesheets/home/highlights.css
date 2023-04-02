@@ -1,0 +1,14 @@
+
+
+/* [ highlights section ]
+================================================================= */
+.highlights {
+    background-image: linear-gradient( 
+        to bottom, 
+        var(--linearbg-01), 
+        #f6eccd
+    );
+    padding: 2vw 0 5vw 0;
+}
+
+

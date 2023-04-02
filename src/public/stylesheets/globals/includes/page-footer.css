@@ -642,3 +642,19 @@ header.title-pk-footer > title-pk {
         /* pointer-events: none; */
     }
 }
+
+page-footer nav > li:has( ico ) {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 5px;
+}
+page-footer nav > li > ico {
+    display: grid;
+    place-items: center;
+}
+
+page-footer nav > li:has( ico ) a {
+    color: #fff;
+} page-footer nav > li:has( ico ) a:hover {
+    color: var( --cp05 );
+}

@@ -1,0 +1,101 @@
+
+
+/* [ testimonials section ]
+================================================================= */
+.testimonials {
+    display: grid;
+    grid-template-rows: 1fr 1.8fr;
+    gap: 2vw;
+    user-select: none;
+    background-image: linear-gradient(
+        to bottom,
+        var(--linearbg-08),
+        var(--linearbg-09),
+        var(--linearbg-10)
+    );
+}
+.testimonials header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.9rem;
+    background: #fff1;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.testimonials section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    width: clamp( 100px, 90%, 1200px );
+    margin: 0 auto;
+    padding: 18px;
+}
+
+.testimonials section card {
+    position: relative;
+    display: block;
+    width: clamp( 200px, 22vw, 240px );
+    height: clamp( 300px, 28vw, 317px );
+    background: var( --cp06 );
+    border-radius: 80px 16px 80px 5px;
+    border: var( --cp00 ) dashed;
+    box-shadow: var( --cp06 ) 0 0 0 10px;
+    filter: drop-shadow( #0003 -5px 5px 2px );
+}
+
+.testimonials section card card-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    position: absolute;
+    top: -16px;
+    left: 16px;
+    border-radius: 80px 16px 80px 5px;
+    border: var( --cp08 ) dashed;
+    box-shadow: var( --cp00 ) 0 0 0 10px;
+    filter: drop-shadow( #0003 -5px 5px 2px );
+    background: var( --cp00 );
+}
+
+.testimonials section card card-home picture {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+    position: relative;
+}
+.testimonials section card card-home picture img {
+    width: 50%;
+    position: absolute;
+    top: -25%;
+    border-radius: 5rem;
+    box-shadow: var( --cp05 ) 0 0 0 6px;
+    filter: drop-shadow( #0005 0 0 5px );
+    overflow: hidden;
+}
+
+.testimonials section card card-home h3 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var( --cp08 );
+    margin-bottom: 1.5ch;
+}
+
+.testimonials section .card-destaq {
+    background: var( --cp09 );
+    border: var( --cp05 ) dashed;
+    box-shadow: var( --cp09 ) 0 0 0 10px;
+}
+.testimonials section .card-destaq .card-destaq-home {
+    background: var( --cp05 );
+    border: var( --cp00 ) dashed;
+    box-shadow: var( --cp05 ) 0 0 0 10px;
+    /* color: var( --cp00 ); */
+}
+
