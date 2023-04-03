@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <title>Cadastro - Pikituchos</title>
-    <link rel="icon" href="/images/logo.svg" type="svg+xml" />
+    <title>Cadastro - Pikituchos</title> 
+    <link rel="icon" href="image/logo.svg" type="svg+xml" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,7 @@
       rel="stylesheet"
       href="/stylesheets/globals/animations.css"
     />
-
+   <script src="/js/cadastro.js" defer> </script>
     <!-- CSS da pagina e dos componentes -->
 
     <link rel="stylesheet" href="/stylesheets/cadastro.css" />
@@ -31,6 +31,7 @@
      
       
       <form action="/cadastro" method="POST">
+        
         <article>
           <img src="/images/home/pikituchos-logo-txt.png" alt="" />
         </article>
@@ -49,7 +50,7 @@
             <label for="email"
               >E-mail:<input
                 class="input-form"
-                type="email"
+                type="email" required
                 name="email"
                 id="email"
                 placeholder="Digite seu E-mail:"
@@ -59,7 +60,7 @@
             <label for="senha"
               >Senha:<input
                 class="input-form"
-                type="password"
+                type="password" required
                 name="senha"
                 id="senha"
                 placeholder="Escolha uma senha:"
@@ -78,7 +79,7 @@
               >Confirme sua senha:<input
                 placeholder="Confirme senha:"
                 class="input-form"
-                type="password"
+                type="password" required
                 name="validar"
                 id="validar"
             />
@@ -96,7 +97,7 @@
               >CPF:<input
                 placeholder="Digite seu CPF:"
                 class="input-form"
-                type="text"
+                type="text" required
                 name="cpf"
                 id="cpf"
             /></label>
@@ -106,7 +107,7 @@
               >Telefone celular:<input
                 placeholder="Digite seu celular:"
                 class="input-form"
-                type="number"
+                type="number" required
                 name="telefone"
                 id="celular"
             /></label>
@@ -116,7 +117,7 @@
               >Nome completo:<input
                 placeholder="Digite seu nome:"
                 class="input-form"
-                type="text"
+                type="text" required
                 name="name"
                 id="nome"
             /></label>
@@ -125,14 +126,14 @@
             <label for="data"
               >Data de nascimento:<input
                 class="input-form"
-                type="date"
+                type="date" required
                 name="data_de_nascimento"
                 id="data"
             /></label>
           </div>
-          <label for="admin"
+          <!-- <label for="admin"
             ><input class="input-radio" type="radio" name="is_admin" id="promo" />É administrador?</label
-          >
+          > -->
           
         </article>
 
@@ -144,11 +145,12 @@
         </article>
 
         <article class="input-card">
+          <div class="c-loader"></div>
           <div>
             <label for="cep"
               >CEP ::<input
                 class="input-form"
-                type="number"
+                type="number" required
                 name="cep"
                 id="cep"
                 placeholder="CEP:"
@@ -158,7 +160,7 @@
             <label for="number"
               >Numero:<input
                 class="input-form"
-                type="number"
+                type="number" required
                 name="numero"
                 id="number"
                 placeholder="Numero:"
@@ -169,7 +171,7 @@
             <label for="compl"
               >Complemento:<input
                 class="input-form"
-                type="text"
+                type="text" 
                 name="compl"
                 id="compl"
                 placeholder="Complemento:"
@@ -179,7 +181,7 @@
             <label for="Endereço"
               >Endereço:<input
                 class="input-form"
-                type="text"
+                type="text" required
                 name="rua"
                 id="endereco"
                 placeholder="Endereço:"
@@ -189,14 +191,14 @@
             <label for="cidade"
               >Cidade:<input
                 class="input-form"
-                type="text"
+                type="text" required
                 name="cidade"
                 id="cidade"
                 placeholder="Cidade:"
             /></label>
             <label for="estado"
               >Estado:
-              <select class="input-form" name="estado" id="estado">
+              <select class="input-form" name="estado" id="estado" required>
                 <option value="null" checked>UF:</option>
                 <option value="SP">SP</option>
                 <option value="RJ">RJ</option>
@@ -218,7 +220,7 @@
         </article>
 
         <article>
-          <button type="submit" class="buttom-form">Cadastrar</button>
+          <button type="submit" onclick="return validarSenha()" class="buttom-form">Cadastrar</button>
         </article>
       </form>
     </main>

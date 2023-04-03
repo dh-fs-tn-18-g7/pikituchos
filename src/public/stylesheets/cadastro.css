@@ -170,6 +170,28 @@ form section img {
   margin-right: 100%;
 }
 
+.c-loader {
+  animation: is-rotating 1s infinite;
+  border: 6px solid #e5e5e5;
+  border-radius: 50%;
+  border-top-color: #51d4db;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  align-self: center;
+  display: none;
+}
+
+.c-loader.active {
+  display: block;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 @media only screen and (width <= 710px){
   .title-pk-contact {
     margin-right: 0px;

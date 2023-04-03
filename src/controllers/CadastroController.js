@@ -11,7 +11,7 @@ const CadastroController = {
     },
     
     store: async (req, res) => {
-        const {email, senha, cpf, telefone, name, data_de_nascimento, cep, numero, compl, rua, cidade, estado, is_admin} = req.body
+        var {email, senha, cpf, telefone, name, data_de_nascimento, cep, numero, compl, rua, cidade, estado, is_admin} = req.body
 
         const verifyUserExists = await User.findOne({
             where: {
@@ -23,6 +23,10 @@ const CadastroController = {
             return res.render('auth/cadastro', { error: "Email já cadastrado" })
         }
 
+        if(!compl){
+            var compl = 0
+        }
+
         const newUser = {
             id: randomUUID(),
             email,
@@ -31,13 +35,17 @@ const CadastroController = {
             telefone,
             name,
             data_de_nascimento,
-            is_admin: is_admin === "on"? true: false,
+            is_admin: false,
             cep,
             numero,
             compl,
             rua,
             cidade,
             estado
+        }
+
+        if(!newUser){
+            res.render('cadastro')
         }
 
         console.log(newUser)

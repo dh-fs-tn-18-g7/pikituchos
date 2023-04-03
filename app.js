@@ -76,6 +76,12 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
+<<<<<<< HEAD
 app.listen(port, (err) => {
   console.log(`Servidor esta rodando na Porta => ${port}`);
 });
+=======
+app.listen(port, (err)=>{
+	console.log(`Servidor esta rodando da port${port}`)
+})
+>>>>>>> 3c83331bffca7af4a23fde768c6719df932c699b

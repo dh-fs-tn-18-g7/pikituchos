@@ -164,7 +164,151 @@
 
 
 
+<<<<<<< HEAD
+@import url(/src/public/stylesheets/globals/global.css);
+
+/* Estilo input: */
+
+.input-form {
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+    height: 50px;
+    outline: none;
+    padding: 0 16px;
+    background-color: var(--cp00);
+    font-size: 18px;
+    transition: 0.4s;
+    gap: 10px;
+    letter-spacing: 1px;
+}
+
+.input-form:hover {
+    border: 1px solid var(--cp07);
+    box-shadow: var(--cp02) 0px 0px 5px 1px inset, var(--cp02) 0px 0px 5px 1px;
+    transition: 0.1s;
+  }
+
+
+
+/* Esconder senha */
+
+.input-senha{
+
+  position: relative;
+
+}
+
+.esconde-senha{
+  position: absolute;
+  right: 20px;
+  bottom: 1%;
+  cursor: pointer;
+}
+
+.esconde-senha img{
+  width: 26px;
+
+}
+
+
+
+
+
+  
+/* Estilos de Botões */
+
+.buttom-form {
+    color: var(--cp00);
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    height: 45px;
+    outline: none;
+    padding: 0 50px;
+    background-color: var(--cp07);
+    transition: 0.4s;
+    margin: 0 auto;
+  }
+  
+  .buttom-form:hover {
+    border: 1px solid var(--cp07);
+    box-shadow: var(--cp02) 0px 0px 8px 1px inset, var(--cp02) 0px 0px 10px 1px;
+    transition: 0.1s;
+    cursor: pointer;
+  }
+  
+/* classe conteiner */
+
+.container{
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: transparent;
+
+}
+
+
+/* CSS imput Radio */
+
+.input-radio{
+  border: 2px solid var(--cp07);
+  appearance: none;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  box-shadow: 0px 0px 5px var(--cp07);
+  background-color: whitesmoke;
+
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-radio:checked{
+  border: 3px;
+  background-color: var(--cp07);
+
+}
+
+.input-ccv{
+  width: 45%;
+
+}
+
+
+/* pagina de usuario */
+
+.btn-usuario{
+
+    color: var(--cp00);
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    width: 370px;
+    height: 45px;
+    outline: none;
+    padding: 0 50px;
+    background-color: var(--cp07);
+    transition: 500ms;
+    margin: 0 auto;
+    cursor: pointer;
+    display: block;
+  
+}
+.btn-usuario:hover{
+  transform: scale(1.01);
+  transition: 500ms;
+  background-color: var(--cp06);
+  color: var(--cp07);
+}
+
+.btn-dadosPessoais{
+
+=======
 .btn-dadosPessoais {
+>>>>>>> main
   color: var(--cp00);
   font-size: 1.3rem;
   font-weight: bold;
@@ -180,6 +324,8 @@
   cursor: pointer;
   display: block;
 
+<<<<<<< HEAD
+=======
 }
 
 .btn-dadosPessoais:hover {
@@ -252,6 +398,7 @@
 .btn-login:active {
   transform: scale(0.98);
   transition: 500ms;
+<<<<<<< HEAD
 }
 
 
@@ -406,3 +553,7 @@
   transition: 500ms;
 
 }
+=======
+>>>>>>> main
+}
+>>>>>>> 3c83331bffca7af4a23fde768c6719df932c699b
