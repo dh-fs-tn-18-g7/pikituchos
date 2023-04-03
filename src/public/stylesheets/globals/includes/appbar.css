@@ -26,6 +26,13 @@ nav#header-nav-mobile {
 }
 
 
+a{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+
 appbar {
     display: grid;
     place-items: center;

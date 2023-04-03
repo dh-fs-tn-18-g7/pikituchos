@@ -8,4 +8,5 @@ const logged = (req, res, next) => {
     return next()
 }
 
+
 module.exports = logged

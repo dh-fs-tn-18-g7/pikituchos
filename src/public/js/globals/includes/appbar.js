@@ -1,6 +1,7 @@
 
 
 "use strict";
+
 window.addEventListener( "load", ev => {
 	let pageHeader = document.querySelector( "page-header" ),
 		btnMenu = document.querySelector( "h2#btn-mobile-nav-menu span" ),
