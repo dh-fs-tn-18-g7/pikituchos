@@ -11,6 +11,7 @@
 }
 a {
   color: whitesmoke;
+  text-decoration: none;
 }
 
 /* estilo barra lateral */
@@ -118,7 +119,6 @@ font-size: 1.3rem;
 
 .meusPedidos{
   display: flex;
-
   flex-direction: column;
   background-color: var(--cp00);
   padding: 1.6rem;
@@ -149,4 +149,49 @@ font-size: 1.3rem;
 .pedido div{
   gap: 2px;
   
+}
+
+
+/* Display cards */
+
+.cards{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cp00);
+  padding: 1.6rem;
+  width: 800px;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  color: #444;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.table-info th {
+  background-color: #fffffffe;
+  font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.box-input-card{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
 }

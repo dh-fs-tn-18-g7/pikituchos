@@ -2,22 +2,34 @@
   --appbar-height: 80px;
 
   /* [ color palette ] -------------------- */
-  --cp00: #ffffff; --cp01: #00A599; --cp02: #FFAEBF; --cp03: #FFFADD;
-  --cp04: #FDCDBF; --cp05: #FEB491; --cp06: #47C8EF; --cp07: #F190A3;
-  --cp08: #464646; --cp09: #f0003c;
+  --cp00: #ffffff;
+  --cp01: #00a599;
+  --cp02: #ffaebf;
+  --cp03: #fffadd;
+  --cp04: #fdcdbf;
+  --cp05: #feb491;
+  --cp06: #47c8ef;
+  --cp07: #f190a3;
+  --cp08: #464646;
+  --cp09: #f0003c;
 
   /* [ shadows ] -------------------- */
   --text-shadow-blue: #27f 0 0 5px;
   --logo-text-shadow: drop-shadow(#0005 -5px 6px 1px);
 
-  --linearbg-00: #fff;    --linearbg-01: #ebebec;
-  --linearbg-02: #71CDC6; --linearbg-03: #00A599;
-  --linearbg-04: #ebebec; --linearbg-05: #fffef4;
-  --linearbg-06: #fffdf3; --linearbg-07: #fff0e4;
-  --linearbg-08: #fff0e4; --linearbg-09: #fee4d9;
-  --linearbg-10: #ffe5da; --linearbg-11: #fce1dd;
+  --linearbg-00: #fff;
+  --linearbg-01: #ebebec;
+  --linearbg-02: #71cdc6;
+  --linearbg-03: #00a599;
+  --linearbg-04: #ebebec;
+  --linearbg-05: #fffef4;
+  --linearbg-06: #fffdf3;
+  --linearbg-07: #fff0e4;
+  --linearbg-08: #fff0e4;
+  --linearbg-09: #fee4d9;
+  --linearbg-10: #ffe5da;
+  --linearbg-11: #fce1dd;
 }
-
 
 /* Estilo input: */
 
@@ -116,7 +128,142 @@
   transition: 500ms;
 }
 
-.input-radio:checked{
+.input-radio:checked {
+  border: 3px;
+  background-color: var(--cp07);
+}
+
+.input-ccv {
+  width: 45%;
+}
+
+/* pagina de usuario */
+
+.btn-usuario a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.btn-usuario {
+  color: var(--cp00);
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  width: 370px;
+  height: 45px;
+  outline: none;
+  padding: 0 50px;
+  background-color: var(--cp07);
+  transition: 500ms;
+  margin: 0 auto;
+  cursor: pointer;
+  display: block;
+}
+
+.btn-usuario:hover {
+  transform: scale(1.01);
+  transition: 500ms;
+  background-color: var(--cp06);
+  color: var(--cp07);
+  box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.75);
+}
+
+.btn-usuario:active {
+  transform: scale(0.97);
+  transition: 500ms;
+  background-color: var(--cp06);
+  color: var(--cp07);
+  box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.75);
+}
+
+/* Estilo input: */
+
+.input-form {
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  height: 50px;
+  outline: none;
+  padding: 0 16px;
+  background-color: var(--cp00);
+  font-size: 18px;
+  transition: 0.4s;
+  gap: 10px;
+  letter-spacing: 1px;
+}
+
+.input-form:hover {
+  border: 1px solid var(--cp07);
+  box-shadow: var(--cp02) 0px 0px 5px 1px inset, var(--cp02) 0px 0px 5px 1px;
+  transition: 0.1s;
+}
+
+/* Esconder senha */
+
+.input-senha {
+  position: relative;
+}
+
+.esconde-senha {
+  position: absolute;
+  right: 20px;
+  bottom: 1%;
+  cursor: pointer;
+}
+
+.esconde-senha img {
+  width: 26px;
+}
+
+/* Estilos de Botões */
+
+.buttom-form {
+  color: var(--cp00);
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  height: 45px;
+  outline: none;
+  padding: 0 50px;
+  background-color: var(--cp07);
+  transition: 0.4s;
+  margin: 0 auto;
+}
+
+.buttom-form:hover {
+  border: 1px solid var(--cp07);
+  box-shadow: var(--cp02) 0px 0px 8px 1px inset, var(--cp02) 0px 0px 10px 1px;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+/* classe conteiner */
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+/* CSS imput Radio */
+
+.input-radio {
+  border: 2px solid var(--cp07);
+  appearance: none;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  box-shadow: 0px 0px 5px var(--cp07);
+  background-color: whitesmoke;
+
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.input-radio:checked {
   border: 3px;
   background-color: var(--cp07);
 }
@@ -148,160 +295,9 @@
   transition: 500ms;
   background-color: var(--cp06);
   color: var(--cp07);
-  box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.75);
-
 }
 
-.btn-usuario:active {
-  transform: scale(.97);
-  transition: 500ms;
-  background-color: var(--cp06);
-  color: var(--cp07);
-  box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.75);
-
-
-}
-
-
-/* Estilo input: */
-
-.input-form {
-    width: 100%;
-    border: 0;
-    border-radius: 8px;
-    height: 50px;
-    outline: none;
-    padding: 0 16px;
-    background-color: var(--cp00);
-    font-size: 18px;
-    transition: 0.4s;
-    gap: 10px;
-    letter-spacing: 1px;
-}
-
-.input-form:hover {
-    border: 1px solid var(--cp07);
-    box-shadow: var(--cp02) 0px 0px 5px 1px inset, var(--cp02) 0px 0px 5px 1px;
-    transition: 0.1s;
-  }
-
-
-
-/* Esconder senha */
-
-.input-senha{
-
-  position: relative;
-
-}
-
-.esconde-senha{
-  position: absolute;
-  right: 20px;
-  bottom: 1%;
-  cursor: pointer;
-}
-
-.esconde-senha img{
-  width: 26px;
-
-}
-
-
-
-
-
-  
-/* Estilos de Botões */
-
-.buttom-form {
-    color: var(--cp00);
-    font-size: 1.3rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    height: 45px;
-    outline: none;
-    padding: 0 50px;
-    background-color: var(--cp07);
-    transition: 0.4s;
-    margin: 0 auto;
-  }
-  
-  .buttom-form:hover {
-    border: 1px solid var(--cp07);
-    box-shadow: var(--cp02) 0px 0px 8px 1px inset, var(--cp02) 0px 0px 10px 1px;
-    transition: 0.1s;
-    cursor: pointer;
-  }
-  
-/* classe conteiner */
-
-.container{
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  background-color: transparent;
-
-}
-
-
-/* CSS imput Radio */
-
-.input-radio{
-  border: 2px solid var(--cp07);
-  appearance: none;
-  border-radius: 50%;
-  width: 1rem;
-  height: 1rem;
-  box-shadow: 0px 0px 5px var(--cp07);
-  background-color: whitesmoke;
-
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.input-radio:checked{
-  border: 3px;
-  background-color: var(--cp07);
-
-}
-
-.input-ccv{
-  width: 45%;
-
-}
-
-
-/* pagina de usuario */
-
-.btn-usuario{
-
-    color: var(--cp00);
-    font-size: 1.3rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    width: 370px;
-    height: 45px;
-    outline: none;
-    padding: 0 50px;
-    background-color: var(--cp07);
-    transition: 500ms;
-    margin: 0 auto;
-    cursor: pointer;
-    display: block;
-  
-}
-.btn-usuario:hover{
-  transform: scale(1.01);
-  transition: 500ms;
-  background-color: var(--cp06);
-  color: var(--cp07);
-}
-
-.btn-dadosPessoais{
-
+.btn-dadosPessoais {
   color: var(--cp00);
   font-size: 1.3rem;
   font-weight: bold;
@@ -318,22 +314,16 @@
   display: block;
 }
 
-
 .btn-dadosPessoais:hover {
   transform: scale(1.01);
   transition: 200ms;
   box-shadow: 0px 0px 8px -2px rgba(0, 0, 0, 0.75);
-
 }
 
 .btn-dadosPessoais:active {
-
-  transform: scale(.97);
+  transform: scale(0.97);
   transition: 500ms;
 }
-
-
-
 
 /* Pagina de login  */
 
@@ -364,7 +354,6 @@
   transition: 0.1s;
 }
 
-
 .btn-login {
   color: var(--cp00);
   font-size: 1.3rem;
@@ -391,18 +380,15 @@
   transition: 500ms;
 }
 
-
-
 /* Pagina de Admin */
 
 /* Btn nav bar */
 
-
-.btn-navbar-admin{
+.btn-navbar-admin {
   width: 100%;
   padding: 10px;
   border: none;
-  background-color: #FFAEBF;
+  background-color: #ffaebf;
   color: whitesmoke;
   cursor: pointer;
   font-weight: bold;
@@ -411,76 +397,64 @@
   transition: 500ms;
 }
 
-.btn-navbar-admin:hover{
-  background-color:#ffaebfd7 ;
+.btn-navbar-admin:hover {
+  background-color: #ffaebfd7;
   transform: scale(1.01);
   transition: 500ms;
-  box-shadow: 0px 0px 42px 1px rgba(0,0,0,0,75);
-
-
+  box-shadow: 0px 0px 42px 1px rgba(0, 0, 0, 0, 75);
 }
 
-.btn-navbar-admin:active{
-  transform: scale(.97);
-  box-shadow: 0px 0px 42px 1px rgba(0,0,0,0,75);
-
- 
+.btn-navbar-admin:active {
+  transform: scale(0.97);
+  box-shadow: 0px 0px 42px 1px rgba(0, 0, 0, 0, 75);
 }
-
-
-
 
 /* Btns Lista de Produtos*/
 
-.btn-edit{
+.btn-edit {
   border: none;
-  background-color:#47C8EF;
+  background-color: #47c8ef;
   text-align: center;
   padding: 5px;
   border-radius: 5px;
- 
-  
 }
 
-.btn-edit:hover{
+.btn-edit:hover {
   transform: scale(1.01);
   transition: 500ms;
-  box-shadow: 0px 0px 42px -11px rgba(0,0,0,0,75);
+  box-shadow: 0px 0px 42px -11px rgba(0, 0, 0, 0, 75);
 }
 
-.btn-edit:active{
-  transform: scale(.97);
+.btn-edit:active {
+  transform: scale(0.97);
 }
 
-.btn-delete{
+.btn-delete {
   color: whitesmoke;
   border: none;
   background-color: red;
   text-align: center;
   padding: 5px;
   border-radius: 5px;
-
-  
 }
 
-.btn-delete:hover{
+.btn-delete:hover {
   transform: scale(1.01);
   transition: 500ms;
-  box-shadow: 0px 0px 42px -11px rgba(0,0,0,0,75);
+  box-shadow: 0px 0px 42px -11px rgba(0, 0, 0, 0, 75);
 }
 
-.btn-delete:active{
-  transform: scale(.97);
+.btn-delete:active {
+  transform: scale(0.97);
 }
-
 
 /* Btns cadastro produto */
 
-.btn-file{
+.btn-file {
   width: 100%;
   padding: 10px;
   border: none;
-  background-color: #FFAEBF;
+  background-color: #ffaebf;
   color: whitesmoke;
   cursor: pointer;
   font-weight: bold;
@@ -489,14 +463,13 @@
   transition: 500ms;
 }
 
-
-.btn-cadastro-admin{
+.btn-cadastro-admin {
   color: var(--cp00);
   font-size: 1.3rem;
   font-weight: bold;
   border: none;
   border-radius: 8px;
-  
+
   height: 45px;
   outline: none;
   padding: 0 50px;
@@ -516,32 +489,26 @@
   transition: 500ms;
 }
 
-
 /* Btns Grid de Produtos */
 
-.btn-criar-produto{
+.btn-criar-produto {
   border: none;
-  background-color:dodgerblue;
+  background-color: dodgerblue;
   color: #ebebec;
   padding: 10px;
   transition: 500ms;
   border-radius: 3px;
 }
 
-.btn-criar-produto:hover{
-  background-color:rgb(108, 182, 255);
+.btn-criar-produto:hover {
+  background-color: rgb(108, 182, 255);
   color: #fff;
   transform: scale(1.02);
   transition: 500ms;
-  box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
-
-
+  box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.75);
 }
 
-.btn-criar-produto:active{
-  transform: scale(.98);
+.btn-criar-produto:active {
+  transform: scale(0.98);
   transition: 500ms;
-
 }
-
-
