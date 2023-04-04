@@ -114,26 +114,39 @@ font-size: 1.3rem;
   gap: 2.5rem;
 }
 
-
+/* Display pedidos */
 
 .meusPedidos{
-  display: none;
+  display: flex;
+
+  flex-direction: column;
+  background-color: var(--cp00);
+  padding: 1.6rem;
+  width: 800px;
 
 }
 
-.meusFavoritos{
-  display: none;
-}
+.pedidos > hr{
+  height: 100%;
 
-.informacoesDaConta{
-  display: none;
-}
-.trocarDevolver{
-  display: none;
 
 }
 
-.cartoes{
-  display: none;
+.pedido{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
 
+.pedido div img{
+  width: 108px;
+
+}
+
+.pedido div{
+  gap: 2px;
+  
 }

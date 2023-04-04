@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- <base href="/" target="_blank"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- [ styles ] 
+==================================================== -->
+
+  <link rel="stylesheet" href="/stylesheets/components.css" />
+  <link rel="stylesheet" href="/stylesheets/usuario.css" />
+
+  <!-- [ scripts ] 
+==================================================== -->
+  <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+
+  <script src="js/usuario.js" defer></script>
+  <title>Account - Pikituchus</title>
+</head>
+
+<body>
+
+
+  <main>
+    <section class="usuario">
+
+      <%- include("components/menuUser.ejs") %>
+
+        <div class="diplayUsuario">
+
+          <section class="meusPedidos">
+
+            <div>
+              <h2>Meus Pedidos</h2>
+            </div>
+
+            <div>
+              <hr>
+            </div>
+
+            <article class="pedido">
+              <div>
+
+                <img src="/images/produtos/conforto.jpg" alt="">
+
+              </div>
+
+
+              <hr>
+
+
+
+              <div>
+
+                <p>Previsão de Entrega:
+                </p>
+                <p>Entrega concluída
+                </p>
+
+
+                <button class="btn-navbar-admin">
+                  BAIXAR NOTA FISCAL
+                </button>
+
+              </div>
+
+              <hr>
+
+
+              <div>
+
+                <p>
+                  <strong>
+                    Pedido nº: 
+                  </strong>
+                  4552254147
+                </p>
+                <p>
+                  <strong>
+                    Data do pedido: 
+                  </strong>
+                  11/04/2022
+                </p>
+
+                <p>
+                  <strong>
+                    Total do pedido:
+                  </strong>
+                   R$ 508,44
+                </p>
+
+                <button class="btn-navbar-admin">
+                  VER DETALHES
+                </button>
+
+              </div>
+
+
+
+            </article>
+
+
+
+
+          </section>
+
+
+
+
+
+
+        </div>
+    </section>
+  </main>
+
+  <%- include( "includes/footer.ejs" ) %>
+
+</body>
+
+</html>
