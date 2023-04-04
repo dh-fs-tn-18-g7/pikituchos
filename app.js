@@ -52,7 +52,7 @@ app.use(
 
 app.use(indexRouter);
 app.use(guide);
-app.use(usersRouter);
+//app.use(usersRouter);
 app.use(loginRouter);
 app.use(checkoutRouter);
 app.use(authRouter);

@@ -163,10 +163,6 @@
 }
 
 
-
-<<<<<<< HEAD
-@import url(/src/public/stylesheets/globals/global.css);
-
 /* Estilo input: */
 
 .input-form {
@@ -306,9 +302,6 @@
 
 .btn-dadosPessoais{
 
-=======
-.btn-dadosPessoais {
->>>>>>> main
   color: var(--cp00);
   font-size: 1.3rem;
   font-weight: bold;
@@ -323,10 +316,8 @@
   margin: 0 auto;
   cursor: pointer;
   display: block;
-
-<<<<<<< HEAD
-=======
 }
+
 
 .btn-dadosPessoais:hover {
   transform: scale(1.01);
@@ -398,7 +389,6 @@
 .btn-login:active {
   transform: scale(0.98);
   transition: 500ms;
-<<<<<<< HEAD
 }
 
 
@@ -553,7 +543,5 @@
   transition: 500ms;
 
 }
-=======
->>>>>>> main
-}
->>>>>>> 3c83331bffca7af4a23fde768c6719df932c699b
+
+
