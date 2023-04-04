@@ -1,4 +1,5 @@
 /* Importações */
+<<<<<<< HEAD
 const createError = require("http-errors");
 const express = require("express");
 const path = require("path");
@@ -18,6 +19,34 @@ const checkoutRouter = require("./src/routes/checkoutRouter");
 const authRouter = require("./src/routes/authRouter");
 const listagemRouter = require("./src/routes/listagemRouter");
 const adminRouter = require("./src/routes/adminRouter");
+=======
+const createError = require( "http-errors" );
+const express = require( "express" );
+const path = require( "path" );
+const cookieParser = require( "cookie-parser" );
+const logger = require( "morgan" );
+const ejs = require( "ejs" );
+<<<<<<< HEAD
+// const methodOverride = require('method-override')
+=======
+const session = require('express-session');
+>>>>>>> 3c83331bffca7af4a23fde768c6719df932c699b
+
+/* Importações das rotas */
+
+const indexRouter = require( "./src/routes/indexRouter" );
+const guide = require( "./src/routes/noely-temps" );
+const usersRouter = require('./src/routes/usersRouter')
+const loginRouter = require('./src/routes/loginRouter')
+const checkoutRouter = require ("./src/routes/checkoutRouter")
+<<<<<<< HEAD
+const listagemRouter = require ('./src/routes/listagemRouter')
+const carrinhoRouter = require ('./src/routes/carrinhoRouter');
+=======
+const authRouter = require('./src/routes/authRouter')
+const listagemRouter = require('./src/routes/listagemRouter')
+>>>>>>> 3c83331bffca7af4a23fde768c6719df932c699b
+>>>>>>> 18ea1b8a9bb667bab2741e8a8e4d4d57d138091b
 
 /* Variaveis */
 
@@ -52,12 +81,28 @@ app.use(
 
 app.use(indexRouter);
 app.use(guide);
+<<<<<<< HEAD
 //app.use(usersRouter);
 app.use(loginRouter);
 app.use(checkoutRouter);
 app.use(authRouter);
 app.use(listagemRouter);
 app.use(adminRouter);
+=======
+app.use(usersRouter)
+app.use(loginRouter)
+app.use(checkoutRouter)
+<<<<<<< HEAD
+app.use(listagemRouter)
+app.use(carrinhoRouter);
+=======
+app.use(authRouter)
+app.use(listagemRouter)
+
+
+>>>>>>> 3c83331bffca7af4a23fde768c6719df932c699b
+
+>>>>>>> 18ea1b8a9bb667bab2741e8a8e4d4d57d138091b
 
 // catch 404 and forward to error handler
 
