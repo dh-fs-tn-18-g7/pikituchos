@@ -1,11 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
-    "password": "Bry@44526510",
-=======
     "password": "xarthur4040x",
->>>>>>> 3c83331bffca7af4a23fde768c6719df932c699b
     "database": "pikituchos",
     "host": "127.0.0.1",
     "dialect": "mysql"

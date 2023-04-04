@@ -12,7 +12,7 @@ const methodOverride = require("method-override");
 
 const indexRouter = require("./src/routes/indexRouter");
 const guide = require("./src/routes/noely-temps");
-const usersRouter = require("./src/routes/usersRouter");
+//const usersRouter = require("./src/routes/usersRouter");
 const loginRouter = require("./src/routes/loginRouter");
 const checkoutRouter = require("./src/routes/checkoutRouter");
 const authRouter = require("./src/routes/authRouter");
@@ -22,7 +22,7 @@ const adminRouter = require("./src/routes/adminRouter");
 /* Variaveis */
 
 const app = express();
-const port = 4452;
+const port = 2001;
 
 // Define a coniguração do ejs
 app.set("views", path.join(__dirname, "src/views"));
@@ -76,12 +76,6 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
-<<<<<<< HEAD
 app.listen(port, (err) => {
   console.log(`Servidor esta rodando na Porta => ${port}`);
 });
-=======
-app.listen(port, (err)=>{
-	console.log(`Servidor esta rodando da port${port}`)
-})
->>>>>>> 3c83331bffca7af4a23fde768c6719df932c699b
