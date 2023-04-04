@@ -6,11 +6,7 @@ const router = express.Router();
 const ListagemContreller = require('../controllers/ListagemController')
 
 
-
-
-
-
-router.get('/listagem-produto', ListagemContreller.showListagemProduto)
+router.get('/listagem-produto', ListagemContreller.showListagem)
 
 
 module.exports = router 

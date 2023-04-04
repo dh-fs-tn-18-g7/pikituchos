@@ -10,13 +10,12 @@
     "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "dotenv": "16.0.3",
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "~4.16.1",
-    "express-session": "1.17.3",
+    "express-session": "^1.17.3",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-<<<<<<< HEAD
     "method-override": "^3.0.0",
     "morgan": "~1.9.1",
     "mysql2": "^3.2.0",
@@ -31,24 +30,8 @@
   },
   
   "description": "<!-- > [![img](https://rawcdn.githack.com/dh-fs-tn-18-g7/.github/3dec8e2c134c1dd9ae8fdb6d89cbccd93fde2469/profile/dh-fstn-18-g7.svg)](https://github.com/dh-fs-tn-18-g7) -->\r <p align=\"center\">\r     <a href=\"https://github.com/dh-fs-tn-18-g7\">\r         <img src=\"https://rawcdn.githack.com/dh-fs-tn-18-g7/.github/3dec8e2c134c1dd9ae8fdb6d89cbccd93fde2469/profile/dh-fstn-18-g7.svg\">\r     </a>\r </p>",
-=======
-    "method": "^2.0.0",
-    "method-override": "^3.0.0",
-    "morgan": "~1.9.1",
-    "myql2": "^3.2.0,",
-    "sequelize": "^6.30.0",
-    "node-fetch": "^2.6.9",
-    "override": "^0.0.1",
-    "uuid": "^9.0.0"
-  },
-   "devDependencies": {
-    "nodemon":"^2.0.22",
-    "sequelize-cli":"6.6.0",
-    "@faker-js/faker": "^7.6.0",
-    "nodemon": "^2.0.20"
-  },
-  "description": "<!-- > [![img](https://rawcdn.githack.com/dh-fs-tn-18-g7/.github/3dec8e2c134c1dd9ae8fdb6d89cbccd93fde2469/profile/dh-fstn-18-g7.svg)](https://github.com/dh-fs-tn-18-g7) -->\r <p align=\"center\">\r>     <a href=\"https://github.com/dh-fs-tn-18-g7\">\r>        <img src=\"https://rawcdn.githack.com/dh-fs-tn-18-g7/.github/3dec8e2c134c1dd9ae8fdb6d89cbccd93fde2469/profile/dh-fstn-18-g7.svg\">\r     </a>\r </p>",
->>>>>>> 18ea1b8a9bb667bab2741e8a8e4d4d57d138091b
+ 
+ 
   "main": "app.js",
   "repository": {
     "type": "git",
