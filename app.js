@@ -15,6 +15,7 @@ const usersRouter = require('./src/routes/usersRouter')
 const loginRouter = require('./src/routes/loginRouter')
 const checkoutRouter = require ("./src/routes/checkoutRouter")
 const listagemRouter = require ('./src/routes/listagemRouter')
+const carrinhoRouter = require ('./src/routes/carrinhoRouter');
 
 /* Variaveis */
 
@@ -43,6 +44,7 @@ app.use(usersRouter)
 app.use(loginRouter)
 app.use(checkoutRouter)
 app.use(listagemRouter)
+app.use(carrinhoRouter);
 
 /* Middleware */
 
