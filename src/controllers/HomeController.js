@@ -1,6 +1,7 @@
 
 
-const productModel = require( "../models/Products" );
+const productModel = require( "../models/Products" ),
+	Products0_1Data = require( "../utils/products_0-1" );
 
 exports.HomeController = [
 	getHomePage = ( req, res ) => {
@@ -74,8 +75,22 @@ exports.HomeController = [
 			title: "Segurança",
 			email: "saq@pikituchos.com.br",
 			tel: "(13) 9 9117-6924",
-			whats: "(13) 9 9117-6924"
+			whats: "(13) 9 9117-6924",
+			whatsPhone: "5513991176924",
+			whatsText: "Olá, vim do site Pikituchos e gostaria de realizar um agendamento. 😊",
 		};
 		res.render( "seguranca", viewsData );
+	},
+	getTestesPage = ( req, res, next ) => {
+		const viewsData = {
+			pageTitle: "Pikituchos - Testes",
+			title: "Testes",
+			email: "saq@pikituchos.com.br",
+			tel: "(13) 9 9117-6924",
+			whats: "(13) 9 9117-6924",
+			products1: Products0_1Data.products0_1,
+		};
+		console.log( viewsData.products1.title );
+		res.render( "teste", viewsData );
 	},
 ];

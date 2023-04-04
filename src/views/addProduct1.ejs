@@ -35,7 +35,7 @@
         <!-- [ highlights section ]
         ========================================================= -->
         <article class="highlights add-product">
-            <header>
+            <!-- <header>
                 <p title-pk="<%= edit ? 'Edição do Produto' : 'Cadastro de Produtos' %>"><%= edit ? 'Edição do Produto' : 'Cadastro de Produtos' %></p>
             </header>
             <form pk="card" method="POST" action="<%= edit ? '/admin/edit-product' : '/admin/add-product' %>">
@@ -117,6 +117,10 @@
                             <input type="number" step="any" class="form-control" name="price"
                             value="<%= edit ? product.price : '' %>">
                         </label><br>
+                        <label>Centavos
+                            <input type="number" step="any" class="form-control" name="cents"
+                            value="<%= edit ? product.cents : '' %>">
+                        </label><br>
                         <label>Preço antigo
                             <input type="number" step="any" class="form-control" name="oldPrice"
                             value="<%= edit ? product.oldPrice : '' %>">
@@ -159,7 +163,7 @@
                         <%= edit ? 'Salvar Alterações' : 'Cadastrar o Produto' %>
                     </btn-front>
                 </button>
-            </form>
+            </form> -->
             
         </article>
         

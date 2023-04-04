@@ -3,7 +3,7 @@
 const fs = require( "fs" ),
 	path = require( "path" ),
 	rootDir = require( "../utils/path" ),
-	CartModel = require( "./Cart" );
+    { deleteProductFromCart } = require( "./Cart" );
 
 
 const getProductsFromFile = handler => {

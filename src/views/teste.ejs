@@ -1,0 +1,84 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title><%= pageTitle %></title>
+    <!-- --------------------------------------------------------- -->
+    <link rel="icon" href="img/logo.svg" type="svg+xml">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <base href="/" target="_blank"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- [ styles ] 
+    ==================================================== -->
+    <link rel="stylesheet" href="stylesheets/globals/global.css">
+    <link rel="stylesheet" href="stylesheets/globals/swiper-bundle.min.css">
+    <link rel="stylesheet" href="stylesheets/home/home.css">
+    <!-- [ scripts ] 
+    ==================================================== -->
+    <script src="js/globals/swiper-bundle.min.js"></script>
+    <script src="js/globals/global.js" defer></script>
+    <script src="js/home/home.js" defer></script>
+    <style>
+        [bg="main-card"] {
+            width: 90%;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            border-radius: 13px;
+            background: var( --cp05 );
+            box-shadow: #fff5 0 0 0 13px;
+        }
+        body > main > article > header:has( [title-pk] ) {
+            display: grid;
+            place-items: center;
+            margin: 2.5rem;
+            padding: 1.5rem;
+        }
+        card {
+            display: grid;
+            grid-template-rows: .5fr .2fr .3fr;
+            width: 250px;
+            aspect-ratio: 1 / 2;
+            border-radius: 13px;
+            background: #f5f5f5;
+            box-shadow: #fff5 0 0 0 5px;
+            filter: drop-shadow( #0005 0 0 13px );
+        }
+    </style>
+</head>
+<body>
+        
+    <%- include( "includes/appbar.ejs" ) %>
+
+    <main>
+        
+        <!-- [ highlights section ]
+        ========================================================= -->
+        <article class="highlights">
+            <header>
+                <p title-pk="<%= title %>"><%= title %></p>
+            </header>
+            <section bg="main-card">
+                <p title-pk="Product List" style="font-size: 1.2rem; color: #905;">Product List</p>
+                <% if( products1.length ) { %>
+                    <% for( products of products1 ) { %>
+                        <card>
+                            <img src="" alt="">
+                            <h2><%= products.title %></h2>
+                            <p><%= products.description %></p>
+                        </card>
+                    <% } %>
+                <% } else { %>    
+                    <card>No Products Available </card>
+                <% } %>    
+            </section>
+        </article>
+    </main>
+
+    <%- include( "includes/footer" ) %>
+
+</body>
+</html>

@@ -76,7 +76,7 @@
                             <p>
                                 <strike>R$ <%= product.oldPrice %></strike>
                             </p>
-                            <h2>R$ <%= product.price %>,<%= product.cents %></h2>
+                            <h2>R$ <%= product.price.replace( ".", "," ) %></h2>
                         </header>
                         <footer>
                             <p>*Consulte as condições de parcelamento no carrinho.</p>

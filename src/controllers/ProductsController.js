@@ -84,4 +84,16 @@ exports.ProductsController = [
 		const productId = req.body.productId;
 		deleteProductById( productId, () => res.redirect( "/admin" ) );
 	},
+
+    
+	getAdminProducts1Page = ( req, res ) => {
+		fetchAllProducts( products => {
+			const viewsData = {
+				admin: true,
+				pageTitle: "Admin Products1",
+				products
+			};
+			res.render( "products1", viewsData );
+		} );
+	},
 ];

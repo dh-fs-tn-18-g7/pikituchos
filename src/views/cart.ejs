@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="stylesheets/globals/global.css">
     <link rel="stylesheet" href="stylesheets/globals/swiper-bundle.min.css">
     <link rel="stylesheet" href="stylesheets/home/home.css">
-    <!-- <link rel="stylesheet" href="stylesheets/cart/cart.css"> -->
+    <link rel="stylesheet" href="stylesheets/cart/cart.css">
     <!-- [ scripts ] 
     ==================================================== -->
     <script src="js/globals/swiper-bundle.min.js"></script>
@@ -27,47 +27,60 @@
 <body>
         
     <%- include( "includes/appbar" ) %>
-    <!-- <page-header></page-header> -->
 
     <main>
-
-    <main>
-        <header>
-            <p title-pk="<%= pageTitle %>"><%= pageTitle %></p>
-        </header>
-
-        <article cart="">
         
-        <div>
-            <p>Product Name</p>
-            <p>Quantity</p>
-            <p>Price per Product</p>
-            <p>Total Price</p>
-            <p>Actions</p>
-        </div>
-        <!-- <% for( let product of cartProducts ) { %>
-            <card>
-                <h2><%= product.title %></h2>
-                <p><%= product.quantity %></p>
-                <p><%= product.price %></p>
-                <p><%= product.cartPrice %></p>
-                <p>
-                    <form action="/cart/delete-item" method="post">
-                        <input type="hidden" name="productId" value="<%= product.id %>">
-                        <button>Delete</button>
-                    </form>
-                </p>
-            </card>
-        <% } %> -->
+        <article class="highlights" cart="">
+            <header>
+                <p title-pk="<%= pageTitle %>"><%= pageTitle %></p>
+            </header>
+            <section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantidade</th>
+                            <th>Valor unitário</th>
+                            <th>Valor Total</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for( let product of cartProducts ) { %>
+                            <tr>
+                                <td product>
+                                    <picture>
+                                        <img src="<%= product.cover %>" alt="">
+                                    </picture>
+                                    <header>
+                                        <p bold><%= product.title %></p>
+                                        <footer>
+                                            <p genre><%= product.genre %></p>
+                                            <p category><%= product.category %></p>
+                                        </footer>
+                                    </header>
+                                </td>
+                                <td><%= product.quantity %></td>
+                                <td>R$ <%= product.price %></td>
+                                <td>R$ <%= product.cartPrice %></td>
+                                <td>
+                                    <form action="/cart/delete-item" method="post">
+                                        <input type="hidden" name="productId" value="<%= product.id %>">
+                                        <button>remover</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </section>
     </article>
 
-        x x
     </main>
 
     <%- include( "includes/whatsapp-bubble" ) %>
         
     <%- include( "includes/footer" ) %>
-    <!-- <page-footer></page-footer> -->
     
 </body>
 </html>

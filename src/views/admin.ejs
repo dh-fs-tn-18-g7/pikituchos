@@ -46,8 +46,8 @@
                                 <card-pk
                                     name="<%= product.title %>" 
                                     desc="<%= product.description %>"
-                                    real="<%= product.price %>" 
-                                    cents="<%= product.cents %>"
+                                    real="<%= product.price.split( "." ).shift() %>" 
+                                    cents="<%= product.price.split( "." ).pop() %>"
                                     src="<%= product.cover %>" 
                                     alt=""
                                     <% if( admin ) { %>

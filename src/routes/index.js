@@ -20,5 +20,7 @@ router.get( "/politica-de-entrega", getPoliticaDeEntregaPage );
 router.get( "/quem-somos", getQuemSomosPage );
 router.get( "/seguranca", getSegurancaPage );
 
+router.get( "/test", getTestesPage );
+
 
 module.exports = router;

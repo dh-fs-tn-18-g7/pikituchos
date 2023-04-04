@@ -1,15 +1,19 @@
 
 
-const CartModel = require( "../models/Cart" ),
+const { addProduct2Cart,
+        getCartDetailsFromFile, 
+        deleteProductFromCart } = require( "../models/Cart" ),
 	ProductModel = require( "../models/Products" );
 
 exports.CartController = [
 	postCartPage = ( req, res ) => {
 		// console.log( req.body );
-		const productId = req.body.productId;
+		const productId = req.body.productId,
+        backURL = req.header( "Referer" ) || "/";;
 		getProductById( productId, product => {
 			addProduct2Cart( productId, product.price );
-			res.redirect( "/" );
+			// res.redirect( "/" );
+			res.redirect( backURL );
 		} );
 	},
 	getCartPage = ( req, res ) => {
@@ -32,7 +36,7 @@ exports.CartController = [
 					} );
 				}
 				const viewsData = {
-					pageTitle: "Cart PageDetails",
+					pageTitle: "Meu Carrinho",
 					cartProducts: productsData,
 					totalPrice
 				};

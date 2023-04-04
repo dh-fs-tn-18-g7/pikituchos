@@ -317,6 +317,10 @@ page-footer > hr {
     width: 28px;
     cursor: pointer;
     filter: drop-shadow(-3px 3px 5px #0005);
+} .socials footer img:hover {
+    transition: .2s ease-out;
+    border-radius: 2rem;
+    box-shadow: #e5e5e555 0 0 0 5px;
 }
 
 .footer-top .support {

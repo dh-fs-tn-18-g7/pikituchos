@@ -42,6 +42,8 @@ app.use( express.static( path.join( __dirname, "src/public" ) ) ); // define ond
 app.use( "/home", express.static( "src/public" ) );
 app.use( "/products", express.static( "src/public" ) );
 app.use( "/products/edit", express.static( "src/public" ) );
+app.use( "admin/products1", express.static( "src/public" ) );
+app.use( "admin/products1/edit", express.static( "src/public" ) );
 app.use( "/produto", express.static( "src/public" ) );
 app.use( "/admin", express.static( "src/public" ) );
 app.use( "/admin/edit-product", express.static( "src/public" ) );
