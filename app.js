@@ -20,7 +20,7 @@ const listagemRouter = require("./src/routes/listagemRouter");
 /* Variaveis */
 
 const app = express();
-const port = 4444;
+const port = 3033;
 
 // Define a coniguração do ejs
 app.set("views", path.join(__dirname, "src/views"));

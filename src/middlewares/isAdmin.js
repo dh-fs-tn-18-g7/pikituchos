@@ -4,7 +4,7 @@ const isAdmin = (req, res, next) => {
     
 
     if(!user || !user.is_admin){
-        return res.redirect('/')
+        return res.redirect('/user')
     }
 
     return next()
