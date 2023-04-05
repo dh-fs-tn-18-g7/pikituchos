@@ -5,30 +5,11 @@
     =========================================================================== */
 const $ = ( l, y ) => !y ? document.querySelector( l ) : y.querySelector( l ),
 	$$ = ( l, y ) => !y ? document.querySelectorAll( l ) : y.querySelectorAll( l ),
-	log = v => console.log( v );
+	log = v => console.log( v ),
+	toList = () => {
+		return [].slice.call( this );
+	};
     
-// let titleTemplate = `
-// <style>
-//     h2#outline {
-//         position: relative;
-//         top: 0; left: 0;
-//         color: var(--cp00);
-//         -webkit-text-stroke: 10px var(--cp00);
-//         filter: drop-shadow(0px 4px #0005);
-//         font-family: Baloo Da;
-//         font-size: 2.5rem;
-//     }
-//     h2#text {
-//         position: absolute;
-//         top: 0; left: 0;
-//         color: var(--cp05);
-//         font-family: Baloo Da;
-//         font-size: 2.5rem;
-//     }
-// </style>
-// <h2 id="outline"></h2>
-// <h2 id="text"></h2>
-// `,
     
 let titleTemplate = `
 <style>
@@ -533,16 +514,7 @@ window.addEventListener( "load", ev => {
 		} );
 	}
 
-	// function fadeIn() {
-	// 	let pageHeight = window.pageYOffset + ( ( window.innerHeight * 3 ) / 4 );
 
-	// 	introsList.forEach( intro => {
-	// 		pageHeight > intro.offsetTop ?
-	// 			intro.setAttribute( "active", "" ) :
-	// 			// intro.removeAttribute( "active" );
-	// 			console.log( "" );
-	// 	} );
-	// }
 
 	function fadeIn() {
 		let pageHeight = window.pageYOffset + ( ( window.innerHeight * 3 ) / 4 );
@@ -550,47 +522,32 @@ window.addEventListener( "load", ev => {
 		introsList.forEach( intro => {
 			switch( intro.getAttribute( "intro" ) ) {
 			case "l": {
-				pageHeight > intro.offsetTop ?
-					intro.setAttribute( "active", "l" ) :
-				// intro.removeAttribute( "active" );
-					console.log( "" );
+				if( pageHeight > intro.offsetTop ) {
+					intro.setAttribute( "active", "l" );
+				}
 			}
 				break;
 			case "r": {
-				pageHeight > intro.offsetTop ?
-					intro.setAttribute( "active", "r" ) :
-				// intro.removeAttribute( "active" );
-					console.log( "" );
+				if( pageHeight > intro.offsetTop ) {
+					intro.setAttribute( "active", "r" );
+				}
 			}
 				break;
 			case "b": {
-				pageHeight > intro.offsetTop ?
-					intro.setAttribute( "active", "b" ) :
-				// intro.removeAttribute( "active" );
-					console.log( "" );
+				if( pageHeight > intro.offsetTop ) {
+					intro.setAttribute( "active", "b" );
+				}
 			}
 				break;
 			case "t": {
-				pageHeight > intro.offsetTop ?
-					intro.setAttribute( "active", "t" ) :
-				// intro.removeAttribute( "active" );
-					console.log( "" );
+				if( pageHeight > intro.offsetTop ) {
+					intro.setAttribute( "active", "t" );
+				}
 			}
 				break;
 			} 
 		} );
 	}
-
-
-
-	// whatsappBubble.addEventListener( "mouseenter", ev => {
-	// 	whatsappBubble.setAttribute( "active", "1" );
-	// 	message.setAttribute( "message", "1" );
-	// } );
-	// whatsappBubble.addEventListener( "mouseleave", ev => {
-	// 	whatsappBubble.setAttribute( "active", "0" );
-	// 	message.setAttribute( "message", "0" );
-	// } );
     
 } );
 

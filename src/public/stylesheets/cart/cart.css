@@ -106,5 +106,33 @@ form button {
     border-radius: 5px;
     border: #c229 1px solid;
     padding: 5px;
+    width: 100% !important;
+}
+button {
+    background: #c222;
+    color: #c22;
+    border-radius: 5px;
+    border: #c229 1px solid;
+    padding: 5px;
+    width: 100%;
+}
+form button > btn-front,
+button > btn-front {
+    background: var( --cp09 );
 }
 
+[b] {
+    font-size: 1.42rem;
+    font-weight: bold;
+}
+
+div {
+    display: grid;
+    place-items: center;
+    background: #f5f5f5;
+    margin: 3rem 4.5rem 0;
+}
+div > p[title-pk] {
+    font-size: 1.2rem;
+    color: #27f;
+}

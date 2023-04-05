@@ -26,7 +26,6 @@
 <body>
         
     <%- include( "includes/appbar.ejs" ) %>
-    <!-- <page-header></page-header> -->
 
     <main>
         
@@ -36,45 +35,45 @@
             <slider>
                 <slide id="slide00">
                     <left>
-                        <section>
-                            <img id="mamae-e-bebe" src="img/home/mamae-e-bebe.svg" alt="">
-                            <h2>A loja mais completa para o seu bebê!</h2>
-                        </section>
+                        <img src="img/home/mamae-e-bebe.svg" alt="" oferta="logo">
+                        <img src="img/home/ofertas/sabonete.png" alt="" oferta="img1">
                     </left>
                     <right>
+                        <section>
+                            <img src="img/home/ofertas/img-oferta02.webp" alt="" oferta="img2">
+                        </section>
                     </right>
+                    <h2 oferta="img2">Venha conferir a semana da Mamãe e Bebê com 70% off em qualquer produto da linha meu bebê.</h2>
                 </slide>
                 
                 <slide id="slide01">
                     <left>
-                        <section>
-                            <img id="mamae-e-bebe" src="img/home/mamae-e-bebe.svg" alt="">
-                            <h2>A loja mais completa para o seu bebê!</h2>
-                        </section>
+                        <footer slide01>
+                            <p title-pk="3 peças">3 peças</p>
+                            <p title-pk="por">por</p>
+                            <p title-pk="R$ 59,90">R$ 59,90</p>
+                        </footer>
+                        <p slide01>FRETE GRÁTIS PARA TODO BRASIL</p>
                     </left>
                     <right>
+                        <img src="img/home/ofertas/kit-macacao.webp" alt="" oferta2="img1">
                     </right>
                 </slide>
                 
                 <slide id="slide02">
                     <left>
-                        <section>
-                            <img id="mamae-e-bebe" src="img/home/mamae-e-bebe.svg" alt="">
-                            <h2>A loja mais completa para o seu bebê!</h2>
-                        </section>
+                        <footer slide02>
+                            <img src="img/home/ofertas/60off.png" alt="" oferta3="img60off">
+                            <strike>R$1399,90</strike>
+                            <p title-pk="Aproveite agora">Aproveite agora</p>
+                        </footer>
+                        <div>
+                            <p slide02="1">PREÇOS A PARTIR</p><br>
+                            <p slide02="2">DE R$449,90</p>
+                        </div>
                     </left>
                     <right>
-                    </right>
-                </slide>
-                
-                <slide id="slide03">
-                    <left>
-                        <section>
-                            <img id="mamae-e-bebe" src="img/home/mamae-e-bebe.svg" alt="">
-                            <h2>A loja mais completa para o seu bebê!</h2>
-                        </section>
-                    </left>
-                    <right>
+                        <img src="img/home/ofertas/stroller.png" alt="" oferta3="img1">
                     </right>
                 </slide>
                 
@@ -94,7 +93,8 @@
                 <slider class="swiper" slider-heighlights>
                     <slider-modules class="swiper-wrapper">
                         <% for( let product of products ) { %>
-
+                            <% if ( product.type == "Acessórios" ) { %>
+                             
                             <slide class="swiper-slide" intro="b">
                                 <card-pk
                                     name="<%= product.title %>" 
@@ -108,13 +108,15 @@
                                 ></card-pk>
                             </slide>
                             <% } %>
+                            
+                            <% } %>
 
 
                     </slider-modules>
                     <div class="swiper-pagination"></div>
                 </slider>
-                <div class="swiper-button-next" intro="l"></div>
-                <div class="swiper-button-prev" intro="r"></div>
+                <div class="swiper-button-next" swiper="h-n" intro="l"></div>
+                <div class="swiper-button-prev" swiper="h-p" intro="r"></div>
             </slider-spot>
             <center-btn intro="t">
                 <button-pk name="Ver mais" color="" width="50%"></button-pk>
@@ -151,14 +153,14 @@
         <section class="sample-products">
             <article>
                 <header>
-                    <title-pk title-pk="Moda e acessórios para bebês" color="var(--cp05)" intro="r"></title-pk>
-                    <title-pk title-pk="de 0 à 1 ano" color="var(--cp05)" intro="l"></title-pk>
+                    <title-pk title-pk="Moda e acessórios para meninos" color="var(--cp05)" intro="r"></title-pk>
                 </header>
                 <% if( products.length ) { %>
                 <slider-spot>
-                    <slider class="swiper" slider-heighlights>
+                    <slider class="swiper" slider-0-1anos>
                         <slider-modules class="swiper-wrapper">
                             <% for( let product of products ) { %>
+                                <% if ( product.genre == "Masculino" ) { %>
     
                                 <slide class="swiper-slide" intro="b">
                                     <card-pk
@@ -173,13 +175,14 @@
                                     ></card-pk>
                                 </slide>
                                 <% } %>
+                                <% } %>
     
     
                         </slider-modules>
                         <div class="swiper-pagination"></div>
                     </slider>
-                    <div class="swiper-button-next" intro="l"></div>
-                    <div class="swiper-button-prev" intro="r"></div>
+                    <div class="swiper-button-next" swiper="01-n" intro="l"></div>
+                    <div class="swiper-button-prev" swiper="01-p" intro="r"></div>
                 </slider-spot>
                 <center-btn intro="t">
                     <button-pk name="Ver mais" color="" width="50%"></button-pk>
@@ -189,14 +192,14 @@
 
             <article>
                 <header>
-                    <title-pk title-pk="Moda e acessórios para crianças" color="var(--cp05)" intro="l"></title-pk>
-                    <title-pk title-pk="de 2 à 3 anos" color="var(--cp05)" intro="r"></title-pk>
+                    <title-pk title-pk="Moda e acessórios para meninas" color="var(--cp05)" intro="l"></title-pk>
                 </header>
                 <% if( products.length ) { %>
                 <slider-spot>
-                    <slider class="swiper" slider-heighlights>
+                    <slider class="swiper" slider-2-3anos>
                         <slider-modules class="swiper-wrapper">
                             <% for( let product of products ) { %>
+                                <% if ( product.genre == "Feminino" ) { %>
     
                                 <slide class="swiper-slide" intro="b">
                                     <card-pk
@@ -211,13 +214,14 @@
                                     ></card-pk>
                                 </slide>
                                 <% } %>
+                                <% } %>
     
     
                         </slider-modules>
                         <div class="swiper-pagination"></div>
                     </slider>
-                    <div class="swiper-button-next" intro="l"></div>
-                    <div class="swiper-button-prev" intro="r"></div>
+                    <div class="swiper-button-next" swiper="23-n" intro="l"></div>
+                    <div class="swiper-button-prev" swiper="23-p" intro="r"></div>
                 </slider-spot>
                 <center-btn intro="t">
                     <button-pk name="Ver mais" color="" width="50%"></button-pk>
@@ -230,51 +234,23 @@
         ========================================================= -->
         <article class="testimonials">
             <header>
-                <title-pk title-pk="O que outras mamâes estão dizendo" color="var(--cp07)" intro="r"></title-pk>
-                <title-pk title-pk="sobre nossos serviços" color="var(--cp07)" intro="l"></title-pk>
+                <p title-pk="O que outras mamâes estão dizendo" intro="r">O que outras mamâes estão dizendo</p>
+                <p title-pk="sobre nossos serviços" intro="l">sobre nossos serviços</p>
             </header>
-            <section>
-                <card>
+            <section intro="b">
+                <% for( mom of moms ) { %>
+                <card test-item>
                     <card-home>
                         <picture>
-                            <img src="img/home/testimonials/mom-testm-01.webp" alt="">
+                            <img src="img/home/testimonials/<%= mom.pix %>" alt="">
                         </picture>
                         
-                        <p title-pk="Noely Gangello" style="font-size: 1.3rem;">Noely Gangello</p>
+                        <p title-pk="<%= mom.name %>" style="font-size: 1.3rem; color: var( --cp05 )"><%= mom.name %></p>
                         
-                        <testimonial>Lorem Ipsum is simply dummy text of the printing and 
-                            typesetting industry.
-                        </testimonial>
+                        <testimonial><%= mom.text %></testimonial>
                     </card-home>
                 </card>
-
-                <card class="card-destaq">
-                    <card-home class="card-destaq-home">
-                        <picture>
-                            <img src="img/home/testimonials/mom-testm-02.webp" alt="">
-                        </picture>
-                        
-                        <p title-pk="Jady Carolina" style="font-size: 1.3rem;">Jady Carolina</p>
-                        
-                        <testimonial>Lorem Ipsum is simply dummy text of the printing and 
-                            typesetting industry.
-                        </testimonial>
-                    </card-home>
-                </card>
-
-                <card>
-                    <card-home>
-                        <picture>
-                            <img src="img/home/testimonials/mom-testm-03.webp" alt="">
-                        </picture>
-                        
-                        <p title-pk="Rafaela Melo" style="font-size: 1.3rem;">Rafaela Melo</p>
-                        
-                        <testimonial>Lorem Ipsum is simply dummy text of the printing and 
-                            typesetting industry.
-                        </testimonial>
-                    </card-home>
-                </card>
+                <% } %>
             </section>
         </article>
 
@@ -284,93 +260,7 @@
         
     <%- include( "includes/footer.ejs" ) %>
     <!-- <page-footer></page-footer> -->
-    
-    
-    <script>
-        /* [ swiperjs ]
-            ============================================================== */
-        /*  https://swiperjs.com/get-started
-            https://www.jsdelivr.com/package/npm/swiper
-            https://swiperjs.com/demos
-        */
-        var swiper = new Swiper( "*[slider-heighlights]", {
-            slidesPerView: 4,
-            spaceBetween: 25,
-            loop: true,
-            centerSlide: "true",
-            fade: "true",
-            grabCursor: "true",
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-                dynamicBullets: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        
-            breakpoints:{
-                0: { slidesPerView: 1, },
-                520: { slidesPerView: 2, },
-                830: { slidesPerView: 3, },
-                950: { slidesPerView: 3, },
-                1120: { slidesPerView: 4, },
-            },
-        } );
 
-        var swiper = new Swiper( "*[slider-0-1anos]", {
-            slidesPerView: 4,
-            spaceBetween: 25,
-            loop: true,
-            centerSlide: "true",
-            fade: "true",
-            grabCursor: "true",
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-                dynamicBullets: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        
-            breakpoints:{
-                0: { slidesPerView: 1, },
-                520: { slidesPerView: 2, },
-                830: { slidesPerView: 3, },
-                950: { slidesPerView: 3, },
-                1120: { slidesPerView: 4, },
-            },
-        } );
-
-        var swiper = new Swiper( "*[slider-2-3anos]", {
-            slidesPerView: 4,
-            spaceBetween: 25,
-            loop: true,
-            centerSlide: "true",
-            fade: "true",
-            grabCursor: "true",
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-                dynamicBullets: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        
-            breakpoints:{
-                0: { slidesPerView: 1, },
-                520: { slidesPerView: 2, },
-                830: { slidesPerView: 3, },
-                950: { slidesPerView: 3, },
-                1120: { slidesPerView: 4, },
-            },
-        } );
-    </script>
 </body>
 </html>
 

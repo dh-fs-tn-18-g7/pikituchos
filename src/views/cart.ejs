@@ -74,6 +74,59 @@
                     </tbody>
                 </table>
             </section>
+            <section>
+                <header>
+                        <div>
+                            <p title-pk="Produtos em seu carrinho">
+                                Produtos em seu carrinho
+                            </p>
+                        </div>
+                    <table>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Produtos</td>
+                                <% let total = 0; %>
+                                <% let frete = 0; %>
+                                <% let Total = 0; %>
+                                <% for( let products of cartProducts ) { %>
+                                    <% total += products.cartPrice %>
+                                <% } %>
+                                <% if( cartProducts.length != 0 ) { %>
+                                    <% frete = 25.50; %>
+                                    <% Total = total + frete %>
+                                <% } else { %>
+                                    <% Total = total %>
+                                <% } %>
+                                <td>R$ <%= total.toString().replace( ".", "," ) %></td>
+                            </tr>
+                            <tr>
+                                <td>Frete</td>
+                                <td>R$ <%= frete.toString().replace( ".", "," ) %></td>
+                            </tr>
+                            <hr>
+                            <tr>
+                                <td b>Total</td>
+                                <td b><%= Total.toString().replace( ".", "," ) %></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <button class="button-pk" 
+                                        role="button" type="submit">
+                                        <btn-shadow class=""></btn-shadow>
+                                        <btn-edge class=""></btn-edge>
+                                        <btn-front class=" text">
+                                            Continuar a compra
+                                        </btn-front>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </header>
+            </section>
     </article>
 
     </main>

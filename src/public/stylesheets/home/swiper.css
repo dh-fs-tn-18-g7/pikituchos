@@ -13,6 +13,7 @@ slider-spot {
 } *.swiper {
     display: flex;
     width: clamp( 100px, 100%, 1220px );
+    padding: 0 1rem;
 }
 
 slider-modules {
@@ -33,7 +34,7 @@ slider-modules {
     position: relative;
 }
 
-slide {
+article slide {
     display: grid;
     place-items: center;
     padding: 10% 0 5% 0;

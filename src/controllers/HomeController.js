@@ -9,7 +9,27 @@ exports.HomeController = [
 			const viewsData = {
 				admin: false,
 				products,
-				pageTitle: "Home page - Products List"
+				pageTitle: "Home page - Products List",
+				moms: [
+					{
+						name: "Jady Carolina",
+						pix: "Jady-Carolina.webp",
+						text: "❛❛ Passando para agradecer. Amei! muito rápido! Adorei fazer compras no site. E amei o brinde 🥰😍 Atendimento encantador.",
+						stars: "5"
+					},
+					{
+						name: "Noely Gangello",
+						pix: "Noely-Gangello.webp",
+						text: "❛❛ Voltei para agradecer, chegou tudo perfeito amei demais, meu filho amou o mimo. Super satisfeita com minha compra. Bjs e obrigada 😘",
+						stars: "5"
+					},
+					{
+						name: "Rafaela Melo",
+						pix: "Rafaela-Melo.webp",
+						text: "❛❛ Gente as roupinhas são lindas de verdade, ótima qualidade. Eu compro sempre aqui pelo site! Entrega super rápida o atendimento perfeito! 🥰😍😘",
+						stars: "5"
+					},
+				],
 			};
 			res.render( "index", viewsData );
 			console.clear();

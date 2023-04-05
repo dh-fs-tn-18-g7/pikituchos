@@ -17,21 +17,56 @@
 .testimonials header {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    line-height: 2.9rem;
-    background: #fff1;
-    text-align: center;
+    align-items: center;
     padding: 3rem 0;
+}
+.testimonials header :nth-child( 1 ) {
+    color: var( --cp05 );
+    
+}
+.testimonials header :nth-child( 2 ) {
+    color: var( --cp06 );
+    
 }
 
 .testimonials section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "a b c";
     justify-items: center;
     width: clamp( 100px, 90%, 1200px );
     margin: 0 auto;
     padding: 18px;
+}
+
+.testimonials section > :nth-child( 1 ) {
+    /* grid-area: b; */
+}
+
+.testimonials section > :nth-child( 2 ) {
+    /* grid-area: a; */
+}
+
+.testimonials section > :nth-child( 3 ) {
+    /* grid-area: c; */
+}
+
+[destaque="card"] {
+    background: var( --cp02 ) !important;
+    border: var( --cp00 ) dashed !important;
+    box-shadow: var( --cp02 ) 0 0 0 10px !important;
+    filter: drop-shadow( #0005 0 5px 13px ) !important;
+    transform: scale(1.4) translateY( -20px );
+    /* transition: .1s ease-in; */
+    z-index: 3;
+}
+[destaque="home"] {
+    background: #905 !important;
+    border: var( --cp05 ) dashed !important;
+    box-shadow: #905 0 0 0 10px !important;
+    color: #fff !important;
+    filter: drop-shadow( #0009 -2px 5px 5px ) !important;
 }
 
 .testimonials section card {
@@ -39,17 +74,19 @@
     display: block;
     width: clamp( 200px, 22vw, 240px );
     height: clamp( 300px, 28vw, 317px );
-    background: var( --cp06 );
+    margin: 7rem 0;
+    background: var( --cp07 );
     border-radius: 80px 16px 80px 5px;
     border: var( --cp00 ) dashed;
-    box-shadow: var( --cp06 ) 0 0 0 10px;
-    filter: drop-shadow( #0003 -5px 5px 2px );
+    box-shadow: var( --cp07 ) 0 0 0 10px;
+    filter: drop-shadow( #0003 0px 0px 2px );
+    transition: .1s ease-in;
 }
 
 .testimonials section card card-home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr .1fr .2fr;
+    justify-items: center;
     width: 100%;
     height: 100%;
     padding: 8px;
@@ -57,8 +94,8 @@
     top: -16px;
     left: 16px;
     border-radius: 80px 16px 80px 5px;
-    border: var( --cp08 ) dashed;
-    box-shadow: var( --cp00 ) 0 0 0 10px;
+    border: var( --cp05 ) dashed;
+    box-shadow: #f5f5f5 0 0 0 10px;
     filter: drop-shadow( #0003 -5px 5px 2px );
     background: var( --cp00 );
 }
@@ -69,11 +106,13 @@
     width: 100%;
     height: 40%;
     position: relative;
+    top: -25px;
 }
 .testimonials section card card-home picture img {
-    width: 50%;
+    width: 70%;
+    aspect-ratio: 1 / 1;
     position: absolute;
-    top: -25%;
+    top: -35px;
     border-radius: 5rem;
     box-shadow: var( --cp05 ) 0 0 0 6px;
     filter: drop-shadow( #0005 0 0 5px );
@@ -88,14 +127,15 @@
 }
 
 .testimonials section .card-destaq {
-    background: var( --cp09 );
+    background: var( --cp00 );
     border: var( --cp05 ) dashed;
-    box-shadow: var( --cp09 ) 0 0 0 10px;
+    box-shadow: var( --cp00 ) 0 0 0 10px;
+    transform: scale(1.3);
 }
 .testimonials section .card-destaq .card-destaq-home {
-    background: var( --cp05 );
-    border: var( --cp00 ) dashed;
-    box-shadow: var( --cp05 ) 0 0 0 10px;
+    background: #eee3e5;
+    border: var( --cp07 ) dashed;
+    box-shadow: #eee3e5 0 0 0 10px;
     /* color: var( --cp00 ); */
 }
 

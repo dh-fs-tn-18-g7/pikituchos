@@ -31,11 +31,192 @@ left section h2 {
     font-size: clamp( .1rem, 2vw,1.6rem );
 }
 
-banner-section slider slide img {
+banner-section slider slide [oferta="img1"] {
+    width: 60%;
+    margin: 0 0 0 2rem;
+    filter: drop-shadow( #0005 10px 10px 5px );
+}
+
+banner-section slider slide [oferta="img-70-off"] {
+    width: 30%;
+    margin: 0 0 0 2rem;
+    filter: drop-shadow( #0005 10px 10px 5px );
+}
+
+banner-section slider slide [oferta="img2"] {
+    width: 80%;
+    margin: 2rem 0 0 2rem;
+    filter: drop-shadow( #0005 10px 10px 5px );
+}
+
+h2[oferta="img2"] {
+    position: absolute;
+    bottom: 0;
+    /* color: var( --cp08 ); */
+    background: var(--cp05);
+    filter: drop-shadow( #000 0 0 5px );
+}
+
+#slide01 {
+    display: grid;
+    background-image: url( "../../img/home/ofertas/fundo-2.webp" );
+    /* background-image: url( "../../img/home/ofertas/bg-02.jpg" ); */
+    background-size: cover;
+    grid-template-columns: .4fr .6fr;
+}
+
+#slide01 > left {
+    display: grid;
+    grid-template-rows: .8fr .2fr;
+}
+#slide01 > right {
+    display: grid;
+    place-items: center;
+}
+
+#slide01 [oferta2="img1"] {
     width: 100%;
-    height: 100%;
+    object-fit: contain;
+}
+
+#slide01 footer[slide01] {
+    display: grid;
+    grid-template-rows: .2fr .3fr .5fr;
+    /* place-items: center; */
+    /* justify-content: right; */
+    justify-items: right;
+    /* align-items: self-end; */
+    margin: 5rem 0 0 auto;
+    white-space: nowrap;
+}
+#slide01 footer[slide01] :nth-child(1) {
+    font-size: 4rem;
+    color: var(--cp05);
+        line-height: 5rem;
+}
+#slide01 footer[slide01] :nth-child(2) {
+    display: grid;
+
+    font-size: 3rem;
+    color: var(--cp05);
+        line-height: 5rem;
+}
+#slide01 footer[slide01] :nth-child(3) {
+    font-size: 7rem;
+    color: var(--cp05);
+        line-height: 5rem;
+}
+
+#slide01 p[slide01] {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--cp07);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#slide02 {
+    display: grid;
+    background-image: url( "../../img/home/ofertas/fundo-03.jpg" );
+    /* background-image: url( "../../img/home/ofertas/bg-02.jpg" ); */
+    background-size: cover;
+    grid-template-columns: .4fr .6fr;
+}
+
+#slide02 > left {
+    display: grid;
+    grid-template-rows: .8fr .2fr;
+}
+#slide02 > right {
+    display: grid;
+    place-items: center;
+}
+
+#slide02 [oferta3="img60off"] {
+    width: 80%;
+    /* object-fit: contain; */
+    filter: drop-shadow( #0003 -5px 13px 5px );
+}
+
+#slide02 [oferta3="img1"] {
+    /* width: 80%; */
+    object-fit: contain;
+    filter: drop-shadow( #0003 -5px 13px 5px );
+}
+
+#slide02 footer[slide02] {
+    display: grid;
+    grid-template-rows: .3fr .05fr .1fr;
+    /* place-items: center; */
+    /* justify-content: right; */
+    justify-items: right;
+    /* align-items: self-end; */
+    /* margin: 5rem 0 0 auto; */
+    white-space: nowrap;
+}
+#slide02 footer[slide02] :nth-child(1) {
+    font-size: 4rem;
+    color: var(--cp05);
+        /* line-height: 5rem; */
+}
+#slide02 footer[slide02] :nth-child(2) {
+    display: grid;
+
+    font-size: 1.5rem;
+    color: var(--cp09);
+        /* line-height: 5rem; */
+}
+#slide02 footer[slide02] :nth-child(3) {
+    font-size: 3rem;
+    color: var(--cp05);
+    /* line-height: 3rem; */
+}
+
+small[oferta3] strike {
+    font-size: .65rem;
+}
+
+#slide02 p[slide02="1"] {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #27f;
+}
+
+#slide02 p[slide02="2"] {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    background: #27f;
+    color: var(--cp00);
+}
+
+
+
+
+banner-section slider slide [oferta="logo"] {
+    width: 65%;
+    margin: 2rem 0 0 2rem;
+    filter: drop-shadow( #0005 10px 10px 5px );
+}
+banner-section slider slide img {
     object-fit: cover;
 }
+
+
+
+
 
 /* [ slide 00 ]
 ----------------------- */
@@ -44,25 +225,22 @@ banner-section slider #slide00 {
     grid-template-columns: 1fr 1fr;
     background-image: url("../../img/home/baby-walls1.jpg");
     background-size: cover;
-    color: var(--cp08);
-    text-shadow: #fff5 0 0 6px;
-} banner-section slider #slide00 left {
-    flex: 1;
-    display: block;
-    width: 100%;
-    height: 100%;
-    /* background-image: linear-gradient(
-        to right,
-        var(--cp00),
-        #fff0
-    ); */
-} banner-section slider 
+}
+
+banner-section slider #slide00 left {
+    display: grid;
+
+}
+
+banner-section slider 
 #slide00 left section {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3vw;
-    padding: 30% 5%;
+    padding: 30% 5%; */
+    display: grid;
+    grid-template-columns: ;
 }
 banner-section slider 
 #slide00 left section #mamae-e-bebe {
@@ -72,30 +250,25 @@ banner-section slider
 }
 
 banner-section slider #slide00 right {
-    flex: 1;
-    display: block;
-    width: 100%;
-    height: 100%;
-    /* background-image: linear-gradient(
-        to left,
-        var(--cp06),
-        #fff0
-    ); */
+    display: grid;
+
 }
 
 /* [ slide 01 ]
 ----------------------- */
-banner-section slider #slide01 {
+/* banner-section slider #slide01 {
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: var(--cp08);
-} banner-section slider #slide01 left {
+} */
+/* banner-section slider #slide01 left {
     flex: 1;
     display: block;
     width: 100%;
     height: 100%;
-} banner-section slider 
+}  */
+banner-section slider 
 #slide01 left section {
     display: flex;
     flex-direction: column;
@@ -110,16 +283,10 @@ banner-section slider
     user-select: none;
 }
 
-banner-section slider #slide01 right {
-    flex: 1;
-    display: block;
-    width: 100%;
-    height: 100%;
-}
 
 /* [ slide 02 ]
 ----------------------- */
-banner-section slider #slide02 {
+/* banner-section slider #slide02 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -152,7 +319,7 @@ banner-section slider #slide02 right {
     display: block;
     width: 100%;
     height: 100%;
-}
+} */
 
 /* [ slide 03 ]
 ----------------------- */
